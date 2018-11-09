@@ -1,6 +1,6 @@
 # Distribucion de Roles y Progreso
 
-Para actualizaciones en tiempo real, vea [la tabla de proyectos](https://github.com/Carpentries-ES/python-ecology-lesson-es/projects/1)
+La meta es traducir toda la lección hasta el final del mes de Nov 2018 y luego revisar. Para actualizaciones en tiempo real, vea [la tabla de proyectos](https://github.com/Carpentries-ES/python-ecology-lesson-es/projects/1)
 
 episodio | nombre archivo | reponsable traducción | fecha de inicio | fecha completada
 --- | --- | --- | --- | --- 
