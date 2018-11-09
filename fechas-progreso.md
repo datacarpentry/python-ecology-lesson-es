@@ -10,7 +10,7 @@ Starting With Data | _episodes/02-starting-with-data.md |  |  |
 Indexing, Slicing and Subsetting DataFrames in Python | _episodes/03-index-slice-subset.md |  |  | 
 Data Types and Formats | _episodes/04-data-types-and-format.md |  |  | 
 Combining DataFrames with Pandas | _episodes/05-merging-data.md |  |  | 
-Data Workflows and Automation | _episodes/06-loops-and-functions.md |  |  | 
+Data Workflows and Automation | _episodes/06-loops-and-functions.md | @miguelgondu  | nov 9 | 
 Making Plots With plotnine | _episodes/07-visualization-ggplot-python.md |  |  | 
 Data Ingest and Visualization - Matplotlib and Pandas | _episodes/08-putting-it-all-together.md |  |  | 
 Accessing SQLite Databases Using Python and Pandas | _episodes/09-working-with-sql.md | orchid00 | nov 9 | 
