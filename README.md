@@ -17,3 +17,18 @@
 Lo siguiente es un conjunto de pautas, no reglas, que hemos desarrollado para otros proyectos de traducción y nos han sido muy útiles para tener una traducción homogénea. [Convenciones](https://github.com/Carpentries-ES/board/blob/master/Convenciones_Traduccion.md). 
 
 Los archivos `.md` en el folder `_episodes_en` son la referencia. Los archivos en `_episodes` son los archivos para traducir y pueden ser sobreescritos con la version en español.
+
+## Questions and Answers
+
+1. Donde empezar?
+Si eres nuevo con github, este tutorial toma 10-15 min https://guides.github.com/activities/hello-world/
+Claro que tenemos la versión traducida de la leccion de git con github, toma unas horas https://swcarpentry.github.io/git-novice-es/
+
+1. Cuales son las fechas importantes? 
+Puedes ver en [milestones](https://github.com/Carpentries-ES/python-ecology-lesson-es/milestones)
+La idea es terminar antes de Navidad del 2018 con la traducción y la revisión.
+
+1. Se traducen los datos?
+Dejaremos eso para la segunda versión. Pero lo tenemos en cuenta
+
+1. Despues de traducir, empezaremos a revisar en paralelo
