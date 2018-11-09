@@ -12,7 +12,7 @@
 
 :+1: :tada: ¡En primer lugar, gracias por tomarte el tiempo para contribuir! :tada::+1:
 
-Éste repositorio está siendo traducido y nos gustaría mucho que puedas contribuir. Escoge un [issue](https://github.com/Carpentries-ES/python-ecology-lesson-es/issues) en el que quisieras trabajar y dejanos un mensaje. El tiempo que dediques depende de ti. La meta es traducir toda la lección hasta el final del mes de Nov 2018 y luego revisar.
+Éste repositorio está siendo traducido y nos gustaría mucho que puedas contribuir. Escoge un [issue](https://github.com/Carpentries-ES/python-ecology-lesson-es/issues) en el que quisieras trabajar y dejanos un mensaje. Cada issue tiene el archivo en ingles que espera ser traducido. Pueder hacer cambios directos o PR's, lo que sea más conveniente para tí. El tiempo que dediques depende de tí. La meta es traducir toda la lección hasta el final del mes de Nov 2018 y luego revisar. 
 
 Lo siguiente es un conjunto de pautas, no reglas, que hemos desarrollado para otros proyectos de traducción y nos han sido muy útiles para tener una traducción homogénea. [Convenciones](https://github.com/Carpentries-ES/board/blob/master/Convenciones_Traduccion.md). 
 
