@@ -13,13 +13,13 @@ Combining DataFrames with Pandas | _episodes/05-merging-data.md |  |  |
 Data Workflows and Automation | _episodes/06-loops-and-functions.md |  |  | 
 Making Plots With plotnine | _episodes/07-visualization-ggplot-python.md |  |  | 
 Data Ingest and Visualization - Matplotlib and Pandas | _episodes/08-putting-it-all-together.md |  |  | 
-Accessing SQLite Databases Using Python and Pandas | _episodes/09-working-with-sql.md |  |  | 
+Accessing SQLite Databases Using Python and Pandas | _episodes/09-working-with-sql.md | orchid00 |  | 
 
 
 otros archivos | nombre archivo | reponsable traducción | fecha de inicio | fecha completada
 ---| --- | --- | --- | ---
 Glossary | _extras/reference.md |  |  | 
-Index | _extras/index.md |  |  | 
+Index | _extras/index.md | @agbeltran |  | 
 Instructor guide | _extras/guide.md |  |  | 
 Overview of Jupyter Notebooks | _extras/jupyter_notebooks.md |  |  | 
 Setup | setup.md |  |  | 
