@@ -14,9 +14,9 @@ objectives:
 keypoints:
     - "Crea una conexión con `sqlite3.connect()`, luego un cursor para consultas con `.cursor()`."  
     - "Ejecuta consultas usando `.execute()`."
-    - "Usa Pandas `read_sql_query()` para extraer datos directamente a un DataFrame."   
-    - "Escribe los datos de un nuevo DataFrame en una nueva tabla en SQLite usando `to_sql(()."
-    - " Al final, no olvides cerrar la puerta de la conexión usando el comando `.close()`."
+    - "Usa Pandas `.read_sql_query()` para extraer datos directamente a un DataFrame."   
+    - "Escribe los datos de un nuevo DataFrame en una nueva tabla en SQLite usando `.to_sql()`."
+    - "Al final, no olvides cerrar la puerta de la conexión usando el comando `.close()`."
 ---
 
 ## Python y SQL
