@@ -1,14 +1,14 @@
 ---
-title: Accessing SQLite Databases Using Python and Pandas
+title: Acceso a base de datos con SQLite usando Python y Pandas
 teaching: 20
 exercises: 25
 questions:
     - "FIXME"
 objectives:
-    - "Use the sqlite3 module to interact with a SQL database."
-    - "Access data stored in SQLite using Python."
-    - "Describe the difference in interacting with data stored as a CSV file versus in SQLite."
-    - "Describe the benefits of accessing data using a database compared to a CSV file."
+    - "Usa el módulo sqlite3 para interactuar con una base de datos SQL."
+    - "Accede a los datos almacenados en SQLite usando Python."
+    - "Describe las diferencias de interactual con datos almacenados en un archivo CSV y datos almacenados en SQLite."
+    - "Describe los beneficios de acceso a datos usando una base de datos en comparación con un archivo CSV."
 keypoints:
     - "FIXME"
 ---
