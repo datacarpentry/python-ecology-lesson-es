@@ -6,7 +6,7 @@ Episodio | Nombre de archivo | Reponsable de traducción | Fecha de inicio | Fec
 --- | --- | --- | --- | --- 
 Before we start | _episodes/00-before-we-start.md |  |  | 
 Short Introduction to Programming in Python | _episodes/01-short-introduction-to-Python.md | @Helysalgado | nov 9 | 
-Starting With Data | _episodes/02-starting-with-data.md |  |  | 
+Starting With Data | _episodes/02-starting-with-data.md | @jmbarrios  | nov 10 | 
 Indexing, Slicing and Subsetting DataFrames in Python | _episodes/03-index-slice-subset.md |  |  | 
 Data Types and Formats | _episodes/04-data-types-and-format.md |  |  | 
 Combining DataFrames with Pandas | _episodes/05-merging-data.md |  |  | 
