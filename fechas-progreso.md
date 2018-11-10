@@ -1,8 +1,8 @@
-# Distribucion de Roles y Progreso
+# Distribución de roles y progreso
 
-La meta es traducir toda la lección hasta el final del mes de Nov 2018 y luego revisar. Para actualizaciones en tiempo real, vea [la tabla de proyectos](https://github.com/Carpentries-ES/python-ecology-lesson-es/projects/1)
+La meta es traducir toda la lección hasta el final del mes de Nov 2018 y luego revisar. Para actualizaciones de todas las tareas puedes ver [la tabla de proyectos](https://github.com/Carpentries-ES/python-ecology-lesson-es/projects/1). Esta tabla de grogreso esta es actualizada manualmente por raynamharris and orchid00, si no vez tu nombre contáctanos
 
-episodio | nombre archivo | reponsable traducción | fecha de inicio | fecha completada
+Episodio | Nombre de archivo | Reponsable de traducción | Fecha de inicio | Fecha de entrega
 --- | --- | --- | --- | --- 
 Before we start | _episodes/00-before-we-start.md |  |  | 
 Short Introduction to Programming in Python | _episodes/01-short-introduction-to-Python.md | @Helysalgado | nov 9 | 
@@ -16,7 +16,7 @@ Data Ingest and Visualization - Matplotlib and Pandas | _episodes/08-putting-it-
 Accessing SQLite Databases Using Python and Pandas | _episodes/09-working-with-sql.md | orchid00 | nov 9 | 
 
 
-otros archivos | nombre archivo | reponsable traducción | fecha de inicio | fecha completada
+Archivos extras | Nombre de archivo | Reponsable de traducción | Fecha de inicio | Fecha de entrega
 ---| --- | --- | --- | ---
 Glossary | _extras/reference.md |  |  | 
 Index | _extras/index.md | @agbeltran | nov 9 | 
