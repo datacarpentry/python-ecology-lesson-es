@@ -1,156 +1,162 @@
 ---
-title: Acceso a base de datos con SQLite usando Python y Pandas
+title: Acceso a base de datos SQLite usando Python y Pandas
 teaching: 20
 exercises: 25
 questions:
-    - "FIXME"
+    - ¿Cómo conectarse a una base de datos SQLite desde Python?
+    - ¿Cómo extraer datos de una base de datos SQLite a un DataFrame de Python?
+    - ¿Cuáles son los beneficios de usar una base de datos en vez de un archivo CSV?
 objectives:
     - "Usa el módulo sqlite3 para interactuar con una base de datos SQL."
     - "Accede a los datos almacenados en SQLite usando Python."
     - "Describe las diferencias de interactual con datos almacenados en un archivo CSV y datos almacenados en SQLite."
     - "Describe los beneficios de acceso a datos usando una base de datos en comparación con un archivo CSV."
 keypoints:
-    - "FIXME"
+    - "Crea una conexión con `sqlite3.connect()`, luego un cursor para consultas con `.cursor()`."  
+    - "Ejecuta consultas usando `.execute()`."
+    - "Usa Pandas `read_sql_query()` para extraer datos directamente a un DataFrame."   
+    - "Escribe los datos de un nuevo DataFrame en una nueva tabla en SQLite usando `to_sql(()."
+    - " Al final, no olvides cerrar la puerta de la conexión usando el comando `.close()`."
 ---
 
-## Python and SQL
+## Python y SQL
 
-When you open a CSV in python, and assign it to a variable name, you are using
-your computers memory to save that variable. Accessing data from a database like
-SQL is not only more efficient, but also it allows you to subset and import only
-the parts of the data that you need.
+Cuando lees un archivo con datos en Python y luego lo asignas a una variable estás usando la memoria de tu computadora para guardar los datos. Pero si accesas datos almacenados en una base de datos es mucho más eficiente y te permite extraer un subconjunto de los datos que necesites.
 
-In the following lesson, we'll see some approaches that can be taken to do so.
+Aquí aprenderás como conectarte a una base de datos, por ejemplo SQL o SQLite.
 
-### The `sqlite3` module
+### El módulo `sqlite3`
 
-The [sqlite3] module provides a straightforward interface for interacting with
-SQLite databases. A connection object is created using `sqlite3.connect()`; the
-connection must be closed at the end of the session with the `.close()` command.
-While the connection is open, any interactions with the database require you to
-make a cursor object with the `.cursor()` command. The cursor is then ready to
-perform all kinds of operations with `.execute()`.
+Con el módulo [sqlite3] uno puede conectarse e interactuar con bases de datos SQLite de manera sencilla. Primeramente, se crea un objeto de conexión usando `sqlite3.connect()`, esto abre la puerta a la base de datos. Mientras la conexión esté abierta se puede interactuar con la base de datos haciendo consultas. Para hacer consultas necesitas crear un objeto cursor usando el comando `.cursor()`. Luego, el objeto cursor puede hacer operaciones usando el comando `.execute()`. Al final, no olvides cerrar la puerta de la conexión usando el comando `.close()`.
 
 [sqlite3]: https://docs.python.org/3/library/sqlite3.html
 
 ~~~
+# Importa el módulo sqlite3
 import sqlite3
 
-# Create a SQL connection to our SQLite database
+# Crea un objeto de conexión a la base de datos SQLite
 con = sqlite3.connect("data/portal_mammals.sqlite")
 
+# Con la conexión, crea un objeto cursor
 cur = con.cursor()
 
-# The result of a "cursor.execute" can be iterated over by row
-for row in cur.execute('SELECT * FROM species;'):
-    print(row)
+# El resultado de "cursor.execute" puede ser iterado por fila
+for fila in cur.execute('SELECT * FROM species;'):
+    print(fila)
 
-# Be sure to close the connection
+# No te olvides de cerrar la conexión
 con.close()
 ~~~
 {: .language-python}
 
-### Queries
+### Consultas
 
-One of the most common ways to interact with a database is by querying:
-retrieving data based on some search parameters. Use a SELECT statement string.
-The query is returned as a single tuple or a tuple of tuples. Add a WHERE
-statement to filter your results based on some parameter.
+Una de las formas más comunes de interactuar con una base de datos es haciendo consultas para extraer datos. Las consultas se hacen con unas declaraciones y palabras clave. Por ejemplo *SELECT* es la palabra clave de una declaración.
+
+Una consulta nos devuelve o retorna datos que pueden ser una o varias filas y columnas, a este resultado también se llama tupla. Para filtrar las tuplas usa la palabra *WHERE* que recibe una o más condiciones en la declaración.
 
 ~~~
+# Importa el módulo sqlite3
 import sqlite3
 
-# Create a SQL connection to our SQLite database
+# Crea un objeto de conexión a la base de datos SQLite
 con = sqlite3.connect("data/portal_mammals.sqlite")
 
+# Con la conexión, crea un objeto cursor
 cur = con.cursor()
 
-# Return all results of query
+# Ejecuta la consulta 1
 cur.execute('SELECT plot_id FROM plots WHERE plot_type="Control"')
+# Extrae todos los datos
 cur.fetchall()
 
-# Return first result of query
+# Ejecuta la consulta 2
 cur.execute('SELECT species FROM species WHERE taxa="Bird"')
+# Extrae sólo la primera tupla
 cur.fetchone()
 
-# Be sure to close the connection
+# No te olvides de cerrar la conexión
 con.close()
 ~~~
 {: .language-python}
 
-## Accessing data stored in SQLite using Python and Pandas
+##  Acceso datos en SQLite usando Python y Pandas
 
-Using pandas, we can import results of a SQLite query into a dataframe. Note
-that you can use the same SQL commands / syntax that we used in the SQLite
-lesson. An example of using pandas together with sqlite is below:
+Usando pandas, podemos extraer los resultados de una consulta en SQLite a un *DataFrame*. Recuerda que puedes usar los mismos comandos o sintaxis de SQL de la lección de SQL.
+
+Por ejemplo para usar Pandas y SQLite:
 
 ~~~
+# Importa pandas y sqlite3
 import pandas as pd
 import sqlite3
 
-# Read sqlite query results into a pandas DataFrame
+# Crea un objeto de conexión a la base de datos SQLite
 con = sqlite3.connect("data/portal_mammals.sqlite")
+# Usa read_sql_query de pandas para extraer el resultado
+# de la consulta a un DataFrame
 df = pd.read_sql_query("SELECT * from surveys", con)
 
-# Verify that result of SQL query is stored in the dataframe
+# Verifica que el resultado de la consulta SQL está
+# almacenado en el DataFrame
 print(df.head())
 
+# No te olvides de cerrar la conexión
 con.close()
 ~~~
 {: .language-python}
 
-## Storing data: CSV vs SQLite
+## Almacenando datos: CSV vs SQLite
 
-Storing your data in an SQLite database can provide substantial performance
-improvements when reading/writing compared to CSV. The difference in performance
-becomes more noticable as the size of the dataset grows (see for example [these
-benchmarks]).
+Almacenar datos en una base de datos SQLite incrementa el rendimiento sustancialmente. Por ejemplo el tiempo de lectura / escritura en comparación con CSV. La diferencia en el rendimiento se hace más notable a medida que crece el tamaño del conjunto de datos (por ejemplo [estos puntos de referencia] en inglés).
 
-[these benchmarks]: http://sebastianraschka.com/Articles/2013_sqlite_database.html#results-and-conclusions
+[estos puntos de referencia]: http://sebastianraschka.com/Articles/2013_sqlite_database.html#results-and-conclusions
 
 
-> ## Challenge - SQL
+> ## Desafío - SQL
 >
-> 1. Create a query that contains survey data collected between 1998 - 2001 for
->   observations of sex "male" or "female" that includes observation's genus and
->   species and site type for the sample. How many records are returned?
+> 1. Crea una consulta que contenga datos de encuestas recopilados
+> entre 1998 y 2001 para observaciones de sexo "masculino" o "femenino"
+> que incluyan el genus de la observación, la especie y el tipo de sitio
+> de la muestra. ¿Cuántos registros se devuelven?
 >
-> 2. Create a dataframe that contains the total number of observations (count)
->   made for all years, and sum of observation weights for each site, ordered by
->   site ID.
+> 2. Crea un DataFrame que contenga el número total de observaciones
+> (count) de todos los años, y la suma de los pesos de observaciones
+> de cada sitio, ordenados por el ID del sitio.
 {: .challenge}
 
-## Storing data: Create new tables using Pandas
+## Almacenando datos: Crea nuevas tablas usando Pandas
 
-We can also us pandas to create new tables within an SQLite database. Here, we run we re-do an excercise we did before with CSV files using our SQLite database. We first read in our survey data, then select only those survey results for 2002, and then save it out to its own table so we can work with it on its own later.
+También podemos usar pandas para crear nuevas tablas dentro de una base de datos SQLite. Aquí, volveremos a hacer un ejercicio que hicimos antes con archivos CSV usando nuestra base de datos SQLite. Primero leemos los datos de nuestra encuesta, luego seleccionamos solo los resultados de la encuesta en el año 2002 y luego los guardamos en su propia tabla para que podamos trabajar con ellos por su cuenta más adelante.
 
 ~~~
+# Importa pandas y sqlite3
 import pandas as pd
 import sqlite3
 
+# Crea un objeto de conexión a la base de datos SQLite
 con = sqlite3.connect("data/portal_mammals.sqlite")
 
-# Load the data into a DataFrame
+# Extrae los datos de la consulta directamente a un DataFrame
 surveys_df = pd.read_sql_query("SELECT * from surveys", con)
 
-# Select only data for 2002
+# Selecciona sólo datos en el año 2002
 surveys2002 = surveys_df[surveys_df.year == 2002]
 
-# Write the new DataFrame to a new SQLite table
+# Escribe los datos del nuevo DataFrame en una nueva tabla en SQLite
 surveys2002.to_sql("surveys2002", con, if_exists="replace")
 
+# No te olvides de cerrar la conexión
 con.close()
 ~~~
 {: .language-python}
 
-> ## Challenge - Saving your work
+> ## Desafío - Guardando tus datos
 >
-> 1. For each of the challenges in the previous challenge block, modify your code to save the
->   results to their own tables in the portal database.
->
-> 2. What are some of the reasons you might want to save the results of your queries back into the
->   database? What are some of the reasons you might avoid doing this.
+> 1. ¿Cuándo sería buena idea guardar los resultados de tus consultas en
+> la base de datos? y ¿Cuáles serían algunas de las razones por las que
+> sería mejor no guardarlas?
 {: .challenge}
 
 {% include links.md %}
-
