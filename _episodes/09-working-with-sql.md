@@ -156,7 +156,7 @@ con.close()
 >
 > 1. ¿Cuándo sería buena idea guardar los resultados de tus consultas en
 > la base de datos? y ¿Cuáles serían algunas de las razones por las que
-> sería mejor no guardarlas?
+> sería mejor no guardar los resultados en la base de datos?
 {: .challenge}
 
 {% include links.md %}
