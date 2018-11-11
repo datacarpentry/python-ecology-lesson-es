@@ -3,7 +3,7 @@ title: Antes de comenzar
 teaching: 30
 exercises: 0
 questions:
-  - "Qué es Python y por qué debería aprenderlo?"
+  - "¿Qué es Python y por qué debería aprenderlo?"
 objectives:
   - "Describir el propósito del editor, consola, ayuda, el panel explorador de variables y el panel explorador de archivos de Spyder."
   - "Organizar los archivos y directorios para un grupo de análisis como proyecto de Python, y entender el propósito del directorio de trabajo."
