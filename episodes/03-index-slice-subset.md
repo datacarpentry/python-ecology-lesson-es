@@ -120,7 +120,7 @@ a = [1, 2, 3, 4, 5]
 ![slicing diagram](../fig/slicing-slicing.png)
 
 
-> ## Challenge - Extracting data
+> ## Desafío - Extrayendo datos
 >
 > 1. What value does the code below return?
 >
