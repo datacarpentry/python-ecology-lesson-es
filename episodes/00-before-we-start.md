@@ -11,7 +11,7 @@ objectives:
   - "Demostrar como proporcionar suficiente información para solucionar problemas junto con la comunidad de usuarios de Python."
 keypoints:
   - "Python es un lenguaje de programación de código libre y plataforma independiente"
-  - "SciPy ecosistema para Python que provee las herramientas necesarias para la computación científica"
+  - "SciPy es un ecosistema para Python que provee las herramientas necesarias para la computación científica"
   - "Jupyter Notebook y la Spyder IDE son excelentes herramientas para escribir código e interactuar con Python. Con su gran comunidad es fácil encontrar ayuda en internet"
 ---
 
