@@ -22,97 +22,97 @@ keypoints:
     
 ---
 
-In lesson 01, we read a CSV into a Python pandas DataFrame.  We learned:
+En la lección 01, leímos un archivo CSV y cargamos los datos en un  pandas **DataFrame**. 
+Aprendimos:
 
-- how to save the DataFrame to a named object,
-- how to perform basic math on the data,
-- how to calculate summary statistics, and
-- how to create plots of the data.
+- como guardar el **DataFrame** en un objeto,
+- como realizar operaciones matemáticas básica sobre datos,
+- como calcular resúmenes estadísticos, y
+- como crear gráficos a partir de los datos.
 
-In this lesson, we will explore **ways to access different parts of the data**
-using:
+En esta lección, exploraremos **formas de acceder a diferentes partes de los datos**
+usando:
 
-- indexing,
-- slicing, and
-- subsetting.
+- indexación,
+- segmentación, y
+- creación de subconjuntos.
 
-## Loading our data
+## Cargando nuestros datos
 
-We will continue to use the surveys dataset that we worked with in the last
-lesson. Let's reopen and read in the data again:
+Vamos a continuar usando el dataset **surveys** que usamos con la lección
+anterior. Reabrámoslo y leamos los datos de nuevo:
 
 ~~~
-# Make sure pandas is loaded
+# Asegurar que panda este disponible
 import pandas as pd
 
-# Read in the survey CSV
+# leer el archivo **surveys** CSV
 surveys_df = pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
 
-## Indexing and Slicing in Python
+## Indexando y Fragmentando en Python
 
-We often want to work with subsets of a **DataFrame** object. There are
-different ways to accomplish this including: using labels (column headings),
-numeric ranges, or specific x,y index locations.
+A menudo necesitamos trabajar con subconjuntos de un objeto **DataFrame**. Existen diferentes 
+maneras de lograr esto, incluyendo: usando etiquetas (encabezados de columnas), rangos numéricos, 
+o índices de localizaciones específicas x,y.
 
+## Seleccionando datos mediante el uso de Etiquetas (Encabezados de Columnas)
 
-## Selecting data using Labels (Column Headings)
-
-We use square brackets `[]` to select a subset of an Python object. For example,
-we can select all data from a column named `species_id` from the `surveys_df`
-DataFrame by name. There are two ways to do this:
+Utilizamos corchetes `[]` para seleccionar un subconjunto de un objeto en Python. Por ejemplo, 
+podemos seleccionar todos los datos de una columna llamada `species_id`  del `surveys_df` **DataFrame** 
+usando el nombre de la columna. Existen dos maneras de hacer esto:
 
 ~~~
-# TIP: use the .head() method we saw earlier to make output shorter
-# Method 1: select a 'subset' of the data using the column name
+# TIP: use el método .head() que vimos anteriormente para hacer la salida mas corta
+# Método 1: seleccione un 'subconjunto' de los datos usando el nombre de la columna
 surveys_df['species_id']
 
-# Method 2: use the column name as an 'attribute'; gives the same output
+# Método 2: usa el nombre de la columna como un 'atributo'; esto produce la misma salida
 surveys_df.species_id
 ~~~
 {: .language-python}
 
-We can also create a new object that contains only the data within the
-`species_id` column as follows:
+También podemos crear un nuevo objeto que contiene solamente los datos de la 
+columna `species_id` de la siguiente manera:
 
 ~~~
-# Creates an object, surveys_species, that only contains the `species_id` column
+# Crea un objeto, `surveys_species`, que solamente contenga la columna `species_id`
 surveys_species = surveys_df['species_id']
 ~~~
 {: .language-python}
 
-We can pass a list of column names too, as an index to select columns in that
-order. This is useful when we need to reorganize our data.
+También podemos pasar una lista de nombres de columnas, a manera de índice para seleccionar las columnas en ese orden. 
+Esto es útil cuando necesitamos reorganizar nuestros datos.
 
-**NOTE:** If a column name is not contained in the DataFrame, an exception
-(error) will be raised.
+**NOTA:** Si el nombre de una columna no esta incluido en el **DataFrame**, 
+se producirá una excepción (error).
 
 ~~~
-# Select the species and plot columns from the DataFrame
+# Selecciona las especies y crea un gráfico con las columnas del **DataFrame**
 surveys_df[['species_id', 'plot_id']]
 
-# What happens when you flip the order?
+# ¿Qué pasa cuando invertimos el orden?
 surveys_df[['plot_id', 'species_id']]
 
-# What happens if you ask for a column that doesn't exist?
+# ¿Qué pasa si preguntamos por una columna que no existe?
 surveys_df['speciess']
 ~~~
 {: .language-python}
 
-Python tells us what type of error it is in the traceback, at the bottom it says `KeyError: 'speciess'` which means that `speciess` is not a column name (or Key in the related Python data type dictionary).
+Python nos informa que tipo de error es en el rastreo, en la parte inferior dice `KeyError: 'speciess'` lo que significa que `speciess` no es un nombre de columna (o **Key** que está relacionado con el diccionario de tipo de datos de Python).
 
-## Extracting Range based Subsets: Slicing
+## Extrayendo subconjuntos basados en rangos: Segmentando
 
-**REMINDER**: Python Uses 0-based Indexing
+**RECORDATORIO**: Python usa Indexación en base-0
 
-Let's remind ourselves that Python uses 0-based
-indexing. This means that the first element in an object is located at position
-0. This is different from other tools like R and Matlab that index elements
-within objects starting at 1.
+Recordemos que Python usa indexación en base-0.
+Esto quiere decir que el primer elemento en un objeto esta localizado en la posición 0.
+Esto es diferente de otros lenguajes como R y Matlab que indexan elementos dentro 
+de objetos iniciando en 1.
 
 ~~~
-# Create a list of numbers:
+# Crea una lista de números:
 a = [1, 2, 3, 4, 5]
 ~~~
 {: .language-python}
@@ -121,7 +121,7 @@ a = [1, 2, 3, 4, 5]
 ![slicing diagram](../fig/slicing-slicing.png)
 
 
-> ## Challenge - Extracting data
+> ## Desafío - Extrayendo datos
 >
 > 1. What value does the code below return?
 >
