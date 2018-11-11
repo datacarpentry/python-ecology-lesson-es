@@ -1,38 +1,32 @@
 ---
-title: Making Plots With plotnine
+title: Creando gráficos con plotnine
 teaching: 40
 exercises: 50
 questions:
-    - "How can I visualize data in Python?"
-    - "What is 'grammar of graphics'?"
+    - "¿Cómo puedo visualizar datos en Python?"
+    - "¿Qué es la 'gramática de gráficos'?"
 objectives:
-    - "Create a `plotnine` object."
-    - "Set universal plot settings."
-    - "Modify an existing plotnine object."
-    - "Change the aesthetics of a plot such as color."
-    - "Edit the axis labels."
-    - "Build complex plots using a step-by-step approach."
-    - "Create scatter plots, box plots, and time series plots."
-    - "Use the facet_wrap and facet_grid commands to create a collection of plots splitting the data by a factor variable."
-    - "Create customized plot styles to meet their needs."
+    - "Crear un objeto `plotnine`."
+    - "Establecer configuraciones para gráficos."
+    - "Modificar un objeto `plotnine` existente."
+    - "Cambiar la estética de un gráfico, como el color."
+    - "Editar las etiquetas de los ejes."
+    - "Construir gráficos complejos paso a paso."
+    - "Crear gráficos de dispersión, gráficos de caja y gráficos de series."
+    - "Usar los comandos `facet_wrap` y `facet_grid` para crear una colección de gráficos que dividen los datos por una variable categórica."
+    - "Crear estilos personalizados para tus gráficos."
 keypoints:
-    - "The `data`, `aes` variables and a `geometry` are the main elements of a plotnine graph"
-    - "With the `+` operator, additional `scale_*`, `theme_*`, `xlab/ylab` and `facet_*` elements are added"
+    - "Las variables `data`, `aes` y` geometry` son los elementos principales de un gráfico de `plotnine`."
+    - "Con el operador `+ `, se agregan elementos adicionales al gráfico, por ejemplo `scale_*`, `theme_*`, `xlab`, `ylab` y `facet_*`."
 ---
 
-## Disclaimer
+## Nota
 
-Python has powerful built-in plotting capabilities such as `matplotlib`, but for
-this episode, we will be using the [`plotnine`](https://plotnine.readthedocs.io/en/stable/)
-package, which facilitates the creation of highly-informative plots of
-structured data based on the R implementation of [`ggplot2`](http://ggplot2.org/)
-and [The Grammar of Graphics](http://link.springer.com/book/10.1007%2F0-387-28695-0)
-by Leland Wilkinson. The [`plotnine`](https://plotnine.readthedocs.io/en/stable/)
-package is built on top of Matplotlib and interacts well with Pandas.
+Python tiene muy buenos recursos para crear gráficos incorporados en el paquete `matplotlib`, pero para éste episodio, utilizaremos el paquete [`plotnine`] (https://plotnine.readthedocs.io/en/stable/), que facilita la creación de gráficos informativos usando datos estructurados. El el paquete `plotnine` está basado en la implementación R de [`ggplot2`](http://ggplot2.org/) y [La gramática de gráficos](http://link.springer.com/book/10.1007%2F0-387-28695-0)
+por Leland Wilkinson. Además el paquete [`plotnine`](https://plotnine.readthedocs.io/en/stable/) está construido sobre `matplotlib` e interactúa bien con `pandas`.
 
-Just as with the other packages, `plotnine` need to be imported. It is good
-practice to not just load an entire package such as `from plotnine import *`,
-but to use an abbreviation as we used `pd` for Pandas:
+Al igual que con los otros paquetes, `plotnine` necesita ser importado. Es bueno
+practicar usando una abreviatura como usamos `pd` para `pandas`:
 
 ~~~
 %matplotlib inline
@@ -40,8 +34,11 @@ import plotnine as p9
 ~~~
 {: .language-python }
 
-From now on, the functions of `plotnine` are available using `p9.`. For the
-exercise, we will use the `surveys.csv` data set, with the `NA` values removed
+Desde ahora todas las funciones de `plotnine` se pueden acceder usando `p9.`
+por delante.
+
+Para los ejercicios usaremos los datos de `surveys.csv` descartando los valores
+nulos `NA`.
 
 ~~~
 import pandas as pd
@@ -51,24 +48,27 @@ surveys_complete = surveys_complete.dropna()
 ~~~
 {: .language-python}
 
-# Plotting with plotnine
+# Creando gráficos con plotnine
 
-The `plotnine` package (cfr. other packages conform [The Grammar of Graphics](http://link.springer.com/book/10.1007%2F0-387-28695-0)) supports the creation of complex plots from data in a
-dataframe. It uses default settings, which help creating publication quality
-plots with a minimal amount of settings and tweaking.
+El paquete `plotnine` (es parte de [La gramática de gráficos] (http://link.springer.com/book/10.1007%2F0-387-28695-0)) se usa para la creación
+ de gráficos complejos a partir de los datos en un `DataFrame`. Utiliza
+ configuraciones por defecto, que ayudan a crear gráficos con calidad de 
+ publicación con unos pocos ajustes.
 
-`plotnine` graphics are built step by step by adding new elementsadding
-different elements on top of each other using the `+` operator. Putting the
-individual steps together in brackets `()` provides Python-compatible syntax.
+Los gráficos `plotnine` se construyen paso a paso agregando nuevos elementos uno
+ encima del otro usando el operador `+`. Poniendo cada paso entre paréntesis `()` proporciona una sintaxis compatible con Python.
 
-To build a `plotnine` graphic we need to:
+Para construir un gráfico `plotnine` necesitamos:
 
-- Bind the plot to a specific data frame using the `data` argument:
+- Conectar el gráfico a un `DataFrame` específico usando el argumento `data`:
 
 ~~~
 (p9.ggplot(data=surveys_complete))
 ~~~
 {: .language-python}
+
+
+
 As we have not defined anything else, just an empty figure is available and
 presented.
 
