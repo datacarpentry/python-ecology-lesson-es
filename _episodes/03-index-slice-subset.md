@@ -68,7 +68,7 @@ usando el nombre de la columna. Existen dos maneras de hacer esto:
 # Método 1: seleccione un 'subconjunto' de los datos usando el nombre de la columna
 surveys_df['species_id']
 
-# Método 2: use el nombre de la columna como un 'atributo'; esto produce la misma salida
+# Método 2: usa el nombre de la columna como un 'atributo'; esto produce la misma salida
 surveys_df.species_id
 ~~~
 {: .language-python}
