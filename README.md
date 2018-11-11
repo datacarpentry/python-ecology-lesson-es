@@ -27,8 +27,7 @@ Si eres nuevo con github, este tutorial toma 10-15 min https://guides.github.com
 Claro que tenemos la versión traducida de la leccion de git con github, toma unas horas https://swcarpentry.github.io/git-novice-es/
 
 1. ¿Cuáles son las fechas importantes? 
-Puedes ver en [milestones](https://github.com/Carpentries-ES/python-ecology-lesson-es/milestones).
-La idea es terminar antes de Navidad del 2018 con la traducción y la revisión.
+Queremos traducir entre Nov 9-25 y a medida que estén listas las traducciones ir revisando. La idea es terminar antes de Navidad del 2018 con la traducción y la revisión.
 
 1. ¿Se traducen los datos?
 Dejaremos eso para la segunda versión. Pero lo tenemos en cuenta.
