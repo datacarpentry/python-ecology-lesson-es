@@ -88,22 +88,22 @@ Esto es útil cuando necesitamos reorganizar nuestros datos.
 se producirá una excepción (error).
 
 ~~~
-# Select the species and plot columns from the DataFrame
+# Seleccionar las especies y graficar columnas del **DataFrame**
 surveys_df[['species_id', 'plot_id']]
 
-# What happens when you flip the order?
+# ¿Qué pasa cuando invertimos el orden?
 surveys_df[['plot_id', 'species_id']]
 
-# What happens if you ask for a column that doesn't exist?
+# ¿Qué pasa si preguntamos por una columna que no existe?
 surveys_df['speciess']
 ~~~
 {: .language-python}
 
-Python tells us what type of error it is in the traceback, at the bottom it says `KeyError: 'speciess'` which means that `speciess` is not a column name (or Key in the related Python data type dictionary).
+Python nos informa que tipo de error es en el rastreo, en la parte inferior dice `KeyError: 'speciess'` lo que significa que `speciess` no es un nombre de columna (o **Key** en el diccionario de tipo de datos de Python relacionado).
 
-## Extracting Range based Subsets: Slicing
+## Extrayendo subconjuntos basados en rangos: Segmentando
 
-**REMINDER**: Python Uses 0-based Indexing
+**RECORDATORIO**: Python usa Indexación en base-0
 
 Let's remind ourselves that Python uses 0-based
 indexing. This means that the first element in an object is located at position
