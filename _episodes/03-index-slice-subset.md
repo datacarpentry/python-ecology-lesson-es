@@ -77,7 +77,7 @@ También podemos crear un nuevo objeto que contiene solamente los datos de la
 columna `species_id` de la siguiente manera:
 
 ~~~
-# Crear un objeto, surveys_species, que solamente contiene la columna `species_id`
+# Crea un objeto, `surveys_species`, que solamente contenga la columna `species_id`
 surveys_species = surveys_df['species_id']
 ~~~
 {: .language-python}
