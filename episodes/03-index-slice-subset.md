@@ -1,24 +1,24 @@
 ---
-title: Indexing, Slicing and Subsetting DataFrames in Python
+title: Indexación, segmentación y creación de subconjuntos a partir de DataFrames en Python
 teaching: 30
 exercises: 30
 questions:
-    - "How can I access specific data within my data set?"
-    - "How can Python and Pandas help me to analyse my data?"
+    - "¿Cómo puedo acceder a un dato específico en mi 'dataset'?"
+    - "¿Cómo pueden ayudarme Python y Pandas a analizar mis datos?"
 objectives:
-    - "Describe what 0-based indexing is."
-    - "Manipulate and extract data using column headings and index locations."
-    - "Employ slicing to select sets of data from a DataFrame."
-    - "Employ label and integer-based indexing to select ranges of data in a dataframe."
-    - "Reassign values within subsets of a DataFrame."
-    - "Create a copy of a DataFrame."
-    - "Query /select a subset of data using a set of criteria using the following operators: =, !=, >, <, >=, <=."
-    - "Locate subsets of data using masks."
-    - "Describe BOOLEAN objects in Python and manipulate data using BOOLEANs."
+    - "Describir que es indexación en base-0."
+    - "Manipular y extraer datos usando encabezados de columnas e índices."
+    - "Usar 'slicing' para seleccionar conjuntos de datos de un 'DataFrame'."
+    - "Emplear etiquetas e índices enteros para seleccionar rangos de datos en un 'DataFrame'."
+    - "Reasignar valores dentro de subconjuntos de datos de un 'DataFrame'."
+    - "Crear una copia de un 'DataFrame'."
+    - "Consultar/Seleccionar un subconjunto de datos usando un conjunto de criterios utilizando los siguientes operadores: =, !=, >, <, >=, <=."
+    - "Localizar subconjuntos de datos utilizando máscaras."
+    - "Describir objetos tipo 'boolean' en Python y manipular datos usando 'booleans'."
 keypoints:
-    - "In Python, portions of data can be accessed using indices, slices, column headings, and condition-based subsetting."
-    - "Python uses 0-based indexing, in which the first element in a list, tuple or any other data structure has an index of 0."
-    - "Pandas enables common data exploration steps such as data indexing, slicing and conditional subsetting."
+    - "En Python, fragmentos de datos pueden ser accedidos usando índices, 'slices', encabezados de columnas, y subconjuntos basados en condiciones."
+    - "Python usa indexación base-0, en la cual el primer elemento de una lista, tupla o cualquier otra structura de datos tiene un indice de 0."
+    - "'Pandas' permite usar procedimientos comunes de exploración de datos como indexación de datos, 'slicing' y creación de subconjuntos basados en condiciones."
     
 ---
 
