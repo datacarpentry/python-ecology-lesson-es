@@ -89,7 +89,7 @@ Esto es útil cuando necesitamos reorganizar nuestros datos.
 se producirá una excepción (error).
 
 ~~~
-# Seleccionar las especies y graficar columnas del **DataFrame**
+# Selecciona las especies y crea un gráfico con las columnas del **DataFrame**
 surveys_df[['species_id', 'plot_id']]
 
 # ¿Qué pasa cuando invertimos el orden?
