@@ -24,7 +24,7 @@ keypoints:
 
 En la lección 01, leímos un archivo CSV y cargamos los datos en un Python pandas **DataFrame**.  Aprendimos:
 
-- ¿Cómo guardar el **DataFrame** en un objeto,
+- como guardar el **DataFrame** en un objeto,
 - ¿Cómo realizar operaciones matemáticas básica sobre datos,
 - ¿Cómo calcular resúmenes estadísticos, y
 - ¿Cómo crear gráficos a partir de los datos.
