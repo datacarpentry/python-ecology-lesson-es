@@ -1,38 +1,32 @@
 ---
-title: Making Plots With plotnine
+title: Creando gráficos con plotnine
 teaching: 40
 exercises: 50
 questions:
-    - "How can I visualize data in Python?"
-    - "What is 'grammar of graphics'?"
+    - "¿Cómo puedo visualizar datos en Python?"
+    - "¿Qué es la 'gramática de gráficos'?"
 objectives:
-    - "Create a `plotnine` object."
-    - "Set universal plot settings."
-    - "Modify an existing plotnine object."
-    - "Change the aesthetics of a plot such as color."
-    - "Edit the axis labels."
-    - "Build complex plots using a step-by-step approach."
-    - "Create scatter plots, box plots, and time series plots."
-    - "Use the facet_wrap and facet_grid commands to create a collection of plots splitting the data by a factor variable."
-    - "Create customized plot styles to meet their needs."
+    - "Crear un objeto `plotnine`."
+    - "Establecer configuraciones para gráficos."
+    - "Modificar un objeto `plotnine` existente."
+    - "Cambiar la estética de un gráfico, como el color."
+    - "Editar las etiquetas de los ejes."
+    - "Construir gráficos complejos paso a paso."
+    - "Crear gráficos de dispersión, gráficos de caja y gráficos de series."
+    - "Usar los comandos `facet_wrap` y `facet_grid` para crear una colección de gráficos que dividen los datos por una variable categórica."
+    - "Crear estilos personalizados para tus gráficos."
 keypoints:
-    - "The `data`, `aes` variables and a `geometry` are the main elements of a plotnine graph"
-    - "With the `+` operator, additional `scale_*`, `theme_*`, `xlab/ylab` and `facet_*` elements are added"
+    - "Las variables `data`, `aes` y` geometry` son los elementos principales de un gráfico de `plotnine`."
+    - "Con el operador `+ `, se agregan elementos adicionales al gráfico, por ejemplo `scale_*`, `theme_*`, `xlab`, `ylab` y `facet_*`."
 ---
 
-## Disclaimer
+## Nota
 
-Python has powerful built-in plotting capabilities such as `matplotlib`, but for
-this episode, we will be using the [`plotnine`](https://plotnine.readthedocs.io/en/stable/)
-package, which facilitates the creation of highly-informative plots of
-structured data based on the R implementation of [`ggplot2`](http://ggplot2.org/)
-and [The Grammar of Graphics](http://link.springer.com/book/10.1007%2F0-387-28695-0)
-by Leland Wilkinson. The [`plotnine`](https://plotnine.readthedocs.io/en/stable/)
-package is built on top of Matplotlib and interacts well with Pandas.
+Python tiene muy buenos recursos para crear gráficos incorporados en el paquete `matplotlib`, pero para éste episodio, utilizaremos el paquete [`plotnine`] (https://plotnine.readthedocs.io/en/stable/), que facilita la creación de gráficos informativos usando datos estructurados. El el paquete `plotnine` está basado en la implementación R de [`ggplot2`](http://ggplot2.org/) y [La gramática de gráficos](http://link.springer.com/book/10.1007%2F0-387-28695-0)
+por Leland Wilkinson. Además el paquete [`plotnine`](https://plotnine.readthedocs.io/en/stable/) está construido sobre `matplotlib` e interactúa bien con `pandas`.
 
-Just as with the other packages, `plotnine` need to be imported. It is good
-practice to not just load an entire package such as `from plotnine import *`,
-but to use an abbreviation as we used `pd` for Pandas:
+Al igual que con los otros paquetes, `plotnine` necesita ser importado. Es bueno
+practicar usando una abreviatura como usamos `pd` para `pandas`:
 
 ~~~
 %matplotlib inline
@@ -40,8 +34,10 @@ import plotnine as p9
 ~~~
 {: .language-python }
 
-From now on, the functions of `plotnine` are available using `p9.`. For the
-exercise, we will use the `surveys.csv` data set, with the `NA` values removed
+Desde ahora todas las funciones de `plotnine` se pueden acceder usando `p9.` por delante.
+
+Para los ejercicios usaremos los datos de `surveys.csv` descartando los valores
+nulos `NA`.
 
 ~~~
 import pandas as pd
@@ -51,34 +47,30 @@ surveys_complete = surveys_complete.dropna()
 ~~~
 {: .language-python}
 
-# Plotting with plotnine
+# Creando gráficos con plotnine
 
-The `plotnine` package (cfr. other packages conform [The Grammar of Graphics](http://link.springer.com/book/10.1007%2F0-387-28695-0)) supports the creation of complex plots from data in a
-dataframe. It uses default settings, which help creating publication quality
-plots with a minimal amount of settings and tweaking.
+El paquete `plotnine` (es parte de [La gramática de gráficos] (http://link.springer.com/book/10.1007%2F0-387-28695-0)) se usa para la creación de gráficos complejos a partir de los datos en un `DataFrame`. Utiliza configuraciones por defecto, que ayudan a crear gráficos con calidad de
+ publicación con unos pocos ajustes.
 
-`plotnine` graphics are built step by step by adding new elementsadding
-different elements on top of each other using the `+` operator. Putting the
-individual steps together in brackets `()` provides Python-compatible syntax.
+Los gráficos `plotnine` se construyen paso a paso agregando nuevos elementos uno
+ encima del otro usando el operador `+`. Poniendo cada paso entre paréntesis `()` proporciona una sintaxis compatible con Python.
 
-To build a `plotnine` graphic we need to:
+Para construir un gráfico `plotnine` necesitamos:
 
-- Bind the plot to a specific data frame using the `data` argument:
+- Conectar el gráfico a un `DataFrame` específico usando el argumento `data`:
 
 ~~~
 (p9.ggplot(data=surveys_complete))
 ~~~
 {: .language-python}
-As we have not defined anything else, just an empty figure is available and
-presented.
 
-As we have not defined anything else, just an empty figure is available and
-presented.
+Como no hemos definido nada más, solo un marco vacío está disponible y
+es presentado.
 
-- Define aesthetics (`aes`), by **selecting variables** used in the plot and
-`mapping` them to a presentation such as plotting size, shape color, etc. You
-can interpret this as: *which** of the variables will influence the plotted
-objects/geometries:
+- Define estéticas (`aes`), seleccionando las variables usadas en el gráfico y
+'mapearlas' a una presentación como tamaño, color, forma, etc.
+Puedes interpretar ésto como: las variables que se usan en el gráfico y son
+modificadas por objetos o geometrías:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -86,14 +78,13 @@ objects/geometries:
 ~~~
 {: .language-python}
 
-The most important aes mappings are: `x`, `y`, `alpha`, `color`, `colour`,
-`fill`, `linetype`, `shape`, `size` and `stroke`.
+Las asignaciones más importantes son: `x`,` y`, `alpha`,` color`, `colour`,
+`fill`,` linetype`, `shape`,` size` y `stroke`.
 
-- Still no specific data is plotted, as we have to define what kind of geometry
-will be used for the plot. The most straightforward is probably using points.
-Points is one of the `geoms` options, the graphical representation of the data
-in the plot. Others are lines, bars,... To add a geom to the plot use `+`
-operator:
+- Todavía no tenemos un gráfico, primero tenemos que definir qué tipo de geometría
+utilizar. Lo más sencillo es probablemente usar puntos.
+Puntos es una de las opciones de geometría `geoms`, que define la representación gráfica de los datos.
+Otras geometría son líneas, barras, etc. Para agregar un `geom` al gráfico usa el símbolo `+`:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -103,30 +94,26 @@ operator:
 ~~~
 {: .language-python}
 
-The `+` in the `plotnine` package is particularly useful because it allows you
-to modify existing `plotnine` objects. This means you can easily set up plot
-*templates* and conveniently explore different types of plots, so the above
-plot can also be generated with code like this:
-
+El símbolo `+` en el paquete `plotnine` es particularmente útil porque te permite
+modificar los objetos `plotnine` existentes. Esto significa que puedes configurar fácilmente el gráfico con *plantillas* y explorar convenientemente diferentes tipos de gráficos.  El gráfico anterior también se puede generar con código como este:
 
 ~~~
-# Create
+# Crea un gráfico
 surveys_plot = p9.ggplot(data=surveys_complete,
                          mapping=p9.aes(x='weight', y='hindfoot_length'))
 
-# Draw the plot
+# Dibuja los puntos en el marco
 surveys_plot + p9.geom_point()
 ~~~
 {: .language-python}
 
 ![png](../fig/06_first_plot.png)
 
-> ## Challenge - bar chart
-> Working on the `surveys_complete` data set, use the `plot-id` column to
-> create a `bar`-plot that counts the number of records for each plot. (Check
-> the documentation of the bar geometry to handle the counts)
+> ## Desafío - gráfico de barras
+> Trabajando con los datos de `survey_complete`, usa la columna `plot-id` para
+> crear un gráfico de barra `geom_bar` que cuenta el número de registros en cada plot-id. (Mira la documentación de la geometría de barra para manejar los conteos).
 >
-> > ## Answers
+> > ## Respuestas
 > >
 > > ~~~
 > > (p9.ggplot(data=surveys_complete,
@@ -140,19 +127,18 @@ surveys_plot + p9.geom_point()
 > {: .solution}
 {: .challenge}
 
-Notes:
+Notas:
 
-- Anything you put in the `ggplot()` function can be seen by any geom layers
-that you add (i.e., these are universal plot settings). This includes the `x`
-and `y` axis you set up in `aes()`.
-- You can also specify aesthetics for a given `geom` independently of the
-aesthetics defined globally in the `ggplot()` function.
+- Cualquier ajuste en la función `ggplot()` se visualiza en las capas del gráfico
+(por ejemplo, las configuraciones universales). Esto incluye los ejes `x` y `y`
+ que configuraste en las capa de estéticas `aes()`.
+- También puedes especificar la estética para un `geom` independientemente de las
+estéticas definida globalmente en la función `ggplot()`.
 
-# Building your plots iteratively
+# Construyendo tus gráficos de forma iterativa
 
-Building plots with `plotnine` is typically an iterative process. We start by
-defining the dataset we'll use, lay the axes, and choose a geom. Hence, the
-`data`, `aes` and `geom-*` are the elementary elements of any graph:
+La construcción de gráficos con `plotnine` es típicamente un proceso iterativo. Empezamos definiendo el conjunto de datos que usaremos, colocaremos los ejes y elegiremos un geom. Por lo tanto, los elementos mínimos de cualquier gráfico son
+ `data`,` aes` y `geom-*`:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -162,9 +148,9 @@ defining the dataset we'll use, lay the axes, and choose a geom. Hence, the
 ~~~
 {: .language-python}
 
-Then, we start modifying this plot to extract more information from it. For
-instance, we can add transparency (alpha) to avoid overplotting:
-
+Luego, comenzamos a modificar este gráfico para extraer más información. Por
+ejemplo, podemos agregar transparencia (alfa) para evitar la obstrucción visual
+por aglomeración de puntos:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -176,7 +162,7 @@ instance, we can add transparency (alpha) to avoid overplotting:
 
 ![png](../fig/06_alpha_plot.png)
 
-We can also add colors for all the points
+¡También puedes agregar color a los puntos!
 
 
 ~~~
@@ -189,8 +175,8 @@ We can also add colors for all the points
 
 ![png](../fig/06_blue_plot.png)
 
-Or to color each species in the plot differently, map the `species_id` column
-to the color aesthetic:
+Si quieres usar un color diferente para cda especie, tienes que conectar la
+columna `species_id` con la estética del color:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -204,11 +190,11 @@ to the color aesthetic:
 
 ![png](../fig/06_color_plot.png)
 
-Apart from the adaptations of the arguments and settings of the `data`, `aes`
-and `geom-*` elements, additional elements can be added as well, using the `+`
-operator:
+Aparte de las configuraciones en los argumentos `data`, ` aes`
+y los elementos `geom-*`, también se pueden agregar elementos adicionales,
+ usando el signo `+`:
 
-- Changing the labels:
+- Cambiando las etiquetas:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -221,8 +207,9 @@ operator:
 
 ![png](../fig/06_color_label_plot.png)
 
-- Defining scale for colors, axes,... For example, a log-version of the x-axis
-could support the interpretation of the lower numbers:
+- Puedes también cambiar las escalas de colores, ejes, etc. Por ejemplo,
+una versión del gráfico usando el logarítmo de los números en el eje x
+podría ayudar a una mejor interpretación de los números más pequeños:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -236,9 +223,8 @@ could support the interpretation of the lower numbers:
 
 ![png](../fig/06_log_plot.png)
 
-- Changing the theme (`theme_*`) or some specific theming (`theme`) elements.
-Usually plots with white background look more readable when printed.  We can
-set the background to white using the function `theme_bw()`.
+- También puedes cambiar el tema (`theme_*`) o algunos elementos específicos del tema (`theme`).
+Por lo general, los gráficos con fondo blanco parecen más legibles cuando se imprimen. Entonces, podemos configurar el fondo a blanco usando la función `theme_bw()`.
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -254,13 +240,13 @@ set the background to white using the function `theme_bw()`.
 
 ![png](../fig/06_white_plot.png)
 
-> ## Challenge - Bar plot adaptations
-> Adapt the bar plot of the previous exercise by mapping the `sex` variable to
-> the color fill of the bar chart. Change the `scale` of the color fill by
-> providing the colors `blue` and `orange` manually
-> (see [API reference](https://plotnine.readthedocs.io/en/stable/api.html#Color-and-fill-scales) to find the appropriate function).
+> ## Desafío - retocando un gráfico de barras
+> Usa el código del ejercicio anterior y cambia la estética de color por la
+> variable `sex`, también cambia la geometría para tener un gráfico de barras,
+> finalmente, cambia la escala `scale` del color de relleno para que tengas una barra
+> azul y una naranja usando `blue` y `orange` (mira este link en inglés de la referencia [API reference plotnine](https://plotnine.readthedocs.io/en/stable/api.html#Color-and-fill-scales) para encontrar la función que necesitas).
 >
-> > ## Answers
+> > ## Respuestas
 > >
 > > ~~~
 > > (p9.ggplot(data=surveys_complete,
@@ -274,6 +260,7 @@ set the background to white using the function `theme_bw()`.
 > > ![png](../fig/06_challenge_color_bar.png)
 > {: .solution}
 {: .challenge}
+
 
 
 # Plotting distributions
