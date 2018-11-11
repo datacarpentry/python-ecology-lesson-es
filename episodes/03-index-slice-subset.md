@@ -112,7 +112,7 @@ Esto es diferente de otros lenguajes como R y Matlab que indexan elementos dentr
 de objetos iniciando en 1.
 
 ~~~
-# Crear una lista de números:
+# Crea una lista de números:
 a = [1, 2, 3, 4, 5]
 ~~~
 {: .language-python}
