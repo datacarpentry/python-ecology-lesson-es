@@ -13,12 +13,12 @@ objectives:
     - "Reasignar valores dentro de subconjuntos de datos de un **DataFrame**."
     - "Crear una copia de un **DataFrame**."
     - "Consultar/Seleccionar un subconjunto de datos usando un conjunto de criterios utilizando los siguientes operadores: =, !=, >, <, >=, <=."
-    - "Lozalizar subconjuntos de datos utilizando **masks**."
+    - "Lozalizar subconjuntos de datos utilizando máscaras."
     - "Describir objetios tipo **BOOLEAN** en Python y manipular datos usando **BOOLEANs**."
 keypoints:
     - "En Python, fragmentos de datos pueden ser accedidos usando índices, **slices**, encabezados de columnas, y subconjuntos basados en condiciones."
-    - "Python usa idexación base-0, en la cual el primer elemento en una lista, tupla o cualquier otra structura de datos tien un indice de 0."
-    - "**Pandas** permite procedimientos comunes de exploracion de datos como indexación de datos, **slicing** y creación de subconjuntos basados en condiciones."
+    - "Python usa idexación base-0, en la cual el primer elemento de una lista, tupla o cualquier otra structura de datos tiene un indice de 0."
+    - "**Pandas** permite usar procedimientos comunes de exploracion de datos como indexación de datos, **slicing** y creación de subconjuntos basados en condiciones."
     
 ---
 
