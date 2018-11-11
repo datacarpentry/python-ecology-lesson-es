@@ -105,7 +105,7 @@ Python nos informa que tipo de error es en el rastreo, en la parte inferior dice
 
 **RECORDATORIO**: Python usa Indexación en base-0
 
-Recordemos que Python usa indexación en base-0
+Recordemos que Python usa indexación en base-0.
 Esto quiere decir que el primer elemento en un objeto esta localizado en la posición 0.
 Esto es diferente de otros lenguajes como R y Matlab que indexan elementos dentro 
 de objetos iniciando en 1.
