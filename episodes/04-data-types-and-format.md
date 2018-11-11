@@ -73,13 +73,9 @@ de datos. Más sobre esto en la tabla de abajo:
 
 | Tipo en Pandas | Tipo en Python Nativo | Descripción |
 |----------------|-----------------------|-------------|
-| object | string | El dtype más general. Será asignado a tu columna si la
-columna contiene tipos mixtos (números y secuencias de caracteres). |
-| int64  | int | Caracteres numéricos. 64 se refiere a la memoria asignada
-para almacenar el caracter. |
-| float64 | float | Caracteres numéricos con decimales. Si una columna contiene
-números y NaNs (ver más abajo), Pandas usará float64 por defecto, en caso de
-que los datos faltantes contengan decimales. |
+| object | string | El dtype más general. Será asignado a tu columna si la columna contiene tipos mixtos (números y secuencias de caracteres). |
+| int64  | int | Caracteres numéricos. 64 se refiere a la memoria asignada para almacenar el caracter. |
+| float64 | float | Caracteres numéricos con decimales. Si una columna contiene números y NaNs (ver más abajo), Pandas usará float64 por defecto, en caso de que los datos faltantes contengan decimales. |
 | datetime64, timedelta[ns] | N/A (but see the [datetime] module in Python's standard library) | Values meant to hold time data. Look into these for time series experiments. |
 
 [datetime]: http://doc.python.org/2/library/datetime.html
