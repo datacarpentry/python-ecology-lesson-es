@@ -42,10 +42,10 @@ Vamos a continuar usando el dataset **surveys** que usamos con la lección
 anterior. Reabrámoslo y leamos los datos de nuevo:
 
 ~~~
-# Asegurar que panda este cargado
+# Asegurar que panda este disponible
 import pandas as pd
 
-# leer el archivo **survey** CSV
+# leer el archivo **surveys** CSV
 surveys_df = pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
@@ -56,36 +56,36 @@ A menudo necesitamos trabajar con subconjuntos de un objeto **DataFrame**. Exist
 maneras de lograr esto, incluyendo: usando etiquetas (encabezados de columnas), rangos numéricos, 
 o índices de localizaciones específicas x,y.
 
-## Seleccionando datos usando Etiquetas (Encabezados de Columnas)
+## Seleccionando datos mediante el uso de Etiquetas (Encabezados de Columnas)
 
-We use square brackets `[]` to select a subset of an Python object. For example,
-we can select all data from a column named `species_id` from the `surveys_df`
-DataFrame by name. There are two ways to do this:
+Utilizamos corchetes `[]` para seleccionar un subconjunto de un objeto en Python. Por ejemplo, 
+podemos seleccionar todos los datos de una columna llamada `species_id`  del `surveys_df` **DataFrame** 
+usando el nombre de la columna. Existen dos maneras de hacer esto:
 
 ~~~
-# TIP: use the .head() method we saw earlier to make output shorter
-# Method 1: select a 'subset' of the data using the column name
+# TIP: use el método .head() que vimos anteriormente para hacer la salida mas corta
+# Método 1: seleccione un 'subconjunto' de los datos usando el nombre de la columna
 surveys_df['species_id']
 
-# Method 2: use the column name as an 'attribute'; gives the same output
+# Método 2: use el nombre de la columna como un 'atributo'; esto produce la misma salida
 surveys_df.species_id
 ~~~
 {: .language-python}
 
-We can also create a new object that contains only the data within the
-`species_id` column as follows:
+También podemos crear un nuevo objeto que contiene solamente los datos de la 
+columna `species_id` de la siguiente manera:
 
 ~~~
-# Creates an object, surveys_species, that only contains the `species_id` column
+# Crear un objeto, surveys_species, que solamente contiene la columna `species_id`
 surveys_species = surveys_df['species_id']
 ~~~
 {: .language-python}
 
-We can pass a list of column names too, as an index to select columns in that
-order. This is useful when we need to reorganize our data.
+También podemos pasar una lista de nombres de columnas, a manera de índice para seleccionar las columnas en ese orden. 
+Esto es útil cuando necesitamos reorganizar nuestros datos.
 
-**NOTE:** If a column name is not contained in the DataFrame, an exception
-(error) will be raised.
+**NOTA:** Si el nombre de una columna no esta incluido en el **DataFrame**, 
+se producirá una excepción (error).
 
 ~~~
 # Select the species and plot columns from the DataFrame
