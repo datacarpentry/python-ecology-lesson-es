@@ -17,7 +17,8 @@ keypoints:
 
 <br />
 ## ¿Qué es Python?
-Python es un lenguage de programación de propósito general que soporta un desarrollo rápido de aplicaciones de análisis de datos.
+
+Python es un lenguage de programación de propósito general que soporta un desarrollo rápido de aplicaciones de análisis de datos. La palabra "Python" es usada para referirse tanto al lenguaje de programación, como a la herramienta que ejecuta los scripts escritos en el lenguaje "Python".
 
 Sus principales ventajas son:
 
