@@ -22,21 +22,21 @@ keypoints:
     
 ---
 
-In lesson 01, we read a CSV into a Python pandas DataFrame.  We learned:
+En la lección 01, leímos un archivo CSV y cargamos los datos en un Python pandas **DataFrame**.  Aprendimos:
 
-- how to save the DataFrame to a named object,
-- how to perform basic math on the data,
-- how to calculate summary statistics, and
-- how to create plots of the data.
+- ¿Cómo guardar el **DataFrame** en un objeto,
+- ¿Cómo realizar operaciones matemáticas básica sobre datos,
+- ¿Cómo calcular resúmenes estadísticos, y
+- ¿Cómo crear gráficos a partir de los datos.
 
-In this lesson, we will explore **ways to access different parts of the data**
-using:
+En esta lección, exploraremos **formas de acceder a diferentes partes de los datos**
+usando:
 
-- indexing,
-- slicing, and
-- subsetting.
+- indexación,
+- segmentación, y
+- creación de subconjuntos.
 
-## Loading our data
+## Cargando nuestros datos
 
 We will continue to use the surveys dataset that we worked with in the last
 lesson. Let's reopen and read in the data again:
