@@ -38,26 +38,25 @@ usando:
 
 ## Cargando nuestros datos
 
-We will continue to use the surveys dataset that we worked with in the last
-lesson. Let's reopen and read in the data again:
+Vamos a continuar usando el dataset **surveys** que usamos con la lección
+anterior. Reabrámoslo y leamos los datos de nuevo:
 
 ~~~
-# Make sure pandas is loaded
+# Asegurar que panda este cargado
 import pandas as pd
 
-# Read in the survey CSV
+# leer el archivo **survey** CSV
 surveys_df = pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
 
-## Indexing and Slicing in Python
+## Indexando y Fragmentando en Python
 
-We often want to work with subsets of a **DataFrame** object. There are
-different ways to accomplish this including: using labels (column headings),
-numeric ranges, or specific x,y index locations.
+A menudo necesitamos trabajar con subconjuntos de un objeto **DataFrame**. Existen diferentes 
+maneras de lograr esto, incluyendo: usando etiquetas (encabezados de columnas), rangos numéricos, 
+o índices de localizaciones específicas x,y.
 
-
-## Selecting data using Labels (Column Headings)
+## Seleccionando datos usando Etiquetas (Encabezados de Columnas)
 
 We use square brackets `[]` to select a subset of an Python object. For example,
 we can select all data from a column named `species_id` from the `surveys_df`
