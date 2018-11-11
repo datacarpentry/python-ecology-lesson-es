@@ -28,7 +28,7 @@ Aprendimos:
 - como guardar el **DataFrame** en un objeto,
 - como realizar operaciones matemáticas básica sobre datos,
 - como calcular resúmenes estadísticos, y
-- ¿Cómo crear gráficos a partir de los datos.
+- como crear gráficos a partir de los datos.
 
 En esta lección, exploraremos **formas de acceder a diferentes partes de los datos**
 usando:
