@@ -3,7 +3,7 @@ title: Indexación, Segmentación y creación de subconjuntos a partir de DataFr
 teaching: 30
 exercises: 30
 questions:
-    - "¿Como puedo acceder a un dato específico en mi <b>dataset</b>?"
+    - "¿Como puedo acceder a un dato específico en mi **dataset**?"
     - "¿Como pueden ayudarme Python y Pandas a analizar mis datos?"
 objectives:
     - "Describir que es indexación base-0."
