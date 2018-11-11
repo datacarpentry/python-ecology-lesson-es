@@ -105,13 +105,13 @@ Python nos informa que tipo de error es en el rastreo, en la parte inferior dice
 
 **RECORDATORIO**: Python usa Indexación en base-0
 
-Let's remind ourselves that Python uses 0-based
-indexing. This means that the first element in an object is located at position
-0. This is different from other tools like R and Matlab that index elements
-within objects starting at 1.
+Recordemos que Python usa indexación en base-0
+Esto quiere decir que el primer elemento en un objeto esta localizado en la posición 0.
+Esto es diferente de otros lenguajes como R y Matlab que indexan elementos dentro 
+de objetos iniciando en 1.
 
 ~~~
-# Create a list of numbers:
+# Crear una lista de numeros:
 a = [1, 2, 3, 4, 5]
 ~~~
 {: .language-python}
