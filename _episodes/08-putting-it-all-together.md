@@ -15,40 +15,21 @@ keypoints:
 ---
 
 
-## Putting it all together
+## Resumiendo
 
-Up to this point, we have walked through tasks that are often
-involved in handling and processing data using the workshop ready cleaned
-files that we have provided. In this wrap-up exercise, we will perform
-many of the same tasks with real data sets. This lesson also covers data
-visualization.
+Hasta aquí, hemos repasado las tareas que se suelen llevar a cabo en el manejo y procesamiento de datos utilizando los archivos limpios que hemos proporcionado en el taller. En este ejercicio de repaso final, realizaremos muchas de las tareas que hemos visto pero con conjuntos de datos reales. Esta lección también incluye visualización de datos.
 
-As opposed to the previous ones, this lesson does not give step-by-step
-directions to each of the tasks. Use the lesson materials you've already gone
-through as well as the Python documentation to help you along.
+A diferencia de las anteriores, en esta lección no se dan instrucciones paso a paso para realizar cada una de las tareas. Usa los materiales de las lecciones que ya has estudiado, así como la documentación de Python.
 
-## Obtain data
+## Obtener datos
 
-There are many repositories online from which you can obtain data. We are
-providing you with one data file to use with these exercises, but feel free to
-use any data that is relevant to your research. The file
-[`bouldercreek_09_2013.txt`]({{ page.root }}/data/bouldercreek_09_2013.txt)
-contains stream discharge data, summarized at 15
-15 minute intervals (in cubic feet per second) for a streamgage on Boulder
-Creek at North 75th Street (USGS gage06730200) for 1-30 September 2013. If you'd
-like to use this dataset, please find it in the data folder.
+Hay muchos repositorios en línea desde los cuales puedes obtener datos. Te proporcionamos un archivo de datos para usar con estos ejercicios, pero no dudes en utilizar cualquier conjunto de datos que encuentres relevante para tu investigación. El archivo [`bouldercreek_09_2013.txt`]({{ page.root }}/data/bouldercreek_09_2013.txt) contiene datos sobre vertidos de agua, resumidos en 15 intervalos de 15 minutos (en pies cúbicos por segundo) de una estación hidrométrica en Boulder Creek en North 75th Street (USGS gage06730200) surante el periodo 1-30 de Septiembre de 2013. Si deseas usar este conjunto de datos, lo encontrarás en la carpeta de datos.
 
-## Clean up your data and open it using Python and Pandas
+## Limpia tus datos y ábrelos con Python y Pandas
 
-To begin, import your data file into Python using Pandas. Did it fail? Your data
-file probably has a header that Pandas does not recognize as part of the data
-table. Remove this header, but do not simply delete it in a text editor! Use
-either a shell script or Python to do this - you wouldn't want to do it by hand
-if you had many files to process.
+Para empezar, importa tu archivo de datos a Python usando Pandas. ¿No te funcionó? Puede que tu archivo de datos tenga un  encabezado que Pandas no reconozca como parte de la tabla. Elimina este encabezado, ¡pero no lo hagas borrándolo en un editor de texto! Usa la terminal o Python para hacerlo; si tuvieras que procesar muchos archivos sería engorroso tener que hacerlo a mano para cada uno.
 
-If you are still having trouble importing the data as a table using Pandas,
-check the documentation. You can open the docstring in an ipython notebook using
-a question mark. For example:
+Si aún tienes problemas para importar los datos como una tabla con Pandas, consulta la documentación. Prueba abrir la cadena de  documentos en un ipython notebook utilizando un signo de interrogación. Por ejemplo:
 
 ~~~
 import pandas as pd
@@ -56,15 +37,9 @@ pd.read_csv?
 ~~~
 {: .language-python}
 
-Look through the function arguments to see if there is a default value that is
-different from what your file requires (Hint: the problem is most likely the
-delimiter or separator. Common delimiters are `','` for comma, `' '` for space,
-and `'\t'` for tab).
+Fíjate en los argumentos de la función para ver si hay un valor predeterminado que sea diferente al que requiere tu archivo (Sugerencia: probablemente el problema sea el delimitador o separador. Los delimitadores más comunes son `','` para separador por comas, `' '` para separador por espacios, y `'\t'` para separador por pestañas).
 
-Create a DataFrame that includes only the values of the data that are useful to
-you. In the streamgage file, those values might be the date, time, and discharge
-measurements. Convert any measurements in imperial units into SI units. You can
-also change the name of the columns in the DataFrame like this:
+Crea una dataframe que incluya solo los valores de los datos que le sean útiles. En el archivo de ejemplo de la estación hidrométrica, esos valores podrían ser la fecha, la hora y las mediciones de descarga o vertido. Convierte cualquier medida en unidades imperiales a unidades SI. También puedes cambiar el nombre de las columnas en el DataFrame de la siguiente manera:
 
 ~~~
 df = pd.DataFrame({'1stcolumn':[100,200], '2ndcolumn':[10,20]}) # this just creates a DataFrame for the example!
