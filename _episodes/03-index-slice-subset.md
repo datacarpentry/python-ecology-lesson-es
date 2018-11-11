@@ -1,9 +1,9 @@
 ---
-title: Indexing, Slicing and Subsetting DataFrames in Python
+title: Indexación, Segmentación y creación de subconjuntos a partir de DataFrames en Python
 teaching: 30
 exercises: 30
 questions:
-    - "Como can I access specific data within my data set?"
+    - "¿Como puedo acceder a un dato específico en mi dataset?"
     - "How can Python and Pandas help me to analyse my data?"
 objectives:
     - "Describe what 0-based indexing is."
