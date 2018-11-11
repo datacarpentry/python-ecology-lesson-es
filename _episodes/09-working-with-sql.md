@@ -9,7 +9,7 @@ questions:
 objectives:
     - "Usa el módulo sqlite3 para interactuar con una base de datos SQL."
     - "Accede a los datos almacenados en SQLite usando Python."
-    - "Describe las diferencias de interactual con datos almacenados en un archivo CSV y datos almacenados en SQLite."
+    - "Describe las diferencias de interactuar con datos almacenados en un archivo CSV y datos almacenados en SQLite."
     - "Describe los beneficios de acceso a datos usando una base de datos en comparación con un archivo CSV."
 keypoints:
     - "Crea una conexión con `sqlite3.connect()`, luego un cursor para consultas con `.cursor()`."  
