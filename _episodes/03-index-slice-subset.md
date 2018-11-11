@@ -100,7 +100,7 @@ surveys_df['speciess']
 ~~~
 {: .language-python}
 
-Python nos informa que tipo de error es en el rastreo, en la parte inferior dice `KeyError: 'speciess'` lo que significa que `speciess` no es un nombre de columna (o **Key** en el diccionario de tipo de datos de Python relacionado).
+Python nos informa que tipo de error es en el rastreo, en la parte inferior dice `KeyError: 'speciess'` lo que significa que `speciess` no es un nombre de columna (o **Key** que está relacionado con el diccionario de tipo de datos de Python).
 
 ## Extrayendo subconjuntos basados en rangos: Segmentando
 
