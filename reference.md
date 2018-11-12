@@ -40,7 +40,7 @@ __docstring__
     de Python hace.
 
 facetar
-:   ss el acto de trazar relaciones entre variables definidas en múltiples subconjuntos 
+:   es el acto de trazar relaciones entre variables definidas en múltiples subconjuntos 
     de los datos y los resultados aparecen como paneles diferentes en la misma figura.
 
 __float__
