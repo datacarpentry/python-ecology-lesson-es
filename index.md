@@ -20,7 +20,7 @@ Esta es una introducción a **Python** diseñada para participantes sin experien
 > asegurar la correcta configuración **setup** de las herramientas para un trabajo eficiente.
 > **Estas lecciones no asumen conocimientos previos sobre los temas presentados o herramientas usadas.**
 >
-> Para empezar, sigue las direcciones en "[Setup](setup)" 
+> Para empezar, sigue las direcciones en [Setup](https://carpentries-es.github.io/python-ecology-lesson-es/setup.html)
 > para bajar los datos a tu computadora y siguen las instrucciones de instalación.
 >
 > #### Prerequisitos
@@ -32,5 +32,5 @@ Esta es una introducción a **Python** diseñada para participantes sin experien
 
 > ## Para instructores
 > Si enseñas esta lección en un taller, por favor lee las 
-> [Notas de instructor](guide).
+> [Notas de instructor](https://carpentries-es.github.io/python-ecology-lesson-es/guide).
 {: .prereq}
