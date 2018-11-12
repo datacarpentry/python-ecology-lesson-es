@@ -38,7 +38,7 @@ que estaremos explorando en esta lección: tipos de datos numéricos y de texto.
 
 ## Tipos de Datos Numéricos
 
-Los tipos de datos numéricos incluyen integers y floats. Un número de
+Los tipos de datos numéricos incluyen enteros y números de punto flotante. Un número de
 **punto flotante** (conocido como float) tiene puntos decimales incluso si
 el valor del punto decimal es 0. Por ejemplo: 1.13, 2.0, 1234.345. Si tenemos
 una columna que contiene tanto integers como floats, Pandas asignará el tipo
