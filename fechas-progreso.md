@@ -11,7 +11,7 @@ Indexing, Slicing and Subsetting DataFrames in Python | _episodes/03-index-slice
 Data Types and Formats | _episodes/04-data-types-and-format.md |  @fergarciafer  | nov 10 | |||
 Combining DataFrames with Pandas | _episodes/05-merging-data.md |  |  | |||
 Data Workflows and Automation | _episodes/06-loops-and-functions.md | @miguelgondu  | nov 9 | |||
-Making Plots With plotnine | _episodes/07-visualization-ggplot-python.md | @orchid00 | nov10  | |||
+Making Plots With plotnine | _episodes/07-visualization-ggplot-python.md | @orchid00 | nov10  | nov 12 |||
 Data Ingest and Visualization - Matplotlib and Pandas | _episodes/08-putting-it-all-together.md | @enricescorsa | nov 11 | |||
 Accessing SQLite Databases Using Python and Pandas | _episodes/09-working-with-sql.md | @orchid00 | nov 9 | nov10||||
 Glossary | _extras/reference.md |  |  | ||||
