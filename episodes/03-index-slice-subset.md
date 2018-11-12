@@ -199,7 +199,7 @@ distinta de objeto **DataFrame** `surveys_df`. Sin embargo, usar el operador `=`
 una instrucción simple de la forma `y = x` **no** crea una copia de nuestro **DataFrame**. 
 En lugar de esto, `y = x` crea una variable nueva `y` que hace referencia al **mismo** 
 objeto al que `x` hace referencia. Para decirlo de otra manera, solamente hay **un** 
-objeto (el **DataFrame**), y ambas `x` y `y` hacen referencia a él.
+objeto (el **DataFrame**), y ambos objetos `x` y `y` hacen referencia a él.
 
 En contraste, el método `copy()` de un **DataFrame** crea una copia verdadera del
 **DataFrame**.
