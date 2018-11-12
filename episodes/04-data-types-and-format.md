@@ -1,5 +1,5 @@
 ---
-title: Tipos de Datos y Formatos
+title: Tipos de datos y formatos
 teaching: 20
 exercises: 25
 questions:
