@@ -43,10 +43,10 @@ Vamos a continuar usando el dataset **surveys** que usamos con la lección
 anterior. Reabrámoslo y leamos los datos de nuevo:
 
 ~~~
-# Asegurar que panda este disponible
+# Asegura que panda este disponible
 import pandas as pd
 
-# leer el archivo **surveys** CSV
+# lee el archivo **surveys** CSV
 surveys_df = pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
@@ -64,8 +64,8 @@ podemos seleccionar todos los datos de una columna llamada `species_id`  del `su
 usando el nombre de la columna. Existen dos maneras de hacer esto:
 
 ~~~
-# TIP: use el método .head() que vimos anteriormente para hacer la salida mas corta
-# Método 1: seleccione un 'subconjunto' de los datos usando el nombre de la columna
+# TIP: usa el método .head() que vimos anteriormente para hacer la salida mas corta
+# Método 1: selecciona un 'subconjunto' de los datos usando el nombre de la columna
 surveys_df['species_id']
 
 # Método 2: usa el nombre de la columna como un 'atributo'; esto produce la misma salida
