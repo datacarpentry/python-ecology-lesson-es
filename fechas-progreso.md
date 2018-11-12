@@ -15,7 +15,7 @@ Making Plots With plotnine | _episodes/07-visualization-ggplot-python.md | @orch
 Data Ingest and Visualization - Matplotlib and Pandas | _episodes/08-putting-it-all-together.md | @enricescorsa | nov 11 | |||
 Accessing SQLite Databases Using Python and Pandas | _episodes/09-working-with-sql.md | @orchid00 | nov 9 | nov10||||
 Glossary | _extras/reference.md |  |  | ||||
-Index | _extras/index.md | @agbeltran | nov 9 | ||||
+Index | _extras/index.md | @agbeltran | nov 9 | nov 11 | @orchid00 | nov 12 | nov 12|
 Instructor guide | _extras/guide.md |  |  | ||||
 Overview of Jupyter Notebooks | _extras/jupyter_notebooks.md |  |  | ||||
 Setup | setup.md |  |  | ||||
