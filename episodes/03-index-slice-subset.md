@@ -64,7 +64,7 @@ podemos seleccionar todos los datos de una columna llamada `species_id`  del `su
 usando el nombre de la columna. Existen dos maneras de hacer esto:
 
 ~~~
-# TIP: usa el método .head() que vimos anteriormente para hacer la salida mas corta
+# Sugerencia: usa el método .head() que vimos anteriormente para hacer la salida más corta
 # Método 1: selecciona un 'subconjunto' de los datos usando el nombre de la columna
 surveys_df['species_id']
 
