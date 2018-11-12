@@ -49,11 +49,10 @@ surveys_complete = surveys_complete.dropna()
 
 # Creando gráficos con plotnine
 
-El paquete `plotnine` (es parte de [La gramática de gráficos] (http://link.springer.com/book/10.1007%2F0-387-28695-0)) se usa para la creación de gráficos complejos a partir de los datos en un `DataFrame`. Utiliza configuraciones por defecto, que ayudan a crear gráficos con calidad de
- publicación con unos pocos ajustes.
+El paquete `plotnine` (es parte de [La gramática de gráficos] (http://link.springer.com/book/10.1007%2F0-387-28695-0)) se usa para la creación de gráficos complejos a partir de los datos en un `DataFrame`. Utiliza configuraciones por defecto, que ayudan a crear gráficos con calidad de publicación con unos pocos ajustes.
 
 Los gráficos `plotnine` se construyen paso a paso agregando nuevos elementos uno
- encima del otro usando el operador `+`. Poniendo cada paso entre paréntesis `()` proporciona una sintaxis compatible con Python.
+encima del otro usando el operador `+`. Poniendo cada paso entre paréntesis `()` proporciona una sintaxis compatible con Python.
 
 Para construir un gráfico `plotnine` necesitamos:
 
@@ -64,13 +63,9 @@ Para construir un gráfico `plotnine` necesitamos:
 ~~~
 {: .language-python}
 
-Como no hemos definido nada más, solo un marco vacío está disponible y
-es presentado.
+Como no hemos definido nada más, sólo se presenta un marco vacío para el gráfico.
 
-- Define estéticas (`aes`), seleccionando las variables usadas en el gráfico y
-'mapearlas' a una presentación como tamaño, color, forma, etc.
-Puedes interpretar ésto como: las variables que se usan en el gráfico y son
-modificadas por objetos o geometrías:
+- Define las opciones del gráfico usando `mapping` y estéticas `aes`, para **seleccionar las variables** que quieres mostrar en el gráfico, y definir la presentación de estas variables, como tamaño, color, forma, etc. Las ésteticas más importantes son: `x`,` y`, `alpha`,` color` o `colour`, `fill`,` linetype`, `shape`,` size` y `stroke`.
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -78,13 +73,11 @@ modificadas por objetos o geometrías:
 ~~~
 {: .language-python}
 
-Las asignaciones más importantes son: `x`,` y`, `alpha`,` color`, `colour`,
-`fill`,` linetype`, `shape`,` size` y `stroke`.
-
 - Todavía no tenemos un gráfico, primero tenemos que definir qué tipo de geometría
-utilizar. Lo más sencillo es probablemente usar puntos.
-Puntos es una de las opciones de geometría `geoms`, que define la representación gráfica de los datos.
-Otras geometría son líneas, barras, etc. Para agregar un `geom` al gráfico usa el símbolo `+`:
+utilizar. Puedes interpretar ésto como: las variables que se usan en el gráfico son las que serán
+modificadas por objetos o geometrías. Lo más sencillo es probablemente usar puntos.
+`geom_point` es una de las opciones de geometría `geoms`, que define la representación gráfica de los datos.
+Otras geometrías son `geom_line`, `geom_bar`, etc. Para agregar un `geom` al gráfico usa el símbolo `+`:S
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -95,10 +88,10 @@ Otras geometría son líneas, barras, etc. Para agregar un `geom` al gráfico us
 {: .language-python}
 
 El símbolo `+` en el paquete `plotnine` es particularmente útil porque te permite
-modificar los objetos `plotnine` existentes. Esto significa que puedes configurar fácilmente el gráfico con *plantillas* y explorar convenientemente diferentes tipos de gráficos.  El gráfico anterior también se puede generar con código como este:
+modificar los objetos `plotnine` existentes. Esto significa que puedes configurar fácilmente el gráfico con *plantillas* y explorar convenientemente diferentes tipos de gráficos. El gráfico anterior también se puede generar con código como este:
 
 ~~~
-# Crea un gráfico
+# Crea un marco para el gráfico definiendo las variables
 surveys_plot = p9.ggplot(data=surveys_complete,
                          mapping=p9.aes(x='weight', y='hindfoot_length'))
 
@@ -111,7 +104,7 @@ surveys_plot + p9.geom_point()
 
 > ## Desafío - gráfico de barras
 > Trabajando con los datos de `survey_complete`, usa la columna `plot-id` para
-> crear un gráfico de barra `geom_bar` que cuenta el número de registros en cada plot-id. (Mira la documentación de la geometría de barra para manejar los conteos).
+> crear un gráfico de barra `geom_bar` que cuente el número de registros en cada parcela. (Mira la documentación de la geometría de barra para manejar los conteos).
 >
 > > ## Respuestas
 > >
@@ -132,13 +125,11 @@ Notas:
 - Cualquier ajuste en la función `ggplot()` se visualiza en las capas del gráfico
 (por ejemplo, las configuraciones universales). Esto incluye los ejes `x` y `y`
  que configuraste en las capa de estéticas `aes()`.
-- También puedes especificar la estética para un `geom` independientemente de las
-estéticas definida globalmente en la función `ggplot()`.
+- También puedes especificar estéticas individuales para cada `geom` independientemente de las estéticas definidas globalmente en la función `ggplot()`.
 
 # Construyendo tus gráficos de forma iterativa
 
-La construcción de gráficos con `plotnine` es típicamente un proceso iterativo. Empezamos definiendo el conjunto de datos que usaremos, colocaremos los ejes y elegiremos un geom. Por lo tanto, los elementos mínimos de cualquier gráfico son
- `data`,` aes` y `geom-*`:
+La construcción de gráficos con `plotnine` es típicamente un proceso iterativo. Empezamos definiendo el conjunto de datos que usaremos, colocaremos los ejes y elegiremos una geometría. Por lo tanto, los elementos mínimos de cualquier gráfico son `data`,` aes` y `geom-*`:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -149,7 +140,7 @@ La construcción de gráficos con `plotnine` es típicamente un proceso iterativ
 {: .language-python}
 
 Luego, comenzamos a modificar este gráfico para extraer más información. Por
-ejemplo, podemos agregar transparencia (alfa) para evitar la obstrucción visual
+ejemplo, podemos agregar transparencia (`alfa`) para evitar la obstrucción visual
 por aglomeración de puntos:
 
 ~~~
@@ -164,7 +155,6 @@ por aglomeración de puntos:
 
 ¡También puedes agregar color a los puntos!
 
-
 ~~~
 (p9.ggplot(data=surveys_complete,
            mapping=p9.aes(x='weight', y='hindfoot_length'))
@@ -175,7 +165,7 @@ por aglomeración de puntos:
 
 ![png](../fig/06_blue_plot.png)
 
-Si quieres usar un color diferente para cda especie, tienes que conectar la
+Si quieres usar un color diferente para cada especie, tienes que conectar la
 columna `species_id` con la estética del color:
 
 ~~~
@@ -190,9 +180,9 @@ columna `species_id` con la estética del color:
 
 ![png](../fig/06_color_plot.png)
 
-Aparte de las configuraciones en los argumentos `data`, ` aes`
+Aparte de las configuraciones en los argumentos `data`, `aes`
 y los elementos `geom-*`, también se pueden agregar elementos adicionales,
- usando el signo `+`:
+usando el signo `+`:
 
 - Cambiando las etiquetas:
 
@@ -207,8 +197,8 @@ y los elementos `geom-*`, también se pueden agregar elementos adicionales,
 
 ![png](../fig/06_color_label_plot.png)
 
-- Puedes también cambiar las escalas de colores, ejes, etc. Por ejemplo,
-una versión del gráfico usando el logarítmo de los números en el eje x
+- Puedes también cambiar las escalas de colores o ejes. Por ejemplo,
+una versión del gráfico anterior usando el logarítmo de los números en el eje x
 podría ayudar a una mejor interpretación de los números más pequeños:
 
 ~~~
@@ -223,8 +213,8 @@ podría ayudar a una mejor interpretación de los números más pequeños:
 
 ![png](../fig/06_log_plot.png)
 
-- También puedes cambiar el tema (`theme_*`) o algunos elementos específicos del tema (`theme`).
-Por lo general, los gráficos con fondo blanco parecen más legibles cuando se imprimen. Entonces, podemos configurar el fondo a blanco usando la función `theme_bw()`.
+- También puedes escoger un tema (`theme_*`) o algunos elementos específicos del tema (`theme`).
+Por lo general, los gráficos con fondo blanco parecen más legibles cuando se imprimen. Entonces, podemos configurar el fondo a blanco usando la función `theme_bw()` y cambiar el tamaño del texto con `theme()`.
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -262,12 +252,10 @@ Por lo general, los gráficos con fondo blanco parecen más legibles cuando se i
 {: .challenge}
 
 
+# Gráficos de distribuciones
 
-# Plotting distributions
-
-Visualizing distributions is a common task during data exploration and
-analysis. To visualize the distribution of `weight` within each `species_id`
-group, a boxplot can be used:
+Visualizar una distribución de datos es una tarea común en el análysis explorativo.
+Por ejemplo, para visualizar la distribución de datos de la columna `weight` por cada especie `species_id`, puedes usar una gráfica de caja:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -280,8 +268,7 @@ group, a boxplot can be used:
 
 ![png](../fig/06_boxplot.png)
 
-By adding points of the individual observations to the boxplot, we can have a
-better idea of the number of measurements and of their distribution:
+Agregando los puntos a la gráfica de caja nos dá una mejor idea de la distribución de las observaciones:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -295,26 +282,24 @@ better idea of the number of measurements and of their distribution:
 
 ![png](../fig/06_point_boxplot.png)
 
-> ## Challenge - distributions
+> ## Desafío - distribuciones
 >
-> Boxplots are useful summaries, but hide the *shape* of the distribution.
-> For example, if there is a bimodal distribution, this would not be observed
-> with a boxplot. An alternative to the boxplot is the violin plot (sometimes
-> known as a beanplot), where the shape (of the density of points) is drawn.
+> Los gráficos de caja son resúmenes útiles, pero ocultan la *forma* de la distribución.
+> Por ejemplo, si hay una distribución bimodal, esto no se observaría
+> con un gráfico de caja. Una alternativa al gráfico de caja es el gráfico de violín, donde se dibuja la forma (de la densidad de los puntos).
 >
-> In many types of data, it is important to consider the *scale* of the
-> observations.  For example, it may be worth changing the scale of the axis
-> to better distribute the observations in the space of the plot.
+> Al visualizar datos, es importante considerar la *escala* de la
+> observaciones. Por ejemplo, puede valer la pena cambiar la escala del eje para
+> distribuir mejor las observaciones en el espacio.
 >
-> - Replace the box plot with a violin plot, see `geom_violin()`
-> - Represent weight on the log10 scale, see `scale_y_log10()`
-> - Add color to the datapoints on your boxplot according to the plot from which
->   the sample was taken (`plot_id`)
+> - Reemplaza el gráfico de caja con uno de violín, mira `geom_violin()`
+> - Transforma la columna `weight` a la escala log10, mira `scale_y_log10()`
+> - Agrega color a los puntos en tu gráfico de acuerdo a la parcela donde
+> la muestra fue tomada (`plot_id`).
 >
-> Hint: Check the class for `plot_id`. By using `factor()` within the `aes`
-> mapping of a variable, `plotnine` will handle the values as category values.
+> Sugerencia: Primero comprueba la clase de `plot_id`. Si usas `factor()` dentro de la estética `aes`, `plotnine` manejará los valores como valores categóricos.
 >
-> > ## Answers
+> > ## Respuestas
 > >
 > > ~~~
 > > (p9.ggplot(data=surveys_complete,
@@ -332,10 +317,9 @@ better idea of the number of measurements and of their distribution:
 {: .challenge}
 
 
-# Plotting time series data
+# Gráficos de series
 
-Let's calculate number of counts per year for each species. To do that we need
-to group data first and count the species (`species_id`) within each group.
+Calculemos el número de cada tipo de especie por año. Para esto primero tenemos que agrupar las especies (`species_id`) por cada año `year`.
 
 ~~~
 yearly_counts = surveys_complete.groupby(['year', 'species_id'])['species_id'].count()
@@ -343,9 +327,7 @@ yearly_counts
 ~~~
 {: .language-python}
 
-When checking the result of the previous calculation, we actually have both the
-`year` and the `species_id` as a row index. We can reset this index to use both
-as column variable:
+Cuando revisamos los resultados del cálculo anterior, vemos que `year` y `species_id` son índices de fila. Podemos cambiar el index para que los dos sean usados como una variable:
 
 ~~~
 yearly_counts = yearly_counts.reset_index(name='counts')
@@ -353,9 +335,7 @@ yearly_counts
 ~~~
 {: .language-python}
 
-Timelapse data can be visualised as a line plot (`geom_line`) with years on `x`
-axis and counts on the `y` axis.
-
+Los gráficos de series se pueden visualizar usando líneas (`geom_line`) con años en el eje `x` y el conteo en el eje `y`.
 
 ~~~
 (p9.ggplot(data=yearly_counts,
@@ -366,9 +346,7 @@ axis and counts on the `y` axis.
 ~~~
 {: .language-python}
 
-Unfortunately this does not work, because we plot data for all the species
-together. We need to tell `plotnine` to draw a line for each species by
-modifying the aesthetic function and map the species_id to the color:
+Desafortunadamete eso no funciona, por que esto nos muestta todas las especies juntas. Tenemos que especificar que queremos una línea para cada especie. Esto se modifica en la función de estética conectando el color con la variable `species_id`:
 
 ~~~
 (p9.ggplot(data=yearly_counts,
@@ -382,15 +360,12 @@ modifying the aesthetic function and map the species_id to the color:
 
 ![png](../fig/06_time_plot.png)
 
-# Faceting
+# Facetas
 
-As any other library supporting the Grammar of Graphics, `plotnine` has a
-special technique called *faceting* that allows to split one plot into multiple
-plots based on a factor variable included in the dataset.
+Como cualquier librería que maneje la gramática de gráficos, `plotnine` tiene
+una función especial para facetear los gráficos, esto permite dividir el gráfico en multiples gráficos basados en una variable categórica.
 
-Consider our scatter plot of the `weight` versus the `hindfoot_length` from the
-previous sections:
-
+¿Recuerdas el gráfico de puntos que creaste antes, usando `weight` y `hindfoot_length`?
 ~~~
 (p9.ggplot(data=surveys_complete,
            mapping=p9.aes(x='weight',
@@ -401,9 +376,7 @@ previous sections:
 ~~~
 {: .language-python}
 
-We can now keep the same code and at the `facet_wrap` on a chosen variable to
-split out the graph and make a separate graph for each of the groups in that
-variable. As an example, use `sex`:
+Podemos reusar este códigoy agregar una faceta con `facet_wrap` en base a una variable categórica para dividir el gráfico, por ejemplo, usando la variable `sex`:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -417,7 +390,7 @@ variable. As an example, use `sex`:
 {: .language-python}
 ![png](../fig/06_facet_plot.png)
 
-We can apply the same concept on any of the available categorical variables:
+Ahora podemos aplicar el mismo concepto con cualquier variable categórica:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -432,14 +405,13 @@ We can apply the same concept on any of the available categorical variables:
 
 ![png](../fig/06_facet_all_plot.png)
 
-The `facet_wrap` geometry extracts plots into an arbitrary number of dimensions
-to allow them to cleanly fit on one page. On the other hand, the `facet_grid`
-geometry allows you to explicitly specify how you want your plots to be
-arranged via formula notation (`rows ~ columns`; a `.` can be used as a
-placeholder that indicates only one row or column).
+La capa de facetas `facet_wrap` divide los gráficos arbitrariamente para que
+entren sin problemas en una hoja. Por otro lado si quieres definir explícitamente
+la distribución de los gráficos usa `facet_grid` con una fórmula (`rows ~ columns`)
+un punto `.` indica que es sólo una fila o una columna.
 
 ~~~
-# only select the years of interest
+# Selecciona unos años que te interesen
 survey_2000 = surveys_complete[surveys_complete["year"].isin([2000, 2001])]
 
 (p9.ggplot(data=survey_2000,
@@ -453,11 +425,11 @@ survey_2000 = surveys_complete[surveys_complete["year"].isin([2000, 2001])]
 {: .language-python}
 ![png](../fig/06_select_plot.png)
 
-> ## Challenge - facetting
-> Create a separate plot for each of the species that depicts how the average
-> weight of the species changes through the years.
+> ## Desafío - facetas 1
+> Crea un gráfico separado por cada especie, que muestre como el peso medio de las especies cambia por año.
 >
-> > ## Answers
+> > ## Respuestas
+> >
 > > yearly_weight = surveys_complete.groupby(['year', 'species_id'])['weight'].mean().reset_index()
 > >
 > > ~~~
@@ -473,12 +445,12 @@ survey_2000 = surveys_complete[surveys_complete["year"].isin([2000, 2001])]
 {: .challenge}
 
 
-> ## Challenge - facetting
-> Based on the previous exercise, visually compare how the weights of male and
-> females has changed through time by creating a separate plot for each sex and
-> an individual color assigned to each `species_id`.
+> ## Desafío - facetas 2
+> Us ando el código del ejercicio anterior compara visualmente como los pesos de
+> machos y hembras van cambiando en el tiempo. Crea un gráfico separado for sexo `sex`
+> que use un color diferente por cada especie `species_id`.
 >
-> > ## Answers
+> > ## Respuestas
 > > yearly_weight = surveys_complete.groupby(['year', 'species_id', 'sex'])['weight'].mean().reset_index()
 > >
 > > (p9.ggplot(data=yearly_weight,
@@ -493,15 +465,13 @@ survey_2000 = surveys_complete[surveys_complete["year"].isin([2000, 2001])]
 {: .challenge}
 
 
-# Further customization
+# Más retoques
 
-As the syntax of `plotnine` follows the original R package `ggplot2`, the
-documentation of `ggplot2` can provide information and inspiration to customize
-graphs. Take a look at the `ggplot2` [cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/08/ggplot2-cheatsheet.pdf), and think of ways to improve the plot. You can write down some
-of your ideas as comments in the Etherpad.
+Como la sintaxis de `plotnine` sigue la versión original del paquete de R `ggplot2`,
+la documentación de `ggplot2` te dá mas información e inspiración para retocar tus gráficos. Mira la hoja resumen de `ggplot2` [cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/08/ggplot2-cheatsheet.pdf), y piensa de que maneras puedes mejorar el gráfico.
+Puedes escribir tus ideas y comentarios en el Etherpad.
 
-The theming options provide a rich set of visual adaptations. Consider the
-following example of a bar plot with the counts per year.
+Las opciones de tema nos proveen con una gran variedad de adaptaciones visuales. Usa el siguente ejemplo, un gráfico de barra que presenta cuantas observaciones hay por año.
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -513,10 +483,8 @@ following example of a bar plot with the counts per year.
 
 ![png](../fig/06_overlap_bars.png)
 
-Notice that we use the `year` here as a categorical variable by using the
-`factor` functionality. However, by doing so, we have the individual year
-labels overlapping with eachother. The `theme` functionality provides a way to
-rotate the text of the x-axis labels:
+Aquí hemos usado el año `year` como una variable categórica usando la función
+`factor`. Pero al hacer esto, las etiquetas de los años se sobreponen. Usando una opción de tema `theme` podemos rotar las etiquetas en el eje x:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
@@ -530,14 +498,12 @@ rotate the text of the x-axis labels:
 
 ![png](../fig/06_good_bars.png)
 
-When you like a specific set of theme-customizations you created, you can save
-them as an object to easily apply them to other plots you may create:
-
+Cuando encuentres las opciones de visualización que te agraden y forman parte del tema, puedes guardar estas opciones en un objeto para luego reusarlo en los próximos gráficos que vayas a crear.
 
 ~~~
-my_custom_theme = p9.theme(axis_text_x = p9.element_text(color="grey", size=10,
+my_custom_theme = p9.theme(axis_text_x = p9.element_text(color='grey', size=10,
                                                          angle=90, hjust=.5),
-                           axis_text_y = p9.element_text(color="grey", size=10))
+                           axis_text_y = p9.element_text(color='grey', size=10))
 (p9.ggplot(data=surveys_complete,
            mapping=p9.aes(x='factor(year)'))
     + p9.geom_bar()
@@ -548,21 +514,17 @@ my_custom_theme = p9.theme(axis_text_x = p9.element_text(color="grey", size=10,
 
 ![png](../fig/06_theme_plot.png)
 
-> ## Challenge - customization
-> Please take another five minutes to either improve one of the plots
-generated in this exercise or create a beautiful graph of your own.
+> ## Desafío - hecho a medida
+Tómate otros cinco minutos para mejorar uno de los gráficos anteriores, o crea un nuevo gráfico hecho a medida, con los retoques que quieras.
 >
-> Here are some ideas:
+> Aquí hay algunas ideas:
 >
-> * See if you can change thickness of lines for the line plot .
-> * Can you find a way to change the name of the legend? What about its labels?
-> * Use a different color palette (see http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/)
+> * Intenta cambiar el grosor de las lineas en el gráfico de línea.
+> * ¿Podrías cambiar el la leyenda y sus etiquetas?
+> * Usa una paleta de colores nueva (mira las opciones aquí http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/)
 {: .challenge}
 
-
-After creating your plot, you can save it to a file in your favourite format.
-You can easily change the dimension (and its resolution) of your plot by
-adjusting the appropriate arguments (`width`, `height` and `dpi`):
+Después de crear tu nuevo gráfico, puedes guardarlo en diferentes formatos. También puedes cambiar las dimensiones, la resolución usando `width`, `height` and `dpi`:
 
 
 ~~~
@@ -575,4 +537,3 @@ my_plot.save("scatterplot.png", width=10, height=10, dpi=300)
 {: .language-python}
 
 {% include links.md %}
-
