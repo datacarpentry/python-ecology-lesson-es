@@ -201,39 +201,38 @@ En lugar de esto, `y = x` crea una variable nueva `y` que hace referencia al **m
 objeto al que `x` hace referencia. Para decirlo de otra manera, solamente hay **un** 
 objeto (el **DataFrame**), y ambas `x` y `y` hacen referencia a él.
 
-In contrast, the `copy()` method for a DataFrame creates a true copy of the
-DataFrame.
+En contraste, el método `copy()` de un **DataFrame** crea una copia verdadera del
+**DataFrame**.
 
-Let's look at what happens when we reassign the values within a subset of the
-DataFrame that references another DataFrame object:
+Veamos lo que sucede cuando reasignamos los valores dentro de un subconjunto del
+**DataFrame** que hace referencia a otro objeto **DataFrame**:
 
 ~~~
-# Assign the value `0` to the first three rows of data in the DataFrame
+# Asigna el valor `0` a las primeras tres filas de datos en el **DataFrame**
 ref_surveys_df[0:3] = 0
 ~~~
 {: .language-python}
 
-Let's try the following code:
+Probemos el siguiente código:
 
 ~~~
-# ref_surveys_df was created using the '=' operator
+# ref_surveys_df fue creado usando el operador '='
 ref_surveys_df.head()
 
-# surveys_df is the original dataframe
+# surveys_df es el **DataFrame** original
 surveys_df.head()
 ~~~
 {: .language-python}
 
-What is the difference between these two dataframes?
+¿Cuál es la diferencia entre estos dos **DataFrames**?
 
-When we assigned the first 3 columns the value of `0` using the
-`ref_surveys_df` DataFrame, the `surveys_df` DataFrame is modified too.
-Remember we created the reference `ref_survey_df` object above when we did
-`ref_survey_df = surveys_df`. Remember `surveys_df` and `ref_surveys_df`
-refer to the same exact DataFrame object. If either one changes the object,
-the other will see the same changes to the reference object.
+Cuando asignamos a las tres primeras columnas el valor de `0` usando el **DataFrame** `ref_surveys_df`,
+el **DataFrame** `surveys_df` también es modificado. Recuerda que creamos el objeto referencia `ref_survey_df` 
+arriba usando la instrucción `ref_survey_df = surveys_df`. Recuerda que `surveys_df` y `ref_surveys_df` hacen 
+referencia exactamente al mismo objeto **DataFrame**. Si cualquiera de los dos hace cambios al objeto, el otro 
+va a observar los mismos cambios del objeto referenciado.
 
-**To review and recap**:
+**Revisar y Recapitular**:
 
 - **Copy** uses the dataframe's `copy()` method
 
