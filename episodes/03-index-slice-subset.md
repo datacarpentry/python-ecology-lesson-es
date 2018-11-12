@@ -100,7 +100,8 @@ surveys_df['speciess']
 ~~~
 {: .language-python}
 
-Python nos informa que tipo de error es en el rastreo, en la parte inferior dice `KeyError: 'speciess'` lo que significa que `speciess` no es un nombre de columna (o **Key** que está relacionado con el diccionario de tipo de datos de Python).
+Python nos informa que tipo de error es en el rastreo, en la parte inferior dice `KeyError: 'speciess'` lo que significa 
+que `speciess` no es un nombre de columna (o **Key** que está relacionado con el diccionario de tipo de datos de Python).
 
 ## Extrayendo subconjuntos basados en rangos: Segmentando
 
@@ -123,23 +124,23 @@ a = [1, 2, 3, 4, 5]
 
 > ## Desafío - Extrayendo datos
 >
-> 1. What value does the code below return?
+> 1. ¿Qué valor devuelve el siguiente código?
 >
 >    ~~~
 >    a[0]
 >    ~~~
 >    {: .language-python }
 >
-> 2. How about this:
+> 2. ¿Qué valor devuelve este?:
 >
 >    ~~~
 >    a[5]
 >    ~~~
 >    {: .language-python }
 >
-> 3. In the example above, calling `a[5]` returns an error. Why is that?
+> 3. En el ejemplo anterior, llamar a `a [5]` devuelve un error. ¿Por qué?
 >
-> 4. What about?
+> 4. ¿Qué tal este?
 >
 >    ~~~
 >    a[len(a)]
@@ -148,57 +149,57 @@ a = [1, 2, 3, 4, 5]
 {: .challenge}
 
 
-## Slicing Subsets of Rows in Python
+## Segmentando Subconjuntos de Filas en Python
 
-Slicing using the `[]` operator selects a set of rows and/or columns from a
-DataFrame. To slice out a set of rows, you use the following syntax:
-`data[start:stop]`. When slicing in pandas the start bound is included in the
-output. The stop bound is one step BEYOND the row you want to select. So if you
-want to select rows 0, 1 and 2 your code would look like this:
+La segmentación utilizando el operador `[]` selecciona un conjunto de filas y/o columnas de 
+un **DataFrame**. Para segmentar un conjunto de filas, usa la siguiente sintaxis: `data[start:stop]`. 
+Cuando se hace segmentación en pandas, el límite inicial (**start**) se incluye en los datos de salida. 
+El límite final (**stop**) es un paso MÁS ALLÁ de la fila que desea seleccionar. 
+Así que si deseas seleccionar las filas 0, 1 y 2, tu código se vería así:
 
 ~~~
-# Select rows 0, 1, 2 (row 3 is not selected)
+# Selecciona filas 0, 1, 2 (fila 3 no es seleccionada)
 surveys_df[0:3]
 ~~~
 {: .language-python}
 
-The stop bound in Python is different from what you might be used to in
-languages like Matlab and R.
+El límite final en Python es diferente del que puedes estar acostumbrado a usar 
+en Lenguajes como Matlab y R.
 
 ~~~
-# Select the first 5 rows (rows 0, 1, 2, 3, 4)
+# Selecciona las primeras cinco filas (filas 0, 1, 2, 3, 4)
 surveys_df[:5]
 
-# Select the last element in the list
-# (the slice starts at the last element, and ends at the end of the list)
+# Selecciona el último elemento de la lista
+# (el segmento comienza en el último elemento y finaliza al final de la lista)
 surveys_df[-1:]
 ~~~
 {: .language-python}
 
-We can also reassign values within subsets of our DataFrame.
+También podemos reasignar valores dentro de subconjuntos de nuestro **DataFrame**.
 
-But before we do that, let's look at the difference between the concept of
-copying objects and the concept of referencing objects in Python.
+Pero antes de hacerlo, veamos la diferencia entre el concepto de copiar objetos y el 
+concepto de referenciar objetos en Python.
 
-## Copying Objects vs Referencing Objects in Python
+## Copiar Objetos vs Referenciar Objetos en Python
 
-Let's start with an example:
+Empecemos con un ejemplo:
 
 ~~~
-# Using the 'copy() method'
+# Usando el método 'copy()'
 true_copy_surveys_df = surveys_df.copy()
 
-# Using the '=' operator
+# Usando el operador '='
 ref_surveys_df = surveys_df
 ~~~
 {: .language-python}
 
-You might think that the code `ref_surveys_df = surveys_df` creates a fresh
-distinct copy of the `surveys_df` DataFrame object. However, using the `=`
-operator in the simple statement `y = x` does **not** create a copy of our
-DataFrame. Instead, `y = x` creates a new variable `y` that references the
-**same** object that `x` refers to. To state this another way, there is only
-**one** object (the DataFrame), and both `x` and `y` refer to it.
+Puedes pensar que el código `ref_surveys_df = surveys_df` crea una copia nueva y 
+distinta de objeto **DataFrame** `surveys_df`. Sin embargo, usar el operador `=` en 
+una instrucción simple de la forma `y = x` **no** crea una copia de nuestro **DataFrame**. 
+En lugar de esto, `y = x` crea una variable nueva `y` que hace referencia al **mismo** 
+objeto al que `x` hace referencia. Para decirlo de otra manera, solamente hay **un** 
+objeto (el **DataFrame**), y ambas `x` y `y` hacen referencia a él.
 
 In contrast, the `copy()` method for a DataFrame creates a true copy of the
 DataFrame.
