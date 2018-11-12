@@ -1,199 +1,175 @@
 ---
-title: Before we start
+title: Antes de comenzar
 teaching: 30
 exercises: 0
 questions:
-  - "What is Python and why should I learn it?"
+  - "¿Qué es Python y por qué debería aprenderlo?"
 objectives:
-  - "Describe the purpose of the editor, console, help, variable explorer and file explorer panes in Spyder."
-  - "Organize files and directories for a set of analyses as a Python project, and understand the purpose of the working directory."
-  - "Know where to find help."
-  - "Demonstrate how to provide sufficient information for troubleshooting with the Python user community."
+  - "Describir el propósito del editor, consola, ayuda, el panel explorador de variables y el panel explorador de archivos de Spyder."
+  - "Organizar los archivos y directorios para un grupo de análisis como proyecto de Python, y entender el propósito del directorio de trabajo."
+  - "Saber donde buscar ayuda."
+  - "Demostrar como proporcionar suficiente información para solucionar problemas junto con la comunidad de usuarios de Python."
 keypoints:
-  - "Python is an open source and platform independent programming language"
-  - "SciPy ecosystem for Python provides the tools necessary for scientific computing"
-  - "Jupyter Notebook and the Spyder IDE are great tools to code in and interact with Python with its large community it is easy to find help in the internet"
+  - "Python es un lenguaje de programación de código libre y plataforma independiente"
+  - "SciPy es un ecosistema para Python que provee las herramientas necesarias para la computación científica"
+  - "Jupyter Notebook y la Spyder IDE son excelentes herramientas para escribir código e interactuar con Python. Con su gran comunidad es fácil encontrar ayuda en internet"
 ---
 
 <br />
-## What is Python?
-Python is a general purpose programming language that supports rapid development of data analytics applications.
-The word "Python" is used to refer to both, the programming language and the tool that executes the scripts 
-written in Python language.
+## ¿Qué es Python?
 
-Its main advantages are:
+Python es un lenguage de programación de propósito general que soporta un desarrollo rápido de aplicaciones de análisis de datos. La palabra "Python" es usada para referirse tanto al lenguaje de programación, como a la herramienta que ejecuta los scripts escritos en el lenguaje "Python".
 
-* Free
-* Open-source
-* Available on all major platforms (macOS, Linux, Windows)
-* Supported by Python Software Foundation
-* Supports multiple programming paradigms
-* Has large community
-* Rich ecosystem of third-party packages
+Sus principales ventajas son:
 
-*So, why do you need Python for data analysis?*
+* Es gratis
+* De código abierto
+* Disponible para todas las plataformas mas importantes (macOS, Linux, Windows)
+* Es mantenido por la Python Software Foundation
+* Soporta múltiples paradigmas de programación
+* Tiene una gran comunidad
+* Tiene un rico ecosistema de paquetes de terceras partes
 
-### Easy to learn
-Python is easier to learn than other programming languages. This is important because lower barriers mean it is 
-easier for new members of the community get up to speed.
+*Entonces, ¿Por qué necesitas Python para el análisis de datos?*
 
-### Reproducibility
-Reproducibility is the ability to obtain the same results using the same dataset(s) and analysis.
+### Fácil de aprender
+Python es más fácil de aprender que otros lenguajes de programación. Esto es importante debido a que al tener barreras mas bajas es más fácil para los nuevos miembros de la comunidad ponerse al día.
 
-Data analysis written as a Python script can be reproduced on any platform.
-Moreover, if you collect more or correct existing data, you can quickly and easily re-run your analysis!
+### Reproducibilidad
+Reproducibilidad es la habilidad de obtener los mismos resultados usando los mismos datos y análisis.
 
-An increasing number of journals and funding agencies expect analyses to be reproducible,
-so knowing Python will give you an edge with these requirements.
+Un análisis de datos escrito como un script de Python puede ser reproducido en cualquier plataforma.
+Es más, si recolectas mas datos o corriges datos existentes puedes volver a ejecutar los análisis de manera rápida y sencilla.
 
-### Versatility
-Python is a versatile language that integrates with many existing applications to enable something completely amazing.
-For example, one can use Python to generate manuscripts, so that if you need to update your data, analysis procedure,
-or change something else, you can quickly regenerate all the figures and your manuscript will be updated automatically.
+Cada vez mas revistas científicas y agencias de financiación esperan que los análisis sean reproducibles, por lo tanto, saber Python te dará una ventaja sobre estos requisitos.
 
-Python can read text files, connect to databases, and many other data formats, on your computer or on the web.
+### Versatilidad
+Python es un lenguaje versátil que se integra con varias aplicaciones existentes para permitir hacer cosas sorprendentes.
+Por ejemplo, uno puede usar Python para generar manuscritos, de tal forma que si necesitas actualizar tus datos, procedimientos de análisis, o cambiar algo adicional, puedes volver a generar todas las figuras rápidamente y tu manuscrito se actualizará automáticamente.
 
-### Interdisciplinary and extensible
-Python provides a framework that allows anyone to combine approaches from different research 
-(but not only) disciplines to best suit your analysis needs.
+Python puede leer archivos de texto, conectarse a bases de datos, y a muchos otros formatos de datos, ya sea en tu computadora o en la web.
 
-### Python has a large and welcoming community
-Thousands of people use Python daily. Many of them are willing to help you through mailing lists and websites, 
-such as [Stack Overflow](https://stackoverflow.com) and
-[Anaconda community portal](https://www.anaconda.com/community/).
+### Interdisciplinario y extensible
+Python provee un marco de trabajo que permite que cualquier persona combine enfoques de diferentes disciplinas de investigación (no solo de investigación) para ajustarse mejor a tus necesidades de análisis.
 
-### Free and Open-Source Software (FOSS)... and Cross-Platform
-We know we have already said that but it is worth repeating.
+### Python tiene una comunidad grande y amable
+Miles de personas usan Python diariamente. Muchos de ellos están dispuestos a ayudarte a través de listas de correo y sitios web, tales como [Stack Overflow](https://stackoverflow.com) y el portal de la [comunidad de Anaconda](https://www.anaconda.com/community/).
+
+### Gratis y de código abierto (FOSS por sus siglas en inglés)... y multi-plataforma
+Sabemos que ya hemos nombrado esto, de todas formas, vale la pena repetirlo.
 
 <br />
-## Knowing your way around Anaconda
-[Anaconda](https://www.anaconda.com) distribution of Python includes a lot of its popular packages,
-such as the IPython console, Jupyter Notebook, and Spyder IDE.
-Have a quick look around the Anaconda Navigator. You can launch programs from the Navigator or use the command line.
+## Conociendo a Anaconda
+La distribución de Python [Anaconda](https://www.anaconda.com) incluye montones de paquetes populares como la consola Ipython, Jupyter Notebook, y Spyder IDE.
+Échale un vistazo al Navegador Anaconda. Puedes ejecutar programas desde el Navegador o usar la línea de comando.
 
-The [Jupyter Notebook](https://jupyter.org) is an open-source web application that allows you to create 
-and share documents that allow one to easilty create documents that combine code, graphs, and narrative text.
-[Spyder](https://spyder-ide.github.io) is an **Integrated Development Enviroment** that
-allows one to write Python scripts and interact with the Python software from within a single interface.
+[Jupyter Notebook](https://jupyter.org) es una aplicación web de código abierto que permite crear y compartir documentos que le dejan a uno crear de manera sencilla documentos que combinan código, gráficos y texto narrativo.
 
-Anaconda also comes with a package manager called [conda](https://conda.io/docs/),
-which makes it easy to install and update additional packages.
+[Spyder](https://spyder-ide.github.io) es un **Entorno de Desarrollo Integrado** (IDE por sus siglas en inglés) que permiten escribir scripts de Python e interactuar con el software de Python desde una interfaz única.
+
+Anaconda también viene con un gestor de paquetes llamado [conda](https://conda.io/docs/), el cual hace que sea fácil instalar y actualizar paquetes adicionales.
 
 <br />
-## Research Project: Best Practices
-It is a good idea to keep a set of related data, analyses, and text in a single folder.
-All scripts and text files within this folder can then use relative paths to the data files.
-Working this way makes it a lot easier to move around your project and share it with others.
+## Proyecto de Investigación: Buenas Prácticas
+
+Es una buena idea guardar los set datos relacionados, análisis, y texto en una única carpeta.
+Por lo tanto, todos los scripts y archivos de texto dentro de esta carpeta pueden usar paths relativos hacia los archivos de datos.
+Trabajar de esta manera hace que sea mucho más fácil mover tu proyecto y compartirlo con otras personas.
+
+### Organizando tu directorio de trabajo
+
+Usar una estructura de carpeta de forma consistente a través de tus proyectos te ayudará a mantener las cosas organizadas, y hará que sea fácil encontrar/archivar cosas en el futuro. Esto puede ser especialmente útil cuando tienes múltiples proyectos. En general, podrías llegar a querer crear directorios separados para tus scripts, datos, y documentos.
 
 
-### Organizing your working directory
-Using a consistent folder structure across your projects will help you keep things organized,
-and will also make it easy to find/file things in the future. This can be especially helpful 
-when you have multiple projects. In general, you may wish to create separate directories for
-your scripts, data, and documents.
+- **`data/`**: Usa esta carpeta para guardar tus datos crudos. Por el bien de la transparencia y procedencia, siempre deberías guardar una copia de tus **datos crudos**. Si necesitas limpiar tus datos, hazlo de manera programática (por ejemplo, con scripts) y asegúrate de separar los datos limpios de los crudos. Por ejemplo, puedes guardar los datos crudos en `./data/raw/` y los limpios en `./data/clean/`.
 
-- **`data/`**: Use this folder to store your raw data. For the sake of transparency and provenance,
-you should always keep a copy of your **raw data**. If you need to cleanup data, do it programmatically
-(_i.e._ with scripts) and make sure to separate cleaned up data from the raw one. 
-For example, you can store raw data in files `./data/raw/` and clean data in `./data/clean/`.
+- **`documents/`**: Usa esta carpeta para guardar lineamientos, borradores, y otro texto.
 
-- **`documents/`**: Use this folder to store outlines, drafts, and other text.
+- **`scripts/`**: Usa esta carpeta para guardar tus scripts (de Python) para limpieza, análisis y generación de gráficos que uses en este proyecto en particular.
 
-- **`scripts/`**: Use this folder to store your (Python) scripts for data cleaning, analysis, and plotting 
-that you use in this particular project.
+Puede que tengas que crear directorios adicionales dependiendo de las necesidades de tu proyecto, pero los que nombramos deberían ser el eje del directorio. Para este workshop, vamos a necesitar una carpeta `data/` para almacenar nuestros datos crudos, y luego vamos a tener que crear la carpeta `data_output/` cuando aprendamos como exportar datos como archivos CSV.
 
-You may need to create additional directories depending on your project needs, but these should form 
-the backbone of your project's directory. For this workshop, we will need a `data/` folder to store 
-our raw data, and we will create later a `data_output/` folder when we learn how to export data as CSV files.
+## ¿Qué es Programación y Coding?
 
+Programación es el proceso de escribir _"programas"_ que una computadora pueda ejecutar produciendo algún resultado (útil).
+La programación es un proceso de múltiples pasos que implican:
 
-## What is Programming and Coding?
+1. Identificar los aspectos de un problema de la vida real que pueda ser resuelto computacionalmente.
+2. Identificar la (mejor) solución computacional.
+3. Implementar la solución en un lenguaje de programación específico
+4. Testear, validar, y ajustar implementando la solución.
 
-Programming is the process of writing _"programs"_ that a computer can execute and produce some (useful) output.
-Programming is a multi-step process that involves the following steps:
+Mientras que _"Programar"_ se refiere a todos los pasos nombrados, _"Coding"_ se refiere solo al paso 3: _"Implementar la solución en un lenguaje de programación específico"_.
 
-1. Identifying the aspects of the real-world problem that can be solved computationally
-2. Identifying (the best) computational solution
-3. Implementing the solution in a specific computer language
-4. Testing, validating, and adjusting implemented solution.
+#### Si trabajas con Jupyter notebook:
 
-While _"Programming"_ refers to all of the above steps,
-_"Coding"_ refers to step 3 only: _"Implementing the solution in a specific computer language"_.
+Puedes tipear código de Python en una celda de input y luego ejecutarla presionando <kbd>Shift</kbd>+<kbd>Enter</kbd>.
 
-#### If you are working with Jupyter notebook:
-You can type Python code into a code cell and then execute the code by pressing <kbd>Shift</kbd>+<kbd>Return</kbd>.
-Output will be printed directly under the input cell.
-You can recognise a code cell by the `In[ ]:` at the beginning of the cell and output by `Out[ ]:`.
-Pressing the __+__ button in the menu bar will add a new cell.
-All your commands as well as any output will be saved with the notebook.
+El output se imprimirá directamente bajo la celda de input.
+Se puede reconocer a una celda de código mediante el `In[ ]:` al principio de la celda y a una celda de output por el `Out[ ]:`.
 
-#### If you are working with Spyder:
+Presionar el botón __+__ en la barra de menú agregará una nueva celda.
 
-You can either use the console or use script files (plain text files that contain your code).
-The console pane (in Spyder, the bottom right panel) is the place where commands written in the Python language 
-can be typed and executed immediately by the computer. It is also where the results will be shown.
-You can execute commands directly in the console by pressing <kbd>Return</kbd>,
-but they will be "lost" when you close the session.
-Spyder uses the [IPython](http://ipython.org) console by default.
+Todos tus comandos tal como los outputs serán guardadas con la notebook.
 
-Because we want our code and workflow to be reproducible, it is better to type the commands in
-the script editor, and save them as a script. This way, there is a complete record of what we did,
-and anyone (including our future selves!) can easily reproduce the results on their computer.
+#### Si trabajas con Spyder:
 
-Spyder allows you to execute commands directly from the script editor by using the run buttons on top.
-To run the entire script click _Run file_ or press <kbd>F5</kbd>, to run the current line click
-_Run selection or current line_ or press <kbd>F9</kbd>, other run buttons allow to run script cells or
-go into debug mode. When using <kbd>F9</kbd>, the command on the current line in the script
-(indicated by the cursor) or all of the commands in the currently selected text will be sent to the
-console and executed.
+Puedes usar tanto la consola o un archivo de script (archivos de texto plano que contienen tu código).
+El panel de consola (el panel abajo a la derecha, en Spyder) es el lugar donde los comandos escritos en el lenguaje de programación Python pueden ser tipeados y ejecutados inmediatamente por la computadora. También es donde se mostrarán los resultados.
+Puedes ejecutar los comandos directamente en la consola presionando <kbd>Enter</kbd>, pero serán "perdidos" cuando cierres la sesión.
+Spyder usar la consola [IPython](http://ipython.org) de manera predeterminada.
 
-At some point in your analysis you may want to check the content of a variable or the structure of 
-an object, without necessarily keeping a record of it in your script. You can type these commands
-and execute them directly in the console. Spyder provides the <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd>
-and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> shortcuts to allow you to jump between the script and the console panes.
+Debido a que queremos que nuestro código y flujo de trabajo sea reproducible, es mejor tipear los comandos en el editor de scripts, y guardarlos como un script. De esta manera, hay un registro completo de lo que hicimos, y cualquiera (incluyendo nuestros yo futuros!) pueden reproducir los resultados en su computadora de forma sencilla.
 
-If Python is ready to accept commands, the IPython console shows an `In [..]:` prompt with the current
-console line number in `[]`. If it receives a command (by typing, copy-pasting or sent from the script editor),
-Python will execute it, display the results in the `Out [..]:` cell, and come back with a new `In [..]:`
-prompt waiting for new commands.
+Spyder permite ejecutar comandos directamente desde el editor de scripts usando los botones de ejecución en la parte superior.
 
-If Python is still waiting for you to enter more data because it isn’t complete yet,
-the console will show a `...:` prompt. It means that you haven’t finished entering a complete command.
-This can be because you have not typed a closing parenthesis (`)`, `]`, or `}`) or quotation mark.
-When this happens, and you thought you finished typing your command, click inside the console window
-and press <kbd>Esc</kbd>; this will cancel the incomplete command and return you to the `In [..]:` prompt.
+Para ejectuar el script entero haz clic en _Run file_ o presiona <kbd>F5</kbd>, para ejecutar la línea actual haz clic en _Run selection or current line_ o presiona <kbd>F9</kbd>, otros botones de ejecución permiten ejecutar celdas de scripts o activar el modo debug. Cuando se usa <kbd>F9</kbd>, el comando en la línea actual del script (indicada por el cursor) o todos los comandos en el actual texto seleccionado serán enviados a la consola y ejecutados.
 
-## How to learn more after the workshop?
-The material we cover during this workshop will give you an initial taste of how you can use Python to analyze data for your own research. However, you will need to learn more to do advanced operations such as cleaning your dataset, using statistical methods, or creating beautiful graphics. The best way to become proficient and efficient at python, as with any other tool, is to use it to address your actual research questions. As a beginner, it can feel daunting to have to write a script from scratch, and given that many people make their code available online, modifying existing code to suit your purpose might make it easier for you to get started.
+En algún punto en tu análisis podrías llegar a desear comprobar el contenido de una variable o la estructura de un objeto, sin necesariamente guardar un registro en tu script. Puedes tipear estos comandos y ejecutarlos directamente en la consola. Spyder provee los atajos <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> y <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> que te permitirán "saltar" entre el panel de scripts y el de la consola.
 
-## Seeking help
+Si Python está listo para aceptar comandos, la consola IPython muestra un aviso `In [..]:` con el número de línea actual en la consola entre corchetes `[]`. Si recibe un comando (mediante tipeo, copiando y pegando o enviado desde el editor de scripts) Python lo va a ejecutar, mostrar los resultados en la celda `Out [..]:`, y luego volver con un nuevo aviso  `In [..]:` a la espera de nuevos comandos.
 
-* check under the _Help_ menu
-* type `help()`
-* type `?object` or `help(object)` to get information about an object
-* [Python documentation](https://www.python.org/doc/)
+Si Python todavía está esperando a que ingreses mas datos debido a que todavía no haz terminado, la consola mostrará un aviso `...:`. Significa que no haz terminado de ingresar un comando completo.
 
-Finally, a generic Google or internet search "Python task" will often either send you to the appropriate module documentation or a helpful forum where someone else has already asked your question.
+Esto es debido a que no haz tipeado un paréntesis de cierre (`)`, `]`, or `}`) o comilla.
+Cuando sucede esto, y pensaste que habías terminado de tipear tu comando, haz clic dentro de la ventana de la consola y presiona <kbd>Esc</kbd>; esto cancelará el comando incompleto y te retornará al aviso `In [..]:`.
 
-I am stuck… I get an error message that I don’t understand
-Start by googling the error message. However, this doesn’t always work very well because often, package developers rely on the error catching provided by python. You end up with general error messages that might not be very helpful to diagnose a problem (e.g. "subscript out of bounds"). If the message is very generic, you might also include the name of the function or package you’re using in your query.
+## ¿Cómo aprender mas luego del workshop?
 
-However, you should check Stack Overflow. Search using the [python] tag. Most questions have already been answered, but the challenge is to use the right words in the search to find the answers: <http://stackoverflow.com/questions/tagged/python>
+El material que cubrimos durante este workshop te dará una prueba inicial de como puede usarse Python para analizar datos de tu propia investigación. Sin embargo, todavía necesitarás aprender mas sobre operaciones mas avanzadas tal como la limpieza de tu set de datos, usar métodos estadísticos, o crear gráficos bonitos. La mejor manera de hacerse competente y eficiente en Python, así como con cualquier otra herramienta, es empleándola para abordar tus propias preguntas de investigación. Como principiante, puede sentirse desalentador tener que escribir un script desde el inicio, y dado que muchas personas comparten su código en la web, modificar código existente para adaptarlo a tus propósitos puede hacer que comenzar sea mas fácil.
 
-### Asking for help
-The key to receiving help from someone is for them to rapidly grasp your problem. You should make it as easy as possible to pinpoint where the issue might be.
+## Buscando ayuda
 
-Try to use the correct words to describe your problem. For instance, a package is not the same thing as a library. Most people will understand what you meant, but others have really strong feelings about the difference in meaning. The key point is that it can make things confusing for people trying to help you. Be as precise as possible when describing your problem.
+* chequea bajo el menú _Help_
+* tipea `help()`
+* tipea `?object` o `help(object)` para obtener información sobre un objeto
+* [Documentación de Python](https://www.python.org/doc/)
 
-If possible, try to reduce what doesn’t work to a simple reproducible example. If you can reproduce the problem using a very small data frame instead of your 50,000 rows and 10,000 columns one, provide the small one with the description of your problem. When appropriate, try to generalize what you are doing so even people who are not in your field can understand the question. For instance instead of using a subset of your real dataset, create a small (3 columns, 5 rows) generic one.
+Finalmente, una búsqueda genérica en Google o internet de "Python tarea_a_buscar" usualmente te enviará a la documentación del módulo apropiado o a un foro dónde alguien más ya ha hecho la misma pregunta.
 
-### Where to ask for help?
-* The person sitting next to you during the workshop. Don’t hesitate to talk to your neighbor during the workshop, compare your answers, and ask for help. You might also be interested in organizing regular meetings following the workshop to keep learning from each other.
-* Your friendly colleagues: if you know someone with more experience than you, they might be able and willing to help you.
-* [Stack Overflow](http://stackoverflow.com/questions/tagged/python): if your question hasn’t been answered before and is well crafted, chances are you will get an answer in less than 5 min. Remember to follow their guidelines on how to ask a good question.
+Estoy atorada... tengo un mensaje de error que no entiendo.
+Empieza por googlear el mensaje de error. Sin embargo, esto no siempre funciona muy bien debido a que a veces, los desarrolladores emplean los mensajes de error provistos por Python. Por ello terminas con mensajes de error generales que podrían no llegar a ser de ayuda para diagnosticar un problema (Ej.: "subscript out of bounds"). Si el mensaje es muy genérico, quizás deberías incluir en tu consulta el nombre de la función o paquete que estés usando.
+
+Sin embargo, deberías chequear Stack Overflow. Buscar usando el tag [python]. La mayoría de las preguntas ya han sido respondidas, el desafío es usar la combinación de palabras apropiadas en la búsqueda para encontrar las respuestas: <http://stackoverflow.com/questions/tagged/python>.
+
+### Pidiendo ayuda
+
+La clave para recibir ayuda de alguien es que ellos entiendan rápidamente tu problema. Deberías hacer que sea lo más fácil posible identificar dónde podría estar el inconveniente.
+
+Trata de usar las palabras correctas para describir el problema. Por ejemplo, un paquete no es lo mismo que una librería. La mayoría de las personas entenderán lo que quieres decir, pero otras tienen fuertes sentimientos sobre la diferencia en el significado. El punto clave es que puede hacer que las cosas sean confusas para las personas que tratan de ayudarte.
+Trata de ser tan precisa como sea posible cuando describes tu problema.
+
+Si es posible, trata de resumir lo que no funciona en un ejemplo simple y reproducible. Si puedes reproducir el problema usando una pequeña cantidad de datos en lugar de tus 50.000 filas y 10.000 columnas, proporciona el set de datos pequeño con la descripción de tu problema. Cuando sea apropiado, trata de generalizar lo que estas haciendo así incluso las personas que no están familiarizadas con tu campo de estudios puedan entender tu pregunta. Por ejemplo, en lugar de usar un subconjunto de tu set de datos real, crea uno pequeño (3 columnas, 5 filas) y genérico.
+
+### ¿Dónde pedir ayuda?
+
+* La persona sentada junto a tu durante el workshop. No dudes en hablar con tu vencina durante el workshop, compara tus respuestas, pide ayuda. También podrías estar interesada en organizar reuniones regularmente luego del workshop para seguir aprendiendo una de otra.
+* Tus amigables colegas: si conoces a alguien con mas experiencia que tu, ellas podrían estar capacitadas y dispuestas a ayudarte.
+* [Stack Overflow](http://stackoverflow.com/questions/tagged/python): si tu pregunta no ha sido contestada con anterioridad y además está bien planteada, hay chances de que obtengas una respuesta en 5 minutos. Recuerda seguir los lineamientos de cómo preguntar correctamente.
 * [Python mailing lists](https://www.python.org/community/lists/)
 
-## More resources
+## Más recursos
+
 [PyPI - the Python Package Index](https://pypi.python.org/pypi)
 
 [The Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/)
