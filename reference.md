@@ -94,7 +94,7 @@ __scripting mode__
 
 __Sequential__ (estructura de datos)
 :   es un grupo ordenado de objetos almacenados en la memoria al que se puede acceder 
-    especificando su índice, es decir, su posición, en la estructura.
+    especificando su índice, es decir, su posición en la estructura.
 
 __SQL__
 :   o __Structured Query Language__, es un lenguaje de dominio-específico (-REVISAR-) para 
