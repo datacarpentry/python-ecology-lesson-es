@@ -13,7 +13,7 @@ __CSV__ (archivo)
 :   es un acrónimo que significa archivo de valores separados por comas. Los archivos CSV 
     almacenan datos tabulares, ya sea números, secuencias de caracteres o una combinación
     de los dos, en texto plano con columnas separadas por una coma y filas por el carácter
-    de retorno de carro (carriage return character ? -REVISAR).
+    de salto de línea.
 
 base de datos
 :   es una colección organizada de datos.
