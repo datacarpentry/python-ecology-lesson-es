@@ -158,7 +158,7 @@ El límite final (**stop**) es un paso MÁS ALLÁ de la fila que desea seleccion
 Así que si deseas seleccionar las filas 0, 1 y 2, tu código se vería así:
 
 ~~~
-# Selecciona filas 0, 1, 2 (fila 3 no es seleccionada)
+# Selecciona las filas 0, 1, 2 (la fila 3 no es seleccionada)
 surveys_df[0:3]
 ~~~
 {: .language-python}
@@ -226,11 +226,11 @@ surveys_df.head()
 
 ¿Cuál es la diferencia entre estos dos **DataFrames**?
 
-Cuando asignamos a las tres primeras columnas el valor de `0` usando el **DataFrame** `ref_surveys_df`,
-el **DataFrame** `surveys_df` también es modificado. Recuerda que creamos el objeto referencia `ref_survey_df` 
-arriba usando la instrucción `ref_survey_df = surveys_df`. Recuerda que `surveys_df` y `ref_surveys_df` hacen 
-referencia exactamente al mismo objeto **DataFrame**. Si cualquiera de los dos hace cambios al objeto, el otro 
-va a observar los mismos cambios del objeto referenciado.
+Cuando asignamos a las tres primeras filas el valor de `0` usando el **DataFrame** `ref_surveys_df`,
+el **DataFrame** `surveys_df` también es modificado. Recuerda que creamos el objeto `ref_survey_df` 
+arriba usando la instrucción `ref_survey_df = surveys_df`. Por lo tanto `surveys_df` y `ref_surveys_df` hacen 
+referencia exactamente al mismo objeto **DataFrame**. Si cualquiera de los dos objetos (`ref_survey_df`, `surveys_df`) 
+es modificado, el otro objeto va a observar los mismos cambios.
 
 **Revisar y Recapitular**:
 
