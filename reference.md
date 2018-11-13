@@ -60,7 +60,8 @@ modo interactivo
     generalmente <kbd>Return</kbd>.
 
 clave de unión
-:   es una variable o un __array__ (--Técnicamente es una _matríz_ que no?) representando los nombres de las columnas sobre las cuales pandas.DataFrame.join() fusiona las columndas de dos __data sets__.
+:   es una variable o un __array__ representando los nombres de las columnas sobre las cuales 
+    __pandas.DataFrame.join()__ fusiona las columndas de dos __datasets__.
 
 
 librería
