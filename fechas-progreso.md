@@ -14,7 +14,7 @@ Data Workflows and Automation | _episodes/06-loops-and-functions.md | @miguelgon
 Making Plots With plotnine | _episodes/07-visualization-ggplot-python.md | @orchid00 | nov10  | nov 12 | @LauCIFASIS | nov 12 |
 Data Ingest and Visualization - Matplotlib and Pandas | _episodes/08-putting-it-all-together.md | @enricescorsa | nov 11 | nov 12 |||
 Accessing SQLite Databases Using Python and Pandas | _episodes/09-working-with-sql.md | @orchid00 | nov 9 | nov10||||
-Glossary | _extras/reference.md | @chekos | nov 12 | ||||
+Glossary | _extras/reference.md | @chekos | nov 12 | nov 13 | |||
 Index | _extras/index.md | @agbeltran | nov 9 | nov 11 | @orchid00 | nov 12 | nov 12|
 Instructor guide | _extras/guide.md | @NPalopoli | nov 12  | ||||
 Overview of Jupyter Notebooks | _extras/jupyter_notebooks.md | @chekos | nov12 | ||||
