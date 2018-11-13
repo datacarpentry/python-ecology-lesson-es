@@ -46,7 +46,7 @@ de dato float a toda la columna, de modo tal que los puntos decimales no se
 pierdan.
 
 Un **integer** nunca tendrá un punto decimal. Así que, si quisiéramos almacenar
-1.13 como un integer se almacenará como 1. Del mismo modo, 1234.345 se
+1.13 como un entero de tipo **integer** se almacenará como 1. Del mismo modo, 1234.345 se
 almacenará como 1234. A menudo, en Python verás el tipo de dato `Int64`
 que representa un integer de 64 bits. El 64 simplemente se refiere a la
 memoria asignada para almacenar datos en cada celda; eso se refiere
