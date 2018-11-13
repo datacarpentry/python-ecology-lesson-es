@@ -167,7 +167,7 @@ El límite final en Python es diferente del que puedes estar acostumbrado a usar
 en Lenguajes como Matlab y R.
 
 ~~~
-# Selecciona las primeras cinco filas (filas 0, 1, 2, 3, 4)
+# Selecciona las primeras cinco filas (con índices 0, 1, 2, 3, 4)
 surveys_df[:5]
 
 # Selecciona el último elemento de la lista
