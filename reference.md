@@ -46,7 +46,7 @@ __faceting__
 
 __float__
 :   es un tipo de datos en Python diseñado para guardar números decimales positivos y
-    negativos mediante una representación denominada punto flotante (-NECESITA REVISION-)
+    negativos mediante una representación denominada punto flotante.
 
 función
 :   es un grupo de declaraciones relacionadas que realizan una tarea específica.
@@ -65,7 +65,7 @@ clave de unión
 
 
 librería
-:   es un conjunto de funciones y metodos agrupados para realizar algún tipo de tareas.
+:   es un conjunto de funciones y metodos agrupados para realizar algún tipo de tareas específicas.
 
 
 __list__
