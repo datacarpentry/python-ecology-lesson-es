@@ -80,7 +80,7 @@ __loop__
 
 __NaN__
 :   es un acrónimo para Not-a-Number (No-un-Número) y representa que falta un valor o
-    que la calculación no puede generar un resultado significativo.
+    que el cálculo no puede generar un resultado con significado.
 
 __None__
 :   es un objeto que representa la falta de un valor.
