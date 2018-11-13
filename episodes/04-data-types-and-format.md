@@ -57,7 +57,7 @@ el almacenamiento y hacer más eficiente el procesamiento.
 ## Tipo de Datos de Texto
 
 En Python, el tipo de datos de texto se conoce como secuencia de caracteres.
-En Pandas se los conoce como Objetos. Las secuencias de caracteres pueden
+En Pandas se los conoce como objetos. Las secuencias de caracteres pueden
 contener números y / o caracteres. Por ejemplo, una secuencia de caracteres
 puede ser una palabra, una oración, o varias oraciones. Un objeto Pandas
 también podría ser un nombre de gráfico como 'plot1'. Una secuencia de
