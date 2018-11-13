@@ -3,17 +3,18 @@ layout: page
 title: Setup
 ---
 
-> ## Data
-> Data for this lesson is from the Portal Project Teaching Database -
-> [available on FigShare](https://figshare.com/articles/Portal_Project_Teaching_Database/1314459).
+> ## Datos
+> Los datos para esta lección son del **Portal Project Teaching Database** -
+> [
+disponible en **FigShare**](https://figshare.com/articles/Portal_Project_Teaching_Database/1314459).
 >
-> We will use the six files listed below for the data in this lesson.
-> Download these files to your computer either by clicking
-> [this link](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/weecology/portal-teachingdb),
-> which will give you everything in a single compressed file.
-> You'll need to unzip this file after downloading it.
+> Usaremos los seis archivos enumerados a continuación en esta lección.
+> Descarga estos archivos a su computadora haciendo clic en
+> [este enlace](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/weecology/portal-teachingdb),
+> que le dará todo en un solo archivo comprimido.
+> Deberá descomprimir este archivo después de descargarlo.
 >
-> Or download each file indvidually with the following links:
+> O descarga cada archivo individualmente con los siguientes enlaces:
 >
 > - [surveys.csv](https://ndownloader.figshare.com/files/10717177)
 > - [species.csv](https://ndownloader.figshare.com/files/3299483)
@@ -26,70 +27,76 @@ title: Setup
 
 
 > ## Software
-> [Python](http://python.org) is a popular language for
-> scientific computing, and great for general-purpose programming as
-> well.  Installing all of its scientific packages individually can be
-> a bit difficult, so we recommend an all-in-one installer.
+> [**Python**](http://python.org) es un lenguaje popular para
+> la computación científica y también es ideal para la programación de propósito general.
+> La instalación de todos los paquetes científicos individualmente puede ser
+> un poco difícil, por lo que recomendamos un instalador todo en uno.
 >
-> For this workshop we use Python version 3.x.
+> Para este taller utilizamos la versión 3.x.
 >
-> ### Required Python Packages for this workshop
+> ### Paquetes de **Python** requeridos para este taller
 >
 > * [Pandas](http://pandas.pydata.org/)
 > * [Jupyter notebook](http://jupyter.org/)
 > * [Numpy](http://www.numpy.org/)
 > * [Matplotlib](http://matplotlib.org/)
+> * [plotnine](https://github.com/has2k1/plotnine)
 {: .prereq}
 
-## Install the workshop packages
+## Instalación de software
 
-For installing these packages we will use Anaconda or Miniconda.
-They both use [Conda](http://conda.pydata.org/docs/), the main difference is
-that Anaconda comes with a lot of packages pre-installed.
-With Miniconda you will need to install the required packages.
+Usaremos **Anaconda** o **Miniconda** para instalar **Python** y los paquetes necesarios.
+Ambos usan [Conda](http://conda.pydata.org/docs/), pero
+Anaconda viene con **Pandas**, **Jupyter Notebook**, **Numpy** y **Matplotlib** preinstaladas,
+mientras que Miniconda no lo hace.
 
-### Anaconda installation
 
-Anaconda will install the workshop packages for you.
+### Instalación de **Anaconda**
 
-#### Download and install Anaconda
+**Anaconda** te instalará los paquetes.
 
-Download and install [Anaconda](https://www.continuum.io/downloads).
-Remember to download and install the installer for Python 3.x.
+#### Descarga e instala **Anaconda**
 
-#### Download plotting package
+Descarga e instala [**Anaconda**](https://www.continuum.io/downloads).
+Recuerde descargar e instalar el instalador para **Python** 3.x.
 
-The plotting package plotnine is not installed by default.  From the terminal,
-type:
+#### Descarga el paquete para crear gráficos.
+
+El paquete para crear gráficos, `plotnine`, no está instalado por defecto.
+Para instalarlo desde el terminal, escriba:
 
 ~~~
 conda install -c conda-forge plotnine
 ~~~
 {: .language-python}
 
-### Miniconda installation
+### Instalación de **Miniconda**
 
 Miniconda is a "light" version of Anaconda. If you install and use Miniconda
 you will also need to install the workshop packages.
 
-#### Download and install Miniconda
+**Miniconda** es una versión "ligera" de **Anaconda**.
+Si instala y usa **Miniconda**,
+también necesitará instalar los paquetes del taller.
 
-Download and install [Miniconda](http://conda.pydata.org/miniconda.html)
-following the instructions. Remember to download and run the installer for
-Python 3.x.
+#### Descarga e instala **Miniconda**
 
-#### Check the installation of Miniconda
+Descarga e instala [**Miniconda**](http://conda.pydata.org/miniconda.html)
+siguiendo las instrucciones. Recuerda descargar y ejecutar el instalador para
+**Python** 3.x.
 
-From the terminal, type:
+#### Compruebe la instalación de **Miniconda**
+
+En la terminal, escriba:
 
 ~~~
 conda list
 ~~~
 {: .language-bash}
 
-### Install the required workshop packages with conda
+### Instala los paquetes requeridos con **Conda**
 
-From the terminal, type:
+En la terminal, escriba:
 
 ~~~
 conda install -y numpy pandas matplotlib jupyter
@@ -97,18 +104,19 @@ conda install -c conda-forge plotnine
 ~~~
 {: .language-bash}
 
-## Launch a Jupyter notebook
+## Lanzar un **Jupyter Notebook**
 
-After installing either Anaconda or Miniconda and the workshop packages,
-launch a Jupyter notebook by typing this command from the terminal:
+Después de instalar **Python** y los paquetes requeridos,
+lanzar un **Jupyter Notebook** escribiendo este comando en la terminal:
 
 ~~~
 jupyter notebook
 ~~~
 {: .language-bash}
 
-The notebook should open automatically in your browser. If it does not or you
-wish to use a different browser, open this link: <http://localhost:8888>.
+Un **Jupyter Notebook** se abrirá automáticamente en su navegador.
+Si no es así, o si desea utilizar un navegador diferente, abra este enlace: <http://localhost: 8888>.
 
-For a bried introduction to Jupyter Notebooks, please consult with our
-[Introduction to Jupyter Notebooks](jupyter_notebooks) page.
+
+Para una breve introducción a **Jupyter Notebooks**, consulte nuestra página
+["Introducción a Jupyter Notebooks""](jupyter_notebooks).
