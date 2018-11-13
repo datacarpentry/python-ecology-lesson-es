@@ -62,7 +62,7 @@ contener números y / o caracteres. Por ejemplo, una secuencia de caracteres
 puede ser una palabra, una oración, o varias oraciones. Un objeto Pandas
 también podría ser un nombre de gráfico como 'plot1'. Una secuencia de
 caracteres también puede contener o consistir en números. Por ejemplo, '1234'
-podría ser almacenado como una secuencia de caracteres. También '10 .23'
+podría ser almacenado como una secuencia de caracteres. También '10.23'
 podría ser almacenado como secuencia de caracteres. Sin embargo **las
 las secuencias de caracteres que contienen números no se pueden utilizar en
 operaciones matemáticas**!
