@@ -111,4 +111,4 @@ tupla
 :   es una estructura de datos de Python diseñada para contener secuencias de __integers__,
     __floats__, cadenas de caracteres, y cualquier combinación de las anteriores. La
     secuencia es ordenada e indexada por __integers__, empezando desde cero. Los elementos
-    de una __list__ pueden ser accesados por su índice pero no pueden ser modificados.
+    de una __list__ pueden ser accedidos por su índice pero no pueden ser modificados.
