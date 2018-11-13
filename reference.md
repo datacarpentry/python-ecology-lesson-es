@@ -33,14 +33,14 @@ tipo de datos
 
 diccionario
 :   es una estructura de datos desordenada de Python que contiene pares clave-valor, donde
-    ambos, la clave y el valor, pueden ser integers, floats, o cadenas de caracteres. Los
+    ambos, la clave y el valor, pueden ser __integers__, __floats__, o cadenas de caracteres. Los
     elementos de un diccionario pueden ser accesados con su llave y pueden ser modificados.
 
 __docstring__
 :   es una cadena de caracteres de documentación opcional que describe lo que una función
     de Python hace.
 
-facetar
+__faceting__
 :   es el acto de trazar relaciones entre variables definidas en múltiples subconjuntos 
     de los datos y los resultados aparecen como paneles diferentes en la misma figura.
 
