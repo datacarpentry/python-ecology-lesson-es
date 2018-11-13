@@ -26,6 +26,10 @@ Los archivos `.md` en el folder `_episodes_en` son la referencia. Los archivos e
 Si eres nuevo con github, este tutorial toma 10-15 min https://guides.github.com/activities/hello-world/
 Claro que tenemos la versión traducida de la leccion de git con github, toma unas horas https://swcarpentry.github.io/git-novice-es/
 
+1. ¿Quieres ayudar con la revisión?
+Te invito a que leas este artículo https://help.github.com/articles/commenting-on-a-pull-request/
+el punto 6 es muy bueno, recién ha sido incoorporado y es muy útil, para directamente aceptar cambios.
+
 1. ¿Cuáles son las fechas importantes? 
 Queremos traducir entre Nov 9-25 y a medida que estén listas las traducciones ir revisando. La idea es terminar antes de Navidad del 2018 con la traducción y la revisión.
 
