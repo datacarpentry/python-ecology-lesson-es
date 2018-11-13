@@ -27,7 +27,7 @@ estructura de datos
 :   es una manera particular de organizar datos en memoria.
 
 tipo de datos
-:   es un tipo de artículo particular que puede ser asignado a una variable, definido
+:   es un tipo particular de elemento que puede ser asignado a una variable, definido
     por los valores que puede tomar, el lenguage de programación en uso y las operaciones
     que se le pueden aplicar.
 
