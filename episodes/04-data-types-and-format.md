@@ -1,72 +1,81 @@
 ---
-title: Data Types and Formats
+title: Tipos de datos y formatos
 teaching: 20
 exercises: 25
 questions:
-  - "What types of data can be contained in a DataFrame?"
-  - "Why is the data type important?"
+  - "¿Qué tipos de datos pueden estar contenidos en un DataFrame?"
+  - "¿Por qué es importante el tipo de datos?"
 objectives:
-    - "Describe how information is stored in a Python DataFrame."
-    - "Define the two main types of data in Python: text and numerics."
-    - "Examine the structure of a DataFrame."
-    - "Modify the format of values in a DataFrame."
-    - "Describe how data types impact operations."
-    - "Define, manipulate, and interconvert integers and floats in Python."
-    - "Analyze datasets having missing/null values (NaN values)."
-    - "Write manipulated data to a file."
+    - "Describir cómo se almacena la información en un DataFrame de Python."
+    - "Definir los dos tipos de datos principales en Python: texto y numéricos."
+    - "Examinar la estructura de un DataFrame."
+    - "Modificar el formato de los valores en un DataFrame."
+    - "Describir cómo los tipos de datos afectan a las operaciones."
+    - "Definir, manipular e interconvertir integers y floats en Python."
+    - "Analizar datasets que tienen valores faltantes/nulos (valores NaN)."
+    - "Escribir datos manipulados a un archivo."
 keypoints:
     - "FIXME"
 ---
 
-The format of individual columns and rows will impact analysis performed on a
-dataset read into python. For example, you can't perform mathematical
-calculations on a string (text formatted data). This might seem obvious,
-however sometimes numeric values are read into Python as strings. In this
-situation, when you then try to perform calculations on the string-formatted
-numeric data, you get an error.
+El formato de columnas y filas individuales afectará el análisis realizado en
+un dataset leído en Python. Por ejemplo, no se pueden realizar cálculos
+matemáticos sobre una secuencia de caracteres (datos con formato de texto).
+Esto puede parecer obvio, sin embargo, a veces en Python los valores numéricos
+son leídos como secuencias de caracteres. En esta situación, cuando intentas
+realizar cálculos con datos numéricos sobre datos formateados como secuencias
+de caracteres, obtienes un error.
 
-In this lesson we will review ways to explore and better understand the
-structure and format of our data.
+En esta lección repasaremos maneras de explorar y comprender mejor la
+estructura y formato de nuestros datos.
 
-# Types of Data
+# Tipos de Datos
 
-How information is stored in a
-DataFrame or a Python object affects what we can do with it and the outputs of
-calculations as well. There are two main types of data that we're explore in
-this lesson: numeric and text data types.
+La forma en que se almacena la información en un
+DataFrame u objeto Python afecta a lo que podemos hacer con él y también a
+los resultados de los cálculos. Hay dos tipos principales de datos
+que estaremos explorando en esta lección: tipos de datos numéricos y de texto.
 
-## Numeric Data Types
+## Tipos de Datos Numéricos
 
-Numeric data types include integers and floats. A **floating point** (known as a
-float) number has decimal points even if that decimal point value is 0. For
-example: 1.13, 2.0, 1234.345. If we have a column that contains both integers and
-floating point numbers, Pandas will assign the entire column to the float data
-type so the decimal points are not lost.
+Los tipos de datos numéricos incluyen enteros y números de punto flotante. Un número de
+**punto flotante** (conocido como float) tiene puntos decimales incluso si
+el valor del punto decimal es 0. Por ejemplo: 1.13, 2.0, 1234.345. Si tenemos
+una columna que contiene tanto enteros como números de punto flotante, Pandas asignará el tipo
+de dato float a toda la columna, de modo tal que los puntos decimales no se
+pierdan.
 
-An **integer** will never have a decimal point. Thus if we wanted to store 1.13 as
-an integer it would be stored as 1. Similarly, 1234.345 would be stored as 1234. You
-will often see the data type `Int64` in Python which stands for 64 bit integer. The 64
-simply refers to the memory allocated to store data in each cell which effectively
-relates to how many digits it can store in each "cell". Allocating space ahead of time
-allows computers to optimize storage and processing efficiency.
+Un **integer** nunca tendrá un punto decimal. Así que, si quisiéramos almacenar
+1.13 como un entero de tipo **integer** se almacenará como 1. Del mismo modo, 1234.345 se
+almacenará como 1234. A menudo, en Python verás el tipo de dato `Int64`
+que representa un entero de 64 bits. El 64 simplemente se refiere a la
+memoria asignada para almacenar datos en cada celda; eso se refiere
+a la cantidad de dígitos que puede efectivamente almacenar en cada "celda".
+Asignar espacio antes de tiempo permite a las computadoras optimizar
+el almacenamiento y hacer más eficiente el procesamiento.
 
-## Text Data Type
+## Tipo de Datos de Texto
 
-Text data type is known as Strings in Python, or Objects in Pandas. Strings can
-contain numbers and / or characters. For example, a string might be a word, a
-sentence, or several sentences. A Pandas object might also be a plot name like
-'plot1'. A string can also contain or consist of numbers. For instance, '1234'
-could be stored as a string. As could '10.23'. However **strings that contain
-numbers can not be used for mathematical operations**!
+En Python, el tipo de datos de texto se conoce como secuencia de caracteres.
+En Pandas se los conoce como objetos. Las secuencias de caracteres pueden
+contener números y / o caracteres. Por ejemplo, una secuencia de caracteres
+puede ser una palabra, una oración, o varias oraciones. Un objeto Pandas
+también podría ser un nombre de gráfico como 'plot1'. Una secuencia de
+caracteres también puede contener o consistir en números. Por ejemplo, '1234'
+podría ser almacenado como una secuencia de caracteres. También '10.23'
+podría ser almacenado como secuencia de caracteres. Sin embargo **las
+las secuencias de caracteres que contienen números no se pueden utilizar en
+operaciones matemáticas**!
 
-Pandas and base Python use slightly different names for data types. More on this
-is in the table below:
 
-| Pandas Type | Native Python Type | Description |
-|-------------|--------------------|-------------|
-| object | string | The most general dtype. Will be assigned to your column if column has mixed types (numbers and strings). |
-| int64  | int | Numeric characters. 64 refers to the memory allocated to hold this character. |
-| float64 | float | Numeric characters with decimals. If a column contains numbers and NaNs (see below), pandas will default to float64, in case your missing value has a decimal. |
+Pandas y Python básico utilizan nombres ligeramente diferentes para los tipos
+de datos. Más sobre esto en la tabla de abajo:
+
+| Tipo en Pandas | Tipo en Python Nativo | Descripción |
+|----------------|-----------------------|-------------|
+| object | string | El dtype más general. Será asignado a tu columna si la columna contiene tipos mixtos (números y secuencias de caracteres). |
+| int64  | int | Caracteres numéricos. 64 se refiere a la memoria asignada para almacenar el caracter. |
+| float64 | float | Caracteres numéricos con decimales. Si una columna contiene números y NaNs (ver más abajo), Pandas usará float64 por defecto, en caso de que los datos faltantes contengan decimales. |
 | datetime64, timedelta[ns] | N/A (but see the [datetime] module in Python's standard library) | Values meant to hold time data. Look into these for time series experiments. |
 
 [datetime]: http://doc.python.org/2/library/datetime.html
@@ -359,4 +368,3 @@ What we've learned:
 + How to use `to_csv` to write manipulated data to a file.
 
 {% include links.md %}
-
