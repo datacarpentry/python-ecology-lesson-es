@@ -102,7 +102,7 @@ __SQL__
     datos relacionales (__RDBMS__ por sus siglas en íngles).
     
 __SQLite__
-:   es un motor de base de datos de SQL (-REVISAR-), de dominio público.
+:   es un motor de base de datos de SQL, de dominio público e independiente.
 
 __string__ o cadena de caracteres
 :   es un tipo de datos de Python que almacena secuencias de caracteres.
