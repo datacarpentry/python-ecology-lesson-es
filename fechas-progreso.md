@@ -4,7 +4,7 @@ La meta es traducir toda la lección hasta el final del mes de Nov 2018 y luego 
 
 Archivo | Nombre de archivo | Reponsable de traducción | Fecha de inicio | Fecha de entrega | Responsable de revisión | Fecha de inicio | Fecha de entrega
 --- | --- | --- | --- | --- | --- | --- | --- 
-Before we start | _episodes/00-before-we-start.md | @LUS24 | nov 10 | nov 11 |||
+Before we start | _episodes/00-before-we-start.md | @LUS24 | nov 10 | nov 11 | @spereyra | nov 13 |
 Short Introduction to Programming in Python | _episodes/01-short-introduction-to-Python.md | @Helysalgado | nov 9 | |||
 Starting With Data | _episodes/02-starting-with-data.md | @jmbarrios  | nov 10 | |||
 Indexing, Slicing and Subsetting DataFrames in Python | _episodes/03-index-slice-subset.md | @welozano  | nov 10 | |@orchid00| nov 11 |
