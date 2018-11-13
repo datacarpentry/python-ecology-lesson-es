@@ -6,8 +6,8 @@ layout: reference
 
 {:auto_ids}
 Indexación basada en cero
-:   es una forma de asignar índices a elementos en una estructura de datos ordenada y secuencial.
-    empezando desde cero, es decir, donde el primer elemento de la secuencia tiene el índice cero.
+:   es una forma de asignar índices a elementos, de manera secuencial, dentro de una 
+    estructura de datos y empezando desde cero.
 
 __CSV__ (archivo)
 :   es un acrónimo que significa archivo de valores separados por comas. Los archivos CSV 
