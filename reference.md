@@ -46,7 +46,7 @@ __faceting__
 
 __float__
 :   es un tipo de datos en Python diseñado para guardar números decimales positivos y
-    negativos mediante una representación de un punto flotante (-NECESITA REVISION-)
+    negativos mediante una representación denominada punto flotante (-NECESITA REVISION-)
 
 función
 :   es un grupo de declaraciones relacionadas que realizan una tarea específica.
