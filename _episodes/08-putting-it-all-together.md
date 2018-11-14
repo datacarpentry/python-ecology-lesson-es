@@ -23,7 +23,7 @@ A diferencia de las anteriores, en esta lección no se dan instrucciones paso a 
 
 ## Obtener datos
 
-Hay muchos repositorios en línea desde los cuales puedes obtener datos. Te proporcionamos un archivo de datos para usar con estos ejercicios, pero no dudes en utilizar cualquier conjunto de datos que encuentres relevante para tu investigación. El archivo [`bouldercreek_09_2013.txt`]({{ page.root }}/data/bouldercreek_09_2013.txt) contiene datos sobre vertidos de agua, resumidos en 15 intervalos de 15 minutos (en pies cúbicos por segundo) de una estación hidrométrica en Boulder Creek en North 75th Street (USGS gage06730200) durante el periodo 1-30 de Septiembre de 2013. Si deseas usar este conjunto de datos, lo encontrarás en la carpeta de datos.
+Hay muchos repositorios en línea desde los cuales puedes obtener datos. Te proporcionamos un archivo de datos para usar con estos ejercicios, pero no dudes en utilizar cualquier conjunto de datos que encuentres relevante para tu investigación. El archivo [`bouldercreek_09_2013.txt`]({{ page.root }}/data/bouldercreek_09_2013.txt) contiene datos sobre vertidos de agua, resumidos en 15 intervalos de 15 minutos (en pies cúbicos por segundo) de una estación hidrométrica en Boulder Creek en North 75th Street (USGS gage06730200) durante el periodo 1-30 de Septiembre de 2013. Si deseas usar este __dataset__, lo encontrarás en la carpeta de datos.
 
 ## Limpia tus datos y ábrelos con Python y Pandas
 
