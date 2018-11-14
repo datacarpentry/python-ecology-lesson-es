@@ -76,7 +76,7 @@ Miniconda is a "light" version of Anaconda. If you install and use Miniconda
 you will also need to install the workshop packages.
 
 **Miniconda** es una versión "ligera" de **Anaconda**.
-Si instala y usa **Miniconda**,
+Si instalas y usas **Miniconda**,
 también necesitará instalar los paquetes del taller.
 
 #### Descarga e instala **Miniconda**
