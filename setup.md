@@ -8,7 +8,7 @@ title: Setup
 > [
 disponible en **FigShare**](https://figshare.com/articles/Portal_Project_Teaching_Database/1314459).
 >
-> Usaremos los seis archivos enumerados a continuación en esta lección.
+> En esta lección usaremos los seis archivos enumerados a continuación.
 > Descarga estos archivos a su computadora haciendo clic en
 > [este enlace](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/weecology/portal-teachingdb),
 > que le dará todo en un solo archivo comprimido.
