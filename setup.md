@@ -119,4 +119,4 @@ Si no es así, o si desea utilizar un navegador diferente, abra este enlace: <ht
 
 
 Para una breve introducción a **Jupyter Notebooks**, consulte nuestra página
-["Introducción a Jupyter Notebooks""](jupyter_notebooks).
+["Introducción a Jupyter Notebooks"](jupyter_notebooks).
