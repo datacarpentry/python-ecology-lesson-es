@@ -87,7 +87,7 @@ siguiendo las instrucciones. Recuerda descargar y ejecutar el instalador para
 
 #### Compruebe la instalación de **Miniconda**
 
-En la terminal, escriba:
+En la terminal, escribe:
 
 ~~~
 conda list
