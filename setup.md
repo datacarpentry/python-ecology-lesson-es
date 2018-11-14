@@ -27,7 +27,7 @@ disponible en **FigShare**](https://figshare.com/articles/Portal_Project_Teachin
 
 
 > ## Software
-> [**Python**](http://python.org) es un lenguaje popular para
+> [**Python**](http://python.org) es un lenguaje muy utilizado en
 > la computación científica y también es ideal para la programación de propósito general.
 > La instalación de todos los paquetes científicos individualmente puede ser
 > un poco difícil, por lo que recomendamos un instalador todo en uno.
