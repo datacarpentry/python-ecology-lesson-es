@@ -17,7 +17,7 @@ keypoints:
 
 ## Resumiendo
 
-Hasta aquí, hemos repasado las tareas que se suelen llevar a cabo en el manejo y procesamiento de datos utilizando los archivos limpios que hemos proporcionado en el taller. En este ejercicio de repaso final, realizaremos muchas de las tareas que hemos visto pero con conjuntos de datos reales. Esta lección también incluye visualización de datos.
+Hasta aquí, hemos repasado las tareas que se suelen llevar a cabo en el manejo y procesamiento de datos utilizando los archivos limpios que hemos proporcionado en el taller. En este ejercicio de repaso final, realizaremos muchas de las tareas que hemos visto pero con __datasets__ reales. Esta lección también incluye visualización de datos.
 
 A diferencia de las anteriores, en esta lección no se dan instrucciones paso a paso para realizar cada una de las tareas. Usa los materiales de las lecciones que ya has estudiado, así como la documentación de Python.
 
