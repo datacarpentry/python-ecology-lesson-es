@@ -11,7 +11,7 @@ disponible en **FigShare**](https://figshare.com/articles/Portal_Project_Teachin
 > En esta lección usaremos los seis archivos enumerados a continuación.
 > Descarga estos archivos a su computadora haciendo clic en
 > [este enlace](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/weecology/portal-teachingdb),
-> que le dará todo en un solo archivo comprimido.
+> luego tendrás todo en un archivo comprimido.
 > Deberá descomprimir este archivo después de descargarlo.
 >
 > O descarga cada archivo individualmente con los siguientes enlaces:
