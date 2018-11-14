@@ -42,7 +42,7 @@ __docstring__
 
 __faceting__
 :   es el acto de trazar relaciones entre variables definidas en múltiples subconjuntos 
-    de los datos y los resultados aparecen como paneles diferentes en la misma figura.
+    de los datos y donde los resultados aparecen como paneles diferentes en la misma figura.
 
 __float__
 :   es un tipo de datos en Python diseñado para guardar números decimales positivos y
