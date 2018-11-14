@@ -43,10 +43,10 @@ Vamos a continuar usando el dataset **surveys** que usamos con la lección
 anterior. Reabrámoslo y leamos los datos de nuevo:
 
 ~~~
-# Asegurar que panda este disponible
+# Asegura que panda este disponible
 import pandas as pd
 
-# leer el archivo **surveys** CSV
+# lee el archivo **surveys** CSV
 surveys_df = pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
@@ -64,8 +64,8 @@ podemos seleccionar todos los datos de una columna llamada `species_id`  del `su
 usando el nombre de la columna. Existen dos maneras de hacer esto:
 
 ~~~
-# TIP: use el método .head() que vimos anteriormente para hacer la salida mas corta
-# Método 1: seleccione un 'subconjunto' de los datos usando el nombre de la columna
+# Sugerencia: usa el método .head() que vimos anteriormente para hacer la salida más corta
+# Método 1: selecciona un 'subconjunto' de los datos usando el nombre de la columna
 surveys_df['species_id']
 
 # Método 2: usa el nombre de la columna como un 'atributo'; esto produce la misma salida
@@ -100,7 +100,8 @@ surveys_df['speciess']
 ~~~
 {: .language-python}
 
-Python nos informa que tipo de error es en el rastreo, en la parte inferior dice `KeyError: 'speciess'` lo que significa que `speciess` no es un nombre de columna (o **Key** que está relacionado con el diccionario de tipo de datos de Python).
+Python nos informa que tipo de error es en el rastreo, en la parte inferior dice `KeyError: 'speciess'` lo que significa 
+que `speciess` no es un nombre de columna (o **Key** que está relacionado con el diccionario de tipo de datos de Python).
 
 ## Extrayendo subconjuntos basados en rangos: Segmentando
 
@@ -123,23 +124,23 @@ a = [1, 2, 3, 4, 5]
 
 > ## Desafío - Extrayendo datos
 >
-> 1. What value does the code below return?
+> 1. ¿Qué valor devuelve el siguiente código?
 >
 >    ~~~
 >    a[0]
 >    ~~~
 >    {: .language-python }
 >
-> 2. How about this:
+> 2. ¿Qué valor devuelve este?:
 >
 >    ~~~
 >    a[5]
 >    ~~~
 >    {: .language-python }
 >
-> 3. In the example above, calling `a[5]` returns an error. Why is that?
+> 3. En el ejemplo anterior, llamar a `a [5]` devuelve un error. ¿Por qué?
 >
-> 4. What about?
+> 4. ¿Qué tal este?
 >
 >    ~~~
 >    a[len(a)]
@@ -148,91 +149,90 @@ a = [1, 2, 3, 4, 5]
 {: .challenge}
 
 
-## Slicing Subsets of Rows in Python
+## Segmentando Subconjuntos de Filas en Python
 
-Slicing using the `[]` operator selects a set of rows and/or columns from a
-DataFrame. To slice out a set of rows, you use the following syntax:
-`data[start:stop]`. When slicing in pandas the start bound is included in the
-output. The stop bound is one step BEYOND the row you want to select. So if you
-want to select rows 0, 1 and 2 your code would look like this:
+La segmentación utilizando el operador `[]` selecciona un conjunto de filas y/o columnas de 
+un **DataFrame**. Para segmentar un conjunto de filas, usa la siguiente sintaxis: `data[start:stop]`. 
+Cuando se hace segmentación en pandas, el límite inicial (**start**) se incluye en los datos de salida. 
+El límite final (**stop**) es un paso MÁS ALLÁ de la fila que desea seleccionar. 
+Así que si deseas seleccionar las filas 0, 1 y 2, tu código se vería así:
 
 ~~~
-# Select rows 0, 1, 2 (row 3 is not selected)
+# Selecciona las filas 0, 1, 2 (la fila 3 no es seleccionada)
 surveys_df[0:3]
 ~~~
 {: .language-python}
 
-The stop bound in Python is different from what you might be used to in
-languages like Matlab and R.
+El límite final en Python es diferente del que puedes estar acostumbrado a usar 
+en Lenguajes como Matlab y R.
 
 ~~~
-# Select the first 5 rows (rows 0, 1, 2, 3, 4)
+# Selecciona las primeras cinco filas (con índices 0, 1, 2, 3, 4)
 surveys_df[:5]
 
-# Select the last element in the list
-# (the slice starts at the last element, and ends at the end of the list)
+# Selecciona el último elemento de la lista
+# (el segmento comienza en el último elemento y finaliza al final de la lista)
 surveys_df[-1:]
 ~~~
 {: .language-python}
 
-We can also reassign values within subsets of our DataFrame.
+También podemos reasignar valores dentro de subconjuntos de nuestro **DataFrame**.
 
-But before we do that, let's look at the difference between the concept of
-copying objects and the concept of referencing objects in Python.
+Pero antes de hacerlo, veamos la diferencia entre el concepto de copiar objetos y el 
+concepto de referenciar objetos en Python.
 
-## Copying Objects vs Referencing Objects in Python
+## Copiar Objetos vs Referenciar Objetos en Python
 
-Let's start with an example:
+Empecemos con un ejemplo:
 
 ~~~
-# Using the 'copy() method'
+# Usando el método 'copy()'
 true_copy_surveys_df = surveys_df.copy()
 
-# Using the '=' operator
+# Usando el operador '='
 ref_surveys_df = surveys_df
 ~~~
 {: .language-python}
 
-You might think that the code `ref_surveys_df = surveys_df` creates a fresh
-distinct copy of the `surveys_df` DataFrame object. However, using the `=`
-operator in the simple statement `y = x` does **not** create a copy of our
-DataFrame. Instead, `y = x` creates a new variable `y` that references the
-**same** object that `x` refers to. To state this another way, there is only
-**one** object (the DataFrame), and both `x` and `y` refer to it.
+Puedes pensar que el código `ref_surveys_df = surveys_df` crea una copia nueva y 
+distinta de objeto **DataFrame** `surveys_df`. Sin embargo, usar el operador `=` en 
+una instrucción simple de la forma `y = x` **no** crea una copia de nuestro **DataFrame**. 
+En lugar de esto, `y = x` crea una variable nueva `y` que hace referencia al **mismo** 
+objeto al que `x` hace referencia. Para decirlo de otra manera, solamente hay **un** 
+objeto (el **DataFrame**), y ambos objetos `x` y `y` hacen referencia a él.
 
-In contrast, the `copy()` method for a DataFrame creates a true copy of the
-DataFrame.
+En contraste, el método `copy()` de un **DataFrame** crea una copia verdadera del
+**DataFrame**.
 
-Let's look at what happens when we reassign the values within a subset of the
-DataFrame that references another DataFrame object:
+Veamos lo que sucede cuando reasignamos los valores dentro de un subconjunto del
+**DataFrame** que hace referencia a otro objeto **DataFrame**:
 
 ~~~
-# Assign the value `0` to the first three rows of data in the DataFrame
+# Asigna el valor `0` a las primeras tres filas de datos en el **DataFrame**
 ref_surveys_df[0:3] = 0
 ~~~
 {: .language-python}
 
-Let's try the following code:
+Probemos el siguiente código:
 
 ~~~
-# ref_surveys_df was created using the '=' operator
+# ref_surveys_df fue creado usando el operador '='
 ref_surveys_df.head()
 
-# surveys_df is the original dataframe
+# surveys_df es el **DataFrame** original
 surveys_df.head()
 ~~~
 {: .language-python}
 
-What is the difference between these two dataframes?
+¿Cuál es la diferencia entre estos dos **DataFrames**?
 
-When we assigned the first 3 columns the value of `0` using the
-`ref_surveys_df` DataFrame, the `surveys_df` DataFrame is modified too.
-Remember we created the reference `ref_survey_df` object above when we did
-`ref_survey_df = surveys_df`. Remember `surveys_df` and `ref_surveys_df`
-refer to the same exact DataFrame object. If either one changes the object,
-the other will see the same changes to the reference object.
+Cuando asignamos a las tres primeras filas el valor de `0` usando el **DataFrame** `ref_surveys_df`,
+el **DataFrame** `surveys_df` también es modificado. Recuerda que creamos el objeto `ref_survey_df` 
+arriba usando la instrucción `ref_survey_df = surveys_df`. Por lo tanto `surveys_df` y `ref_surveys_df` hacen 
+referencia exactamente al mismo objeto **DataFrame**. Si cualquiera de los dos objetos (`ref_survey_df`, `surveys_df`) 
+es modificado, el otro objeto va a observar los mismos cambios.
 
-**To review and recap**:
+**Revisar y Recapitular**:
 
 - **Copy** uses the dataframe's `copy()` method
 
