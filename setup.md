@@ -115,7 +115,7 @@ jupyter notebook
 {: .language-bash}
 
 Un **Jupyter Notebook** se abrirá automáticamente en tu navegador.
-Si no es así, o si desea utilizar un navegador diferente, abra este enlace: <http://localhost: 8888>.
+Si no es así, o si deseas utilizar un navegador diferente, abre este enlace: <http://localhost:8888>.
 
 
 Para una breve introducción a **Jupyter Notebooks**, consulta nuestra página
