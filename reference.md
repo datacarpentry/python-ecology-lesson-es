@@ -5,104 +5,110 @@ layout: reference
 ## Glossary
 
 {:auto_ids}
-0-based indexing
-:   is a way of assigning indices to elements in a sequential, ordered data structure
-    starting from 0, i.e. where the first element of the sequence has index 0.
+Indexación basada en cero
+:   es una forma de asignar índices a elementos, de manera secuencial, dentro de una 
+    estructura de datos y empezando desde cero. Es decir, el primer elemento de la 
+    secuencia tiene el índice cero.
 
-CSV (file)
-:   is an acronym which stands for Comma-Separated Values file. CSV files store
-    tabular data, either numbers, strings, or a combination of the two, in plain
-    text with columns separated by a comma and rows by the carriage return character.
+__CSV__ (archivo)
+:   es un acrónimo que significa archivo de valores separados por comas. Los archivos CSV 
+    almacenan datos tabulares, ya sea números, secuencias de caracteres o una combinación
+    de los dos, en texto plano con columnas separadas por una coma y filas por el carácter
+    de salto de línea.
 
-database
-:   is an organized collection of data.
+base de datos
+:   es una colección organizada de datos.
 
-dataframe
-:   is a two-dimensional labeled data structure with columns of (potentially)
-    different type.
+__dataframe__
+:   es una estructura bidimensional de datos etiquetados con columnas de (potencialmente) 
+    diferentes tipos.
 
-data structure
-:   is a particular way of organizing data in memory.
+estructura de datos
+:   es una manera particular de organizar datos en memoria.
 
-data type
-:   is a particular kind of item that can be assigned to a variable, defined by
-    by the values it can take, the programming language in use and the operations
-    that can be performed on it.
+tipo de datos
+:   es un tipo particular de elemento que puede ser asignado a una variable, definido
+    por los valores que puede tomar, el lenguage de programación en uso y las operaciones
+    que se le pueden aplicar.
 
-dictionary
-:   is an unordered Python data structure designed to contain key-value pairs, where both
-    the key and the value can be integers, floats or strings. Elements of a dictionary
-    can be accessed by their key and can be modified.
+diccionario
+:   es una estructura de datos desordenada de Python que contiene pares clave-valor, donde
+    ambos, la clave y el valor, pueden ser __integers__, __floats__, o cadenas de caracteres. Los
+    elementos de un diccionario pueden ser accesados con su llave y pueden ser modificados.
 
-docstring
-:   is an optional documentation string to describe what a Python function does.
+__docstring__
+:   es una cadena de caracteres de documentación opcional que describe lo que una función
+    de Python hace.
 
-faceting
-:   is the act of plotting relationships between set variables in multiple subsets
-    of the data with the results appearing as different panels in the same figure.
+__faceting__
+:   es el acto de trazar relaciones entre variables definidas en múltiples subconjuntos 
+    de los datos y donde los resultados aparecen como paneles diferentes en la misma figura.
 
-float
-:   is a Python data type designed to store positive and negative decimal numbers
-    by means of a floating point representation.
+__float__
+:   es un tipo de datos en Python diseñado para guardar números decimales positivos y
+    negativos mediante una representación denominada punto flotante.
 
-function
-:   is a group of related statements that perform a specific task.
+función
+:   es un grupo de declaraciones relacionadas que realizan una tarea específica.
 
-integer
-:   is a Python data type designed to store positive and negative integer numbers.
+__integer__
+:   es un tipo de datos de Python diseñado para almacenar números enteros positivos y negativos.
 
-interactive mode
-:   is an online mode of operation in which the user writes the commands directly
-    on the command line one-by-one and execute them immediately by pressing a button
-    on the keyword, usually <kbd>Return</kbd>.
+modo interactivo
+:   es un modo de operación en línea en el que el usuario escribe los comandos directamente 
+    en la línea de comandos uno por uno y los ejecuta inmediatamente presionando un botón, 
+    generalmente <kbd>Return</kbd>.
 
-join key
-:   is a variable or an array representing the column names over which pandas.DataFrame.join()
-    merge together columns of different data sets.
+clave de unión
+:   es una variable o un __array__ representando los nombres de las columnas sobre las cuales 
+    __pandas.DataFrame.join()__ fusiona las columndas de dos __datasets__.
 
-library
-:   is a set of functions and methods grouped together to perform some specific
-    sort of tasks.
 
-list
-:   is a Python data structure designed to contain sequences of integers, floats,
-    strings and any combination of the previous. The sequence is ordered and indexed
-    by integers, starting from 0. Elements of a list can be accessed by their index
-    and can be modified.
+librería
+:   es un conjunto de funciones y metodos agrupados para realizar algún tipo de tareas específicas.
 
-loop
-:   is a sequence of instructions that is continually repeated until a condition
-    is satisfied.
 
-NaN
-:   is an acronym for Not-a-Number and represents that either a value is missing or
-    the calculation cannot output any meaningful result.
+__list__
+:   es una estructura de datos de Python diseñada para contener secuencias de __integers__,
+    __floats__, cadenas de caracteres, y cualquier combinación de las anteriores. La
+    secuencia es ordenada e indexada por __integers__, empezando desde cero. Los elementos
+    de una __list__ pueden ser accedidos por su índice y pueden ser modificados.
 
-None
-:   is an object that represents no value.
+__loop__
+:   es una secuencia de instrucciones que es continuamente repetida hasta que se 
+    cumple una condición.
 
-scripting mode
-:   is an offline mode of operation in which the user writes the commands to be
-    executed in a text file (with .py extension for Python) which is then compiled
-    or interpreted to run the program. Notes that Python interprets script on
-    run-time and compiles a binary version of the program to speed up the execution time.
+__NaN__
+:   es un acrónimo para Not-a-Number (No-un-Número) y representa que falta un valor o
+    que el cálculo no puede generar un resultado con significado.
 
-Sequential (data structure)
-:   is an ordered group of objects stored in memory which can be accessed specifying
-    their index, i.e. their position, in the structure.
+__None__
+:   es un objeto que representa la falta de un valor.
 
-SQL
-:   or Structured Query Language, is a domain-specific language for managing data
-    stored in a relational database management system (RDBMS).
+__scripting mode__
+:    es un modo de operación fuera de línea en el que el usuario escribe los comandos que 
+    se ejecutarán en un archivo de texto (con extensión .py para Python) que luego se 
+    compila o interpreta para ejecutar el programa. Nótese que Python interpreta el script 
+    en tiempo de ejecución y compila una versión binaria del programa para acelerar el 
+    tiempo de ejecución.
 
-SQLite
-:   is a self-contained, public domain SQL database engine.
+__Sequential__ (estructura de datos)
+:   es un grupo ordenado de objetos almacenados en la memoria al que se puede acceder 
+    especificando su índice, es decir, su posición en la estructura.
 
-string
-:   is a Python data type designed to store sequences of characters.
+__SQL__
+:   o __Structured Query Language__, es un lenguaje de dominio-específico (-REVISAR-) para 
+    administrar datos almacenados en un sistema de administración de bases de 
+    datos relacionales (__RDBMS__ por sus siglas en íngles).
+    
+__SQLite__
+:   es un motor de base de datos de SQL, de dominio público e independiente.
 
-tuple
-:   is a Python data structure designed to contain sequences of integers, floats,
-    strings and any combination of the previous. The sequence is ordered and indexed
-    by integers, starting from 0. Elements of a tuple can be accessed by their index
-    but cannot be modified.
+__string__ o cadena de caracteres
+:   es un tipo de datos de Python que almacena secuencias de caracteres.
+
+tupla
+:   es una estructura de datos de Python diseñada para contener secuencias de __integers__,
+    __floats__, cadenas de caracteres, y cualquier combinación de las anteriores. La
+    secuencia es ordenada e indexada por __integers__, empezando desde cero. Los elementos
+    de una __list__ pueden ser accedidos por su índice pero no pueden ser modificados.
