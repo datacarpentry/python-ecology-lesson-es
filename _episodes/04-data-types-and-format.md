@@ -76,24 +76,24 @@ de datos. Más sobre esto en la tabla de abajo:
 | object | string | El dtype más general. Será asignado a tu columna si la columna contiene tipos mixtos (números y secuencias de caracteres). |
 | int64  | int | Caracteres numéricos. 64 se refiere a la memoria asignada para almacenar el caracter. |
 | float64 | float | Caracteres numéricos con decimales. Si una columna contiene números y NaNs (ver más abajo), Pandas usará float64 por defecto, en caso de que los datos faltantes contengan decimales. |
-| datetime64, timedelta[ns] | N/A (but see the [datetime] module in Python's standard library) | Values meant to hold time data. Look into these for time series experiments. |
+| datetime64, timedelta[ns] | N/D (pero ver el módulo [datetime] en la librería estandar de Python) | Valores destinados a contener datos de tiempo. Mira en estos para experimentos con series de tiempo. |
 
 [datetime]: http://doc.python.org/2/library/datetime.html
 
 
-## Checking the format of our data
+## Comprobando el formato de nuestros datos
 
-Now that we're armed with a basic understanding of numeric and text data
-types, let's explore the format of our survey data. We'll be working with the
-same `surveys.csv` dataset that we've used in previous lessons.
+Ahora que estamos armados con una comprensión básica de los tipos de datos numéricos
+y de texto, exploremos el formato de los datos de nuestra encuesta. Estaremos trabajando
+con el mismo **dataset**  `survey.csv` que hemos usado en lecciones anteriores.
 
 ~~~
-# Note that pd.read_csv is used because we imported pandas as pd
-surveys_df = pd.read_csv("data/surveys.csv")
+# Ten en cuenta que se usa pd.read_csv porque importamos pandas como pd
+survey_df = pd.read_csv ("data/survey.csv")
 ~~~
 {: .language-python}
 
-Remember that we can check the type of an object like this:
+Recuerda que podemos comprobar el tipo de un objeto de la siguiente manera:
 
 ~~~
 type(surveys_df)
@@ -102,8 +102,8 @@ type(surveys_df)
 
 **OUTPUT:** `pandas.core.frame.DataFrame`
 
-Next, let's look at the structure of our surveys data. In pandas, we can check
-the type of one column in a DataFrame using the syntax
+A continuación, veamos la estructura de datos de nuestras encuestas. En pandas,
+podemos comprobar el tipo de una columna de un DataFrame usando la sintaxis
 `dataFrameName[column_name].dtype`:
 
 ~~~
@@ -113,8 +113,8 @@ surveys_df['sex'].dtype
 
 **OUTPUT:** `dtype('O')`
 
-A type 'O' just stands for "object" which in Pandas' world is a string
-(text).
+Un tipo 'O' solo significa "objeto" que en el mundo de Pandas es una secuencia
+de caracteres (texto).
 
 ~~~
 surveys_df['record_id'].dtype
@@ -123,9 +123,9 @@ surveys_df['record_id'].dtype
 
 **OUTPUT:** `dtype('int64')`
 
-The type `int64` tells us that Python is storing each value within this column
-as a 64 bit integer. We can use the `dat.dtypes` command to view the data type
-for each column in a DataFrame (all at once).
+El tipo `int64` nos dice que Python está almacenando cada valor dentro de esta columna
+como un entero de 64 bits. Podemos usar el comando `dat.dtypes` para ver el tipo de datos
+de cada columna de un DataFrame (todos a la vez).
 
 ~~~
 surveys_df.dtypes
@@ -148,18 +148,21 @@ dtype: object
 ~~~
 {: .language-python }
 
-Note that most of the columns in our Survey data are of type `int64`. This means
-that they are 64 bit integers. But the weight column is a floating point value
-which means it contains decimals. The `species_id` and `sex` columns are objects which
-means they contain strings.
+Ten en cuenta que la mayoría de las columnas en nuestros datos de encuesta son
+del tipo `int64`. Esto significa que son enteros de 64 bits. Pero la columna de
+peso (weight) es un valor de punto flotante, lo que significa que contiene
+decimales. Las columnas `species_id` y `sex` son objetos, lo cual significa que
+contienen secuencias de caracteres.
 
-## Working With Integers and Floats
+## Trabajando con **integers** y **floats**
 
-So we've learned that computers store numbers in one of two ways: as integers or
-as floating-point numbers (or floats). Integers are the numbers we usually count
-with. Floats have fractional parts (decimal places).  Let's next consider how
-the data type can impact mathematical operations on our data. Addition,
-subtraction, division and multiplication work on floats and integers as we'd expect.
+Así que hemos aprendido que las computadoras almacenan los números de una de
+dos maneras: como enteros o como números de punto flotante (o **float**). Los
+**integers** son los números que usualmente usamos para contar. Los **float**
+tienen parte fraccionaria (decimal). Consideremos ahora cómo el tipo de datos
+puede impactar en las operaciones matemáticas entre nuestros datos. La suma,
+la resta, la división y la multiplicación funcionan en **floats** e **integers**
+como es de esperar.
 
 ~~~
 print(5+5)
@@ -170,9 +173,9 @@ print(24-4)
 ~~~
 {: .language-python}
 
-If we divide one integer by another, we get a float.
-The result on Python 3 is different than in Python 2, where the result is an
-integer (integer division).
+Si dividimos un **integer** por otro, obtenemos un **float**.
+El resultado en Python 3 es diferente al de Python 2, donde el resultado es un
+**integer** (división entera).
 
 ~~~
 print(5/9)
@@ -183,31 +186,31 @@ print(10/3)
 ~~~
 {: .language-python}
 
-We can also convert a floating point number to an integer or an integer to
-floating point number. Notice that Python by default rounds down when it
-converts from floating point to integer.
+También podemos convertir un número de punto flotante en un entero, o un entero en
+un número de punto flotante. Ten en cuenta que Python redondea por defecto cuando
+convierte de **float** a **integer**.
 
 ~~~
-# Convert a to an integer
+# Convertir 'a' a integer
 a = 7.83
 int(a)
 7
 
-# Convert b to a float
+# Convertir 'b' a float
 b = 7
 float(b)
 7.0
 ~~~
 {: .language-python}
 
-# Working With Our Survey Data
+# Trabajando con los datos de nuestra encuesta
 
-Getting back to our data, we can modify the format of values within our data, if
-we want. For instance, we could convert the `record_id` field to floating point
-values.
+Volviendo a nuestros datos, si lo deseamos, podemos modificar el formato de los
+valores dentro de nuestros datos. Por ejemplo, podríamos convertir el campo
+ `record_id` a **float**
 
 ~~~
-# Convert the record_id field from an integer to a float
+# Convertir el campo record_id de integer a float
 surveys_df['record_id'] = surveys_df['record_id'].astype('float64')
 surveys_df['record_id'].dtype
 ~~~
@@ -215,56 +218,64 @@ surveys_df['record_id'].dtype
 
 **OUTPUT:** `dtype('float64')`
 
-
-> ## Challenge - Changing Types
+> ## Desafío - Cambiando tipos
 >
-> Try converting the column `plot_id` to floats using
+> Intenta convertir la columna `plot_id` a **float** usando
 >
 > ~~~
 > surveys_df.plot_id.astype("float")
 > ~~~
 > {: .language-python}
 >
-> Next try converting `weight` to an integer. What goes wrong here? What is Pandas telling you?
-> We will talk about some solutions to this later.
+> A continuación, intenta convertir `weight` (peso) en un **integer**. ¿Qué te
+dice Pandas? ¿Qué es lo que va mal ahí?
+> Más adelante, hablaremos acerca de algunas soluciones a esto.
+
 {: .challenge}
 
-## Missing Data Values - NaN
+## Valores de datos faltantes - NaN
 
-What happened in the last challenge activity? Notice that this throws a value error:
-`ValueError: Cannot convert NA to integer`. If we look at the `weight` column in the surveys
-data we notice that there are NaN (**N**ot **a** **N**umber) values. **NaN** values are undefined
-values that cannot be represented mathematically. Pandas, for example, will read
-an empty cell in a CSV or Excel sheet as a NaN. NaNs have some desirable properties: if we
-were to average the `weight` column without replacing our NaNs, Python would know to skip
-over those cells.
+¿Qué ocurrió en en el desafío? Ten en cuenta que esto arroja un error de valor:
+
+`ValueError: Cannot convert NA to integer`.
+
+Si observamos la columna `weight`
+(peso) de los datos de las encuestas, notamos que hay valores NaN (**N**ot **a**
+**N**umber) (no es número). Los valores **NaN ** son valores que no están definidos
+y que no se pueden representar matemáticamente. Pandas, por ejemplo, leerá
+como NaN aquellas celdas vacías de una hoja CSV o Excel. Los valores NaN tienen
+algunas propiedades deseables: si tuviéramos que promediar la columna `weight`
+(peso) sin reemplazar los valores NaN, Python sabría saltarse las celdas vacías.
 
 ~~~
 surveys_df['weight'].mean()
 42.672428212991356
 ~~~
 {: .language-python}
-Dealing with missing data values is always a challenge. It's sometimes hard to
-know why values are missing - was it because of a data entry error? Or data that
-someone was unable to collect? Should the value be 0? We need to know how
-missing values are represented in the dataset in order to make good decisions.
-If we're lucky, we have some metadata that will tell us more about how null
-values were handled.
+Tratar con valores de datos faltantes siempre es un desafío. A veces es dificil
+saber por qué faltan valores. ¿Fue debido a un error de entrada de datos? ¿O
+son datos que alguien no pudo recoger? ¿Debe considerarse el valor como 0?
+Para tomar buenas decisiones, necesitamos saber qué representan los valores
+faltantes del **dataset**. Si tenemos suerte, tendremos algunos metadatos que
+nos dirán más acerca de cómo fueron manejados los valores nulos.
 
-For instance, in some disciplines, like Remote Sensing, missing data values are
-often defined as -9999. Having a bunch of -9999 values in your data could really
-alter numeric calculations. Often in spreadsheets, cells are left empty where no
-data are available. Pandas will, by default, replace those missing values with
-NaN. However it is good practice to get in the habit of intentionally marking
-cells that have no data, with a no data value! That way there are no questions
-in the future when you (or someone else) explores your data.
+Por ejemplo, en algunas disciplinas, como el sensado remoto, los valores de
+datos faltantes suelen definirse como -9999. Tener un montón de valores -9999 en
+tus datos podría realmente alterar los cálculos numéricos. A menudo, en las
+hojas de cálculo, las celdas se dejan vacías cuando no hay datos disponibles.
+Por defecto, Pandas reemplazará esos valores perdidos con **NaN**.
+Sin embargo, es una buena práctica adquirir el hábito de marcar intencionalmente
+aquellas celdas que no tienen datos con un valor que respresente "sin datos"!
+De esa manera, en el futuro, no habrá preguntas cuando tu (o alguna otra persona)
+explore los datos.
 
-### Where Are the NaN's?
+### ¿Dónde están los **NaN's**?
 
-Let's explore the NaN values in our data a bit further. Using the tools we
-learned in lesson 02, we can figure out how many rows contain NaN values for
-weight. We can also create a new subset from our data that only contains rows
-with weight values > 0 (i.e., select meaningful weight values):
+Exploremos un poco más los valores **NaN** en nuestros datos. Usando las herramientas
+que hemos aprendido en la lección 02, podemos averiguar cuántas filas contienen
+valores **NaN** para weight (peso). También, partiendo de nuestros datos, podemos
+crear un nuevo subconjunto que contenga solamente aquellas filas con peso mayor
+a cero (es decir, seleccionar valores significativos de peso):
 
 ~~~
 len(surveys_df[pd.isnull(surveys_df.weight)])
@@ -273,19 +284,20 @@ len(surveys_df[surveys_df.weight> 0])
 ~~~
 {: .language-python}
 
-We can replace all NaN values with zeroes using the `.fillna()` method (after
-making a copy of the data so we don't lose our work):
+Usando el método `.fillna ()` podemos reemplazar todos los valores **NaN** por
+ceros (después de hacer una copia de los datos de modo tal de no perder
+nuestro trabajo):
 
 ~~~
 df1 = surveys_df.copy()
-# Fill all NaN values with 0
+# Completar todos los valores NaN con ceros
 df1['weight'] = df1['weight'].fillna(0)
 ~~~
 {: .language-python}
 
-However NaN and 0 yield different analysis results. The mean value when NaN
-values are replaced with 0 is different from when NaN values are simply thrown
-out or ignored.
+Sin embargo, NaN y cero arrojan diferentes resultados de análisis. El valor
+promedio resulta diferente cuando los valores **NaN** se reemplazan con
+cero de cuando los valores de **NaN** son descartados o ignorados.
 
 ~~~
 df1['weight'].mean()
@@ -293,43 +305,47 @@ df1['weight'].mean()
 ~~~
 {: .language-python}
 
-We can fill NaN values with any value that we chose. The code below fills all
-NaN values with a mean for all weight values.
+Podemos completar los valores **NaN** con cualquier valor que elijamos. El
+código de abajo completa todos los Valores **NaN** con un promedio de los pesos.
 
 ~~~
  df1['weight'] = surveys_df['weight'].fillna(surveys_df['weight'].mean())
 ~~~
 {: .language-python}
 
-We could also chose to create a subset of our data, only keeping rows that do
-not contain NaN values.
+También podríamos elegir crear un subconjunto de datos, manteniendo solamente
+aquellas filas que que no contiene valores **NaN**.
 
-The point is to make conscious decisions about how to manage missing data. This
-is where we think about how our data will be used and how these values will
-impact the scientific conclusions made from the data.
+La clave es tomar decisiones conscientes acerca de cómo administrar los datos
+faltantes. Aquí es donde pensamos cómo se utilizarán nuestros datos y cómo estos
+valores afectarán las conclusiones científicas que se obtengan de los datos.
 
-Python gives us all of the tools that we need to account for these issues. We
-just need to be cautious about how the decisions that we make impact scientific
-results.
+Python nos brinda todas las herramientas que necesitamos para dar cuenta de estos
+problemas. Solo debemos ser cautelosos acerca de cómo nuestras decisiones impactan
+en los resultados científicos.
 
-> ## Challenge - Counting
-> Count the number of missing values per column. Hint: The method .count() gives you
-> the number of non-NA observations per column. Try looking to the .isnull() method.
+> ## Desafío - Contando
+> Cuenta el número de valores perdidos por columna. Sugerencia: el método
+> `.count ()` te proporciona el número de observaciones que no son NA por columna.
+> Examina el método `.isnull ()`.
 {: .challenge}
 
-## Writing Out Data to CSV
+## Escribiendo datos a CSV
 
-We've learned about using manipulating data to get desired outputs. But we've also discussed
-keeping data that has been manipulated separate from our raw data. Something we might be interested
-in doing is working with only the columns that have full data. First, let's reload the data so
-we're not mixing up all of our previous manipulations.
+Hemos aprendido sobre a manipular datos para obtener los resultados deseados.
+Pero también hemos discutido acerca de mantener los datos que han sido manipulados
+separados de los datos sin procesar. Algo que podríamos estar interesados en
+hacer es trabajar solo con las columnas que tienen datos completos. Primero,
+recarguemos los datos para no mezclar todas nuestras manipulaciones anteriores.
 
 ~~~
 surveys_df = pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
-Next, let's drop all the rows that contain missing values. We will use the command `dropna`.
-By default, dropna removes columns that contain missing data for even just one row.
+A continuación, vamos a eliminar todas las filas que contienen valores perdidos.
+Usaremos el comando `dropna`.
+De forma predeterminada, `dropna` elimina las columnas que contienen datos faltantes
+incluso para una sola fila.
 
 ~~~
 df_na = surveys_df.dropna()
@@ -337,34 +353,37 @@ df_na = surveys_df.dropna()
 ~~~
 {: .language-python}
 
-If you now type `df_na`, you should observe that the resulting DataFrame has 30676 rows
-and 9 columns, much smaller than the 35549 row original.
+Si ahora escribes `df_na`, deberías observar que el **DataFrame** resultante
+tiene 30676 filas y 9 columnas, mucho menos que las 35549 filas originales.
 
-We can now use the `to_csv` command to do export a DataFrame in CSV format. Note that the code
-below will by default save the data into the current working directory. We can
-save it to a different folder by adding the foldername and a slash before the filename:
-`df.to_csv('foldername/out.csv')`. We use 'index=False' so that
-pandas doesn't include the index number for each line.
+Ahora podemos usar el comando `to_csv` para exportar un **DataFrame** a formato
+CSV. Ten en cuenta que el código que se muestra a continuación por defector
+guardará los datos en el directorio de trabajo en el que estamos parados.
+Podemos guardarlo en otra carpeta agregando el nombre de la carpeta y una barra
+inclinada antes del nombre del archivo: `df.to_csv ('foldername / out.csv')`.
+Usamos 'index = False' para que Pandas no incluya el número de índice para cada
+fila.
 
 ~~~
-# Write DataFrame to CSV
+# Escribir DataFrame a CSV
 df_na.to_csv('data_output/surveys_complete.csv', index=False)
 ~~~
 {: .language-python}
 
-We will use this data file later in the workshop. Check out your working directory to make
-sure the CSV wrote out properly, and that you can open it! If you want, try to bring it
-back into Python to make sure it imports properly.
+Usaremos este archivo de datos más adelante en el taller. Revisa tu directorio
+de trabajo para asegurarte de que el CSV se haya guardado correctamente y que
+puedas abrirlo. Si lo deseas, intenta recuperarlo con Python para
+asegurarte de que se importa correctamente.
 
+## Resumen
 
-## Recap
+Hemos aprendido:
 
-What we've learned:
-
-+ How to explore the data types of columns within a DataFrame
-+ How to change the data type
-+ What NaN values are, how they might be represented, and what this means for your work
-+ How to replace NaN values, if desired
-+ How to use `to_csv` to write manipulated data to a file.
++ Cómo explorar los tipos de dato de las colummnas de un **Dataframe**
++ Cómo cambiar el tipo de dato
++ Qué son los valores **NaN**, cómo deberían representarse, y lo que eso
++ significa para tu trabajo
++ Cómo reemplazar los valores **Nan" si así lo quisieras
++ Como usar `to_csv` para guardar en un archivo los datos manipulados.
 
 {% include links.md %}
