@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Overview of Jupyter Notebooks"
+title: "Resumen de Jupyter Notebooks"
 permalink: /jupyter_notebooks/
 ---
 
