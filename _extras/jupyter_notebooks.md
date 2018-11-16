@@ -5,96 +5,99 @@ permalink: /jupyter_notebooks/
 ---
 
 ![Example Jupyter Notebook](../fig/00_0_jupyter_notebook_example.jpg)
-*Screenshot of a [Jupyter Notebook on quantum mechanics](https://github.com/jrjohansson/qutip-lectures) by Robert Johansson*
+*Captura de pantalla de un [Jupyter Notebook sobre mecánica cuántica](https://github.com/jrjohansson/qutip-lectures) por Robert Johansson*
 
-### How the Jupyter notebook works
+### Como funcionan los __Jupyter notebooks__
 
-After typing the command `jupyter notebook`, the following happens:
+Al escribir el comando `jupyter notebook`, ocurre lo siguiente:
 
-* A Jupyter Notebook server is automatically created on your local machine.
-* The Jupyter Notebook server runs locally on your machine only and does not
-  use an internet connection.
-* The Jupyter Notebook server opens the Jupyter notebook client, also known
-  as the notebook user interface, in your default web browser.
+* Un servidor de __Jupyter Notebook__ es creado en tu máquina local.
+* El servidor de  __Jupyter Notebook__ solo se ejecuta en tu máquina local
+  y no utiliza una conexión a internet.
+* El servidor de __Jupyter Notebook__ abre el cliente de __Jupyter notebook__, 
+  también conocido como la interfaz de usuario de notebook, en tu navegador web
+  predeterminado.
 
-  ![Jupyter notebook file browser](../fig/00_1_jupyter_file_browser.png)
-  *The Jupyter notebook file browser*
 
-* To create a new Python notebook select the "New" dropdown on the upper
-  right of the screen.
+  ![Navegador de archivos de Jupyter notebook](../fig/00_1_jupyter_file_browser.png)
+  *El navegador de archivos de __Jupyter notebook__*
 
-  ![Jupyter notebook file browser](../fig/00_2_jupyter_new_notebook.png)
-  *The Jupyter notebook file browser*
+* Para crear un nuevo __notebook__ de Python selecciona __"New"__ del manu 
+  desplegable de la esquina superior derecha de la pantalla.
 
-* When you can create a new notebook and type code into the browser, the web
-  browser and the Jupyter notebook server communicate with each other.
+  ![Navegador de archivos de Jupyter notebook](../fig/00_2_jupyter_new_notebook.png)
+  *El navegador de archivos de __Jupyter notebook__*
 
-  ![new Jupyter notebook](../fig/00_3_jupyter_blank_notebook.png)
-  *A new, blank Jupyter notebook*
+* Cuando creas un nuevo __notebook__ y escribes codigo en tu navegador, el 
+  navegador web y el servidor de __Jupyter Notebook__ se comunican entre sí.
 
-* Under the "help" menu, take a quick interactive tour of how to
-  use the notebook. Help on Jupyter and key workshop packages is
-  available here too.
+  ![nuevo Jupyter notebook](../fig/00_3_jupyter_blank_notebook.png)
+  *Un nuevo __Jupyter notebook__ en blanco*
 
-  ![Jupyter tour and help](../fig/00_4_jupyter_tour_help.png)
-  *User interface tour and Help*
+* Bajo el menu __"help"__, puedes tomar un rápido tour interactivo sobre como 
+  utilizar el __notebook__. Más ayuda sobre __Jupyter__ y recursos de 
+  talleres clave se encuentran aquí también. 
 
-* The Jupyter Notebook server does the work and calculations, and the web
-  browser renders the notebook.
-* The web browser then displays the updated notebook to you.
+  ![ayuda y tour Jupyter](../fig/00_4_jupyter_tour_help.png)
+  *Tour de interfaz del usuario y Ayuda*
 
-* For example, click in the first cell and type some Python code.
+* El servidor de __Jupyter Notebook__ hace el trabajo y los cálculos, y el navegador 
+  web procesa el __notebook__.
+* El navegador web entonces te muestra el __notebook__ actualizado.
 
-  ![Code cell](../fig/00_5_jupyter_code_before.png)
-  *A Code cell*
+* Por ejemplo, haz clic en la primera celda y escribe algo de código en Python.
 
-* This is a **Code** cell (see the cell type dropdown with the word **Code**).
-  To run the cell, type <kbd>Shift</kbd>+<kbd>Return</kbd>.
+  ![cell de código](../fig/00_5_jupyter_code_before.png)
+  *Una celda de código*
 
-  ![Code cell and its output](../fig/00_6_jupyter_code_after.png)
-  *A Code cell and its output*
+* Esta es una celda de **Código** (nota el tipo de celda en el menú desplegable con la palabra **Code**).
+  Para ejecutar la celda, presiona <kbd>Shift</kbd>+<kbd>Return</kbd>.
 
-* Let's look at a **Markdown** cell. Markdown is a text manipulation
-  language that is readable yet offers additional formatting. Don't forget
-  to select **Markdown** from the cell type dropdown. Click in the cell and
-  enter the markdown text.
+  ![Una celda de código y su resultado](../fig/00_6_jupyter_code_after.png)
+  *Una celda de código y su resultado*
 
-  ![markdown input cell](../fig/00_7_jupyter_markdown_before.png)
-  *A markdown input cell*
+* Veamos una celda de **Markdown**. __Markdown__ es un lenguaje de manipulación de 
+  texto que es legible pero que ofrece formato adicional. No olvides 
+  seleccionar **Markdown** del menú desplegable de tipo de celda. Haz clic 
+  en la celda y escribe algo texto en __Markdown__.
 
-* To run the cell, type <kbd>Shift</kbd>+<kbd>Return</kbd>.
+  ![Una celda de __Markdown__](../fig/00_7_jupyter_markdown_before.png)
+  *Una celda de __Markdown__*
+
+* Para ejecutar una celda, presiona <kbd>Shift</kbd>+<kbd>Return</kbd>.
 
   ![rendered markdown cell](../fig/00_8_jupyter_markdown_after.png)
-  *A rendered markdown cell*
+  *Una celda de __Markdown__ ejecutada*
 
 
-This workflow has several advantages:
+Este flujo de trabajo tiene varias ventajas:
 
-- You can easily type, edit, and copy and paste blocks of code.
-- Tab completion allows you to easily access the names of things you are using
-  and learn more about them.
-- It allows you to annotate your code with links, different sized text,
-  bullets, etc. to make information more accessible to you and your
-  collaborators.
-- It allows you to display figures next to the code that produces them
-  to tell a complete story of the analysis.
+- Puedes escribir, editar, copiar y pegar bloques de código fácilmente.
+- El autocompletado facilita el accesso a los nombres de las cosas que estas usando
+  y te permite aprender más de ellas.
+- Te permite anotar tu código con enlaces, texto de diferentes tamaños,
+  viñetas, etc. para hacer la información más accesible para ti y tus
+  colaboradores.
+- Te permite mostrar gráficos junto al código que las produce para contar
+  la historia completa de tu análisis.
 
-### How the notebook is stored
+### Como se guarda el __notebook__
 
-* The notebook file is stored in a format called JSON and has the suffix
-  `.ipynb`.
-* Just like HTML for a webpage, what's saved in a notebook file looks
-  different from what you see in your browser.
-* But this format allows Jupyter to mix software (in several languages) with
-  documentation and graphics, all in one file.
+* El archivo __notebook__ se guarda en un formato llamado JSON y tiene el 
+  sufijo `.ipynb`.
+* Igual que HTML para una página web, lo que se guarda en un archivo __notebook__
+  se ve diferente a lo que tu vez en tu navegador.
+* Pero este formato le permite a __Jupyter__ mezclar software (en muchos lenguajes)
+  con documentación y gráficos, todo en un archivo.
 
-### Notebook modes: Control and Edit
+### Modos del __Notebook__: __Control__ y __Edit__
 
-The notebook has two modes of operation: Control and Edit. Control mode lets
-you edit notebook level features; while, Edit mode lets you change the
-contents of a notebook cell. Remember a notebook is made up of a number of
-cells which can contain code, markdown, html, visualizations, and more.
+El __notebook__ tiene dos modos de operación: __Control__ y __Edit__. El modo
+__Control__ te permite editar funciones a nivel __notebook__; mientras, el modo
+__Edit__ te permite cambiar los contenidos de las celdas del __notebook__.
+Recuerda que un __notebook__ esta compuesto de un numero de celdas que contienen
+código, __markdown__, html, visualizaciones, y más.
 
-### Help and more information
+### Ayuda y más información
 
-Use the **Help** menu and its options when needed.
+Utiliza el menú **Help** y sus opciones options cuando lo necesites.
