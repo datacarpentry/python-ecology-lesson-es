@@ -332,7 +332,7 @@ en los resultados científicos.
 
 ## Escribiendo datos a CSV
 
-Hemos aprendido sobre a manipular datos para obtener los resultados deseados.
+Hemos aprendido a manipular datos para obtener los resultados deseados.
 Pero también hemos discutido acerca de mantener los datos que han sido manipulados
 separados de los datos sin procesar. Algo que podríamos estar interesados en
 hacer es trabajar solo con las columnas que tienen datos completos. Primero,
