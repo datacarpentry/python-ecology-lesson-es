@@ -342,7 +342,7 @@ recarguemos los datos para no mezclar todas nuestras manipulaciones anteriores.
 surveys_df = pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
-A continuación, vamos a eliminar todas las filas que contienen valores perdidos.
+A continuación, vamos a eliminar todas las filas que contienen valores nulos.
 Usaremos el comando `dropna`.
 De forma predeterminada, `dropna` elimina las columnas que contienen datos faltantes
 incluso para una sola fila.
