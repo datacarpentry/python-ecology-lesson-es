@@ -383,7 +383,7 @@ Hemos aprendido:
 + Cómo cambiar el tipo de dato
 + Qué son los valores **NaN**, cómo deberían representarse, y lo que eso
 + significa para tu trabajo
-+ Cómo reemplazar los valores **Nan" si así lo quisieras
++ Cómo reemplazar los valores **NaN" si así lo quisieras
 + Como usar `to_csv` para guardar en un archivo los datos manipulados.
 
 {% include links.md %}
