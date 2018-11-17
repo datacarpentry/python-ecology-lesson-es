@@ -297,7 +297,7 @@ df1['weight'] = df1['weight'].fillna(0)
 
 Sin embargo, **NaN** y cero arrojan diferentes resultados en el análisis. El valor
 promedio resulta diferente cuando los valores **NaN** se reemplazan con
-cero de cuando los valores de **NaN** son descartados o ignorados.
+cero, comparando cuando los valores de **NaN** son descartados o ignorados.
 
 ~~~
 df1['weight'].mean()
