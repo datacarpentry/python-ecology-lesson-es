@@ -24,7 +24,7 @@ Sus principales ventajas son:
 
 * Es gratis
 * De código abierto
-* Disponible para todas las grandes plataformas (macOS, Linux, Windows)
+* Disponible para todas las plataformas más importantes (macOS, Linux, Windows)
 * Es mantenido por la Python Software Foundation
 * Soporta múltiples paradigmas de programación
 * Tiene una gran comunidad
