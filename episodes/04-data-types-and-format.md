@@ -273,7 +273,7 @@ explore los datos.
 
 Exploremos un poco más los valores **NaN** en nuestros datos. Usando las herramientas
 que hemos aprendido en la lección 02, podemos averiguar cuántas filas contienen
-valores **NaN** para weight (peso). También, partiendo de nuestros datos, podemos
+valores **NaN** en la columna weight (peso). También, partiendo de nuestros datos, podemos
 crear un nuevo subconjunto que contenga solamente aquellas filas con peso mayor
 a cero (es decir, seleccionar valores significativos de peso):
 
