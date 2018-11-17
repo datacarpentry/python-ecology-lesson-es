@@ -344,7 +344,7 @@ surveys_df = pd.read_csv("data/surveys.csv")
 {: .language-python}
 A continuación, vamos a eliminar todas las filas que contienen valores nulos.
 Usaremos el comando `dropna`.
-De forma predeterminada, `dropna` elimina las columnas que contienen datos faltantes
+De forma predeterminada, `dropna` elimina las columnas que contienen valores nulos
 incluso para una sola fila.
 
 ~~~
