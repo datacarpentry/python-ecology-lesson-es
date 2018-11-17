@@ -125,7 +125,7 @@ surveys_df['record_id'].dtype
 
 El tipo `int64` nos dice que Python está almacenando cada valor dentro de esta columna
 como un entero de 64 bits. Podemos usar el comando `dat.dtypes` para ver el tipo de datos
-de cada columna de un DataFrame (todos a la vez).
+de cada columna de un **DataFrame** (todos a la vez).
 
 ~~~
 surveys_df.dtypes
