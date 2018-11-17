@@ -360,7 +360,7 @@ Ahora podemos usar el comando `to_csv` para exportar un **DataFrame** a formato
 CSV. Ten en cuenta que el código que se muestra a continuación por defector
 guardará los datos en el directorio de trabajo en el que estamos parados.
 Podemos guardarlo en otra carpeta agregando el nombre de la carpeta y una barra
-inclinada antes del nombre del archivo: `df.to_csv ('foldername / out.csv')`.
+inclinada antes del nombre del archivo: `df.to_csv ('foldername/out.csv')`.
 Usamos 'index = False' para que Pandas no incluya el número de índice para cada
 fila.
 
