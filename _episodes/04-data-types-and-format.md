@@ -157,7 +157,7 @@ contienen secuencias de caracteres `string`.
 ## Trabajando con **integers** y **floats**
 
 Así que hemos aprendido que las computadoras almacenan los números de una de
-dos maneras: como enteros o como números de punto flotante (o **float**). Los
+dos maneras: como enteros `integer` o como números de punto flotante `float`. Los
 **integers** son los números que usualmente usamos para contar. Los **float**
 tienen parte fraccionaria (decimal). Consideremos ahora cómo el tipo de datos
 puede impactar en las operaciones matemáticas entre nuestros datos. La suma,
