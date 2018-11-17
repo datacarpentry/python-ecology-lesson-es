@@ -295,7 +295,7 @@ df1['weight'] = df1['weight'].fillna(0)
 ~~~
 {: .language-python}
 
-Sin embargo, NaN y cero arrojan diferentes resultados de análisis. El valor
+Sin embargo, **NaN** y cero arrojan diferentes resultados en el análisis. El valor
 promedio resulta diferente cuando los valores **NaN** se reemplazan con
 cero de cuando los valores de **NaN** son descartados o ignorados.
 
