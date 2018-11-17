@@ -114,7 +114,7 @@ surveys_df['sex'].dtype
 **OUTPUT:** `dtype('O')`
 
 Un tipo 'O' solo significa "objeto" que en el mundo de Pandas es una secuencia
-de caracteres (texto).
+de caracteres (texto), llamado **string**.
 
 ~~~
 surveys_df['record_id'].dtype
