@@ -32,17 +32,17 @@ estructura y formato de nuestros datos.
 # Tipos de Datos
 
 La forma en que se almacena la información en un
-DataFrame u objeto Python afecta a lo que podemos hacer con él y también a
+**DataFrame** u objeto Python afecta a lo que podemos hacer con él y también a
 los resultados de los cálculos. Hay dos tipos principales de datos
 que estaremos explorando en esta lección: tipos de datos numéricos y de texto.
 
 ## Tipos de Datos Numéricos
 
-Los tipos de datos numéricos incluyen enteros y números de punto flotante. Un número de
-**punto flotante** (conocido como float) tiene puntos decimales incluso si
+Los tipos de datos numéricos incluyen enteros (**integer**) y números de punto flotante (**float**). Un número de
+punto flotante tiene puntos decimales incluso si
 el valor del punto decimal es 0. Por ejemplo: 1.13, 2.0, 1234.345. Si tenemos
 una columna que contiene tanto enteros como números de punto flotante, Pandas asignará el tipo
-de dato float a toda la columna, de modo tal que los puntos decimales no se
+de dato `float` a toda la columna, de modo tal que los puntos decimales no se
 pierdan.
 
 Un **integer** nunca tendrá un punto decimal. Así que, si quisiéramos almacenar
@@ -50,20 +50,20 @@ Un **integer** nunca tendrá un punto decimal. Así que, si quisiéramos almacen
 almacenará como 1234. A menudo, en Python verás el tipo de dato `Int64`
 que representa un entero de 64 bits. El 64 simplemente se refiere a la
 memoria asignada para almacenar datos en cada celda; eso se refiere
-a la cantidad de dígitos que puede efectivamente almacenar en cada "celda".
+a la cantidad de dígitos que puede efectivamente almacenar cada "celda".
 Asignar espacio antes de tiempo permite a las computadoras optimizar
 el almacenamiento y hacer más eficiente el procesamiento.
 
 ## Tipo de Datos de Texto
 
-En Python, el tipo de datos de texto se conoce como secuencia de caracteres.
-En Pandas se los conoce como objetos. Las secuencias de caracteres pueden
+En Python, el tipo de datos de texto se conoce como secuencia de caracteres (**string**).
+En Pandas se los conoce como objetos (**object**). Las secuencias de caracteres pueden
 contener números y / o caracteres. Por ejemplo, una secuencia de caracteres
 puede ser una palabra, una oración, o varias oraciones. Un objeto Pandas
 también podría ser un nombre de gráfico como 'plot1'. Una secuencia de
 caracteres también puede contener o consistir en números. Por ejemplo, '1234'
 podría ser almacenado como una secuencia de caracteres. También '10.23'
-podría ser almacenado como secuencia de caracteres. Sin embargo **las
+podría ser almacenado como secuencia de caracteres. Sin embargo, ¡**las
 las secuencias de caracteres que contienen números no se pueden utilizar en
 operaciones matemáticas**!
 
@@ -73,10 +73,10 @@ de datos. Más sobre esto en la tabla de abajo:
 
 | Tipo en Pandas | Tipo en Python Nativo | Descripción |
 |----------------|-----------------------|-------------|
-| object | string | El dtype más general. Será asignado a tu columna si la columna contiene tipos mixtos (números y secuencias de caracteres). |
+| object | string | El **dtype** más general. Será asignado a tu columna si la columna contiene tipos mixtos (números y secuencias de caracteres). |
 | int64  | int | Caracteres numéricos. 64 se refiere a la memoria asignada para almacenar el caracter. |
 | float64 | float | Caracteres numéricos con decimales. Si una columna contiene números y NaNs (ver más abajo), Pandas usará float64 por defecto, en caso de que los datos faltantes contengan decimales. |
-| datetime64, timedelta[ns] | N/D (pero ver el módulo [datetime] en la librería estandar de Python) | Valores destinados a contener datos de tiempo. Mira en estos para experimentos con series de tiempo. |
+| datetime64, timedelta[ns] | N/D (ver el módulo [datetime] en la librería estandar de Python) | Valores destinados a contener datos de tiempo. Mira en estos para experimentos con series de tiempo. |
 
 [datetime]: http://doc.python.org/2/library/datetime.html
 
@@ -114,7 +114,7 @@ surveys_df['sex'].dtype
 **OUTPUT:** `dtype('O')`
 
 Un tipo 'O' solo significa "objeto" que en el mundo de Pandas es una secuencia
-de caracteres (texto), llamado **string**.
+de caracteres (texto).
 
 ~~~
 surveys_df['record_id'].dtype
@@ -161,7 +161,7 @@ dos maneras: como enteros `integer` o como números de punto flotante `float`. L
 **integers** son los números que usualmente usamos para contar. Los **float**
 tienen parte fraccionaria (decimal). Consideremos ahora cómo el tipo de datos
 puede impactar en las operaciones matemáticas entre nuestros datos. La suma,
-la resta, la división y la multiplicación funcionan en **floats** e **integers**
+la resta, la división y la multiplicación funcionan en **float** e **integer**
 como es de esperar.
 
 ~~~
@@ -233,7 +233,7 @@ dice Pandas? ¿Qué es lo que va mal ahí?
 
 {: .challenge}
 
-## Valores de datos faltantes - NaN
+## Valores de datos faltantes o nulos - NaN
 
 ¿Qué ocurrió en en el desafío? Ten en cuenta que esto arroja un error de valor:
 
@@ -265,7 +265,7 @@ tus datos podría realmente alterar los cálculos numéricos. A menudo, en las
 hojas de cálculo, las celdas se dejan vacías cuando no hay datos disponibles.
 Por defecto, Pandas reemplazará esos valores nulos con **NaN**.
 Sin embargo, es una buena práctica adquirir el hábito de marcar intencionalmente
-aquellas celdas que no tienen datos con un valor que respresente "sin datos"!
+aquellas celdas que no tienen datos con un valor que represente "sin datos"!
 De esa manera, en el futuro, no habrá preguntas cuando tu (o alguna otra persona)
 explore los datos.
 
@@ -314,7 +314,7 @@ código de abajo completa todos los Valores **NaN** con un promedio de los pesos
 {: .language-python}
 
 También podríamos elegir crear un subconjunto de datos, manteniendo solamente
-aquellas filas que que no contiene valores **NaN**.
+aquellas filas que no contienen valores **NaN**.
 
 La clave es tomar decisiones conscientes acerca de cómo administrar los datos
 faltantes. Aquí es donde pensamos cómo se utilizarán nuestros datos y cómo estos
@@ -360,8 +360,8 @@ Ahora podemos usar el comando `to_csv` para exportar un **DataFrame** a formato
 CSV. Ten en cuenta que el código que se muestra a continuación por defector
 guardará los datos en el directorio de trabajo en el que estamos parados.
 Podemos guardarlo en otra carpeta agregando el nombre de la carpeta y una barra
-inclinada antes del nombre del archivo: `df.to_csv ('foldername/out.csv')`.
-Usamos 'index = False' para que Pandas no incluya el número de índice para cada
+inclinada antes del nombre del archivo: `df.to_csv('foldername/out.csv')`.
+Usamos `index = False` para que Pandas no incluya el número de índice para cada
 fila.
 
 ~~~
@@ -379,11 +379,11 @@ asegurarte de que se importa correctamente.
 
 Hemos aprendido:
 
-+ Cómo explorar los tipos de dato de las colummnas de un **Dataframe**
++ Cómo explorar los tipos de dato de las colummnas de un **DataFrame**
 + Cómo cambiar el tipo de dato
 + Qué son los valores **NaN**, cómo deberían representarse, y lo que eso
 + significa para tu trabajo
-+ Cómo reemplazar los valores **NaN" si así lo quisieras
++ Cómo reemplazar los valores **NaN** si así lo quisieras
 + Como usar `to_csv` para guardar en un archivo los datos manipulados.
 
 {% include links.md %}
