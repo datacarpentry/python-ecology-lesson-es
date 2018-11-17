@@ -152,7 +152,7 @@ Ten en cuenta que la mayoría de las columnas en nuestros datos de encuesta son
 del tipo `int64`. Esto significa que son enteros de 64 bits. Pero la columna de
 peso (weight) es un valor de punto flotante o `float`, lo que significa que contiene 
 decimales. Las columnas `species_id` y `sex` son objetos, lo cual significa que
-contienen secuencias de caracteres.
+contienen secuencias de caracteres `string`. 
 
 ## Trabajando con **integers** y **floats**
 
