@@ -88,7 +88,7 @@ y de texto, exploremos el formato de los datos de nuestra encuesta. Estaremos tr
 con el mismo **dataset**  `survey.csv` que hemos usado en lecciones anteriores.
 
 ~~~
-# Ten en cuenta que se usa pd.read_csv porque importamos pandas como pd
+# Ten en cuenta que se usa `pd.read_csv` porque importamos pandas con el alias `pd`
 survey_df = pd.read_csv ("data/survey.csv")
 ~~~
 {: .language-python}
