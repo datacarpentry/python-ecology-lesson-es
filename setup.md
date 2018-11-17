@@ -104,7 +104,7 @@ conda install -c conda-forge plotnine
 ~~~
 {: .language-bash}
 
-## Lanzar un **Jupyter Notebook**
+## Abre un **Jupyter Notebook**
 
 Después de instalar **Python** y los paquetes requeridos,
 abre un **Jupyter Notebook** escribiendo este comando en la terminal:
