@@ -326,7 +326,7 @@ en los resultados científicos.
 
 > ## Desafío - Contando
 > Cuenta el número de valores perdidos por columna. Sugerencia: el método
-> `.count ()` te proporciona el número de observaciones que no son NA por columna.
+> `.count()` te proporciona el número de observaciones que no son NA por columna.
 > Examina el método `.isnull ()`.
 {: .challenge}
 
