@@ -175,7 +175,7 @@ print(24-4)
 
 Si dividimos un **integer** por otro, obtenemos un **float**.
 El resultado en Python 3 es diferente al de Python 2, donde el resultado es un
-**integer** (división entera).
+**integer** (porque Python 2 hace una división entera).
 
 ~~~
 print(5/9)
