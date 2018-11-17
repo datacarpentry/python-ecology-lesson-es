@@ -19,7 +19,7 @@ __CSV__ (archivo)
 base de datos
 :   es una colección organizada de datos.
 
-__dataframe__
+__DataFrame__
 :   es una estructura bidimensional de datos etiquetados con columnas de (potencialmente) 
     diferentes tipos.
 
@@ -31,7 +31,7 @@ tipo de datos
     por los valores que puede tomar, el lenguage de programación en uso y las operaciones
     que se le pueden aplicar.
 
-diccionario
+diccionario o **dictionary**
 :   es una estructura de datos desordenada de Python que contiene pares clave-valor, donde
     ambos, la clave y el valor, pueden ser __integers__, __floats__, o cadenas de caracteres. Los
     elementos de un diccionario pueden ser accesados con su llave y pueden ser modificados.
@@ -48,7 +48,7 @@ __float__
 :   es un tipo de datos en Python diseñado para guardar números decimales positivos y
     negativos mediante una representación denominada punto flotante.
 
-función
+función o **function**
 :   es un grupo de declaraciones relacionadas que realizan una tarea específica.
 
 __integer__
@@ -64,7 +64,7 @@ clave de unión
     __pandas.DataFrame.join()__ fusiona las columndas de dos __datasets__.
 
 
-librería
+librería o **library**
 :   es un conjunto de funciones y metodos agrupados para realizar algún tipo de tareas específicas.
 
 
@@ -74,7 +74,7 @@ __list__
     secuencia es ordenada e indexada por __integers__, empezando desde cero. Los elementos
     de una __list__ pueden ser accedidos por su índice y pueden ser modificados.
 
-__loop__
+__loop__ o bucle
 :   es una secuencia de instrucciones que es continuamente repetida hasta que se 
     cumple una condición.
 
