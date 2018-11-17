@@ -263,7 +263,7 @@ Por ejemplo, en algunas disciplinas, como el sensado remoto, los valores de
 datos faltantes suelen definirse como -9999. Tener un montón de valores -9999 en
 tus datos podría realmente alterar los cálculos numéricos. A menudo, en las
 hojas de cálculo, las celdas se dejan vacías cuando no hay datos disponibles.
-Por defecto, Pandas reemplazará esos valores perdidos con **NaN**.
+Por defecto, Pandas reemplazará esos valores nulos con **NaN**.
 Sin embargo, es una buena práctica adquirir el hábito de marcar intencionalmente
 aquellas celdas que no tienen datos con un valor que respresente "sin datos"!
 De esa manera, en el futuro, no habrá preguntas cuando tu (o alguna otra persona)
