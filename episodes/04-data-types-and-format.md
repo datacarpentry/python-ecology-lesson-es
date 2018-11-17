@@ -103,7 +103,7 @@ type(surveys_df)
 **OUTPUT:** `pandas.core.frame.DataFrame`
 
 A continuación, veamos la estructura de datos de nuestras encuestas. En pandas,
-podemos comprobar el tipo de una columna de un DataFrame usando la sintaxis
+podemos comprobar el tipo de datos de una columna en un **DataFrame** usando la sintaxis
 `dataFrameName[column_name].dtype`:
 
 ~~~
