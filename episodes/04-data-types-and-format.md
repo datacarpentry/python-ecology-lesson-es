@@ -15,7 +15,11 @@ objectives:
     - "Analizar datasets que tienen valores faltantes/nulos (valores NaN)."
     - "Escribir datos manipulados a un archivo."
 keypoints:
-    - "FIXME"
+    - Python usa dos tipos de datos principales: texto y numéricos, estos tienen un nombre diferente en Python básico y Pandas
+    - Cada columna en un **DataFrame** tiene un tipo de datos para todas las filas
+    - Puedes convertir cualquier tipo de dato a otro tipo
+    - Puedes descartar o cambiar valores nulos 
+    - Luego de manipular el **DataFrame** lo puedes guardar en un archivo CSV
 ---
 
 El formato de columnas y filas individuales afectará el análisis realizado en
