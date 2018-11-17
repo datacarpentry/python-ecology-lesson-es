@@ -83,7 +83,7 @@ de datos. Más sobre esto en la tabla de abajo:
 
 ## Comprobando el formato de nuestros datos
 
-Ahora que estamos armados con una comprensión básica de los tipos de datos numéricos
+Ahora que tenemos una comprensión básica de los tipos de datos numéricos
 y de texto, exploremos el formato de los datos de nuestra encuesta. Estaremos trabajando
 con el mismo **dataset**  `survey.csv` que hemos usado en lecciones anteriores.
 
