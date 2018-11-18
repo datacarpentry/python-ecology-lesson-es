@@ -234,7 +234,7 @@ es modificado, el otro objeto va a observar los mismos cambios.
 
 **Revisar y Recapitular**:
 
-- **Copy** uses the dataframe's `copy()` method
+- **Copy** usa el método copy del **dataframe**
 
   ~~~
   true_copy_surveys_df = surveys_df.copy()
