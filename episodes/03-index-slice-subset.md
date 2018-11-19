@@ -257,7 +257,7 @@ surveys_df = pd.read_csv("data/surveys.csv")
 
 ## Segmentando Subconjuntos de Filas y Columnas en Python
 
-Podemos seleccionar subconjuntos de datos, contenidos en rangos específicos de filas y columnas
+Podemos seleccionar subconjuntos de datos, contenidos en rangos específicos de filas y columnas,
 usando etiquetas o indexación basada en números enteros.
 
 - `loc` es usado principalmente para indexación basada en *etiquetas*. Puede usar *números enteros* pero
