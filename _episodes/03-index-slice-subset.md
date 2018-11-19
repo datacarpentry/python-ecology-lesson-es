@@ -85,7 +85,7 @@ surveys_species = surveys_df['species_id']
 También podemos pasar una lista de nombres de columnas, a manera de índice para seleccionar las columnas en ese orden. 
 Esto es útil cuando necesitamos reorganizar nuestros datos.
 
-**NOTA:** Si el nombre de una columna no esta incluido en el **DataFrame**, 
+**NOTA:** Si el nombre de una columna no esta incluido en el `DataFrame`, 
 se producirá una excepción (error).
 
 ~~~
@@ -234,7 +234,7 @@ es modificado, el otro objeto va a observar los mismos cambios.
 
 **Revisar y Recapitular**:
 
-- Para crear una **copia** de un objeto, usamos el método **copy()** del **dataframe**
+- Para crear una **copia** de un objeto, usamos el método **copy()** de un `dataframe`
 
   ~~~
   true_copy_surveys_df = surveys_df.copy()
@@ -255,10 +255,10 @@ surveys_df = pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
 
-## Slicing Subsets of Rows and Columns in Python
+## Segmentando Subconjuntos de Filas y Columnas en Python
 
-We can select specific ranges of our data in both the row and column directions
-using either label or integer-based indexing.
+Podemos seleccionar rangos específicos de datos que contengan filas y columnas
+usando etiquetas o indexación basada en númeroes enteros.
 
 - `loc` is primarily *label* based indexing. *Integers* may be used but
   they are interpreted as a *label*.
