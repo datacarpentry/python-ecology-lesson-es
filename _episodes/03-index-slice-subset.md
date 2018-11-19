@@ -234,21 +234,21 @@ es modificado, el otro objeto va a observar los mismos cambios.
 
 **Revisar y Recapitular**:
 
-- **Copy** usa el método copy del **dataframe**
+- Para crear una **copia** de un objeto, usamos el método **copy()** del **dataframe**
 
   ~~~
   true_copy_surveys_df = surveys_df.copy()
   ~~~
   {: .language-python }
-- A **Reference** is created using the `=` operator
+- Para crear una **referencia** a un objeto usamos el operador `=`
 
   ~~~
   ref_surveys_df = surveys_df
   ~~~
   {: .language-python }
 
-Okay, that's enough of that. Let's create a brand new clean dataframe from
-the original data CSV file.
+Muy bien, hora de practicar. Vamos a crear un nuevo `dataframe` a partir
+del archivo CSV con los datos originales.
 
 ~~~
 surveys_df = pd.read_csv("data/surveys.csv")
