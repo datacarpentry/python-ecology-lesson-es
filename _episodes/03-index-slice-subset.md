@@ -260,7 +260,7 @@ surveys_df = pd.read_csv("data/surveys.csv")
 Podemos seleccionar subconjuntos de datos, contenidos en rangos específicos de filas y columnas,
 usando etiquetas o indexación basada en números enteros.
 
-- `loc` es usado principalmente para indexación basada en *etiquetas*. Puede usar *números enteros* pero
+- `loc` es usado principalmente para indexación basada en *etiquetas*. Permite usar *números enteros* pero
   son interpretados como una *etiqueta*.
 - `iloc` es usado para indexación basada en *números enteros*
 
@@ -285,7 +285,7 @@ lo cual nos produce la siguiente **salida**
 {: .output}
 
 Ten en cuenta que pedimos un segmento de 0:3. Esto produjo 3 filas de datos. Cuando
-pides de 0:3, le estas diciendo a **Python** que comience en el índice 0 y seleccione las filas
+pides un segmento de 0:3, le estas diciendo a **Python** que comience en el índice 0 y seleccione las filas
 0, 1, 2 **hasta 3 pero sin incluir esta última**.
 
 Exploremos otras maneras de indexar y seleccionar subconjuntos de datos:
