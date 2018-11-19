@@ -247,7 +247,7 @@ es modificado, el otro objeto va a observar los mismos cambios.
   ~~~
   {: .language-python }
 
-Muy bien, hora de practicar. Vamos a crear un nuevo `dataframe` a partir
+Muy bien, hora de practicar. Vamos a crear un nuevo objeto `dataframe` a partir
 del archivo CSV con los datos originales.
 
 ~~~
@@ -257,24 +257,24 @@ surveys_df = pd.read_csv("data/surveys.csv")
 
 ## Segmentando Subconjuntos de Filas y Columnas en Python
 
-Podemos seleccionar rangos específicos de datos que contengan filas y columnas
-usando etiquetas o indexación basada en númeroes enteros.
+Podemos seleccionar subconjuntos de datos, contenidos en rangos específicos de filas y columnas
+usando etiquetas o indexación basada en números enteros.
 
-- `loc` is primarily *label* based indexing. *Integers* may be used but
-  they are interpreted as a *label*.
-- `iloc` is primarily *integer* based indexing
+- `loc` es usado principalmente para indexación basada en *etiquetas*. Puede usar *números enteros* pero
+  son interpretados como una *etiqueta*.
+- `iloc` es usado para indexación basada en *números enteros*
 
-To select a subset of rows **and** columns from our DataFrame, we can use the
-`iloc` method. For example, we can select month, day and year (columns 2, 3
-and 4 if we start counting at 1), like this:
+Para seleccionar un subconjunto de filas **y** columnas de nuestro objeto **DataFrame**, podemos usar
+el método `iloc`. Por ejemplo, podemos seleccionar `month`, `day` y `year` (que corresponden a las columnas 2, 3
+y 4 si empezamos a contar las columnas en 1) para las primeras tres filas, de la siguiente manera:
 
 ~~~
-# iloc[row slicing, column slicing]
+# iloc[segmentación de fila, segmentación de columna]
 surveys_df.iloc[0:3, 1:4]
 ~~~
 {: .language-python}
 
-which gives the **output**
+lo cual nos produce la siguiente **salida**
 
 ~~~
    month  day  year
@@ -284,25 +284,25 @@ which gives the **output**
 ~~~
 {: .output}
 
-Notice that we asked for a slice from 0:3. This yielded 3 rows of data. When you
-ask for 0:3, you are actually telling Python to start at index 0 and select rows
-0, 1, 2 **up to but not including 3**.
+Ten en cuenta que pedimos un segmento de 0:3. Esto produjo 3 filas de datos. Cuando
+pides de 0:3, le estas diciendo a **Python** que comience en el índice 0 y seleccione las filas
+0, 1, 2 **hasta 3 pero sin incluir esta última**.
 
-Let's explore some other ways to index and select subsets of data:
+Exploremos otras maneras de indexar y seleccionar subconjuntos de datos:
 
 ~~~
-# Select all columns for rows of index values 0 and 10
+# Selecciona todas las columnas para las filas con índices entre 0 y 10
 surveys_df.loc[[0, 10], :]
 
-# What does this do?
+# ¿Qué produce el la siguiente instrucción?
 surveys_df.loc[0, ['species_id', 'plot_id', 'weight']]
 
-# What happens when you type the code below?
+# ¿Que pasa cuando ejecutas el siguiente código?
 surveys_df.loc[[0, 10, 35549], :]
 ~~~
 {: .language-python}
 
-**NOTE**: Labels must be found in the DataFrame or you will get a `KeyError`.
+**NOTA**: Las etiquetas utilizadas deben estar incluidas en el **DataFrame** o se obtendrá un error de tipo `KeyError`.
 
 Indexing by labels `loc` differs from indexing by integers `iloc`.
 With `loc`, the both start bound and the stop bound are **inclusive**. When using
