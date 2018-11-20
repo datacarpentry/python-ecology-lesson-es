@@ -324,7 +324,7 @@ La función `merge` de pandas admite otros dos tipos de unión:
 > parcelas por tipo de parcela.
 > 2. Calcula un índice de diversidad de su elección para control vs parcelas de rodamiento de roedores
 > El índice debe considerar tanto la abundancia de especies como el número de
-> especies. Puede optar por utilizar el simple [índice de biodiversidad descrito
+> especies. Puedes optar por utilizar el simple [índice de biodiversidad descrito
 > aquí](http://www.amnh.org/explore/curriculum-collections/biodiversity-counts/plant-ecology/how-to-calculate-a-biodiversity-index)
 > que calcula la diversidad como:
 >
