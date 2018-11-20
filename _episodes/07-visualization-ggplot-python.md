@@ -104,7 +104,7 @@ surveys_plot + p9.geom_point()
 
 > ## Desafío - gráfico de barras
 > Trabajando con los datos de `survey_complete`, usa la columna `plot-id` para
-> crear un gráfico de barra `geom_bar` que cuente el número de registros en cada parcela. (Mira la documentación de la geometría de barra para manejar los conteos).
+> crear un gráfico de barras `geom_bar` que cuente el número de registros  para cada parcela. (Mira la documentación de la geometría de barras para manejar los conteos).
 >
 > > ## Respuestas
 > >
