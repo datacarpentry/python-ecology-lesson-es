@@ -327,7 +327,7 @@ yearly_counts
 ~~~
 {: .language-python}
 
-Cuando revisamos los resultados del cálculo anterior, vemos que `year` y `species_id` son índices de fila. Podemos cambiar el index para que los dos sean usados como una variable:
+Cuando revisamos los resultados del cálculo anterior, vemos que `year` y `species_id` son índices de filas. Podemos cambiar este indice para que sean usados como una variable de columnas:
 
 ~~~
 yearly_counts = yearly_counts.reset_index(name='counts')
