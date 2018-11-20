@@ -8,32 +8,32 @@ questions:
     - "¿Por qué debería de usar Pandas para trabajar con datos?"
 objectives:
     - "Explorar el directorio del taller y descargar el dataset."
-    - "Explicar que es una biblioteca y para que se usan."
+    - "Explicar qué es una biblioteca y para qué se usa."
     - "Describir que es la biblioteca análisis de datos de Python (Pandas)."
     - "Cargar la biblioteca de análisis de datos de Python (Pandas)."
     - "Usar `read_csv` para leer datos tabulares en Python."
-    - "Describir que es un DataFrame en Python."
-    - "Acceder y resumir datos guardados en un DataFrame."
-    - "Definir indexado y sus estructura de datos relacionadas."
+    - "Describir qué es un **DataFrame** en Python."
+    - "Acceder y resumir datos guardados en un **DataFrame**."
+    - "Definir la indexación y su relación con las estructuras de datos."
     - "Ejecutar operaciones matemáticas básicas y estadísticas en datos de un Pandas Dataframe."
-    - "Crear gráficas simples."
+    - "Crear gráficos simples."
 keypoints:
     - "FIXME"
 ---
 
-# Trabajando con Pandas Dataframes en Python
+# Trabajando con Pandas **DataFrames** en Python
 
 Podemos automatizar el proceso de manipular datos con Python. Vale la pena pasar
 tiempo escribiendo el código que haga estas tareas ya que una vez que se escribió,
 lo podemos usar una y otra vez en distintos conjuntos de datos que usen un formato 
-similar. Esto hace nuestros métodos facilmente reproducibles. También resulta fácil
+similar. Esto hace nuestros métodos fácilmente reproducibles. También resulta fácil
 compartir nuestro código con nuestros colegas y ellos pueden replicar el mismo 
 análisis.
 
-### Empezemos en el mismo punto
+### Comenzando en el mismo lugar
 
-Para que la leccción salga de la mejor manera posible, aseguremonos que todos
-estemos en el mismo directorio. Esto nos ayuda a evistar problemas en los nombres
+Para que la lección salga de la mejor manera posible, vamos a asegurarnos que todos
+estemos en el mismo directorio. Esto debería ayudarnos a evitar inconvenientes con los nombres
 de directorios y archivos. En este momento haz el favor de navegar al directorio del
 taller. Si tu estás trabajando en IPython Notebook asegurate de iniciar tu notebook 
 en el directorio del taller.
