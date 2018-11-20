@@ -404,37 +404,37 @@ surveys_df[(surveys_df.year >= 1980) & (surveys_df.year <= 1985)]
 Podemos utilizar la sintaxis incluida a continuación, cuando queramos hace consultas de datos por criterios en un `DataFrame`.
 Experimenta seleccionando varios subconjuntos de los datos contenidos en "surveys".
 
-* Igual: `==`
-* No igual o diferente: `!=`
+* Igual a: `==`
+* No igual o diferente de: `!=`
 * Mayor que, menor que: `>` or `<`
 * Mayor o igual que `>=`
 * Menor o ogual que `<=`
 
 
-> ## Challenge - Queries
+> ## Desafío - Consultas
 >
-> 1. Select a subset of rows in the `surveys_df` DataFrame that contain data from
->   the year 1999 and that contain weight values less than or equal to 8. How
->   many rows did you end up with? What did your neighbor get?
+> 1. Selecciona un subconjunto de filas, en el `DataFrame` `surveys_df`, que contenga datos desde
+>   el año 1999 y que contenga valores en `weight` menores o iguales a 8. ¿Cuántas
+>   filas obtuviste como resultado? ¿Cuantas filas obtuvo tu compañero?
 >
-> 2. You can use the `isin` command in Python to query a DataFrame based upon a
->   list of values as follows:
+> 2. Puedes usar la función `isin` de Python para hacer una consulta, a un `DataFrame`, basada en
+>   una lista de valores según se muestra a continuación:
 >
 >    ~~~
 >    surveys_df[surveys_df['species_id'].isin([listGoesHere])]
 >    ~~~
 >    {: .language-python }
 >
->   Use the `isin` function to find all plots that contain particular species
->   in the "surveys" DataFrame. How many records contain these values?
+>   Usa la función `isin` para encontrar todos los gráficos que contienen una especie en particular
+>   en el `DtataFrame` "surveys". ¿Cuántos registros contienen esos valores?
 >
-> 3. Experiment with other queries. Create a query that finds all rows with a
->   weight value > or equal to 0.
+> 3. Experimenta con otras consultas. Crea una consulta que encuentre todas las filas con el
+>   valor de `weight` > myor o igual a 0.
 >
-> 4. The `~` symbol in Python can be used to return the OPPOSITE of the
->   selection that you specify in Python. It is equivalent to **is not in**.
->   Write a query that selects all rows with sex NOT equal to 'M' or 'F' in
->   the "surveys" data.
+> 4. El símbolo `~` en Python puede ser usado para obtener lo **opuesto** a los
+>   datos seleccionados que hayas especificado en Python. Es equivalente a **no esta en**.
+>   Escriba una consulta que seleccione todas las filas con `sex` no igual a 'M' o 'F' en
+>   los datos de "surveys".
 {: .challenge}
 
 
