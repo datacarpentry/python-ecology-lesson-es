@@ -254,7 +254,7 @@ Por lo general, los gráficos con fondo blanco parecen más legibles cuando se i
 
 # Gráficos de distribuciones
 
-Visualizar una distribución de datos es una tarea común en el análisis y exploración de los datos.
+Visualizar una distribución de datos es una tarea común en el análisis y exploración de datos.
 Por ejemplo, para visualizar la distribución de datos de la columna `weight` por cada especie `species_id`, puedes usar una gráfica de caja:
 
 ~~~
