@@ -4,7 +4,7 @@ teaching: 20
 exercises: 25
 questions:
   - ¿Puedo trabajar con datos de diferentes fuentes?
-  - ¿Como puedo combinar datos de diferentes __datasets__?
+  - ¿Cómo puedo combinar datos de diferentes __datasets__?
 objectives:
   - Combinar datos de varios diferentes archivos en un unico __DataFrame__ usando merge y concat.
   - Combinar dos __DataFrames__ usando un ID único encontrado en los do __DataFrames__.
@@ -322,7 +322,7 @@ La función `merge` de pandas admite otros dos tipos de unión:
 > 1. En la carpeta de datos, hay un gráfico `CSV` que contiene información sobre el
 > tipo asociado con cada parcela. Usa esos datos para resumir el número de
 > parcelas por tipo de parcela.
-> 2. Calcule un índice de diversidad de su elección para control vs parcelas de rodamiento de roedores
+> 2. Calcula un índice de diversidad de su elección para control vs parcelas de rodamiento de roedores
 > El índice debe considerar tanto la abundancia de especies como el número de
 > especies. Puede optar por utilizar el simple [índice de biodiversidad descrito
 > aquí](http://www.amnh.org/explore/curriculum-collections/biodiversity-counts/plant-ecology/how-to-calculate-a-biodiversity-index)
