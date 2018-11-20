@@ -234,7 +234,7 @@ es modificado, el otro objeto va a observar los mismos cambios.
 
 **Revisar y Recapitular**:
 
-- Para crear una **copia** de un objeto, usamos el método **copy()** de un `dataframe`
+- Para crear una **copia** de un objeto, usamos el método **copy()** de un `DataFrame`
 
   ~~~
   true_copy_surveys_df = surveys_df.copy()
