@@ -520,7 +520,7 @@ Tómate otros cinco minutos para mejorar uno de los gráficos anteriores, o crea
 > Aquí hay algunas ideas:
 >
 > * Intenta cambiar el grosor de las lineas en el gráfico de línea.
-> * ¿Podrías cambiar el la leyenda y sus etiquetas?
+> * ¿Podrías cambiar la leyenda y sus etiquetas?
 > * Usa una paleta de colores nueva (mira las opciones aquí http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/)
 {: .challenge}
 
