@@ -59,7 +59,7 @@ species_df
 ~~~
 {: .language-python}
 
-Se debe notar que el método `read_csv` que usamos puede tomar opciones adicionales que no hemos usado antes. Muchas funciones en Python tienen un conjunto de opciones que se pueden ser establecido por el usuario si es necesario. En este caso, nosotros hemos dicho pandas que asigne valores vacíos en nuestro CSV a NaN `keep_default_na=False, na_values=[""]`.
+Ten en cuenta que el método `read_csv` que usamos puede tomar opciones adicionales que no hemos usado anteriormente. Muchas funciones en __Python__ tienen un conjunto de opciones que se pueden ser definidas por el usuario si es necesario. En este caso, hemos indicado a __pandas__ que asigne valores vacíos en nuestro __CSV__ como __NaN__ `keep_default_na=False, na_values=[""]`.
 [Mas sobre todas las optciones de read csv aqui.](http://pandas.pydata.org/pandas-docs/dev/generated/pandas.io.parsers.read_csv.html)
 
 # Concatenando DataFrames
