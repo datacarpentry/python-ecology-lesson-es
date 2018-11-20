@@ -77,7 +77,7 @@ Como no hemos definido nada más, sólo se presenta un marco vacío para el grá
 utilizar. Puedes interpretar ésto como: las variables que se usan en el gráfico son las que serán
 modificadas por objetos o geometrías. Lo más sencillo es probablemente usar puntos.
 `geom_point` es una de las opciones de geometría `geoms`, que define la representación gráfica de los datos.
-Otras geometrías son `geom_line`, `geom_bar`, etc. Para agregar un `geom` al gráfico usa el símbolo `+`:S
+Otras geometrías son `geom_line`, `geom_bar`, etc. Para agregar un `geom` al gráfico usa el símbolo `+`:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
