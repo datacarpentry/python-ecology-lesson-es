@@ -37,7 +37,7 @@ import plotnine as p9
 Desde ahora todas las funciones de `plotnine` se pueden acceder usando `p9.` por delante.
 
 Para los ejercicios usaremos los datos de `surveys.csv` descartando los valores
-nulos `NA`.
+ `NA`.
 
 ~~~
 import pandas as pd
