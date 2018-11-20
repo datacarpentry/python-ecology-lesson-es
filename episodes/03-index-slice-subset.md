@@ -264,7 +264,7 @@ usando etiquetas o indexación basada en números enteros.
   son interpretados como una *etiqueta*.
 - `iloc` es usado para indexación basada en *números enteros*
 
-Para seleccionar un subconjunto de filas **y** columnas de nuestro objeto **DataFrame**, podemos usar
+Para seleccionar un subconjunto de filas **y** columnas de nuestro objeto `DataFrame`, podemos usar
 el método `iloc`. Por ejemplo, podemos seleccionar `month`, `day` y `year` (que corresponden a las columnas 2, 3
 y 4, si empezamos a contar las columnas en 1) para las primeras tres filas, de la siguiente manera:
 
@@ -286,7 +286,7 @@ lo cual nos produce la siguiente **salida**
 
 Ten en cuenta que pedimos un segmento de 0:3. Esto produjo 3 filas de datos. Cuando
 pides un segmento de 0:3, le estas diciendo a **Python** que comience en el índice 0 y seleccione las filas
-0, 1, 2 **hasta 3 pero sin incluir esta última**.
+0, 1, 2, **hasta 3 pero sin incluir esta última**.
 
 Exploremos otras maneras de indexar y seleccionar subconjuntos de datos:
 
@@ -294,7 +294,7 @@ Exploremos otras maneras de indexar y seleccionar subconjuntos de datos:
 # Selecciona todas las columnas para las filas con índices entre 0 y 10
 surveys_df.loc[[0, 10], :]
 
-# ¿Qué produce el la siguiente instrucción?
+# ¿Qué salida produce el la siguiente instrucción?
 surveys_df.loc[0, ['species_id', 'plot_id', 'weight']]
 
 # ¿Qué pasa cuando ejecutas el siguiente código?
@@ -333,7 +333,7 @@ la **salida** es la siguiente
 ~~~
 {: .output}
 
-Recuerda que la indexación en Python inicia en 0. Asi que, la direccíon basada en índice [2, 6]
+Recuerda que la indexación en Python inicia en 0. Así que, la direccíon basada en índice [2, 6]
 selecciona el elemento ubicado en la intersección de la tercera fila (índice 2) y la séptima columna (índice 6) en el `DataFrame`.
 
 
@@ -351,13 +351,13 @@ selecciona el elemento ubicado en la intersección de la tercera fila (índice 2
 >    - `dat.iloc[0:4, 1:4]`
 >    - `dat.loc[0:4, 1:4]`
 >
-> - ¿Qué diferencia observó entre los resultados de los comandos inmediatamente anteriores?
+> - ¿Qué diferencia observas entre los resultados de los comandos inmediatamente anteriores?
 {: .challenge}
 
 
 ## Creando subconjuntos de datos mediante el filtrado por criterios
 
-También podemos seleccionar un subconjunto de nuestros datos mediante el filtrado de la data original usando algún criterio. 
+También podemos seleccionar un subconjunto de nuestros datos, mediante el filtrado de la data original, usando algún criterio. 
 Por ejemplo, podemos seleccionar todas las filas que tienen el valor de 2002 en la columna `year`:
 
 ~~~
