@@ -346,7 +346,7 @@ Los gráficos de series se pueden visualizar usando líneas (`geom_line`) con a�
 ~~~
 {: .language-python}
 
-Desafortunadamete eso no funciona, por que esto nos muestta todas las especies juntas. Tenemos que especificar que queremos una línea para cada especie. Esto se modifica en la función de estética conectando el color con la variable `species_id`:
+Desafortunadamente eso no funciona, porque nos muestra todas las especies juntas. Tenemos que especificar que queremos una línea para cada especie. Esto se modifica en la función de estética conectando el color con la variable `species_id`:
 
 ~~~
 (p9.ggplot(data=yearly_counts,
