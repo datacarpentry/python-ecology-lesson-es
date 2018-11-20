@@ -3,13 +3,13 @@ title: Breve introducción a la Programación en Python
 teaching: 0
 exercises: 0
 questions:
-    - "¿Qué Python?"
+    - "¿Qué es Python?"
     - "¿Porqué deberías aprender Python?"
 objectives:
     - "Describir las ventajas de usar programación vs. completar tareas repetitivas a mano."
     - "Definir los tipos de datos en Python: **strings**, **integers**, and **floats**."
     - "Realizar operaciones matemáticas en Python utilizando operadores básicos."
-    - "Definir como lo siguiente se relaciona con Python: **lists**, **tuples**, y **dictionaries**."
+    - "Dentro del contexto de Python definir: **lists**, **tuples**, y **dictionaries**."
 keypoints:
     - "FIXME"
 ---
@@ -20,7 +20,7 @@ Python es un lenguaje interpretado que puede ser usado de dos formas:
 
 * Modo "Interactivo": cuando lo usas como una "calculadora avanzada" ejecutando
   un comando a la vez. Para iniciar Python en este modo, simplemente ejecuta `python`
-  en la línea de comando:
+  en la línea de comandos:
 
 ~~~
 $ python
@@ -35,7 +35,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ~~~
 {: .output}
 
-Los `>>>` es un indicador interactivo en Python, que significa que está esperando tu
+Los res símbolos de mayor que `>>>` forman un indicador interactivo en Python, que significa que está esperando tu
 entrada de datos.
 
 ~~~
@@ -69,16 +69,16 @@ Hello World
 ~~~
 {: .output}
 
-## Introducción a los tipos de datos incorporados de Python
+## Introducción a los tipos de datos incorporados en Python
 
 ### Strings, integers, and floats
 
 Una de las cosas más básicas que podemos hacer en Python es asignar valores a las variables:
 
 ~~~
-text = "Data Carpentry"  # An example of a string
-number = 42  # An example of an integer
-pi_value = 3.1415  # An example of a float
+text = "Data Carpentry"  # Un ejemplo de string
+number = 42  # Un ejemplo de integer
+pi_value = 3.1415  # Un ejemplo de float
 ~~~
 {: .language-python}
 
@@ -127,7 +127,7 @@ type(6.02)
 {: .output}
 
 
-La variable `text` es de tipo` str`, abreviatura de "cadena". Las cadenas almacenan
+La variable `text` es de tipo 'str', abreviatura de **string** o cadena de caracteres. Las cadenas almacenan
 secuencias de caracteres, que pueden ser letras, números, puntuación
 o más formas exóticas de texto (¡incluso emoji!).
 
@@ -154,12 +154,12 @@ Esto puede parecer redundante, pero de hecho es la única forma de mostrar resul
 
 *example.py*
 ~~~
-# Un archivo script de Python
-# Los comentarios en Python inician con #
+# En un archivo script de Python
+# los comentarios en Python inician con #
 # Las siguientes líneas asignan la cadena "Data Carpentry" a la variable "text".
 text = "Data Carpentry"
 
-# La siguiente línea no hace nada!
+# ¡La siguiente línea no hace nada!
 text
 
 # La siguiente línea usa la función print para imprimir el valor asignado a "text"
@@ -180,9 +180,9 @@ Data Carpentry
 
 Nota que "Data Carpentry" se imprime una vez.
 
-**Tip**: `print` y `type` son funciones incorporadas en Python. Mas adelante en esta
-lección, introduciremos métodos y funciones definidas por el usuario. En Python
-la documentación es excelente como referencia sobre las diferencias entre ellos.
+**Sugerencia**: `print` y `type` son funciones incorporadas en Python. Mas adelante en esta
+lección, veremos métodos y funciones definidas por el usuario. La documentación 
+de Python es excelente para darte una referencia sobre las diferencias entre ellos.
 
 
 ### Operadores
@@ -228,8 +228,8 @@ Podemos realizar cálculos matemáticos en Python usando los operadores básicos
 
 También podemos utilizar operadores de comparación y lógica:
 `<,>, ==,! =, <=,> =` y declaraciones de identidad como
-`and, or, not`. El tipo de datos devuelto por estos es
-llamado un _**boolean**_.
+`and, or, not`. El tipo de datos devuelto por estos operadres es
+llamado _**boolean**_ y retorna verdadero o falso, como ves a continuación.
 
 ~~~
 3 > 4
@@ -271,7 +271,7 @@ False
 
 ### Listas
 
-**Listas** son una estructura de datos común para almacenar una secuencia ordenada de
+**list** (o listas) son una estructura de datos común para almacenar una secuencia ordenada de
 elementos. Se puede acceder a cada elemento mediante un índice. Ten en cuenta que en Python,
 los índices comienzan con 0 en lugar de 1:
 
@@ -302,10 +302,10 @@ estructuras de datos de Python, uno a la vez:
 ~~~
 {: .output}
 
-**La sangría** es muy importante en Python. Ten en cuenta que la segunda línea en el
-ejemplo de arriba está sangrado. Al igual que los tres `>>>` son un
-indicador interactivo en Python, los tres puntos `...` son indicadores de Python para
-líneas multiples. Esta es la manera en que Python marca un bloque de código. [Nota: no 
+Usar **sangría** es muy importante en Python. Ten en cuenta que la segunda línea en el
+ejemplo de arriba está sangrada (o indentada). Al igual que los tres `>>>` son un
+indicador interactivo en Python, los tres puntos `...` son indicadores de 
+líneas multiples en Python. Esta es la manera en que Python marca un bloque de código. [Nota: no 
 tienes que escribir `>>>` o `...`.]
 
 Para agregar elementos al final de una lista, podemos usar el método `append`. Los métodos
@@ -341,7 +341,7 @@ class list(object)
 
 ### Tuplas
 
-Una tupla es similar a una lista en que es una secuencia ordenada de elementos.
+Una tupla **tuple** es similar a una lista en que es una secuencia ordenada de elementos.
 Sin embargo, las tuplas no se pueden cambiar una vez creadas (son "inmutables"). Las tuplas
 se crean colocando valores separados por comas dentro de los paréntesis `()`.
 
@@ -365,7 +365,7 @@ a_list = [1, 2, 3]
 
 ## Diccionarios
 
-Un **diccionario** es un contenedor que almacena pares de objetos - llaves y valores.
+Un diccionario **dictionary** es un contenedor que almacena pares de objetos - llaves y valores.
 
 ~~~
 translation = {'one': 1, 'two': 2}
@@ -377,7 +377,7 @@ translation['one']
 ~~~
 {: .output}
 
-Los diccionarios funcionan como listas, excepto que indexas con las *llaves*.
+Los diccionarios funcionan como listas, excepto que se crea el índice utilizando *llaves*  **keys**.
 Puedes pensar en una llave como nombre o un identificador único para un conjunto de valores
 en el diccionario. Las llaves solo pueden tener tipos particulares, tienen que ser
 "**hashable**". Las cadenas y los tipos numéricos son aceptables, pero las listas no lo son.
@@ -451,19 +451,19 @@ for key in rev.keys():
 
 > ## Cambiando diccionarios
 >
-> 1. Primero, imprima el valor de `rev` del diccionario en la pantalla.
-> 2. Reasigne el segundo valor (parar el *par llave valor*) para que ya no
-> lea "dos" sino "apple-sauce".
+> 1. Primero, imprime el valor de `rev` del diccionario en la pantalla.
+> 2. Reasigna el segundo valor (parar el *par llave: valor*) para que ya no
+> lea "dos" sino "manzana".
 > 3. Imprime el valor de `rev` en la pantalla nuevamente y ve si el valor ha cambiado.
 >
 {: .challenge}
 
 
 Es importante tener en cuenta que los diccionarios están "desordenados" y no recuerdan
-la secuencia de sus elementos (es decir, el orden en el que los pares clave: valor fueron
+la secuencia de sus elementos (es decir, el orden en el que los pares llave: valor fueron
 añadidos al diccionario). Debido a esto, el orden en que los elementos son
 devuelto en los bucles sobre los diccionarios, puede aparecer al azar e incluso puede cambiar
-con tiempo.
+con el tiempo.
 
 
 ## Funciones
