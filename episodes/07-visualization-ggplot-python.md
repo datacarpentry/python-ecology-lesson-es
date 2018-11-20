@@ -49,7 +49,7 @@ surveys_complete = surveys_complete.dropna()
 
 # Creando gráficos con plotnine
 
-El paquete `plotnine` (es parte de [La gramática de gráficos] (http://link.springer.com/book/10.1007%2F0-387-28695-0)) se usa para la creación de gráficos complejos a partir de los datos en un `DataFrame`. Utiliza configuraciones por defecto, que ayudan a crear gráficos con calidad de publicación con unos pocos ajustes.
+El paquete `plotnine` (es parte de [La gramática de gráficos] (http://link.springer.com/book/10.1007%2F0-387-28695-0)) se usa para la creación de gráficos complejos a partir de los datos en un `DataFrame`. Utiliza configuraciones por defecto que ayudan a crear gráficos con calidad de publicación con unos pocos ajustes.
 
 Los gráficos `plotnine` se construyen paso a paso agregando nuevos elementos uno
 encima del otro usando el operador `+`. Poniendo cada paso entre paréntesis `()` proporciona una sintaxis compatible con Python.
