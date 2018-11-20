@@ -85,7 +85,7 @@ surveys_species = surveys_df['species_id']
 También podemos pasar una lista de nombres de columnas, a manera de índice para seleccionar las columnas en ese orden. 
 Esto es útil cuando necesitamos reorganizar nuestros datos.
 
-**NOTA:** Si el nombre de una columna no esta incluido en el **DataFrame**, 
+**NOTA:** Si el nombre de una columna no esta incluido en el `DataFrame`, 
 se producirá una excepción (error).
 
 ~~~
@@ -234,47 +234,47 @@ es modificado, el otro objeto va a observar los mismos cambios.
 
 **Revisar y Recapitular**:
 
-- **Copy** uses the dataframe's `copy()` method
+- Para crear una **copia** de un objeto, usamos el método **copy()** de un `DataFrame`
 
   ~~~
   true_copy_surveys_df = surveys_df.copy()
   ~~~
   {: .language-python }
-- A **Reference** is created using the `=` operator
+- Para crear una **referencia** a un objeto usamos el operador `=`
 
   ~~~
   ref_surveys_df = surveys_df
   ~~~
   {: .language-python }
 
-Okay, that's enough of that. Let's create a brand new clean dataframe from
-the original data CSV file.
+Muy bien, hora de practicar. Vamos a crear un nuevo objeto `DataFrame` a partir
+del archivo CSV con los datos originales.
 
 ~~~
 surveys_df = pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
 
-## Slicing Subsets of Rows and Columns in Python
+## Segmentando subconjuntos de filas y columnas en Python
 
-We can select specific ranges of our data in both the row and column directions
-using either label or integer-based indexing.
+Podemos seleccionar subconjuntos de datos, contenidos en rangos específicos de filas y columnas,
+usando etiquetas o indexación basada en números enteros.
 
-- `loc` is primarily *label* based indexing. *Integers* may be used but
-  they are interpreted as a *label*.
-- `iloc` is primarily *integer* based indexing
+- `loc` es usado principalmente para indexación basada en *etiquetas*. Permite usar *números enteros* pero
+  son interpretados como una *etiqueta*.
+- `iloc` es usado para indexación basada en *números enteros*
 
-To select a subset of rows **and** columns from our DataFrame, we can use the
-`iloc` method. For example, we can select month, day and year (columns 2, 3
-and 4 if we start counting at 1), like this:
+Para seleccionar un subconjunto de filas **y** columnas de nuestro objeto `DataFrame`, podemos usar
+el método `iloc`. Por ejemplo, podemos seleccionar `month`, `day` y `year` (que corresponden a las columnas 2, 3
+y 4, si empezamos a contar las columnas en 1) para las primeras tres filas, de la siguiente manera:
 
 ~~~
-# iloc[row slicing, column slicing]
+# iloc[segmentación de fila, segmentación de columna]
 surveys_df.iloc[0:3, 1:4]
 ~~~
 {: .language-python}
 
-which gives the **output**
+lo cual nos produce la siguiente **salida**
 
 ~~~
    month  day  year
@@ -284,88 +284,88 @@ which gives the **output**
 ~~~
 {: .output}
 
-Notice that we asked for a slice from 0:3. This yielded 3 rows of data. When you
-ask for 0:3, you are actually telling Python to start at index 0 and select rows
-0, 1, 2 **up to but not including 3**.
+Ten en cuenta que pedimos un segmento de 0:3. Esto produjo 3 filas de datos. Cuando
+pides un segmento de 0:3, le estas diciendo a **Python** que comience en el índice 0 y seleccione las filas
+0, 1, 2, **hasta 3 pero sin incluir esta última**.
 
-Let's explore some other ways to index and select subsets of data:
+Exploremos otras maneras de indexar y seleccionar subconjuntos de datos:
 
 ~~~
-# Select all columns for rows of index values 0 and 10
+# Selecciona todas las columnas para las filas con índices entre 0 y 10
 surveys_df.loc[[0, 10], :]
 
-# What does this do?
+# ¿Qué salida produce el la siguiente instrucción?
 surveys_df.loc[0, ['species_id', 'plot_id', 'weight']]
 
-# What happens when you type the code below?
+# ¿Qué pasa cuando ejecutas el siguiente código?
 surveys_df.loc[[0, 10, 35549], :]
 ~~~
 {: .language-python}
 
-**NOTE**: Labels must be found in the DataFrame or you will get a `KeyError`.
+**NOTA**: Las etiquetas utilizadas deben estar incluidas en el `DataFrame` o se obtendrá un error de tipo `KeyError`.
 
-Indexing by labels `loc` differs from indexing by integers `iloc`.
-With `loc`, the both start bound and the stop bound are **inclusive**. When using
-`loc`, integers *can* be used, but the integers refer to the
-index label and not the position. For example, using `loc` and select 1:4
-will get a different result than using `iloc` to select rows 1:4.
+La indexación por etiquetas (`loc`) difiere de la indexación por números enteros (`iloc`).
+Cuando usamos `loc`, los limites inicial y final se **incluyen**. Cuando usamos
+`loc`, *podemos* usar números enteros, pero dichos números enteros harán referencia a
+etiquetas usadas a manera de índice y no a la posición. Por ejemplo, si usamos `loc` y seleccionamos 1:4
+vamos a obtener resultados diferentes que si usamos `iloc` para seleccionar las filas 1:4.
 
-We can also select a specific data value using a row and
-column location within the DataFrame and `iloc` indexing:
+Podemos seleccionar un dato específico utilizando la la intersección de una fila y
+una columna dentro del `DataFrame`, junto con la indexación basada en números enteros `iloc`:
 
 ~~~
-# Syntax for iloc indexing to finding a specific data element
-dat.iloc[row, column]
+# Sintaxis para encontrar un dato especifico dentro de un `DataFrame` utilizando indexación `iloc`
+dat.iloc[fila, columna]
 ~~~
 {: .language-python}
 
-In this `iloc` example,
+En este ejemplo de `iloc`,
 
 ~~~
 surveys_df.iloc[2, 6]
 ~~~
 {: .language-python}
 
-gives the **output**
+la **salida** es la siguiente
 
 ~~~
 'F'
 ~~~
 {: .output}
 
-Remember that Python indexing begins at 0. So, the index location [2, 6]
-selects the element that is 3 rows down and 7 columns over in the DataFrame.
+Recuerda que la indexación en Python inicia en 0. Así que, la direccíon basada en índice [2, 6]
+selecciona el elemento ubicado en la intersección de la tercera fila (índice 2) y la séptima columna (índice 6) en el `DataFrame`.
 
 
 
-> ## Challenge - Range
+> ## Desafío - Rango
 >
-> 1. What happens when you execute:
+> 1. ¿Qué ocurre al ejecutar el siguiente código?:
 >
 >    - `surveys_df[0:1]`
 >    - `surveys_df[:4]`
 >    - `surveys_df[:-1]`
 >
-> 2. What happens when you call:
+> 2. ¿Qué pasa al ejecutar este otro?:
 >
 >    - `dat.iloc[0:4, 1:4]`
 >    - `dat.loc[0:4, 1:4]`
 >
-> - How are the two commands different?
+> - ¿Qué diferencia observas entre los resultados de los comandos inmediatamente anteriores?
 {: .challenge}
 
 
-## Subsetting Data using Criteria
+## Creando subconjuntos de datos mediante el filtrado por criterios
 
-We can also select a subset of our data using criteria. For example, we can
-select all rows that have a year value of 2002:
+También podemos seleccionar un subconjunto de nuestros datos, mediante el filtrado de la data original, usando algún criterio. 
+Por ejemplo, podemos seleccionar todas las filas que tienen el valor de 2002 en la columna `year`:
 
 ~~~
 surveys_df[surveys_df.year == 2002]
 ~~~
 {: .language-python}
 
-Which produces the following output:
+Lo cual produce la siguiente salida:
 
 ~~~
 record_id  month  day  year  plot_id species_id  sex  hindfoot_length  weight
@@ -385,14 +385,14 @@ record_id  month  day  year  plot_id species_id  sex  hindfoot_length  weight
 ~~~
 {: .language-python}
 
-Or we can select all rows that do not contain the year 2002:
+También podemos seleccionar todas las filas que **no** contienen el año 2002:
 
 ~~~
 surveys_df[surveys_df.year != 2002]
 ~~~
 {: .language-python}
 
-We can define sets of criteria too:
+También podemos definir conjuntos de criterios:
 
 ~~~
 surveys_df[(surveys_df.year >= 1980) & (surveys_df.year <= 1985)]
