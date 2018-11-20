@@ -26,7 +26,7 @@ Python tiene muy buenos recursos para crear gráficos incorporados en el paquete
 por Leland Wilkinson. Además el paquete [`plotnine`](https://plotnine.readthedocs.io/en/stable/) está construido sobre `matplotlib` e interactúa bien con `Pandas`.
 
 Al igual que con los otros paquetes, `plotnine` necesita ser importado. Es bueno
-practicar usando una abreviatura como usamos `pd` para `pandas`:
+practicar usando una abreviatura como usamos `pd` para `Pandas`:
 
 ~~~
 %matplotlib inline
