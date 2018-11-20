@@ -338,7 +338,7 @@ selecciona el elemento ubicado en la intersección de la tercera fila (índice 2
 
 
 
-> ## Desafío - Rango
+> ## Desafío - Rangos
 >
 > 1. ¿Qué ocurre al ejecutar el siguiente código?:
 >
@@ -399,16 +399,16 @@ surveys_df[(surveys_df.year >= 1980) & (surveys_df.year <= 1985)]
 ~~~
 {: .language-python}
 
-### Python Syntax Cheat Sheet
+### Hoja de referencia para sintaxis de Python
 
-Use can use the syntax below when querying data by criteria from a DataFrame.
-Experiment with selecting various subsets of the "surveys" data.
+Podemos utilizar la sintaxis incluida a continuación, cuando queramos hace consultas de datos por criterios en un `DataFrame`.
+Experimenta seleccionando varios subconjuntos de los datos contenidos en "surveys".
 
-* Equals: `==`
-* Not equals: `!=`
-* Greater than, less than: `>` or `<`
-* Greater than or equal to `>=`
-* Less than or equal to `<=`
+* Igual: `==`
+* No igual o diferente: `!=`
+* Mayor que, menor que: `>` or `<`
+* Mayor o igual que `>=`
+* Menor o ogual que `<=`
 
 
 > ## Challenge - Queries
