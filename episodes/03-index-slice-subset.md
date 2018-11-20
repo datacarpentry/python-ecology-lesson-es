@@ -304,11 +304,11 @@ surveys_df.loc[[0, 10, 35549], :]
 
 **NOTA**: Las etiquetas utilizadas deben estar incluidas en el **DataFrame** o se obtendrá un error de tipo `KeyError`.
 
-Indexing by labels `loc` differs from indexing by integers `iloc`.
-With `loc`, the both start bound and the stop bound are **inclusive**. When using
-`loc`, integers *can* be used, but the integers refer to the
-index label and not the position. For example, using `loc` and select 1:4
-will get a different result than using `iloc` to select rows 1:4.
+La indexación por etiquetas (`loc`) difiere de la indexación por números enteros (`iloc`).
+Cuando usamos `loc`, los limites inicial y final se **incluyen**. Cuando usamos
+`loc`, *podemos* usar números enteros, pero dichos números enteros harán referencia a
+etiquetas usadas como índice y no a la posición. Por ejemplo, si usamos `loc` y seleccionamos 1:4
+vamos a obtener resultados diferentes que si usamos `iloc` para seleccionar las filas 1:4.
 
 We can also select a specific data value using a row and
 column location within the DataFrame and `iloc` indexing:
