@@ -446,7 +446,7 @@ survey_2000 = surveys_complete[surveys_complete["year"].isin([2000, 2001])]
 
 
 > ## Desafío - facetas 2
-> Us ando el código del ejercicio anterior compara visualmente como los pesos de
+> Usando el código del ejercicio anterior, compara visualmente como los pesos de
 > machos y hembras van cambiando en el tiempo. Crea un gráfico separado por cada `sex`
 > que use un color diferente por cada especie `species_id`.
 >
