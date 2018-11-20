@@ -255,7 +255,7 @@ surveys_df = pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
 
-## Segmentando Subconjuntos de Filas y Columnas en Python
+## Segmentando subconjuntos de filas y columnas en Python
 
 Podemos seleccionar subconjuntos de datos, contenidos en rangos específicos de filas y columnas,
 usando etiquetas o indexación basada en números enteros.
