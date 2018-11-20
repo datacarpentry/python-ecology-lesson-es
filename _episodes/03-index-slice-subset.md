@@ -302,56 +302,56 @@ surveys_df.loc[[0, 10, 35549], :]
 ~~~
 {: .language-python}
 
-**NOTA**: Las etiquetas utilizadas deben estar incluidas en el **DataFrame** o se obtendrá un error de tipo `KeyError`.
+**NOTA**: Las etiquetas utilizadas deben estar incluidas en el `DataFrame` o se obtendrá un error de tipo `KeyError`.
 
 La indexación por etiquetas (`loc`) difiere de la indexación por números enteros (`iloc`).
 Cuando usamos `loc`, los limites inicial y final se **incluyen**. Cuando usamos
 `loc`, *podemos* usar números enteros, pero dichos números enteros harán referencia a
-etiquetas usadas como índice y no a la posición. Por ejemplo, si usamos `loc` y seleccionamos 1:4
+etiquetas usadas a manera de índice y no a la posición. Por ejemplo, si usamos `loc` y seleccionamos 1:4
 vamos a obtener resultados diferentes que si usamos `iloc` para seleccionar las filas 1:4.
 
-We can also select a specific data value using a row and
-column location within the DataFrame and `iloc` indexing:
+Podemos seleccionar un dato específico utilizando la la intersección de una fila y
+una columna dentro del `DataFrame`, junto con la indexación basada en números enteros `iloc`:
 
 ~~~
-# Syntax for iloc indexing to finding a specific data element
-dat.iloc[row, column]
+# Sintaxis para encontrar un dato especifico dentro de un `DataFrame` utilizando indexación `iloc`
+dat.iloc[fila, columna]
 ~~~
 {: .language-python}
 
-In this `iloc` example,
+En este ejemplo de `iloc`,
 
 ~~~
 surveys_df.iloc[2, 6]
 ~~~
 {: .language-python}
 
-gives the **output**
+la **salida** es la siguiente
 
 ~~~
 'F'
 ~~~
 {: .output}
 
-Remember that Python indexing begins at 0. So, the index location [2, 6]
-selects the element that is 3 rows down and 7 columns over in the DataFrame.
+Recuerda que la indexación en Python inicia en 0. Asi que, la direccíon basada en índice [2, 6]
+selecciona el elemento ubicado en la intersección de la tercera fila (índice 2) y la séptima columna (índice 6) en el `DataFrame`.
 
 
 
-> ## Challenge - Range
+> ## Desafío - Rango
 >
-> 1. What happens when you execute:
+> 1. ¿Qué ocurre al ejecutar el siguiente código?:
 >
 >    - `surveys_df[0:1]`
 >    - `surveys_df[:4]`
 >    - `surveys_df[:-1]`
 >
-> 2. What happens when you call:
+> 2. ¿Qué pasa al ejecutar este otro?:
 >
 >    - `dat.iloc[0:4, 1:4]`
 >    - `dat.loc[0:4, 1:4]`
 >
-> - How are the two commands different?
+> - ¿Qué diferencia observó entre los resultados de los comandos inmediatamente anteriores?
 {: .challenge}
 
 
