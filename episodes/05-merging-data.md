@@ -231,7 +231,7 @@ El resultado `merged_inner` __DataFrame__ contiene todas las columnas de`survey_
 (ID de registro, mes, día, etc.), así como todas las columnas de `species_sub`
 (especies_id, género, especie y taxa).
 
-Dese cuenta que `merged_inner` tiene menos filas que `survey_sub`. Esto es una indicación de que había filas en `survey_df` con valor(es) para `species_id` que no existen como valor(es) para `species_id` en `species_df`.
+Date cuenta que `merged_inner` tiene menos filas que `survey_sub`. Esto es una indicación de que había filas en `survey_df` con valor(es) para `species_id` que no existen como valor(es) para `species_id` en `species_df`.
 
 
 ## Unión izquierda
