@@ -484,7 +484,7 @@ Las opciones de tema nos proveen con una gran variedad de adaptaciones visuales.
 ![png](../fig/06_overlap_bars.png)
 
 Aquí hemos usado el año `year` como una variable categórica usando la función
-`factor`. Pero al hacer esto, las etiquetas de los años se sobreponen. Usando una opción de tema `theme` podemos rotar las etiquetas en el eje x:
+`factor`. Pero al hacer esto, las etiquetas de los años se sobreponen. Usando una opción `theme` podemos rotar las etiquetas en el eje x:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
