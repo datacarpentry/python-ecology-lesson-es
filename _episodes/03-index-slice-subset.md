@@ -266,7 +266,7 @@ usando etiquetas o indexación basada en números enteros.
 
 Para seleccionar un subconjunto de filas **y** columnas de nuestro objeto **DataFrame**, podemos usar
 el método `iloc`. Por ejemplo, podemos seleccionar `month`, `day` y `year` (que corresponden a las columnas 2, 3
-y 4 si empezamos a contar las columnas en 1) para las primeras tres filas, de la siguiente manera:
+y 4, si empezamos a contar las columnas en 1) para las primeras tres filas, de la siguiente manera:
 
 ~~~
 # iloc[segmentación de fila, segmentación de columna]
