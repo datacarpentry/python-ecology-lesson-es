@@ -376,7 +376,7 @@ una técnica especial denominada *faceting* que permite dividir el gráfico en m
 ~~~
 {: .language-python}
 
-Podemos reusar este códigoy agregar una faceta con `facet_wrap` en base a una variable categórica para dividir el gráfico, por ejemplo, usando la variable `sex`:
+Podemos reusar este mismo código y agregar una faceta con `facet_wrap` en base a una categoría para dividir el gráfico para cada uno de los grupos, por ejemplo, usando la variable `sex`:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
