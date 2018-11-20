@@ -14,9 +14,9 @@ keypoints:
     - "FIXME"
 ---
 
-En muchas situations del “mundo real”, los datos que queremos usar vienen en muchos archivos. Frecuentemente necesitamos combinar estos archivos en un uniquo __DataFrame__ para analizar los datos. El paquete pandas proporciona [varios métodos de combinar DataFrames](http://pandas.pydata.org/pandas-docs/stable/merging.html) incluyendo `merge` y `concat`.
+En muchas situations del “mundo real”, los datos que queremos usar proceden de múltiples archivos. Frecuentemente necesitamos combinar estos archivos en un uniquo __DataFrame__ para analizar los datos. El paquete __pandas__ proporciona [varios métodos de combinar __DataFrames__](http://pandas.pydata.org/pandas-docs/stable/merging.html) incluyendo `merge` y `concat`.
 
-Para trabajar en los ejemplos abajo, necesitamos primero cargar los archivos de species y surveys dentro pandas __DataFrames__. En iPython:
+Para trabajar en los ejemplos abajo, necesitamos primero cargar los archivos de species y surveys dentro de __pandas DataFrames__. En __Python__:
 
 ~~~
 import pandas as pd
