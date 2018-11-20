@@ -390,7 +390,7 @@ Podemos reusar este mismo código y agregar una faceta con `facet_wrap` en base 
 {: .language-python}
 ![png](../fig/06_facet_plot.png)
 
-Ahora podemos aplicar el mismo concepto con cualquier variable categórica:
+Ahora podemos aplicar el mismo concepto con cualquier categoría:
 
 ~~~
 (p9.ggplot(data=surveys_complete,
