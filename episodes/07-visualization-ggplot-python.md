@@ -197,7 +197,7 @@ usando el signo `+`:
 
 ![png](../fig/06_color_label_plot.png)
 
-- Puedes también cambiar las escalas de colores o ejes. Por ejemplo,
+- Puedes también cambiar las escalas para colores, ejes.... Por ejemplo,
 una versión del gráfico anterior usando el logarítmo de los números en el eje x
 podría ayudar a una mejor interpretación de los números más pequeños:
 
