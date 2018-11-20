@@ -297,7 +297,7 @@ Agregando los puntos a la gráfica de caja nos dá una mejor idea de la distribu
 > - Agrega color a los puntos en tu gráfico de acuerdo a la parcela donde
 > la muestra fue tomada (`plot_id`).
 >
-> Sugerencia: Primero comprueba la clase de `plot_id`. Si usas `factor()` dentro de la estética `aes`, `plotnine` manejará los valores como valores categóricos.
+> Sugerencia: Primero comprueba la clase de `plot_id`. Si usas `factor()` dentro de la estética `aes`, `plotnine` manejará los valores como categorías.
 >
 > > ## Respuestas
 > >
