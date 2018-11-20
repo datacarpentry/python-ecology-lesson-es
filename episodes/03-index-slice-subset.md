@@ -355,17 +355,17 @@ selecciona el elemento ubicado en la intersección de la tercera fila (índice 2
 {: .challenge}
 
 
-## Subsetting Data using Criteria
+## Creando subconjuntos de datos mediante el filtrado por criterios
 
-We can also select a subset of our data using criteria. For example, we can
-select all rows that have a year value of 2002:
+También podemos seleccionar un subconjunto de nuestros datos mediante el filtrado de la data original usando algún criterio. 
+Por ejemplo, podemos seleccionar todas las filas que tienen el valor de 2002 en la columna `year`:
 
 ~~~
 surveys_df[surveys_df.year == 2002]
 ~~~
 {: .language-python}
 
-Which produces the following output:
+Lo cual produce la siguiente salida:
 
 ~~~
 record_id  month  day  year  plot_id species_id  sex  hindfoot_length  weight
@@ -385,14 +385,14 @@ record_id  month  day  year  plot_id species_id  sex  hindfoot_length  weight
 ~~~
 {: .language-python}
 
-Or we can select all rows that do not contain the year 2002:
+También podemos seleccionar todas las filas que **no** contienen el año 2002:
 
 ~~~
 surveys_df[surveys_df.year != 2002]
 ~~~
 {: .language-python}
 
-We can define sets of criteria too:
+También podemos definir conjuntos de criterios:
 
 ~~~
 surveys_df[(surveys_df.year >= 1980) & (surveys_df.year <= 1985)]
