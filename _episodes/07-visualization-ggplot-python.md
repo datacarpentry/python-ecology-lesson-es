@@ -471,7 +471,7 @@ Como la sintaxis de `plotnine` sigue la versión original del paquete de R `ggpl
 la documentación de `ggplot2` te dá mas información e inspiración para retocar tus gráficos. Mira la hoja resumen de `ggplot2` [cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/08/ggplot2-cheatsheet.pdf), y piensa de que maneras puedes mejorar el gráfico.
 Puedes escribir tus ideas y comentarios en el Etherpad.
 
-Las opciones de tema nos proveen con una gran variedad de adaptaciones visuales. Usa el siguente ejemplo, un gráfico de barra que presenta cuantas observaciones hay por año.
+Las opciones temáticas nos proveen una gran variedad de adaptaciones visuales. Usa el siguiente ejemplo de un gráfico de barras que presenta las observaciones por año.
 
 ~~~
 (p9.ggplot(data=surveys_complete,
