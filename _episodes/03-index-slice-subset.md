@@ -247,7 +247,7 @@ es modificado, el otro objeto va a observar los mismos cambios.
   ~~~
   {: .language-python }
 
-Muy bien, hora de practicar. Vamos a crear un nuevo objeto `dataframe` a partir
+Muy bien, hora de practicar. Vamos a crear un nuevo objeto `DataFrame` a partir
 del archivo CSV con los datos originales.
 
 ~~~
