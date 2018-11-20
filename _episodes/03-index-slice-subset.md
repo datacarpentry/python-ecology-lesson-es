@@ -297,7 +297,7 @@ surveys_df.loc[[0, 10], :]
 # ¿Qué produce el la siguiente instrucción?
 surveys_df.loc[0, ['species_id', 'plot_id', 'weight']]
 
-# ¿Que pasa cuando ejecutas el siguiente código?
+# ¿Qué pasa cuando ejecutas el siguiente código?
 surveys_df.loc[[0, 10, 35549], :]
 ~~~
 {: .language-python}
