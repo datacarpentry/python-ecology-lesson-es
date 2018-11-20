@@ -13,7 +13,7 @@ Combining DataFrames with Pandas | _episodes/05-merging-data.md | @spencerbh | n
 Data Workflows and Automation | _episodes/06-loops-and-functions.md | @miguelgondu  | nov 9 | nov 18 | @fergarciafer | nov 19 |
 Making Plots With plotnine | _episodes/07-visualization-ggplot-python.md | @orchid00 | nov10  | nov 12 | @LauCIFASIS | nov 12 |
 Data Ingest and Visualization - Matplotlib and Pandas | _episodes/08-putting-it-all-together.md | @enricescorsa | nov 11 | nov 12 | @chekos | nov 13 |
-Accessing SQLite Databases Using Python and Pandas | _episodes/09-working-with-sql.md | @orchid00 | nov 9 | nov10| @rzayas | nov 13 ||
+Accessing SQLite Databases Using Python and Pandas | _episodes/09-working-with-sql.md | @orchid00 | nov 9 | nov10| @rzayas @nohemihuanca | nov 13 - nov 20 ||
 Glossary | _extras/reference.md | @chekos | nov 12 | nov 13 | @arredondo23 | nov 13 | nov 15 
 Index | _extras/index.md | @agbeltran | nov 9 | nov 11 | @orchid00 | nov 12 | nov 12|
 Instructor guide | _extras/guide.md | @NPalopoli | nov 12  | | @Helysalgado |||
