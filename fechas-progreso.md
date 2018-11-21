@@ -17,5 +17,6 @@ Accessing SQLite Databases Using Python and Pandas | _episodes/09-working-with-s
 Glossary | _extras/reference.md | @chekos | nov 12 | nov 13 | @arredondo23 | nov 13 | nov 15 
 Index | _extras/index.md | @agbeltran | nov 9 | nov 11 | @orchid00 | nov 12 | nov 12|
 Instructor guide | _extras/guide.md | @NPalopoli | nov 12  | | @Helysalgado |||
+Contributors | _extras/CONTRIBUTORS.md | @orchid00 @rzayas | nov 21 ||||
 Overview of Jupyter Notebooks | _extras/jupyter_notebooks.md | @chekos | nov 12 | nov 15 | @miguelgondu | nov 19 ||
 Setup | setup.md | @raynamharris | nov 12 | nov 12 | @orchid00 | nov 13 | nov 17|
