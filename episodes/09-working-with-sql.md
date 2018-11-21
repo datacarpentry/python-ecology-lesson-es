@@ -54,7 +54,7 @@ con.close()
 ### Consultas
 
 Una de las formas más comunes de interactuar con una base de datos es haciendo consultas para extraer datos:
-Para obtener datos basados en algunos parametros de busqueda, use la palabra de declaración SELECT .
+Para obtener datos basados en algunos parametros de búsqueda, usa la palabra de declaración **SELECT**.
 Una consulta nos devuelve o retorna datos que pueden ser una o varias filas y columnas, a este resultado también se llama tupla. Para filtrar las tuplas basado en algun parametro use la palabra WHERE .
 
 ~~~
