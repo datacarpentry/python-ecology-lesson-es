@@ -139,10 +139,10 @@ un [DataFrame](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#datafram
 
 ## Entonces, ¿qué es un DataFrame?
 
-Un DataFrame es una estructura de datos con dos dimensiones en la cual se puede
+Un **DataFrame** es una estructura de datos con dos dimensiones en la cual se puede
 guardar datos de distintos tipos (como caractéres, enteros, valores de punto flotante,
 fatcores y más) en columnas. Es similar a una hoja de cálculo o una table de SQL o
-el `data.frame` de R. Un DataFrame siempre tiene un índice (con inicio en 0). El índice 
+el `data.frame` de R. Un **DataFrame** siempre tiene un índice (con inicio en 0). El índice 
 refiere a la posición de un elemento en la estructura de datos.
 
 ~~~
@@ -176,7 +176,7 @@ Podemos ver que se leyeron 35,549 renglones. Cada uno de los renglones tiene
 para identificar la posición de los datos, pero no es una columna del DataFrame. 
 Parace ser que la función `read_csv`de Pandas leyó el archivo correctamente. 
 Sin embargo, no hemos salvado ningún dato en memoria por lo que no podemos 
-trabajar con estos. Necesitamos asignar el DataFrame a una variable. Recuerda que 
+trabajar con estos. Necesitamos asignar el **DataFrame** a una variable. Recuerda que 
 una variable es el nombre para un valor, como `x`o `data`. Podemos crear un
 nuevo objeto con el nombre de la variable y le asignamos un valor usando `=`.
 
@@ -187,7 +187,7 @@ surveys_df = pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
 
-Notemos que cuando asignamos los datos importado a un DataFrame a una variable,
+Notemos que cuando asignamos los datos importado a un **DataFrame** a una variable,
 Python no produce ninguna salida a pantalla. Podemos ver el contenido de `surveys_df`
 escribiendo el nombre en la línea de comando de Python.t.
 
@@ -292,10 +292,10 @@ type(surveys_df)
 ~~~
 {: .output}
 
-Como podíamos esperar, es un DataFrame (o, usando el nombre completo por
+Como podíamos esperar, es un **DataFrame** (o, usando el nombre completo por
 el cual Python usa internamente, un  `pandas.core.frame.DataFrame`).
 
-¿Qué tipo de cosas `surveys_df` contiene? Los DataFrame tienen un atributo 
+¿Qué tipo de cosas `surveys_df` contiene? Los **DataFrame** tienen un atributo 
 llamado `dtypes` que contesta esta pregunta:
 
 ~~~
@@ -325,15 +325,15 @@ el caso del sexo).
 
 En otra lección discutiremos sobre el significado de los distintos tipos.
 
-### Formas útiles de ver objetos DataFrame en Python
+### Formas útiles de ver objetos **DataFrame** en Python
 
 Hay distintas maneras de resumir y accesar a los datos guardados en un DataFrame,
 usando los atributos y métodos que proveé el objeto DataFrame.
 
-Para accesar a un atributo, se usa el nombre del objeto DataFrame seguido
-del nombre del atributo `df_object.attribute`. Usando el DataFrame `surveys_df`
+Para accesar a un atributo, se usa el nombre del objeto **DataFrame** seguido
+del nombre del atributo `df_object.attribute`. Usando el **DataFrame** `surveys_df`
 y el atributo `columns`, un índice de todos los nombres de las columnas en 
-el DataFrame puede ser accesado con `surveys_df.columns`.
+el **DataFrame** puede ser accesado con `surveys_df.columns`.
 
 Métodos son llamados de la misma manera usando la sintáxis `df_object.method()`.
 Como ejemplo, `surveys_df.head()` obtiene los primeros renglones del DataFrame
@@ -344,7 +344,7 @@ Echemos un ojo a los datos usando este.
 
 > ## Reto - DataFrames
 >
-> Usando nuestro DataFrame `surveys_df`, ejecuta los atributos y métodos siguientes
+> Usando nuestro **DataFrame** `surveys_df`, ejecuta los atributos y métodos siguientes
 > y observa que regresan.
 >
 > 1. `surveys_df.columns`
@@ -357,7 +357,7 @@ Echemos un ojo a los datos usando este.
 {: .challenge}
 
 
-## Calculando estadísticas de los datos en un DataFrame de Pandas
+## Calculando estadísticas de los datos en un **DataFrame** de Pandas
 
 Hemos leídos los datos en Python. Ahora calculemos algunas estadísticas para
 entender un poco de los datos con los que estamos trabajando. Podríamos  querer
@@ -451,7 +451,7 @@ surveys_df['weight'].count()
 
 Pero si nosotros queremos extraer información por una o más variables, por ejemplo sexo,
 podemos usar el **método `.groupby` de Pandas**. Una vez que creamos
-un DataFrame groupby, podemos calcular estadísticas por el grupo de nuestra elección.
+un **DataFrame** groupby, podemos calcular estadísticas por el grupo de nuestra elección.
 
 ~~~
 # Datos agrupados por sexo
@@ -546,7 +546,7 @@ surveys_df.groupby('species_id')['record_id'].count()['DO']
 >
 > ¿Qué otra manera hay de crear una lista de especies y asociarle `count` de las
 >  muestras  de los datos? Sugerencia: puedes hacer ejecutar las funciones
->  `count`, `min`, etc. en un DataFrame groupby de la misma manera de la que 
+>  `count`, `min`, etc. en un **DataFrame** groupby de la misma manera de la que 
 >  se hace en un DataFrame
 {: .challenge}
 
