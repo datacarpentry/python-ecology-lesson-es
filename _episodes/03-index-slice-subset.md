@@ -425,7 +425,7 @@ Experimenta seleccionando varios subconjuntos de los datos contenidos en "survey
 >    ~~~
 >    {: .language-python }
 >
->   Usa la función `isin` para encontrar todos los gráficos que contienen una especie en particular
+>   Usa la función `isin` para encontrar todos los `plots` que contienen una especie en particular
 >   en el `DtataFrame` "surveys". ¿Cuántos registros contienen esos valores?
 >
 > 3. Experimenta con otras consultas. Crea una consulta que encuentre todas las filas con el
