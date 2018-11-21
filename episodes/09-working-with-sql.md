@@ -84,7 +84,7 @@ con.close()
 
 ##  Acceso datos en SQLite usando Python y Pandas
 
-Usando pandas, podemos extraer los resultados de una consulta en SQLite a un *DataFrame*. Recuerda que puedes usar los mismos comandos o sintaxis de SQL de la lección de SQLite.
+Usando pandas, podemos extraer los resultados de una consulta en SQLite a un *DataFrame*. Recuerda que puedes usar los mismos comandos o sintaxis de SQL de la lección de SQL. 
 
 Por ejemplo para usar Pandas y SQLite:
 
