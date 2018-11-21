@@ -7,7 +7,6 @@ questions:
   - "¿Por qué es importante el tipo de datos?"
 objectives:
     - "Describir cómo se almacena la información en un DataFrame de Python."
-    - "Definir los dos tipos de datos principales en Python: texto y numéricos."
     - "Examinar la estructura de un DataFrame."
     - "Modificar el formato de los valores en un DataFrame."
     - "Describir cómo los tipos de datos afectan a las operaciones."
@@ -15,11 +14,7 @@ objectives:
     - "Analizar datasets que tienen valores faltantes/nulos (valores NaN)."
     - "Escribir datos manipulados a un archivo."
 keypoints:
-    - Python usa dos tipos de datos principales texto y numéricos, estos tienen un nombre diferente en Python básico y Pandas
-    - Cada columna en un **DataFrame** tiene un tipo de datos para todas las filas
-    - Puedes convertir cualquier tipo de dato a otro tipo
-    - Puedes descartar o cambiar valores nulos 
-    - Luego de manipular el **DataFrame** lo puedes guardar en un archivo CSV
+    - "FIXME"
 ---
 
 El formato de columnas y filas individuales afectará el análisis realizado en
@@ -385,8 +380,7 @@ Hemos aprendido:
 
 + Cómo explorar los tipos de dato de las colummnas de un **DataFrame**
 + Cómo cambiar el tipo de dato
-+ Qué son los valores **NaN**, cómo deberían representarse, y lo que eso
-+ significa para tu trabajo
++ Qué son los valores **NaN**, cómo deberían representarse, y lo que eso significa para tu trabajo
 + Cómo reemplazar los valores **NaN** si así lo quisieras
 + Como usar `to_csv` para guardar en un archivo los datos manipulados.
 
