@@ -45,14 +45,14 @@ estructra de directorios, sin emebargo este no es nuestro objetivo el día de ho
 ### Nuestros datos
 
 Para esta lección, usaremos los datos del portal de enseñanza, estos datos son un
-subconjunto de Ernst et al
-[Long-term monitoring and experimental manipulation of a Chihuahuan Desert ecosystem near Portal, Arizona, USA](http://www.esapubs.org/archive/ecol/E090/118/default.htm)
+subconjunto de los datos estudiados por Ernst et al.
+ [Long-term monitoring and experimental manipulation of a Chihuahuan Desert ecosystem near Portal, Arizona, USA](http://www.esapubs.org/archive/ecol/E090/118/default.htm).
 
-Usaremo los datos de [Portal Project Teaching Database](https://figshare.com/articles/Portal_Project_Teaching_Database/1314459).
+Usaremos los datos de [Portal Project Teaching Database](https://figshare.com/articles/Portal_Project_Teaching_Database/1314459).
 Esta sección usa el archivo `surveys.csv` el cual puede ser descargado desde:
 [https://ndownloader.figshare.com/files/2292172](https://ndownloader.figshare.com/files/2292172)
 
-Vamos a estudiar el peso y la especie de animales capturado en nuestra área de
+Vamos a estudiar la especie y el peso de los animales capturados en sitios dentro de nuestra área de
 estudio. El conjunto de datos esta guardado en un archivo `.csv`: cada renglón
 tiene información sobre un solo animal y las columnas representan:
 
@@ -96,10 +96,10 @@ está instalada, puede ser usada y llamada para hacer muchas tareas.
 
 ## Pandas en Python
 Una de las mejores opciones para trabajar con datos tabulares en Python es usar
-[Python Data Analysis Library](http://pandas.pydata.org/) (alias Pandas).  La
-biblioteca Pandas proveé de estructurad de datos, genera gráficos de alta
+la [Python Data Analysis Library](http://pandas.pydata.org/) (alias Pandas).  La
+biblioteca Pandas provee estructuras de datos, genera gráficos de alta
 calidad con [matplotlib](http://matplotlib.org/) y se integra de buena forma 
-con otras bibliotecas que usan arreglos de [NumPy](http://www.numpy.org/) 
+con otras bibliotecas que usan **arrays** de [NumPy](http://www.numpy.org/) 
 (la cual es otra biblioteca de Python).
 
 Python no carga todas las bibliotecas disponibles por default. Se tiene que usar
@@ -115,9 +115,9 @@ import pandas as pd
 ~~~
 {: .language-python}
 
-Cada vez que llamemos una función que está en la biblioteca, se usa la sintaxis
+Cada vez que llamemos a una función que está en la biblioteca, se usa la sintaxis
 `NombreDeLaBiblioteca.NombreDeLaFuncion`. Agregar el nombre de la biblioteca
-con `.` antes del nombre de la función le indica a Python donde encontrar la función. 
+con un `.` antes del nombre de la función le indica a Python donde encontrar la función. 
 En el ejemplo anterior hemos importado Pandas como `pd`. Esto hace que no 
 tengamos que escribir `pandas` cada que llamemos una función de Pandas y solo
 lo hagamos con su sobrenombre.
