@@ -80,7 +80,7 @@ de datos. Más sobre esto en la tabla de abajo:
 | object | string | El **dtype** más general. Será asignado a tu columna si la columna contiene tipos mixtos (números y secuencias de caracteres). |
 | int64  | int | Caracteres numéricos. 64 se refiere a la memoria asignada para almacenar el caracter. |
 | float64 | float | Caracteres numéricos con decimales. Si una columna contiene números y NaNs (ver más abajo), Pandas usará float64 por defecto, en caso de que los datos faltantes contengan decimales. |
-| datetime64, timedelta[ns] | N/D (ver el módulo [datetime] en la librería estandar de Python) | Valores destinados a contener datos de tiempo. Mira en estos para experimentos con series de tiempo. |
+| datetime64, timedelta[ns] | N/D (ver el módulo [datetime] en la biblioteca estandar de Python) | Valores destinados a contener datos de tiempo. Mira en estos para experimentos con series de tiempo. |
 
 [datetime]: http://doc.python.org/2/library/datetime.html
 
