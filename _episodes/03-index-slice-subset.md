@@ -415,7 +415,7 @@ Experimenta seleccionando varios subconjuntos de los datos contenidos en "survey
 >
 > 1. Selecciona un subconjunto de filas, en el `DataFrame` `surveys_df`, que contenga datos desde
 >   el año 1999 y que contenga valores en `weight` menores o iguales a 8. ¿Cuántas
->   filas obtuviste como resultado? ¿Cuantas filas obtuvo tu compañero?
+>   filas obtuviste como resultado? ¿Cuántas filas obtuvo tu compañera?
 >
 > 2. Puedes usar la función `isin` de Python para hacer una consulta, a un `DataFrame`, basada en
 >   una lista de valores según se muestra a continuación:
