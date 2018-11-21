@@ -9,13 +9,13 @@ questions:
 objectives:
     - "Explorar el directorio del taller y descargar el dataset."
     - "Explicar qué es una biblioteca y para qué se usa."
-    - "Describir que es la biblioteca análisis de datos de Python (Pandas)."
-    - "Cargar la biblioteca de análisis de datos de Python (Pandas)."
+    - "Describir qué es, Pandas, la Biblioteca de Análisis de Datos de Python."
+    - "Cargar Pandas, la biblioteca de Análisis de Datos de Python."
     - "Usar `read_csv` para leer datos tabulares en Python."
     - "Describir qué es un **DataFrame** en Python."
     - "Acceder y resumir datos guardados en un **DataFrame**."
     - "Definir la indexación y su relación con las estructuras de datos."
-    - "Ejecutar operaciones matemáticas básicas y estadísticas en datos de un Pandas Dataframe."
+    - "Ejecutar operaciones matemáticas básicas y calcular estadísticas descriptivas sobre datos dentro de un Pandas **Dataframe**."
     - "Crear gráficos simples."
 keypoints:
     - "FIXME"
@@ -34,7 +34,7 @@ análisis.
 
 Para que la lección salga de la mejor manera posible, vamos a asegurarnos que todos
 estemos en el mismo directorio. Esto debería ayudarnos a evitar inconvenientes con los nombres
-de directorios y archivos. En este momento haz el favor de navegar al directorio del
+de los directorios y los archivos. Navega al directorio del
 taller. Si tu estás trabajando en IPython Notebook asegurate de iniciar tu notebook 
 en el directorio del taller.
 
