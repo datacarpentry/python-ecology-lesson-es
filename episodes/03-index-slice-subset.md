@@ -408,7 +408,7 @@ Experimenta seleccionando varios subconjuntos de los datos contenidos en "survey
 * No igual o diferente de: `!=`
 * Mayor que, menor que: `>` or `<`
 * Mayor o igual que `>=`
-* Menor o ogual que `<=`
+* Menor o igual que `<=`
 
 
 > ## Desafío - Consultas
@@ -438,31 +438,31 @@ Experimenta seleccionando varios subconjuntos de los datos contenidos en "survey
 {: .challenge}
 
 
-# Using masks to identify a specific condition
+# Usando máscaras para identificar una condición específica
 
-A **mask** can be useful to locate where a particular subset of values exist or
-don't exist - for example,  NaN, or "Not a Number" values. To understand masks,
-we also need to understand `BOOLEAN` objects in Python.
+Una **máscara** puede ser útil para identificar donde existe o no exite un subconjunto específico
+de valores - por ejemplo,  NaN, o **Not a Number" values** en inglés. Para enternder el concepto de máscaras,
+también tenemos que entender los objetos `BOOLEAN` en Python.
 
-Boolean values include `True` or `False`. For example,
+Valores boleanos (**boolean**) incluyen `True` o `False`. Por ejemplo,
 
 ~~~
-# Set x to 5
+# Establece x a 5
 x = 5
 
-# What does the code below return?
+# ¿Qué nos devuelve el siguiente código?
 x > 5
 
-# How about this?
+# ¿Qué nos veuelve este?
 x == 5
 ~~~
 {: .language-python}
 
-When we ask Python what the value of `x > 5` is, we get `False`. This is
-because the condition, `x` is not greater than 5, is not met since `x` is equal
-to 5.
+Cuando le preguntamos a Python ¿Cuál es el valor de `x > 5`?, obtenemos `False`. Esto se debe
+a que la condición, `x` es mayor que 5, no se cumple dado que `x` es igual
+a 5.
 
-To create a boolean mask:
+Para crear una máscara booleana:
 
 - Set the True / False criteria (e.g. `values > 5 = True`)
 - Python will then assess each value in the object to determine whether the
