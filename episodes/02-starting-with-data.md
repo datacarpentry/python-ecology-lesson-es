@@ -56,17 +56,17 @@ Vamos a estudiar la especie y el peso de los animales capturados en sitios dentr
 estudio. El conjunto de datos esta guardado en un archivo `.csv`: cada renglón
 tiene información sobre un solo animal y las columnas representan:
 
-| Column           | Description                        |
-|------------------|------------------------------------|
-| record_id        | identificador único de la observación      |
-| month            | mes de observación               |
-| day              | día de la observación                 |
-| year             | año de la observación               |
-| plot_id          | ID de un sitio en particular           |
-| species_id       | código de dos letras                      |
-| sex              | sexo del animal ("M", "F")           |
-| hindfoot_length  | tamaño de pata en mm       |
-| weight           | peso del animal en gramos      |
+| Column          | Description                           |
+|-----------------|---------------------------------------|
+| record_id       | identificador único de la observación |
+| month           | mes de observación                    |
+| day             | día de la observación                 |
+| year            | año de la observación                 |
+| plot_id         | ID de un sitio en particular          |
+| species_id      | código de dos letras                  |
+| sex             | sexo del animal ("M", "F")            |
+| hindfoot_length | tamaño de pata en mm                  |
+| weight          | peso del animal en gramos             |
 
 
 Los primeros renglones de nuestro archivo se ven de la siguiente manera:
