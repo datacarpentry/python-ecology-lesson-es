@@ -338,7 +338,7 @@ selecciona el elemento ubicado en la intersección de la tercera fila (índice 2
 
 
 
-> ## Desafío - Rango
+> ## Desafío - Rangos
 >
 > 1. ¿Qué ocurre al ejecutar el siguiente código?:
 >
@@ -399,88 +399,88 @@ surveys_df[(surveys_df.year >= 1980) & (surveys_df.year <= 1985)]
 ~~~
 {: .language-python}
 
-### Python Syntax Cheat Sheet
+### Hoja de referencia para sintaxis de Python
 
-Use can use the syntax below when querying data by criteria from a DataFrame.
-Experiment with selecting various subsets of the "surveys" data.
+Podemos utilizar la sintaxis incluida a continuación, cuando queramos hace consultas de datos por criterios en un `DataFrame`.
+Experimenta seleccionando varios subconjuntos de los datos contenidos en "surveys".
 
-* Equals: `==`
-* Not equals: `!=`
-* Greater than, less than: `>` or `<`
-* Greater than or equal to `>=`
-* Less than or equal to `<=`
+* Igual a: `==`
+* No igual o diferente de: `!=`
+* Mayor que, menor que: `>` or `<`
+* Mayor o igual que `>=`
+* Menor o igual que `<=`
 
 
-> ## Challenge - Queries
+> ## Desafío - Consultas
 >
-> 1. Select a subset of rows in the `surveys_df` DataFrame that contain data from
->   the year 1999 and that contain weight values less than or equal to 8. How
->   many rows did you end up with? What did your neighbor get?
+> 1. Selecciona un subconjunto de filas, en el `DataFrame` `surveys_df`, que contenga datos desde
+>   el año 1999 y que contenga valores en `weight` menores o iguales a 8. ¿Cuántas
+>   filas obtuviste como resultado? ¿Cuántas filas obtuvo tu compañera?
 >
-> 2. You can use the `isin` command in Python to query a DataFrame based upon a
->   list of values as follows:
+> 2. Puedes usar la función `isin` de Python para hacer una consulta, a un `DataFrame`, basada en
+>   una lista de valores según se muestra a continuación:
 >
 >    ~~~
 >    surveys_df[surveys_df['species_id'].isin([listGoesHere])]
 >    ~~~
 >    {: .language-python }
 >
->   Use the `isin` function to find all plots that contain particular species
->   in the "surveys" DataFrame. How many records contain these values?
+>   Usa la función `isin` para encontrar todos los `plots` que contienen una especie en particular
+>   en el `DtataFrame` "surveys". ¿Cuántos registros contienen esos valores?
 >
-> 3. Experiment with other queries. Create a query that finds all rows with a
->   weight value > or equal to 0.
+> 3. Experimenta con otras consultas. Crea una consulta que encuentre todas las filas con el
+>   valor de `weight` `>=` mayor o igual a 0.
 >
-> 4. The `~` symbol in Python can be used to return the OPPOSITE of the
->   selection that you specify in Python. It is equivalent to **is not in**.
->   Write a query that selects all rows with sex NOT equal to 'M' or 'F' in
->   the "surveys" data.
+> 4. El símbolo `~` en Python puede ser usado para obtener lo **opuesto** a los
+>   datos seleccionados que hayas especificado en Python. Es equivalente a **no esta en**.
+>   Escribe una consulta que seleccione todas las filas con `sex` diferente de 'M' o 'F' en
+>   los datos de "surveys".
 {: .challenge}
 
 
-# Using masks to identify a specific condition
+# Usando máscaras para identificar una condición específica
 
-A **mask** can be useful to locate where a particular subset of values exist or
-don't exist - for example,  NaN, or "Not a Number" values. To understand masks,
-we also need to understand `BOOLEAN` objects in Python.
+Una **máscara** puede ser útil para identificar donde existe o no exite un subconjunto específico
+de valores - por ejemplo,  NaN, o **Not a Number** en inglés. Para enternder el concepto de máscaras,
+también tenemos que entender los objetos `BOOLEAN` en Python.
 
-Boolean values include `True` or `False`. For example,
+Valores boleanos (**boolean**) incluyen `True` o `False`. Por ejemplo,
 
 ~~~
-# Set x to 5
+# Asigna 5 a la variable x
 x = 5
 
-# What does the code below return?
+# ¿Qué nos devuelve la ejecución del siguiente código?
 x > 5
 
-# How about this?
+# ¿Qué nos devuelve la ejecución de este?
 x == 5
 ~~~
 {: .language-python}
 
-When we ask Python what the value of `x > 5` is, we get `False`. This is
-because the condition, `x` is not greater than 5, is not met since `x` is equal
-to 5.
+Cuando le preguntamos a Python ¿Cuál es el valor de `x > 5`?, obtenemos `False`. Esto se debe
+a que la condición `x` es mayor que 5, no se cumple dado que `x` es igual
+a 5.
 
-To create a boolean mask:
+Para crear una máscara booleana:
 
-- Set the True / False criteria (e.g. `values > 5 = True`)
-- Python will then assess each value in the object to determine whether the
-  value meets the criteria (True) or not (False).
-- Python creates an output object that is the same shape as the original
-  object, but with a `True` or `False` value for each index location.
+- Establece el criterio a ser evaluado como `True` o `False` (ej. `values > 5 = True`)
+- Python evaluará cada valor en el objeto para determinar si
+  el valor cumple el criterio (`True`) o no lo cumple (`False`).
+- Python crea un objeto de salida que es de la misma forma que el objeto 
+  original, pero con un valor `True` o `False` por cada índice según corresponda.
 
-Let's try this out. Let's identify all locations in the survey data that have
-null (missing or NaN) data values. We can use the `isnull` method to do this.
-The `isnull` method will compare each cell with a null value. If an element
-has a null value, it will be assigned a value of  `True` in the output object.
+Intentémoslo. Vamos a identificar todos los lugares en los datos de `survey` que son `null` (que no existen o son NaN). 
+Podemos usar el método `isnull` para lograrlo.
+El método `isnull` va a comparar cada celda con un valor `null`. Si un elemento
+tiene un valor `null`, se le asignará un nuevo valor de `True` en el objeto de salida.
 
 ~~~
 pd.isnull(surveys_df)
 ~~~
 {: .language-python}
 
-A snippet of the output is below:
+Un fragmento de la salida se muestra a continuación:
 
 ~~~
       record_id  month    day   year plot_id species_id    sex  hindfoot_length weight
@@ -494,30 +494,30 @@ A snippet of the output is below:
 ~~~
 {: .language-python}
 
-To select the rows where there are null values, we can use
-the mask as an index to subset our data as follows:
+Para seleccionar las filas donde hay valores `null`, podemos utilizar
+la máscara a manera de índice para obtener subconjuntos de datos así:
 
 ~~~
-# To select just the rows with NaN values, we can use the 'any()' method
+# Para seleccionar solamente las filas con valores NaN, podemos utilizar el método 'any()'
 surveys_df[pd.isnull(surveys_df).any(axis=1)]
 ~~~
 {: .language-python}
 
-Note that the `weight` column of our DataFrame contains many `null` or `NaN`
-values. We will explore ways of dealing with this in Lesson 03.
+Nota que la columna `weight` de nuestro `DataFrame` contiene varios valores `null` o `NaN`
+Exploraremos diferentes maneras de abordar esto en la lección 03.
 
-We can run `isnull` on a particular column too. What does the code below do?
+También podemos utilizar `isnull` en una columna en particular. ¿Qué salida produce el siguiente código?
 
 ~~~
-# What does this do?
+# ¿Qué hace el siguiente código?
 empty_weights = surveys_df[pd.isnull(surveys_df['weight'])]['weight']
 print(empty_weights)
 ~~~
 {: .language-python}
 
-Let's take a minute to look at the statement above. We are using the Boolean
-object `pd.isnull(surveys_df['weight'])` as an index to `surveys_df`. We are
-asking Python to select rows that have a `NaN` value of weight.
+Tomemos un minuto para observar las instrucciones de arriba. Estamos usando el objeto booleano
+`pd.isnull(surveys_df['weight'])` a manera de índice para `surveys_df`. Estamos
+pidiendo a Python que seleccione aquellas filas que tienen un valor de `NaN` en la columna `weight`.
 
 
 > ## Challenge - Putting it all together
