@@ -429,7 +429,7 @@ Experimenta seleccionando varios subconjuntos de los datos contenidos en "survey
 >   en el `DtataFrame` "surveys". ¿Cuántos registros contienen esos valores?
 >
 > 3. Experimenta con otras consultas. Crea una consulta que encuentre todas las filas con el
->   valor de `weight` > myor o igual a 0.
+>   valor de `weight` `>=` mayor o igual a 0.
 >
 > 4. El símbolo `~` en Python puede ser usado para obtener lo **opuesto** a los
 >   datos seleccionados que hayas especificado en Python. Es equivalente a **no esta en**.
