@@ -26,14 +26,17 @@ Los archivos `.md` en el folder `_episodes_en` son la referencia. Los archivos e
 Si eres nuevo con github, este tutorial toma 10-15 min https://guides.github.com/activities/hello-world/
 Claro que tenemos la versión traducida de la leccion de git con github, toma unas horas https://swcarpentry.github.io/git-novice-es/
 
+1. ¿Quieres ayudar con la revisión?
+Te invito a que leas este artículo https://help.github.com/articles/commenting-on-a-pull-request/
+el punto 6 es muy bueno, recién ha sido incoorporado y es muy útil, para directamente aceptar cambios, así: https://help.github.com/articles/incorporating-feedback-in-your-pull-request/.
+
 1. ¿Cuáles son las fechas importantes? 
-Puedes ver en [milestones](https://github.com/Carpentries-ES/python-ecology-lesson-es/milestones).
-La idea es terminar antes de Navidad del 2018 con la traducción y la revisión.
+Queremos traducir entre Nov 9-25 y a medida que estén listas las traducciones ir revisando. La idea es terminar antes de Navidad del 2018 con la traducción y la revisión.
 
 1. ¿Se traducen los datos?
 Dejaremos eso para la segunda versión. Pero lo tenemos en cuenta.
 
 1. ¿Qué se viene después de traducir?
-Empezaremos a revisar, y éste proceso se hará en paralelo, puedes poner tu nombre en éste [issue](https://github.com/Carpentries-ES/python-ecology-lesson-es/issues/20), si quieres sólo revisar.
+Empezaremos a revisar, y éste proceso se hará también en paralelo. Si quieres revisar, las issues que tienen el label "to review" están listas para ser revisadas, igual que para las traducciones te pido que dejes tu nombre y una nota que vas a revisar. Podemos tener más de una revisión y eso sería lo ideal. Contactanos si quieres revisar.
 
 Si tienes otras dudas, te esperamos en slack.

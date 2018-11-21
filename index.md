@@ -3,34 +3,34 @@ layout: lesson
 root: .
 
 maintainers:
-  - April Wright
-  - Tania Allard
-  - Maxim Belkin
+  - Necesitamos maintainers de esta versión
+  - 
+  - 
 ---
 
 **Lesson Maintainers:** {{ page.maintainers | join: ', ' }}
 
-Python is a general purpose programming language that is useful for writing scripts to work effectively and reproducibly with data.
+**Python** es un lenguaje de programación general que es útil para escribir **scripts** para trabajar con datos de manera efectiva y reproducible.
 
-This is an introduction to Python designed for participants with no programming experience. These lessons can be taught in a day (~ 6 hours). They start with some basic information about Python syntax, the Jupyter notebook interface, and move through how to import CSV files, using the pandas package to work with data frames, how to calculate summary information from a data frame, and a brief introduction to plotting. The last lesson demonstrates how to work with databases directly from Python.
+Esta es una introducción a **Python** diseñada para participantes sin experiencia en programación. Estas lecciones pueden enseñarse en un día (~ 6 horas). Las lecciones empiezan con información básica sobre la sintaxis de **Python**, la interface de **Jupyter notebook**, y continúan con cómo importar archivos CSV, usando el paquete **pandas** para trabajar con **DataFrames**, cómo calcular la información resumen de un **DataFrame**, y una breve introducción en cómo crear visualizaciones. La última lección demuestra cómo trabajar con bases de datos directamente desde **Python**.
 
-> ## Getting Started
+> ## Antes de empezar
 >
-> Data Carpentry's teaching is hands-on, so participants are encouraged to use
-> their own computers to ensure the proper setup of tools for an efficient
-> workflow. <br>**These lessons assume no prior knowledge of the skills or tools.**
+> La enseñanza en **Data Carpentry** es práctica, y por tanto se fomenta que los participantes usen sus propias computadoras para 
+> asegurar la correcta configuración **setup** de las herramientas para un trabajo eficiente.
+> **Estas lecciones no asumen conocimientos previos sobre los temas presentados o herramientas usadas.**
 >
-> To get started, follow the directions in the "[Setup](setup)" tab to
-> download data to your computer and follow any installation instructions.
+> Para empezar, sigue las direcciones en [Setup](https://carpentries-es.github.io/python-ecology-lesson-es/setup.html)
+> para bajar los datos a tu computadora y siguen las instrucciones de instalación.
 >
-> #### Prerequisites
+> #### Prerequisitos
 >
-> This lesson requires a working copy of **Python**.
-> <br>To most effectively use these materials, please make sure to install
-> everything *before* working through this lesson.
+> Esta lección requiere la instalación de **Python**.
+> Para el uso efectivo de este material, por favor instala todo 
+> *antes* de trabajar en la lección.
 {: .prereq}
 
-> ## For Instructors
-> If you are teaching this lesson in a workshop, please see the
-> [Instructor notes](guide).
+> ## Para instructores
+> Si enseñas esta lección en un taller, por favor lee las 
+> [Notas de instructor](https://carpentries-es.github.io/python-ecology-lesson-es/guide).
 {: .prereq}

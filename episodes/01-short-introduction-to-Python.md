@@ -1,26 +1,26 @@
 ---
-title: Short Introduction to Programming in Python
+title: Breve introducción a la Programación en Python
 teaching: 0
 exercises: 0
 questions:
-    - "What is Python?"
-    - "Why should I learn Python?"
+    - "¿Qué es Python?"
+    - "¿Porqué deberías aprender Python?"
 objectives:
-    - "Describe the advantages of using programming vs. completing repetitive tasks by hand."
-    - "Define the following data types in Python: strings, integers, and floats."
-    - "Perform mathematical operations in Python using basic operators."
-    - "Define the following as it relates to Python: lists, tuples, and dictionaries."
+    - "Describir las ventajas de usar programación vs. completar tareas repetitivas a mano."
+    - "Definir los tipos de datos en Python: **strings**, **integers**, and **floats**."
+    - "Realizar operaciones matemáticas en Python utilizando operadores básicos."
+    - "Dentro del contexto de Python definir: **lists**, **tuples**, y **dictionaries**."
 keypoints:
     - "FIXME"
 ---
 
-## Interpreter
+## Intérprete
 
-Python is an interpreted language which can be used in two ways:
+Python es un lenguaje interpretado que puede ser usado de dos formas:
 
-* "Interactively": when you use it as an "advanced calculator" executing
-  one command at a time. To start Python in this mode, simply execute `python`
-  on the command line:
+* Modo "Interactivo": cuando lo usas como una "calculadora avanzada" ejecutando
+  un comando a la vez. Para iniciar Python en este modo, simplemente ejecuta `python`
+  en la línea de comandos:
 
 ~~~
 $ python
@@ -35,8 +35,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 ~~~
 {: .output}
 
-Chevrons `>>>` indicate an interactive prompt in Python, meaning that it is waiting for your
-input.
+Los res símbolos de mayor que `>>>` forman un indicador interactivo en Python, que significa que está esperando tu
+entrada de datos.
 
 ~~~
 2 + 2
@@ -57,9 +57,8 @@ Hello World
 ~~~
 {: .output}
 
-* "Scripting" Mode: executing a series of "commands" saved in text file,
-  usually with a `.py` extension after the name of your file:
-
+* Modo "Script": cuando ejecutas una serie de "comandos" guardados en un archivo de texto,
+  generalmente con una extensión `.py` después del nombre de tu archivo:
 ~~~
 $ python my_script.py
 ~~~
@@ -70,22 +69,22 @@ Hello World
 ~~~
 {: .output}
 
-## Introduction to Python built-in data types
+## Introducción a los tipos de datos incorporados en Python
 
 ### Strings, integers, and floats
 
-One of the most basic things we can do in Python is assign values to variables:
+Una de las cosas más básicas que podemos hacer en Python es asignar valores a las variables:
 
 ~~~
-text = "Data Carpentry"  # An example of a string
-number = 42  # An example of an integer
-pi_value = 3.1415  # An example of a float
+text = "Data Carpentry"  # Un ejemplo de string
+number = 42  # Un ejemplo de integer
+pi_value = 3.1415  # Un ejemplo de float
 ~~~
 {: .language-python}
 
-Here we've assigned data to the variables `text`, `number` and `pi_value`,
-using the assignment operator `=`. To review the value of a variable, we
-can type the name of the variable into the interpreter and press <kbd>Return</kbd>:
+Aquí hemos asignado datos a las variables `text`,` number` y `pi_value`,
+utilizando el operador de asignación `=`. Para revisar el valor de una variable, nosotros
+podemos escribir el nombre de la variable en el intérprete y presionar <kbd>Return</kbd>:
 
 ~~~
 text
@@ -96,8 +95,9 @@ text
 ~~~
 {: .output}
 
-Everything in Python has a type. To get the type of something, we can pass it
-to the built-in function `type`:
+
+Todo en Python tiene un tipo. Para obtener el tipo de algo, podemos pasarlo
+a la función `type`:
 
 ~~~
 type(text)
@@ -126,11 +126,12 @@ type(6.02)
 ~~~
 {: .output}
 
-The variable `text` is of type `str`, short for "string". Strings hold
-sequences of characters, which can be letters, numbers, punctuation
-or more exotic forms of text (even emoji!).
 
-We can also see the value of something using another built-in function, `print`:
+La variable `text` es de tipo 'str', abreviatura de **string** o cadena de caracteres. Las cadenas almacenan
+secuencias de caracteres, que pueden ser letras, números, puntuación
+o más formas exóticas de texto (¡incluso emoji!).
+
+También podemos ver el valor de algo usando otra función incorporada, `print`:
 
 ~~~
 print(text)
@@ -149,24 +150,24 @@ print(11)
 ~~~
 {: .output}
 
-This may seem redundant, but in fact it's the only way to display output in a script:
+Esto puede parecer redundante, pero de hecho es la única forma de mostrar resultados en un script:
 
 *example.py*
 ~~~
-# A Python script file
-# Comments in Python start with #
-# The next line assigns the string "Data Carpentry" to the variable "text".
+# En un archivo script de Python
+# los comentarios en Python inician con #
+# Las siguientes líneas asignan la cadena "Data Carpentry" a la variable "text".
 text = "Data Carpentry"
 
-# The next line does nothing!
+# ¡La siguiente línea no hace nada!
 text
 
-# The next line uses the print function to print out the value we assigned to "text"
+# La siguiente línea usa la función print para imprimir el valor asignado a "text"
 print(text)
 ~~~
 {: .language-python}
 
-*Running the script*
+*Ejecutando el script*
 ~~~
 $ python example.py
 ~~~
@@ -177,19 +178,20 @@ Data Carpentry
 ~~~
 {: .output}
 
-Notice that "Data Carpentry" is printed only once.
+Nota que "Data Carpentry" se imprime una vez.
 
-**Tip**: `print` and `type` are built-in functions in Python. Later in this
-lesson, we will introduce methods and user-defined functions. The Python
-documentation is excellent for reference on the differences between them.
+**Sugerencia**: `print` y `type` son funciones incorporadas en Python. Mas adelante en esta
+lección, veremos métodos y funciones definidas por el usuario. La documentación 
+de Python es excelente para darte una referencia sobre las diferencias entre ellos.
 
-### Operators
 
-We can perform mathematical calculations in Python using the basic operators
+### Operadores
+
+Podemos realizar cálculos matemáticos en Python usando los operadores básicos
  `+, -, /, *, %`:
 
 ~~~
-2 + 2  # Addition
+2 + 2  # Suma
 ~~~
 {: .language-python}
 
@@ -199,7 +201,7 @@ We can perform mathematical calculations in Python using the basic operators
 {: .output}
 
 ~~~
-6 * 7  # Multiplication
+6 * 7  # Multiplicación
 ~~~
 {: .language-python}
 ~~~
@@ -207,7 +209,7 @@ We can perform mathematical calculations in Python using the basic operators
 ~~~
 {: .output}
 ~~~
-2 ** 16  # Power
+2 ** 16  # Potencia
 ~~~
 {: .language-python}
 ~~~
@@ -215,7 +217,7 @@ We can perform mathematical calculations in Python using the basic operators
 ~~~
 {: .output}
 ~~~
-13 % 5  # Modulo
+13 % 5  # Módulo
 ~~~
 {: .language-python}
 ~~~
@@ -223,11 +225,11 @@ We can perform mathematical calculations in Python using the basic operators
 ~~~
 {: .output}
 
-We can also use comparison and logic operators:
-`<, >, ==, !=, <=, >=` and statements of identity such as
-`and, or, not`. The data type returned by this is
-called a _boolean_.
 
+También podemos utilizar operadores de comparación y lógica:
+`<,>, ==,! =, <=,> =` y declaraciones de identidad como
+`and, or, not`. El tipo de datos devuelto por estos operadres es
+llamado _**boolean**_ y retorna verdadero o falso, como ves a continuación.
 
 ~~~
 3 > 4
@@ -265,13 +267,13 @@ False
 ~~~
 {: .output}
 
-## Sequences: Lists and Tuples
+## Secuencias: Listas y Tuplas
 
-### Lists
+### Listas
 
-**Lists** are a common data structure to hold an ordered sequence of
-elements. Each element can be accessed by an index.  Note that Python
-indexes start with 0 instead of 1:
+**list** (o listas) son una estructura de datos común para almacenar una secuencia ordenada de
+elementos. Se puede acceder a cada elemento mediante un índice. Ten en cuenta que en Python,
+los índices comienzan con 0 en lugar de 1:
 
 ~~~
 numbers = [1, 2, 3]
@@ -283,8 +285,8 @@ numbers[0]
 ~~~
 {: .output}
 
-A `for` loop can be used to access the elements in a list or other Python data
-structure one at a time:
+Se puede usar un bucle `for` para acceder a los elementos de una lista u otras 
+estructuras de datos de Python, uno a la vez:
 
 ~~~
 >>> for num in numbers:
@@ -300,16 +302,16 @@ structure one at a time:
 ~~~
 {: .output}
 
-**Indentation** is very important in Python. Note that the second line in the
-example above is indented. Just like three chevrons `>>>` indicate an
-interactive prompt in Python, the three dots `...` are Python's prompt for
-multiple lines. This is Python's way of marking a block of code. [Note: you
-do not type `>>>` or `...`.]
+Usar **sangría** es muy importante en Python. Ten en cuenta que la segunda línea en el
+ejemplo de arriba está sangrada (o indentada). Al igual que los tres `>>>` son un
+indicador interactivo en Python, los tres puntos `...` son indicadores de 
+líneas multiples en Python. Esta es la manera en que Python marca un bloque de código. [Nota: no 
+tienes que escribir `>>>` o `...`.]
 
-To add elements to the end of a list, we can use the `append` method. Methods
-are a way to interact with an object (a list, for example). We can invoke a
-method using the dot `.` followed by the method name and a list of arguments
-in parentheses. Let's look at an example using `append`:
+Para agregar elementos al final de una lista, podemos usar el método `append`. Los métodos
+son una forma de interactuar con un objeto (una lista, por ejemplo). Podemos invocar un
+método usando el punto `.` seguido del nombre del método y una lista de argumentos
+entre paréntesis. Veamos un ejemplo usando `append`:
 
 ~~~
 numbers.append(4)
@@ -322,8 +324,8 @@ print(numbers)
 ~~~
 {: .output}
 
-To find out what methods are available for an
-object, we can use the built-in `help` command:
+Para averiguar qué métodos están disponibles para un
+objeto, podemos usar el comando incorporado `help`:
 
 ~~~
 help(numbers)
@@ -337,33 +339,33 @@ class list(object)
 ~~~
 {: .output}
 
-### Tuples
+### Tuplas
 
-A tuple is similar to a list in that it's an ordered sequence of elements.
-However, tuples can not be changed once created (they are "immutable"). Tuples
-are created by placing comma-separated values inside parentheses `()`.
+Una tupla **tuple** es similar a una lista en que es una secuencia ordenada de elementos.
+Sin embargo, las tuplas no se pueden cambiar una vez creadas (son "inmutables"). Las tuplas
+se crean colocando valores separados por comas dentro de los paréntesis `()`.
 
 ~~~
-# Tuples use parentheses
+# Las tuplas usan paréntesis
 a_tuple = (1, 2, 3)
 another_tuple = ('blue', 'green', 'red')
 
-# Note: lists use square brackets
+# Nota: las listas usan corchetes cuadrados
 a_list = [1, 2, 3]
 ~~~
 {: .language-python}
 
-> ## Tuples _vs._ Lists
-> 1. What happens when you execute `a_list[1] = 5` ?
-> 2. What happens when you execute `a_tuple[2] = 5`?
-> 3. What does `type(a_tuple)` tell you about `a_tuple`?
+> ## Tuplas _vs._ Listas
+> 1. ¿Qué sucede cuando ejecutas `a_list[1] = 5` ?
+> 2. ¿Qué sucede cuando ejecutas `a_tuple[2] = 5`?
+> 3. ¿Qué te dice `type(a_tuple)` sobre `a_tuple`?
 >
 {: .challenge}
 
 
-## Dictionaries
+## Diccionarios
 
-A **dictionary** is a container that holds pairs of objects - keys and values.
+Un diccionario **dictionary** es un contenedor que almacena pares de objetos - llaves y valores.
 
 ~~~
 translation = {'one': 1, 'two': 2}
@@ -375,10 +377,10 @@ translation['one']
 ~~~
 {: .output}
 
-Dictionaries work a lot like lists - except that you index them with *keys*.
-You can think about a key as a name for or a unique identifier for a set of values
-in the dictionary. Keys can only have particular types - they have to be
-"hashable". Strings and numeric types are acceptable, but lists aren't.
+Los diccionarios funcionan como listas, excepto que se crea el índice utilizando *llaves*  **keys**.
+Puedes pensar en una llave como nombre o un identificador único para un conjunto de valores
+en el diccionario. Las llaves solo pueden tener tipos particulares, tienen que ser
+"**hashable**". Las cadenas y los tipos numéricos son aceptables, pero las listas no lo son.
 
 ~~~
 rev = {1: 'one', 2: 'two'}
@@ -401,10 +403,10 @@ TypeError: unhashable type: 'list'
 ~~~
 {: .output}
 
-In Python, a "Traceback" is an multi-line error block printed out for the
-user.
+En Python, un "**Traceback**" es un bloque de error de varias líneas impreso para el
+usuario.
 
-To add an item to the dictionary we assign a value to a new key:
+Para agregar un elemento al diccionario, asignamos un valor a una nueva llave:
 
 ~~~
 rev = {1: 'one', 2: 'two'}
@@ -417,9 +419,8 @@ rev
 ~~~
 {: .output}
 
-Using `for` loops with dictionaries is a little more complicated. We can do
-this in two ways:
-
+Usar bucles `for` con diccionarios es un poco más complicado. Podemos hacer
+esto de dos maneras:
 ~~~
 for key, value in rev.items():
     print(key, '->', value)
@@ -433,7 +434,7 @@ for key, value in rev.items():
 ~~~
 {: .output}
 
-or
+o
 
 ~~~
 for key in rev.keys():
@@ -447,28 +448,29 @@ for key in rev.keys():
 ~~~
 {: .output}
 
-> ## Changing dictionaries
+
+> ## Cambiando diccionarios
 >
-> 1. First, print the value of the `rev` dictionary to the screen.
-> 2. Reassign the second value (in the *key value pair*) so that it no longer
->    reads "two" but instead "apple-sauce".
-> 3. Print the value of `rev` to the screen again to see if the value has changed.
+> 1. Primero, imprime el valor de `rev` del diccionario en la pantalla.
+> 2. Reasigna el segundo valor (parar el *par llave: valor*) para que ya no
+> lea "dos" sino "manzana".
+> 3. Imprime el valor de `rev` en la pantalla nuevamente y ve si el valor ha cambiado.
 >
 {: .challenge}
 
-It is important to note that dictionaries are "unordered" and do not remember
-the sequence of their items (i.e. the order in which key:value pairs were
-added to the dictionary). Because of this, the order in which items are
-returned from loops over dictionaries might appear random and can even change
-with time.
+
+Es importante tener en cuenta que los diccionarios están "desordenados" y no recuerdan
+la secuencia de sus elementos (es decir, el orden en el que los pares llave: valor fueron
+añadidos al diccionario). Debido a esto, el orden en que los elementos son
+devuelto en los bucles sobre los diccionarios, puede aparecer al azar e incluso puede cambiar
+con el tiempo.
 
 
+## Funciones
 
-## Functions
-
-Defining a section of code as a function in Python is done using the `def`
-keyword. For example a function that takes two arguments and returns their sum
-can be defined as:
+Definir una sección de código como una función en Python se hace utilizando la palabra clave `def`.
+Por ejemplo, una función que tome dos argumentos y devuelve su suma
+puede ser definida como:
 
 ~~~
 def add_function(a, b):
