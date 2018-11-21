@@ -64,7 +64,7 @@ clave de unión
     __pandas.DataFrame.join()__ fusiona las columndas de dos __datasets__.
 
 
-librería o **library**
+**library** o biblioteca
 :   es un conjunto de funciones y metodos agrupados para realizar algún tipo de tareas específicas.
 
 
