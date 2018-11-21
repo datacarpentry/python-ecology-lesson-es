@@ -503,21 +503,21 @@ surveys_df[pd.isnull(surveys_df).any(axis=1)]
 ~~~
 {: .language-python}
 
-Note that the `weight` column of our DataFrame contains many `null` or `NaN`
-values. We will explore ways of dealing with this in Lesson 03.
+Nota que la columna `weight` de nuestro `DataFrame` contiene varios valores `null` o `NaN`
+Exploraremos diferentes maneras de abordar esto en la lección 03.
 
-We can run `isnull` on a particular column too. What does the code below do?
+También podemos utilizar `isnull` en una columna en particular. ¿Qué salida produce el siguiente código?
 
 ~~~
-# What does this do?
+# ¿Qué hace el siguiente código?
 empty_weights = surveys_df[pd.isnull(surveys_df['weight'])]['weight']
 print(empty_weights)
 ~~~
 {: .language-python}
 
-Let's take a minute to look at the statement above. We are using the Boolean
-object `pd.isnull(surveys_df['weight'])` as an index to `surveys_df`. We are
-asking Python to select rows that have a `NaN` value of weight.
+Tomemos un minuto para observar las instrucciones de arriba. Estamos usando el objeto booleano
+`pd.isnull(surveys_df['weight'])` a manera de índice para `surveys_df`. Estamos
+pidiendo a Python que seleccione aquellas filas que tienen un valor de `NaN` en la columna `weight`.
 
 
 > ## Challenge - Putting it all together
