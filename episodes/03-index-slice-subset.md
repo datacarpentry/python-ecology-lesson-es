@@ -433,7 +433,7 @@ Experimenta seleccionando varios subconjuntos de los datos contenidos en "survey
 >
 > 4. El símbolo `~` en Python puede ser usado para obtener lo **opuesto** a los
 >   datos seleccionados que hayas especificado en Python. Es equivalente a **no esta en**.
->   Escribe una consulta que seleccione todas las filas con `sex` distinto de 'M' o 'F' en
+>   Escribe una consulta que seleccione todas las filas con `sex` diferente de 'M' o 'F' en
 >   los datos de "surveys".
 {: .challenge}
 
