@@ -362,7 +362,7 @@ Desafortunadamente eso no funciona, porque nos muestra todas las especies juntas
 
 # Facetas
 
-Como cualquier librería que maneje la gramática de gráficos, `plotnine` tiene
+Como cualquier biblioteca que maneje la gramática de gráficos, `plotnine` tiene
 una técnica especial denominada *faceting* que permite dividir el gráfico en múltiples gráficos en función de una categoría incluida en el conjunto de datos.
 
 ¿Recuerdas el gráfico de puntos que creaste antes, usando `weight` y `hindfoot_length`?
