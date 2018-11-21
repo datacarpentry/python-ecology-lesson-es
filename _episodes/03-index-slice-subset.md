@@ -441,7 +441,7 @@ Experimenta seleccionando varios subconjuntos de los datos contenidos en "survey
 # Usando máscaras para identificar una condición específica
 
 Una **máscara** puede ser útil para identificar donde existe o no exite un subconjunto específico
-de valores - por ejemplo,  NaN, o **Not a Number" values** en inglés. Para enternder el concepto de máscaras,
+de valores - por ejemplo,  NaN, o **Not a Number** en inglés. Para enternder el concepto de máscaras,
 también tenemos que entender los objetos `BOOLEAN` en Python.
 
 Valores boleanos (**boolean**) incluyen `True` o `False`. Por ejemplo,
