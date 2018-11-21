@@ -27,9 +27,9 @@ Hay muchos repositorios en línea desde los cuales puedes obtener datos. Te prop
 
 ## Limpia tus datos y ábrelos con Python y Pandas
 
-Para empezar, importa tu archivo de datos a Python usando Pandas. ¿No te funcionó? Puede que tu archivo de datos tenga un  encabezado que Pandas no reconozca como parte de la tabla. Elimina este encabezado, ¡pero no lo hagas borrándolo en un editor de texto! Usa la terminal o Python para hacerlo; si tuvieras que procesar muchos archivos sería engorroso tener que hacerlo a mano para cada uno.
+Para empezar, importa tu archivo de datos a Python usando Pandas. ¿No te funcionó? Puede que tu archivo de datos tenga un  encabezado que Pandas no reconozca como parte de la tabla. Elimina este encabezado, ¡pero no lo hagas borrándolo en un editor de texto! Usa la terminal o Python para hacerlo; no quisieras tener que hacer esto a mano si tuvieras muchos archivos por procesar.
 
-Si aún tienes problemas para importar los datos como una tabla con Pandas, consulta la documentación. Prueba a abrir la cadena de  documentos en un ipython notebook utilizando un signo de interrogación. Por ejemplo:
+Si aún tienes problemas para importar los datos como una tabla con Pandas, consulta la documentación. Prueba a abrir la __docstring__ en un ipython notebook utilizando un signo de interrogación. Por ejemplo:
 
 ~~~
 import pandas as pd
@@ -37,12 +37,12 @@ pd.read_csv?
 ~~~
 {: .language-python}
 
-Fíjate en los argumentos de la función para ver si hay un valor predeterminado que sea diferente al que requiere tu archivo (Sugerencia: probablemente el problema sea el delimitador o separador. Los delimitadores más comunes son `','` comas, `' '` espacios, y `'\t'` pestañas).
+Fíjate en los argumentos de la función para ver si hay un valor predeterminado que sea diferente al que requiere tu archivo (Sugerencia: probablemente el problema sea el delimitador o separador. Los delimitadores más comunes son `','` comas, `' '` espacios, y `'\t'` tabulaciones).
 
-Crea una dataframe que incluya sólo los valores de los datos que te sean útiles. En nuestro archivo de ejemplo de la estación hidrométrica, esos valores podrían ser la fecha, la hora y las mediciones de descarga o vertido. Convierte cualquier medida de unidades imperiales a unidades SI. También puedes cambiar el nombre de las columnas en el DataFrame del siguiente modo:
+Crea un __DataFrame__ que incluya sólo los valores de los datos que te sean útiles. En nuestro archivo de ejemplo de la estación hidrométrica, esos valores podrían ser la fecha, la hora y las mediciones de descarga o vertido. Convierte cualquier medida de unidades imperiales a unidades SI. También puedes cambiar el nombre de las columnas en el __DataFrame__ del siguiente modo:
 
 ~~~
-df = pd.DataFrame({'1stcolumn':[100,200], '2ndcolumn':[10,20]}) # esto crea un DataFrame para el ejemplo!
+df = pd.DataFrame({'1stcolumn':[100,200], '2ndcolumn':[10,20]}) # esto crea un __DataFrame__ para el ejemplo!
 print('With the old column names:\n') # El \n crea una nueva línea, para que sea más fácil de ver
 print(df)
 
@@ -113,7 +113,7 @@ En esta lección cubriremos algunos comandos básicos para crear y formatear gr�
 
 ### `plt` pyplot vs matplotlib basado en objetos
 
-Matplotlib se integra bien con el paquete NumPy y permite usar arrays de NumPy como input para las funciones para crear gráficos disponibles. Considera los siguientes datos de ejemplo,creados con NumPy extrayendo 1000 muestras de una distribución normal con un valor medio de 0 y una desviación estándar de 0.1:
+Matplotlib se integra bien con el paquete NumPy y permite usar __arrays__ de NumPy como entrada para las funciones para crear gráficos disponibles. Considera los siguientes datos de ejemplo, creados con NumPy extrayendo 1000 muestras de una distribución normal con un valor medio de 0 y una desviación estándar de 0.1:
 
 ~~~
 import numpy
@@ -132,7 +132,7 @@ plt.hist(sample_data)
 ![Histograma de 1000 muestras de una distribución normal](../fig/08-normal-distribution.png)
 
 > ## Sugerencia: Visualization multiplataforma de Figuras
-> Los Jupyter Notebooks nos simplifican muchos aspectos de nuestro análisis y de las visualizaciones. Por ejemplo, hacen buena parte del trabajo de visualización por nosotros. Pero quizás no todos tus colaboradores trabajan con Jupyter Notebook. El comando `.show()` te permite visualizar los gráficos tanto si trabajas en la línea de comandos, con un script o en el intérprete de IPython. En el ejemplo anterior, si añades `plt.show()` después de crear el gráfico, eso permitirá que tus colegas que no estén usando Jupyter notebook puedan reproducir igualmente tu trabajo en su plataforma.
+> Los __Jupyter Notebooks__ nos simplifican muchos aspectos de nuestro análisis y de las visualizaciones. Por ejemplo, hacen buena parte del trabajo de visualización por nosotros. Pero quizás no todos tus colaboradores trabajan con __Jupyter Notebooks__. El comando `.show()` te permite visualizar los gráficos tanto si trabajas en la línea de comandos, con un __script__ o en el intérprete de IPython. En el ejemplo anterior, si añades `plt.show()` después de crear el gráfico, eso permitirá que tus colegas que no estén usando __Jupyter notebooks__ puedan reproducir igualmente tu trabajo en su plataforma.
 {: .callout}
 
 o creas primero los objetos `figure` y `axis` de matplotlib y luego agregas un histograma con 30 contenedores de datos:
