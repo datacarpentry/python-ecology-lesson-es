@@ -450,37 +450,37 @@ Valores boleanos (**boolean**) incluyen `True` o `False`. Por ejemplo,
 # Establece x a 5
 x = 5
 
-# ¿Qué nos devuelve el siguiente código?
+# ¿Qué nos devuelve la ejecución del siguiente código?
 x > 5
 
-# ¿Qué nos veuelve este?
+# ¿Qué nos devuelve la ejecución de este?
 x == 5
 ~~~
 {: .language-python}
 
 Cuando le preguntamos a Python ¿Cuál es el valor de `x > 5`?, obtenemos `False`. Esto se debe
-a que la condición, `x` es mayor que 5, no se cumple dado que `x` es igual
+a que la condición `x` es mayor que 5, no se cumple dado que `x` es igual
 a 5.
 
 Para crear una máscara booleana:
 
-- Set the True / False criteria (e.g. `values > 5 = True`)
-- Python will then assess each value in the object to determine whether the
-  value meets the criteria (True) or not (False).
-- Python creates an output object that is the same shape as the original
-  object, but with a `True` or `False` value for each index location.
+- Establece el criterio a ser evaluado como `True` o `False` (ej. `values > 5 = True`)
+- Python evaluará cada valor en el objeto para determinar si whether the
+  el valor cumple el criterio (`True`) o no lo cumple (`False`).
+- Python crea un objeto de salida que es de la misma forma que el objeto 
+  original, pero con un valor `True` o `False` por cada índice según corresponda.
 
-Let's try this out. Let's identify all locations in the survey data that have
-null (missing or NaN) data values. We can use the `isnull` method to do this.
-The `isnull` method will compare each cell with a null value. If an element
-has a null value, it will be assigned a value of  `True` in the output object.
+Intentémoslo. Vamos a identificar todos los lugares en los datos de `survey` que son `null` (que no existen o son NaN). 
+Podemos usar el método `isnull` para lograrlo.
+El método `isnull` va a comparar cada celda con un valor `null`. Si un elemento
+tiene un valor `null`, se le asignará un nuevo valor de `True` en el objeto de salida.
 
 ~~~
 pd.isnull(surveys_df)
 ~~~
 {: .language-python}
 
-A snippet of the output is below:
+Un fragmento de la salida se muestra a continuación:
 
 ~~~
       record_id  month    day   year plot_id species_id    sex  hindfoot_length weight
@@ -494,8 +494,8 @@ A snippet of the output is below:
 ~~~
 {: .language-python}
 
-To select the rows where there are null values, we can use
-the mask as an index to subset our data as follows:
+Para seleccionar las filas donde hay valores `null`, podemos utilizar
+la máscara a maera de índice para obtener subconjuntos de datos así:
 
 ~~~
 # To select just the rows with NaN values, we can use the 'any()' method
