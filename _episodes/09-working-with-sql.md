@@ -117,12 +117,12 @@ Almacenar datos en una base de datos SQLite incrementa el rendimiento sustancial
 > ## Desafío - SQL
 >
 > 1. Crea una consulta que contenga datos de encuestas recopilados
-> entre 1998 y 2001 para observaciones de sexo "masculino" o "femenino"
+> entre 1998 y 2001 para observaciones de sexo `sex`, "masculino" `male` o "femenino" `female`
 > que incluyan el genus de la observación, la especie y el tipo de sitio
 > de la muestra. ¿Cuántos registros se devuelven?
 >
 > 2. Crea un DataFrame que contenga el número total de observaciones
-> (count) de todos los años, y la suma de los pesos de observaciones
+> **count** de todos los años, y la suma de los pesos de observaciones
 > de cada sitio, ordenados por el ID del sitio.
 {: .challenge}
 

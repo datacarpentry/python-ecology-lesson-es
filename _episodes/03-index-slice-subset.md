@@ -22,97 +22,98 @@ keypoints:
     
 ---
 
-In lesson 01, we read a CSV into a Python pandas DataFrame.  We learned:
+En la lección 01, leímos un archivo CSV y cargamos los datos en un  pandas **DataFrame**. 
+Aprendimos:
 
-- how to save the DataFrame to a named object,
-- how to perform basic math on the data,
-- how to calculate summary statistics, and
-- how to create plots of the data.
+- como guardar el **DataFrame** en un objeto,
+- como realizar operaciones matemáticas básica sobre datos,
+- como calcular resúmenes estadísticos, y
+- como crear gráficos a partir de los datos.
 
-In this lesson, we will explore **ways to access different parts of the data**
-using:
+En esta lección, exploraremos **formas de acceder a diferentes partes de los datos**
+usando:
 
-- indexing,
-- slicing, and
-- subsetting.
+- indexación,
+- segmentación, y
+- creación de subconjuntos.
 
-## Loading our data
+## Cargando nuestros datos
 
-We will continue to use the surveys dataset that we worked with in the last
-lesson. Let's reopen and read in the data again:
+Vamos a continuar usando el dataset **surveys** que usamos con la lección
+anterior. Reabrámoslo y leamos los datos de nuevo:
 
 ~~~
-# Make sure pandas is loaded
+# Asegura que panda este disponible
 import pandas as pd
 
-# Read in the survey CSV
+# lee el archivo **surveys** CSV
 surveys_df = pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
 
-## Indexing and Slicing in Python
+## Indexando y Fragmentando en Python
 
-We often want to work with subsets of a **DataFrame** object. There are
-different ways to accomplish this including: using labels (column headings),
-numeric ranges, or specific x,y index locations.
+A menudo necesitamos trabajar con subconjuntos de un objeto **DataFrame**. Existen diferentes 
+maneras de lograr esto, incluyendo: usando etiquetas (encabezados de columnas), rangos numéricos, 
+o índices de localizaciones específicas x,y.
 
+## Seleccionando datos mediante el uso de Etiquetas (Encabezados de Columnas)
 
-## Selecting data using Labels (Column Headings)
-
-We use square brackets `[]` to select a subset of an Python object. For example,
-we can select all data from a column named `species_id` from the `surveys_df`
-DataFrame by name. There are two ways to do this:
+Utilizamos corchetes `[]` para seleccionar un subconjunto de un objeto en Python. Por ejemplo, 
+podemos seleccionar todos los datos de una columna llamada `species_id`  del `surveys_df` **DataFrame** 
+usando el nombre de la columna. Existen dos maneras de hacer esto:
 
 ~~~
-# TIP: use the .head() method we saw earlier to make output shorter
-# Method 1: select a 'subset' of the data using the column name
+# Sugerencia: usa el método .head() que vimos anteriormente para hacer la salida más corta
+# Método 1: selecciona un 'subconjunto' de los datos usando el nombre de la columna
 surveys_df['species_id']
 
-# Method 2: use the column name as an 'attribute'; gives the same output
+# Método 2: usa el nombre de la columna como un 'atributo'; esto produce la misma salida
 surveys_df.species_id
 ~~~
 {: .language-python}
 
-We can also create a new object that contains only the data within the
-`species_id` column as follows:
+También podemos crear un nuevo objeto que contiene solamente los datos de la 
+columna `species_id` de la siguiente manera:
 
 ~~~
-# Creates an object, surveys_species, that only contains the `species_id` column
+# Crea un objeto, `surveys_species`, que solamente contenga la columna `species_id`
 surveys_species = surveys_df['species_id']
 ~~~
 {: .language-python}
 
-We can pass a list of column names too, as an index to select columns in that
-order. This is useful when we need to reorganize our data.
+También podemos pasar una lista de nombres de columnas, a manera de índice para seleccionar las columnas en ese orden. 
+Esto es útil cuando necesitamos reorganizar nuestros datos.
 
-**NOTE:** If a column name is not contained in the DataFrame, an exception
-(error) will be raised.
+**NOTA:** Si el nombre de una columna no esta incluido en el `DataFrame`, 
+se producirá una excepción (error).
 
 ~~~
-# Select the species and plot columns from the DataFrame
+# Selecciona las especies y crea un gráfico con las columnas del **DataFrame**
 surveys_df[['species_id', 'plot_id']]
 
-# What happens when you flip the order?
+# ¿Qué pasa cuando invertimos el orden?
 surveys_df[['plot_id', 'species_id']]
 
-# What happens if you ask for a column that doesn't exist?
+# ¿Qué pasa si preguntamos por una columna que no existe?
 surveys_df['speciess']
 ~~~
 {: .language-python}
 
-Python tells us what type of error it is in the traceback, at the bottom it says `KeyError: 'speciess'` which means that `speciess` is not a column name (or Key in the related Python data type dictionary).
+Python nos informa que tipo de error es en el rastreo, en la parte inferior dice `KeyError: 'speciess'` lo que significa 
+que `speciess` no es un nombre de columna (o **Key** que está relacionado con el diccionario de tipo de datos de Python).
 
-## Extracting Range based Subsets: Slicing
+## Extrayendo subconjuntos basados en rangos: Segmentando
 
-**REMINDER**: Python Uses 0-based Indexing
+**RECORDATORIO**: Python usa Indexación en base-0
 
-Let's remind ourselves that Python uses 0-based
-indexing. This means that the first element in an object is located at position
-0. This is different from other tools like R and Matlab that index elements
-within objects starting at 1.
+Recordemos que Python usa indexación en base-0.
+Esto quiere decir que el primer elemento en un objeto esta localizado en la posición 0.
+Esto es diferente de otros lenguajes como R y Matlab que indexan elementos dentro 
+de objetos iniciando en 1.
 
 ~~~
-# Create a list of numbers:
+# Crea una lista de números:
 a = [1, 2, 3, 4, 5]
 ~~~
 {: .language-python}
@@ -121,25 +122,25 @@ a = [1, 2, 3, 4, 5]
 ![slicing diagram](../fig/slicing-slicing.png)
 
 
-> ## Challenge - Extracting data
+> ## Desafío - Extrayendo datos
 >
-> 1. What value does the code below return?
+> 1. ¿Qué valor devuelve el siguiente código?
 >
 >    ~~~
 >    a[0]
 >    ~~~
 >    {: .language-python }
 >
-> 2. How about this:
+> 2. ¿Qué valor devuelve este?:
 >
 >    ~~~
 >    a[5]
 >    ~~~
 >    {: .language-python }
 >
-> 3. In the example above, calling `a[5]` returns an error. Why is that?
+> 3. En el ejemplo anterior, llamar a `a [5]` devuelve un error. ¿Por qué?
 >
-> 4. What about?
+> 4. ¿Qué tal este?
 >
 >    ~~~
 >    a[len(a)]
@@ -148,133 +149,132 @@ a = [1, 2, 3, 4, 5]
 {: .challenge}
 
 
-## Slicing Subsets of Rows in Python
+## Segmentando Subconjuntos de Filas en Python
 
-Slicing using the `[]` operator selects a set of rows and/or columns from a
-DataFrame. To slice out a set of rows, you use the following syntax:
-`data[start:stop]`. When slicing in pandas the start bound is included in the
-output. The stop bound is one step BEYOND the row you want to select. So if you
-want to select rows 0, 1 and 2 your code would look like this:
+La segmentación utilizando el operador `[]` selecciona un conjunto de filas y/o columnas de 
+un **DataFrame**. Para segmentar un conjunto de filas, usa la siguiente sintaxis: `data[start:stop]`. 
+Cuando se hace segmentación en pandas, el límite inicial (**start**) se incluye en los datos de salida. 
+El límite final (**stop**) es un paso MÁS ALLÁ de la fila que desea seleccionar. 
+Así que si deseas seleccionar las filas 0, 1 y 2, tu código se vería así:
 
 ~~~
-# Select rows 0, 1, 2 (row 3 is not selected)
+# Selecciona las filas 0, 1, 2 (la fila 3 no es seleccionada)
 surveys_df[0:3]
 ~~~
 {: .language-python}
 
-The stop bound in Python is different from what you might be used to in
-languages like Matlab and R.
+El límite final en Python es diferente del que puedes estar acostumbrado a usar 
+en Lenguajes como Matlab y R.
 
 ~~~
-# Select the first 5 rows (rows 0, 1, 2, 3, 4)
+# Selecciona las primeras cinco filas (con índices 0, 1, 2, 3, 4)
 surveys_df[:5]
 
-# Select the last element in the list
-# (the slice starts at the last element, and ends at the end of the list)
+# Selecciona el último elemento de la lista
+# (el segmento comienza en el último elemento y finaliza al final de la lista)
 surveys_df[-1:]
 ~~~
 {: .language-python}
 
-We can also reassign values within subsets of our DataFrame.
+También podemos reasignar valores dentro de subconjuntos de nuestro **DataFrame**.
 
-But before we do that, let's look at the difference between the concept of
-copying objects and the concept of referencing objects in Python.
+Pero antes de hacerlo, veamos la diferencia entre el concepto de copiar objetos y el 
+concepto de referenciar objetos en Python.
 
-## Copying Objects vs Referencing Objects in Python
+## Copiar Objetos vs Referenciar Objetos en Python
 
-Let's start with an example:
+Empecemos con un ejemplo:
 
 ~~~
-# Using the 'copy() method'
+# Usando el método 'copy()'
 true_copy_surveys_df = surveys_df.copy()
 
-# Using the '=' operator
+# Usando el operador '='
 ref_surveys_df = surveys_df
 ~~~
 {: .language-python}
 
-You might think that the code `ref_surveys_df = surveys_df` creates a fresh
-distinct copy of the `surveys_df` DataFrame object. However, using the `=`
-operator in the simple statement `y = x` does **not** create a copy of our
-DataFrame. Instead, `y = x` creates a new variable `y` that references the
-**same** object that `x` refers to. To state this another way, there is only
-**one** object (the DataFrame), and both `x` and `y` refer to it.
+Puedes pensar que el código `ref_surveys_df = surveys_df` crea una copia nueva y 
+distinta de objeto **DataFrame** `surveys_df`. Sin embargo, usar el operador `=` en 
+una instrucción simple de la forma `y = x` **no** crea una copia de nuestro **DataFrame**. 
+En lugar de esto, `y = x` crea una variable nueva `y` que hace referencia al **mismo** 
+objeto al que `x` hace referencia. Para decirlo de otra manera, solamente hay **un** 
+objeto (el **DataFrame**), y ambos objetos `x` y `y` hacen referencia a él.
 
-In contrast, the `copy()` method for a DataFrame creates a true copy of the
-DataFrame.
+En contraste, el método `copy()` de un **DataFrame** crea una copia verdadera del
+**DataFrame**.
 
-Let's look at what happens when we reassign the values within a subset of the
-DataFrame that references another DataFrame object:
+Veamos lo que sucede cuando reasignamos los valores dentro de un subconjunto del
+**DataFrame** que hace referencia a otro objeto **DataFrame**:
 
 ~~~
-# Assign the value `0` to the first three rows of data in the DataFrame
+# Asigna el valor `0` a las primeras tres filas de datos en el **DataFrame**
 ref_surveys_df[0:3] = 0
 ~~~
 {: .language-python}
 
-Let's try the following code:
+Probemos el siguiente código:
 
 ~~~
-# ref_surveys_df was created using the '=' operator
+# ref_surveys_df fue creado usando el operador '='
 ref_surveys_df.head()
 
-# surveys_df is the original dataframe
+# surveys_df es el **DataFrame** original
 surveys_df.head()
 ~~~
 {: .language-python}
 
-What is the difference between these two dataframes?
+¿Cuál es la diferencia entre estos dos **DataFrames**?
 
-When we assigned the first 3 columns the value of `0` using the
-`ref_surveys_df` DataFrame, the `surveys_df` DataFrame is modified too.
-Remember we created the reference `ref_survey_df` object above when we did
-`ref_survey_df = surveys_df`. Remember `surveys_df` and `ref_surveys_df`
-refer to the same exact DataFrame object. If either one changes the object,
-the other will see the same changes to the reference object.
+Cuando asignamos a las tres primeras filas el valor de `0` usando el **DataFrame** `ref_surveys_df`,
+el **DataFrame** `surveys_df` también es modificado. Recuerda que creamos el objeto `ref_survey_df` 
+arriba usando la instrucción `ref_survey_df = surveys_df`. Por lo tanto `surveys_df` y `ref_surveys_df` hacen 
+referencia exactamente al mismo objeto **DataFrame**. Si cualquiera de los dos objetos (`ref_survey_df`, `surveys_df`) 
+es modificado, el otro objeto va a observar los mismos cambios.
 
-**To review and recap**:
+**Revisar y Recapitular**:
 
-- **Copy** uses the dataframe's `copy()` method
+- Para crear una **copia** de un objeto, usamos el método **copy()** de un `DataFrame`
 
   ~~~
   true_copy_surveys_df = surveys_df.copy()
   ~~~
   {: .language-python }
-- A **Reference** is created using the `=` operator
+- Para crear una **referencia** a un objeto usamos el operador `=`
 
   ~~~
   ref_surveys_df = surveys_df
   ~~~
   {: .language-python }
 
-Okay, that's enough of that. Let's create a brand new clean dataframe from
-the original data CSV file.
+Muy bien, hora de practicar. Vamos a crear un nuevo objeto `DataFrame` a partir
+del archivo CSV con los datos originales.
 
 ~~~
 surveys_df = pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
 
-## Slicing Subsets of Rows and Columns in Python
+## Segmentando subconjuntos de filas y columnas en Python
 
-We can select specific ranges of our data in both the row and column directions
-using either label or integer-based indexing.
+Podemos seleccionar subconjuntos de datos, contenidos en rangos específicos de filas y columnas,
+usando etiquetas o indexación basada en números enteros.
 
-- `loc` is primarily *label* based indexing. *Integers* may be used but
-  they are interpreted as a *label*.
-- `iloc` is primarily *integer* based indexing
+- `loc` es usado principalmente para indexación basada en *etiquetas*. Permite usar *números enteros* pero
+  son interpretados como una *etiqueta*.
+- `iloc` es usado para indexación basada en *números enteros*
 
-To select a subset of rows **and** columns from our DataFrame, we can use the
-`iloc` method. For example, we can select month, day and year (columns 2, 3
-and 4 if we start counting at 1), like this:
+Para seleccionar un subconjunto de filas **y** columnas de nuestro objeto `DataFrame`, podemos usar
+el método `iloc`. Por ejemplo, podemos seleccionar `month`, `day` y `year` (que corresponden a las columnas 2, 3
+y 4, si empezamos a contar las columnas en 1) para las primeras tres filas, de la siguiente manera:
 
 ~~~
-# iloc[row slicing, column slicing]
+# iloc[segmentación de fila, segmentación de columna]
 surveys_df.iloc[0:3, 1:4]
 ~~~
 {: .language-python}
 
-which gives the **output**
+lo cual nos produce la siguiente **salida**
 
 ~~~
    month  day  year
@@ -284,88 +284,88 @@ which gives the **output**
 ~~~
 {: .output}
 
-Notice that we asked for a slice from 0:3. This yielded 3 rows of data. When you
-ask for 0:3, you are actually telling Python to start at index 0 and select rows
-0, 1, 2 **up to but not including 3**.
+Ten en cuenta que pedimos un segmento de 0:3. Esto produjo 3 filas de datos. Cuando
+pides un segmento de 0:3, le estas diciendo a **Python** que comience en el índice 0 y seleccione las filas
+0, 1, 2, **hasta 3 pero sin incluir esta última**.
 
-Let's explore some other ways to index and select subsets of data:
+Exploremos otras maneras de indexar y seleccionar subconjuntos de datos:
 
 ~~~
-# Select all columns for rows of index values 0 and 10
+# Selecciona todas las columnas para las filas con índices entre 0 y 10
 surveys_df.loc[[0, 10], :]
 
-# What does this do?
+# ¿Qué salida produce el la siguiente instrucción?
 surveys_df.loc[0, ['species_id', 'plot_id', 'weight']]
 
-# What happens when you type the code below?
+# ¿Qué pasa cuando ejecutas el siguiente código?
 surveys_df.loc[[0, 10, 35549], :]
 ~~~
 {: .language-python}
 
-**NOTE**: Labels must be found in the DataFrame or you will get a `KeyError`.
+**NOTA**: Las etiquetas utilizadas deben estar incluidas en el `DataFrame` o se obtendrá un error de tipo `KeyError`.
 
-Indexing by labels `loc` differs from indexing by integers `iloc`.
-With `loc`, the both start bound and the stop bound are **inclusive**. When using
-`loc`, integers *can* be used, but the integers refer to the
-index label and not the position. For example, using `loc` and select 1:4
-will get a different result than using `iloc` to select rows 1:4.
+La indexación por etiquetas (`loc`) difiere de la indexación por números enteros (`iloc`).
+Cuando usamos `loc`, los limites inicial y final se **incluyen**. Cuando usamos
+`loc`, *podemos* usar números enteros, pero dichos números enteros harán referencia a
+etiquetas usadas a manera de índice y no a la posición. Por ejemplo, si usamos `loc` y seleccionamos 1:4
+vamos a obtener resultados diferentes que si usamos `iloc` para seleccionar las filas 1:4.
 
-We can also select a specific data value using a row and
-column location within the DataFrame and `iloc` indexing:
+Podemos seleccionar un dato específico utilizando la la intersección de una fila y
+una columna dentro del `DataFrame`, junto con la indexación basada en números enteros `iloc`:
 
 ~~~
-# Syntax for iloc indexing to finding a specific data element
-dat.iloc[row, column]
+# Sintaxis para encontrar un dato especifico dentro de un `DataFrame` utilizando indexación `iloc`
+dat.iloc[fila, columna]
 ~~~
 {: .language-python}
 
-In this `iloc` example,
+En este ejemplo de `iloc`,
 
 ~~~
 surveys_df.iloc[2, 6]
 ~~~
 {: .language-python}
 
-gives the **output**
+la **salida** es la siguiente
 
 ~~~
 'F'
 ~~~
 {: .output}
 
-Remember that Python indexing begins at 0. So, the index location [2, 6]
-selects the element that is 3 rows down and 7 columns over in the DataFrame.
+Recuerda que la indexación en Python inicia en 0. Así que, la direccíon basada en índice [2, 6]
+selecciona el elemento ubicado en la intersección de la tercera fila (índice 2) y la séptima columna (índice 6) en el `DataFrame`.
 
 
 
-> ## Challenge - Range
+> ## Desafío - Rango
 >
-> 1. What happens when you execute:
+> 1. ¿Qué ocurre al ejecutar el siguiente código?:
 >
 >    - `surveys_df[0:1]`
 >    - `surveys_df[:4]`
 >    - `surveys_df[:-1]`
 >
-> 2. What happens when you call:
+> 2. ¿Qué pasa al ejecutar este otro?:
 >
 >    - `dat.iloc[0:4, 1:4]`
 >    - `dat.loc[0:4, 1:4]`
 >
-> - How are the two commands different?
+> - ¿Qué diferencia observas entre los resultados de los comandos inmediatamente anteriores?
 {: .challenge}
 
 
-## Subsetting Data using Criteria
+## Creando subconjuntos de datos mediante el filtrado por criterios
 
-We can also select a subset of our data using criteria. For example, we can
-select all rows that have a year value of 2002:
+También podemos seleccionar un subconjunto de nuestros datos, mediante el filtrado de la data original, usando algún criterio. 
+Por ejemplo, podemos seleccionar todas las filas que tienen el valor de 2002 en la columna `year`:
 
 ~~~
 surveys_df[surveys_df.year == 2002]
 ~~~
 {: .language-python}
 
-Which produces the following output:
+Lo cual produce la siguiente salida:
 
 ~~~
 record_id  month  day  year  plot_id species_id  sex  hindfoot_length  weight
@@ -385,14 +385,14 @@ record_id  month  day  year  plot_id species_id  sex  hindfoot_length  weight
 ~~~
 {: .language-python}
 
-Or we can select all rows that do not contain the year 2002:
+También podemos seleccionar todas las filas que **no** contienen el año 2002:
 
 ~~~
 surveys_df[surveys_df.year != 2002]
 ~~~
 {: .language-python}
 
-We can define sets of criteria too:
+También podemos definir conjuntos de criterios:
 
 ~~~
 surveys_df[(surveys_df.year >= 1980) & (surveys_df.year <= 1985)]
