@@ -156,7 +156,7 @@ Sin embargo, deberías chequear Stack Overflow. Buscar usando la etiqueta [pytho
 
 La clave para recibir ayuda de alguien es que ellos entiendan rápidamente tu problema. Deberías hacer que sea lo más fácil posible identificar dónde podría estar el inconveniente.
 
-Trata de usar las palabras correctas para describir el problema. Por ejemplo, un paquete no es lo mismo que una librería. La mayoría de las personas entenderán lo que quieres decir, pero otras tienen fuertes sentimientos sobre la diferencia en el significado. El punto clave es que puede hacer que las cosas sean confusas para las personas que tratan de ayudarte.
+Trata de usar las palabras correctas para describir el problema. Por ejemplo, un paquete no es lo mismo que una biblioteca. La mayoría de las personas entenderán lo que quieres decir, pero otras tienen fuertes sentimientos sobre la diferencia en el significado. El punto clave es que puede hacer que las cosas sean confusas para las personas que tratan de ayudarte.
 Trata de ser tan precisa como sea posible cuando describes tu problema.
 
 Si es posible, trata de resumir lo que no funciona en un ejemplo simple y reproducible. Si puedes reproducir el problema usando una pequeña cantidad de datos en lugar de tus 50.000 filas y 10.000 columnas, proporciona el **dataset** pequeño con la descripción de tu problema. Cuando sea apropiado, trata de generalizar lo que estas haciendo, así incluso las personas que no están familiarizadas con tu campo de estudio podrán entender tu pregunta. Por ejemplo, en lugar de usar un subconjunto de tu **datase** real, crea uno pequeño (3 columnas, 5 filas) y genérico.
