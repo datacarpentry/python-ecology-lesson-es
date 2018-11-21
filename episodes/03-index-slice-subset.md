@@ -498,7 +498,7 @@ Para seleccionar las filas donde hay valores `null`, podemos utilizar
 la máscara a maera de índice para obtener subconjuntos de datos así:
 
 ~~~
-# To select just the rows with NaN values, we can use the 'any()' method
+# Para seleccionar solamente las filas con valores NaN, podemos utilizar el método 'any()'
 surveys_df[pd.isnull(surveys_df).any(axis=1)]
 ~~~
 {: .language-python}
