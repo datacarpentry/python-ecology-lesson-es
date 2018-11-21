@@ -465,7 +465,7 @@ a 5.
 Para crear una máscara booleana:
 
 - Establece el criterio a ser evaluado como `True` o `False` (ej. `values > 5 = True`)
-- Python evaluará cada valor en el objeto para determinar si whether the
+- Python evaluará cada valor en el objeto para determinar si
   el valor cumple el criterio (`True`) o no lo cumple (`False`).
 - Python crea un objeto de salida que es de la misma forma que el objeto 
   original, pero con un valor `True` o `False` por cada índice según corresponda.
