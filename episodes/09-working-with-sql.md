@@ -27,7 +27,7 @@ En la siguiente lección, veremos algunos enfoques que se pueden tomar para cone
 
 ### El módulo `sqlite3`
 
-Con el módulo [sqlite3] uno puede conectarse e interactuar con bases de datos SQLite de manera directa y sencilla. Primeramente, se crea un objeto de conexión usando `sqlite3.connect()`, esto abre la puerta a la base de datos. Mientras la conexión esté abierta cualquier interacción con la base de datos requiere que crees un objeto cursor con el comando `.cursor()` . Luego el cursor estará listo para realizar todo tipo de operaciones con el comando `.execute()`.
+Con el módulo [sqlite3] uno puede conectarse e interactuar con bases de datos SQLite de manera directa y sencilla. Primeramente, se crea un objeto de conexión usando `sqlite3.connect()`, esto abre la puerta a la base de datos. Mientras la conexión esté abierta cualquier interacción con la base de datos requiere que crees un objeto cursor con el comando `.cursor()`. Luego el cursor estará listo para realizar todo tipo de operaciones con el comando `.execute()`.
  Al final, no olvides cerrar la puerta de la conexión usando el comando `.close()`.
 
 [sqlite3]: https://docs.python.org/3/library/sqlite3.html
