@@ -495,7 +495,7 @@ Un fragmento de la salida se muestra a continuación:
 {: .language-python}
 
 Para seleccionar las filas donde hay valores `null`, podemos utilizar
-la máscara a maera de índice para obtener subconjuntos de datos así:
+la máscara a manera de índice para obtener subconjuntos de datos así:
 
 ~~~
 # Para seleccionar solamente las filas con valores NaN, podemos utilizar el método 'any()'
