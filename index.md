@@ -12,7 +12,7 @@ maintainers:
 
 **Python** es un lenguaje de programación general que es útil para escribir **scripts** para trabajar con datos de manera efectiva y reproducible.
 
-Esta es una introducción a **Python** diseñada para participantes sin experiencia en programación. Estas lecciones pueden enseñarse en un día (~ 6 horas). Las lecciones empiezan con información básica sobre la sintaxis de **Python**, la interface de **Jupyter notebook**, y continúan con cómo importar archivos CSV, usando el paquete **pandas** para trabajar con **DataFrames**, cómo calcular la información resumen de un **DataFrame**, y una breve introducción en cómo crear visualizaciones. La última lección demuestra cómo trabajar con bases de datos directamente desde **Python**.
+Esta es una introducción a **Python** diseñada para participantes sin experiencia en programación. Estas lecciones pueden enseñarse en un día (~ 6 horas). Las lecciones empiezan con información básica sobre la sintaxis de **Python**, la interface de **Jupyter Notebook**, y continúan con cómo importar archivos CSV, usando el paquete **Pandas** para trabajar con **DataFrames**, cómo calcular la información resumen de un **DataFrame**, y una breve introducción en cómo crear visualizaciones. La última lección demuestra cómo trabajar con bases de datos directamente desde **Python**.
 
 > ## Antes de empezar
 >
