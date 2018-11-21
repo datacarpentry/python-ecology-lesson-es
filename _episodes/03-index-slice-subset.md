@@ -447,7 +447,7 @@ también tenemos que entender los objetos `BOOLEAN` en Python.
 Valores boleanos (**boolean**) incluyen `True` o `False`. Por ejemplo,
 
 ~~~
-# Establece x a 5
+# Asigna 5 a la variable x
 x = 5
 
 # ¿Qué nos devuelve la ejecución del siguiente código?
