@@ -23,7 +23,7 @@ keypoints:
 
 Cuando lees un archivo de datos en Python y luego lo asignas a una variable estás usando la memoria de tu computadora para guardar esta variable. Acceder a tus datos desde una base de datos como SQL no es solo mas eficiente, sino que también te permite extraer e importar una parte o el subconjunto de datos que necesites.
 
-En la siguiente lección, veremos algunos enfoques que se pueden tomar para hacerlo.
+En la siguiente lección, veremos algunos enfoques que se pueden tomar para conectarte a una base de datos, por ejemplo SQL o SQLite.
 
 ### El módulo `sqlite3`
 
