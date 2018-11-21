@@ -26,7 +26,7 @@ keypoints:
 Podemos automatizar el proceso de manipular datos con Python. Vale la pena pasar
 tiempo escribiendo el código que haga estas tareas ya que una vez que se escribió,
 lo podemos usar una y otra vez en distintos conjuntos de datos que usen un formato 
-similar. Esto hace nuestros métodos fácilmente reproducibles. También resulta fácil
+similar. Esto hace a nuestros métodos fácilmente reproducibles. También resulta fácil
 compartir nuestro código con nuestros colegas y ellos pueden replicar el mismo 
 análisis.
 
@@ -44,7 +44,7 @@ estructra de directorios, sin emebargo este no es nuestro objetivo el día de ho
 
 ### Nuestros datos
 
-Para esta lección, usaremos los datos del portal de enseñanza, estos datos son un
+Para esta lección, usaremos los datos de "Portal Teaching" que son
 subconjunto de los datos estudiados por Ernst et al.
  [Long-term monitoring and experimental manipulation of a Chihuahuan Desert ecosystem near Portal, Arizona, USA](http://www.esapubs.org/archive/ecol/E090/118/default.htm).
 
@@ -118,8 +118,8 @@ import pandas as pd
 Cada vez que llamemos a una función que está en la biblioteca, se usa la sintaxis
 `NombreDeLaBiblioteca.NombreDeLaFuncion`. Agregar el nombre de la biblioteca
 con un `.` antes del nombre de la función le indica a Python donde encontrar la función. 
-En el ejemplo anterior hemos importado Pandas como `pd`. Esto hace que no 
-tengamos que escribir `pandas` cada que llamemos una función de Pandas y solo
+En el ejemplo anterior hemos importado a Pandas como `pd`. Esto significa que no 
+vamos a tener que escribir `pandas` cada que llamemos una función de Pandas y solo
 lo hagamos con su sobrenombre.
 
 # Leyendo datos en CSV usando Pandas
