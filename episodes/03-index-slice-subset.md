@@ -527,7 +527,7 @@ pidiendo a Python que seleccione aquellas filas que tienen un valor de `NaN` en 
 >   un nuevo valor de 'x'. Determina el número total de valores `null` en el subconjunto.
 >
 > 2. Crea un nuevo objeto `DataFrame` que contenga solo observaciones cuyos valores en la columna`sex` sean `male`
->   o `female` y en los cuales el valor de `weight` sea mayor que 0. Crea un gráfico de barra apiladas
+>   o `female` y en los cuales el valor de `weight` sea mayor que 0. Luego, crea un gráfico de barra apiladas
 >   del promedio de `weight`,  por parcela, con valores `male` versus `female` apilados por cada parcela.
 >   
 {: .challenge}
