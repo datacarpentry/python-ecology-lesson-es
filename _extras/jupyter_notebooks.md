@@ -28,7 +28,7 @@ Al escribir el comando `jupyter notebook`, ocurre lo siguiente:
   ![Navegador de archivos de Jupyter notebook](../fig/00_2_jupyter_new_notebook.png)
   *El navegador de archivos de __Jupyter notebook__*
 
-* Cuando creas un nuevo __notebook__ y escribes codigo en tu navegador, el 
+* Cuando creas un nuevo __notebook__ y escribes código en tu navegador, el 
   navegador web y el servidor de __Jupyter Notebook__ se comunican entre sí.
 
   ![nuevo Jupyter notebook](../fig/00_3_jupyter_blank_notebook.png)
