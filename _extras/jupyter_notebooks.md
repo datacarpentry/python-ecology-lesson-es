@@ -29,7 +29,7 @@ Al escribir el comando `jupyter notebook`, ocurre lo siguiente:
   *El navegador de archivos de __Jupyter notebook__*
 
 * Cuando creas un nuevo __notebook__ y escribes código en tu navegador, el 
-  navegador web y el servidor de __Jupyter Notebook__ se comunican entre sí.
+  navegador web y el servidor de __Jupyter Notebook__ se comunican entre si.
 
   ![nuevo Jupyter notebook](../fig/00_3_jupyter_blank_notebook.png)
   *Un nuevo __Jupyter notebook__ en blanco*
