@@ -495,7 +495,7 @@ Un fragmento de la salida se muestra a continuación:
 {: .language-python}
 
 Para seleccionar las filas donde hay valores `null`, podemos utilizar
-la máscara a manera de índice para obtener subconjuntos de datos así:
+una máscara a manera de índice y obtener subconjuntos de datos así:
 
 ~~~
 # Para seleccionar solamente las filas con valores NaN, podemos utilizar el método 'any()'
@@ -503,8 +503,8 @@ surveys_df[pd.isnull(surveys_df).any(axis=1)]
 ~~~
 {: .language-python}
 
-Nota que la columna `weight` de nuestro `DataFrame` contiene varios valores `null` o `NaN`
-Exploraremos diferentes maneras de abordar esto en la lección 03.
+Nota que la columna `weight` de nuestro `DataFrame` contiene varios valores `null` o `NaN`.
+Exploraremos diferentes maneras de abordar esto en el episodio de [tipos de datos y formatos](https://carpentries-es.github.io/python-ecology-lesson-es/04-data-types-and-format/index.html).
 
 También podemos utilizar `isnull` en una columna en particular. ¿Qué salida produce el siguiente código?
 
@@ -520,16 +520,16 @@ Tomemos un minuto para observar las instrucciones de arriba. Estamos usando el o
 pidiendo a Python que seleccione aquellas filas que tienen un valor de `NaN` en la columna `weight`.
 
 
-> ## Challenge - Putting it all together
+> ## Desafío - Revisando todo lo aprendido
 >
-> 1. Create a new DataFrame that only contains observations with sex values that
->   are **not** female or male. Assign each sex value in the new DataFrame to a
->   new value of 'x'. Determine the number of null values in the subset.
+> 1. Crea un nuevo objeto `DataFrame` que solamente contenga observaciones cuyos valores en la columna `sex`
+>   **no** sean `female` o `male`. Asigna cada valor de `sex` en el nuevo `DataFrame` a
+>   un nuevo valor de 'x'. Determina el número total de valores `null` en el subconjunto.
 >
-> 2. Create a new DataFrame that contains only observations that are of sex male
->   or female and where weight values are greater than 0. Create a stacked bar
->   plot of average weight by plot with male vs female values stacked for each
->   plot.
+> 2. Crea un nuevo objeto `DataFrame` que contenga solo observaciones cuyos valores en la columna`sex` sean `male`
+>   o `female` y en los cuales el valor de `weight` sea mayor que 0. Luego, crea un gráfico de barra apiladas
+>   del promedio de `weight`,  por parcela, con valores `male` versus `female` apilados por cada parcela.
+>   
 {: .challenge}
 
 {% include links.md %}
