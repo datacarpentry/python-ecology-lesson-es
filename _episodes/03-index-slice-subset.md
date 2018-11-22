@@ -504,7 +504,7 @@ surveys_df[pd.isnull(surveys_df).any(axis=1)]
 {: .language-python}
 
 Nota que la columna `weight` de nuestro `DataFrame` contiene varios valores `null` o `NaN`.
-Exploraremos diferentes maneras de abordar esto en la lección 03.
+Exploraremos diferentes maneras de abordar esto en el episodio de [tipos de datos y formatos](https://carpentries-es.github.io/python-ecology-lesson-es/04-data-types-and-format/index.html).
 
 También podemos utilizar `isnull` en una columna en particular. ¿Qué salida produce el siguiente código?
 
