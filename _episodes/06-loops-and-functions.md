@@ -3,34 +3,36 @@ title: Data Workflows and Automation
 teaching: 40
 exercises: 50
 questions:
-    - "Can I automate operations in Python?"
-    - "What are functions and why should I use them?"
+    - "¿Puedo automatizar operaciones en Python?"
+    - "¿Qué son las función y por qué debería usarlas?"
 objectives:
-    - "Describe why for loops are used in Python."
-    - "Employ for loops to automate data analysis."
-    - "Write unique filenames in Python."
-    - "Build reusable code in Python."
-    - "Write functions using conditional statements (if, then, else)."
+    - "Describir por qué se usan los bucles en Python."
+    - "Usar bucles for para automatizar el análisis de datos."
+    - "Escribir nombres de archivo únicos en Python."
+    - "Construir código reusable en Python."
+    - "Escribir funciones usando condicionales (if, then, else)."
 keypoints:
     - "FIXME"
 ---
 
-So far, we've used Python and the pandas library to explore and manipulate
-individual datasets by hand, much like we would do in a spreadsheet. The beauty
-of using a programming language like Python, though, comes from the ability to
-automate data processing through the use of loops and functions.
+Hasta este momento, hemos usado Python y la librería Pandas para explorar y
+manipular **datasets** a mano, tal y como lo haríamos en una planilla de cálculo.
+Sin embargo la belleza de usar un lenguaje de programación como Python viene de
+la posibilidad de automatizar el procesamiento de los datos a través del uso de
+bucles y funciones.
 
-## For loops
+## Bucles **for**
 
-Loops allow us to repeat a workflow (or series of actions) a given number of
-times or while some condition is true. We would use a loop to automatically
-process data that's stored in multiple files (daily values with one file per
-year, for example). Loops lighten our work load by performing repeated tasks
-without our direct involvement and make it less likely that we'll introduce
-errors by making mistakes while processing each file by hand.
+Los bucles nos permiten repetir un flujo de trabajo (o una serie de acciones)
+cierto número dado de veces o mientras una condición es cierta. Podríamos
+usar un bucle para procesar automáticamente la información que está contenida en
+múltiples archivos (valores diarios con un archivo por año, por ejemplo). Los
+bucles nos alivian nuestra tarea al hacer tareas repetitivas sin que tengamos que
+involucrarnos directamente, y hace menos probable que introduzcamos errores al
+equivocarnos mientras procesamos cada archivo manualmente.
 
-Let's write a simple for loop that simulates what a kid might see during a
-visit to the zoo:
+Escribamos un bucle **for** sencillo que simule lo que un niño podría ver
+durante una visita al zoológico:
 
 ~~~
 animals = ['lion', 'tiger', 'crocodile', 'vulture', 'hippo']
@@ -58,13 +60,14 @@ hippo
 ~~~
 {: .output}
 
-The line defining the loop must start with `for` and end with a colon, and the
-body of the loop must be indented.
+La línea que define el bucle debe comenzar con un **for** y terminar con el caracter dos
+puntos, y el cuerpo del bucle debe estar indentado.
 
-In this example, `creature` is the loop variable that takes the value of the next
-entry in `animals` every time the loop goes around. We can call the loop variable
-anything we like. After the loop finishes, the loop variable will still exist
-and will have the value of the last entry in the collection:
+Eh este ejemplo, `creature` es la variable del bucle que toma el valor de la
+siguiente entrada en `animals` cada vez que el bucle hace una iteración. Podemos
+darle a la variable del bucle el nombre que querramos. Después que se termina el bucle,
+la variable del bucle continuará existiendo y tendrá el valor de la última entrada en
+la colección.
 
 ~~~
 animals = ['lion', 'tiger', 'crocodile', 'vulture', 'hippo']
@@ -87,27 +90,29 @@ The loop variable is now: hippo
 ~~~
 {: .output}
 
-We are not asking Python to print the value of the loop variable anymore, but
-the for loop still runs and the value of `creature` changes on each pass through
-the loop. The statement `pass` in the body of the loop just means "do nothing".
+Acá no le estamos pidiendo a Python que imprima el valor de la variable del
+bucle, pero el bucle todavía corre y el valor de `creature` cambia en cada
+iteración. La palabra clave `pass` en el cuerpo del bucle significa solamente
+"no hagas nada".
 
-> ## Challenge - Loops
+> ## Desafío - **Bucles**
 >
-> 1. What happens if we don't include the `pass` statement?
+> 1. ¿Qué pasa si no incluimos la palabra clave `pass`?
 >
-> 2. Rewrite the loop so that the animals are separated by commas, not new lines
-> (Hint: You can concatenate strings using a plus sign. For example,
-> `print(string1 + string2)` outputs 'string1string2').
+> 2. Reescribe el bucle de tal forma que los animales estén separados por comas
+>    y no por una línea nueva.
+>    (Pista: Puedes concatenar cadenas de caracteres usando el signo más. Por 
+>    ejemplo, `print(string1 + string2)` resulta en 'string1string2').
 {: .challenge}
 
-## Automating data processing using For Loops
+## Automatizando el procesamiento de datos usando bucles **For**
 
-The file we've been using so far, `surveys.csv`, contains 25 years of data and is
-very large. We would like to separate the data for each year into a separate
-file.
+El archivo que hemos estado usando hasta este momento, `surveys.csv`, contiene
+25 años de información y es muy grande. Nos encantaría separar esta información
+por años y guardar un archivo por cada año.
 
-Let's start by making a new directory inside the folder `data` to store all of
-these files using the module `os`:
+Comencemos por crear un nuevo directorio en nuestra carpeta `data` para guardar
+todos estos archivos usando el módulo `os`
 
 ~~~
 import os
@@ -116,8 +121,10 @@ os.mkdir('data/yearly_files')
 ~~~
 {: .language-python}
 
-The command `os.mkdir` is equivalent to `mkdir` in the shell. Just so we are
-sure, we can check that the new directory was created within the `data` folder:
+El comando `os.mkdir` es equivalente a escribir `mkdir` en la terminal. Solo
+para estar seguros, podemos verificar que nuestro nuevo directorio fue creado en
+la carpeta `data`:
+
 ~~~
 os.listdir('data')
 ~~~
@@ -134,40 +141,41 @@ os.listdir('data')
 ~~~
 {: .output}
 
-The command `os.listdir` is equivalent to `ls` in the shell.
+El comando `os.listdir` es equivalente a usar `ls` en la terminal.
 
-In previous lessons, we saw how to use the library pandas to load the species
-data into memory as a DataFrame, how to select a subset of the data using some
-criteria, and how to write the DataFrame into a CSV file. Let's write a script
-that performs those three steps in sequence for the year 2002:
+En episodios anteriores, vimos cómo usar la librería Pandas para cargar
+en memoria, a través de **DataFrame**,  información sobre las especies; vimos cómo
+seleccionar un subconjunto de esos datos usando ciertos criterios, y vimos
+también cómo escribir esa información en un archivo CSV. Escribamos un
+**script** que realiza esos tres pasos en secuencia para el año 2002:
 
 ~~~
 import pandas as pd
 
-# Load the data into a DataFrame
+# Cargamos los datos en un DataFrame
 surveys_df = pd.read_csv('data/surveys.csv')
 
-# Select only data for the year 2002
+# Seleccionamos solo los datos del año 2002
 surveys2002 = surveys_df[surveys_df.year == 2002]
 
-# Write the new DataFrame to a CSV file
+# Escribimos el nuevo DataFrame en un archivo CSV
 surveys2002.to_csv('data/yearly_files/surveys2002.csv')
 ~~~
 {: .language-python}
 
-To create yearly data files, we could repeat the last two commands over and
-over, once for each year of data. Repeating code is neither elegant nor
-practical, and is very likely to introduce errors into your code. We want to
-turn what we've just written into a loop that repeats the last two commands for
-every year in the dataset.
+Para crear los archivos con los datos anuales, podemos repetir estos últimos dos
+comandos una y otra vez, una vez por cada año de información. Sin embargo, repetir
+código no es ni elegante ni práctico, y hace muy probable que introduzcamos
+errores en nuestro código. Queremos convertir lo que acabamos de escribir en un
+bucle que repita estos últimos dos comandos para cada año en nuestro **dataset**.
 
-Let's start by writing a loop that simply prints the names of the files we want
-to create - the dataset we are using covers 1977 through 2002, and we'll create
-a separate file for each of those years. Listing the filenames is a good way to
-confirm that the loop is behaving as we expect.
+Comencemos con un bucle que solamente imprima los nombres de los archivos que
+queremos crear - El dataset que estamos usando va desde 1977 hasta 2002, y vamos
+a crear un archivo por separado para cada año. Listar los nombres de los archivos
+es una buena estrategia, porque así podemos confirmar que nuestro bucle se
+está comportando como esperamos.
 
-We have seen that we can loop over a list of items, so we need a list of years
-to loop over. We can get the years in our DataFrame with:
+Hemos visto que podemos iterar sobre una lista de elementos, entonces necesitamos una lista de años sobre la cual iterar. Podemos obtener los años en nuestro **DataFrame** con:
 
 ~~~
 surveys_df['year']
@@ -186,8 +194,8 @@ surveys_df['year']
 ~~~
 {: .output}
 
-but we want only unique years, which we can get using the `unique` method
-which we have already seen.
+pero queremos solamente años únicos, y esto lo podemos obtener usando el método
+`unique` que ya hemos visto.
 
 ~~~
 surveys_df['year'].unique()
@@ -200,7 +208,7 @@ array([1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987,
 ~~~
 {: .output}
 
-Putting this into our for loop we get
+Escribiendo esto en un bucle **for** obtenemos
 
 ~~~
 for year in surveys_df['year'].unique():
@@ -238,7 +246,8 @@ data/yearly_files/surveys2002.csv
 ~~~
 {: .output}
 
-We can now add the rest of the steps we need to create separate text files:
+Ahora podemos agregar el resto de pasos que necesitamos para crear archivos
+separados:
 
 ~~~
 # Load the data into a DataFrame
@@ -255,73 +264,81 @@ for year in surveys_df['year'].unique():
 ~~~
 {: .language-python}
 
-Look inside the `yearly_files` directory and check a couple of the files you
-just created to confirm that everything worked as expected.
+Mira dentro del directorio `yearly_files` y verifica un par de los archivos que
+acabaste de crear para confirmar que todo funcionó como esperabas.
 
-## Writing Unique FileNames
+## Escribiendo nombres de archivo únicos
 
-Notice that the code above created a unique filename for each year.
+Nota que en el código anterior creamos un nombre de archivo único para cada año.
 
 ~~~
 filename = 'data/yearly_files/surveys' + str(year) + '.csv'
 ~~~
 {: .language-python}
 
-Let's break down the parts of this name:
+Descompongamos las partes de este nombre:
 
-* The first part is simply some text that specifies the directory to store our
-  data file in (data/yearly_files/) and the first part of the file name
-  (surveys): `'data/yearly_files/surveys'`
-* We can concatenate this with the value of a variable, in this case `year` by
-  using the plus `+` sign and the variable we want to add to the file name: `+
-  str(year)`
-* Then we add the file extension as another text string: `+ '.csv'`
+* La primera parte es simplemente un texto que especifica el directorio en el que
+  vamos a guardar nuestro archivo (data/yearly_files/) y la primera parte del
+  nombre del archivo (surveys): `'data/yearly_files/surveys'`
+* Podemos concatenar esto con el valor de una variable, en este caso `year`, al
+  usar el signo más y la variable que le queremos añadir al nombre del archivo:
+  `+ str(year)`
+* Por último añadimos la extensión del archivo usando otra cadena de caracteres:
+  `+ '.csv'`
 
-Notice that we use single quotes to add text strings. The variable is not
-surrounded by quotes. This code produces the string
-`data/yearly_files/surveys2002.csv` which contains the path to the new filename
-AND the file name itself.
+Nota que usamos comillas sencillas para añadir las cadenas de caracteres y que la
+variable no está entre comillas. Este código produce la cadena de caracteres
+`data/yearly_files/surveys2002.csv` que contiene tanto el **path** como el
+nombre del archivo.
 
-> ## Challenge - Modifying loops
+> ## Desafío - Modificando bucles
 >
-> 1. Some of the surveys you saved are missing data (they have null values that
-> show up as NaN - Not A Number - in the DataFrames and do not show up in the text
-> files). Modify the for loop so that the entries with null values are not
-> included in the yearly files.
+> 1. Algunas de las encuestas que guardaste tienen datos faltantes (tienen valores
+>    nulos que salen como `NaN` - No es un número (en inglés) - en los DataFrames
+>    y no salen en los archivos de texto). Modifica el bucle **for** para que las
+>    entradas que tengan valores nulos no sean incluidas en los archivos anuales.
 >
-> 2. Let's say you only want to look at data from a given multiple of years. How would you modify your loop in order to generate a data file for only every 5th year, starting from 1977?
+> 2. Supongamos que solo quieres revisar los datos cada cierto múltiplo de años.
+>    ¿Cómo modificarías el bucle para generar un archivo de datos cada cinco
+>    años comenzando desde 1977?
 >
-> 3. Instead of splitting out the data by years, a colleague wants to do analyses each species separately. How would you write a unique CSV file for each species?
+> 3. En vez de separar la información por años, un colega tuyo quiere hacer el
+>    análisis separando por especies. ¿Cómo escribirías un único archivo CSV
+>    por cada especie?
 {: .challenge}
 
-## Building reusable and modular code with functions
+## Construyendo código modular y reusable usando funciones
 
-Suppose that separating large data files into individual yearly files is a task
-that we frequently have to perform. We could write a **for loop** like the one above
-every time we needed to do it but that would be time consuming and error prone.
-A more elegant solution would be to create a reusable tool that performs this
-task with minimum input from the user. To do this, we are going to turn the code
-we've already written into a function.
+Supón que separar archivos enormes en archivos anuales individuales es una tarea
+que tenemos que realizar frecuentemente. Podríamos escribir un bucle **for**
+como el que hicimos arriba cada vez que lo necesitemos, pero esto tomaría
+mucho tiempo y podría introducir errores en el código. Una solución más elegante
+sería crear una herramienta reusable que realice esta tarea con el mínimo
+esfuerzo del usuario. Para hacerlo, vamos a convertir el código que ya
+escribimos en una función.
 
-Functions are reusable, self-contained pieces of code that are called with a
-single command. They can be designed to accept arguments as input and return
-values, but they don't need to do either. Variables declared inside functions
-only exist while the function is running and if a variable within the function
-(a local variable) has the same name as a variable somewhere else in the code,
-the local variable hides but doesn't overwrite the other.
+Las funciones son piezas de código reusable y autónomo que pueden ser
+llamadas mediante un solo comando. Están diseñadas para aceptar argumentos como
+entrada y retornar valores, pero no necesitan hacerlo necesariamente. Las
+variables declaradas adentro de las funciones solo existen mientras la función
+se está ejecutando, y si una variable adentro de una función (una variable
+local) tiene el mismo nombre de otra variable en alguna parte del código, la
+variable local no sobrescribe a la otra.
 
-Every method used in Python (for example, `print`) is a function, and the
-libraries we import (say, `pandas`) are a collection of functions. We will only
-use functions that are housed within the same code that uses them, but it's also
-easy to write functions that can be used by different programs.
+Todo método usado en Python (como por ejemplo `print`) es una función, y las
+librerías que importamos (`pandas`, por ejemplo) son una colección de funciones.
+Solo usaremos las funciones que están contenidas en el mismo código que las
+usan, pero es sencillo también escribir funciones que puedan ser usadas por
+programas diferentes.
 
-Functions are declared following this general structure:
+Las funciones se declaran usando la siguiente estructura general:
 
 ~~~
 def this_is_the_function_name(input_argument1, input_argument2):
 
-    # The body of the function is indented
-    # This function prints the two arguments to screen
+    # El cuerpo de la función está indentado
+    # Esta función imprime los dos argumentos en pantalla
     print('The function arguments are:', input_argument1, input_argument2, '(this is done inside the function!)')
 
     # And returns their product
@@ -329,12 +346,13 @@ def this_is_the_function_name(input_argument1, input_argument2):
 ~~~
 {: .language-python}
 
-The function declaration starts with the word `def`, followed by the function
-name and any arguments in parenthesis, and ends in a colon. The body of the
-function is indented just like loops are. If the function returns something when
-it is called, it includes a return statement at the end.
+La declaración de la función comienza con la palabra clave `def`, seguida del
+nombre de la función y los argumentos entre paréntesis, y termina con un dos
+puntos. El cuerpo de la función está indentado justo como ocurría con los
+bucles. Si la función retorna algo al ser llamada, entonces incluimos la palabra
+clave `return` al final.
 
-This is how we call the function:
+Así es como llamamos a la función:
 
 ~~~
 product_of_inputs = this_is_the_function_name(2,5)
@@ -356,46 +374,48 @@ Their product is: 10 (this is done outside the function!)
 ~~~
 {: .output}
 
-> ## Challenge - Functions
+> ## Desafío - Funciones
 >
-> 1. Change the values of the arguments in the function and check its output
-> 2. Try calling the function by giving it the wrong number of arguments (not 2)
->   or not assigning the function call to a variable (no `product_of_inputs =`)
-> 3. Declare a variable inside the function and test to see where it exists (Hint:
->   can you print it from outside the function?)
-> 4. Explore what happens when a variable both inside and outside the function
->   have the same name. What happens to the global variable when you change the
->   value of the local variable?
+> 1. Cambia los valores de los argumentos en la función y mira su salida.
+> 2. Intenta llamar a la función usando la cantidad equivocada de argumentos
+>    (es decir, diferente de 2) o sin asignar la llamada de la función a una
+>    variable (sin poner `product_of_inputs =`).
+> 3. Declara una variable dentro de una función y prueba a encontrar en dónde
+>    existe (Pista: ¿puedes imprimirla desde fuera de la función?)
+> 4. Explora qué sucede cuando una variable tiene el mismo nombre adentro y
+>    afuera de la función. ¿Qué le ocurre a la variable global cuando cambias el
+>    valor de la variable local?
 {: .challenge}
 
-We can now turn our code for saving yearly data files into a function. There are
-many different "chunks" of this code that we can turn into functions, and we can
-even create functions that call other functions inside them. Let's first write a
-function that separates data for just one year and saves that data to a file:
+Ahora podemos convertir el código para guardar archivos con datos anuales en una
+función. Hay muchas "partes" de este código que podemos convertir en funciones,
+y podríamos inclusive crear funciones que llaman a otras funciones adentro de
+ellas. Comencemos escribiendo una función que separa los datos para un año y los
+guarda en un archivo:
 
 ~~~
 def one_year_csv_writer(this_year, all_data):
     """
-    Writes a csv file for data from a given year.
+    Escribe un archivo csv con los datos para un año dado.
 
-    this_year --- year for which data is extracted
-    all_data --- DataFrame with multi-year data
+    this_year --- el año del que vamos a extraer los datos
+    all_data --- DataFrame con datos de múltiples años
     """
 
-    # Select data for the year
+    # Seleccionamos los datos para el año
     surveys_year = all_data[all_data.year == this_year]
 
-    # Write the new DataFrame to a csv file
+    # Escribimos el nuevo DataFrame a un archivo csv
     filename = 'data/yearly_files/function_surveys' + str(this_year) + '.csv'
     surveys_year.to_csv(filename)
 ~~~
 {: .language-python}
 
-The text between the two sets of triple double quotes is called a docstring and
-contains the documentation for the function. It does nothing when the function
-is running and is therefore not necessary, but it is good practice to include
-docstrings as a reminder of what the code does. Docstrings in functions also
-become part of their 'official' documentation:
+El texto que está entre los dos grupos de tres comillas dobles se llama el
+**docstring** y contiene la documentación de la función. No hace nada al
+ejecutar la función y por tanto no es necesario, pero es una excelente práctica
+incluir docstrings para recordar y explicar qué hace el código. Los docstrings
+en las funciones también se vuelven parte de la documentación "oficial":
 
 ~~~
 one_year_csv_writer?
@@ -407,92 +427,97 @@ one_year_csv_writer(2002, surveys_df)
 ~~~
 {: .language-python}
 
-We changed the root of the name of the CSV file so we can distinguish it from
-the one we wrote before. Check the `yearly_files` directory for the file. Did it
-do what you expect?
+Cambiamos el nombre del archivo CSV para diferenciarlo del que escribimos
+anteriormente. Busca en el directorio `yearly_files` el archivo que creamos.
+¿Hizo la función lo que esperabas que hiciera?
 
-What we really want to do, though, is create files for multiple years without
-having to request them one by one. Let's write another function that replaces
-the entire For loop by simply looping through a sequence of years and repeatedly
-calling the function we just wrote, `one_year_csv_writer`:
+Sin embargo, lo que nos encantaría hacer es crear archivos para múltiples años
+sin tener que pedirlos uno a uno. Escribamos otra función que reemplace el bucle
+**for** simplemente iterando a través de la secuencia de años y llamando repetidamente a la
+función que acabamos de escribir, `one_year_csv_writer`:
 
 
 ~~~
 def yearly_data_csv_writer(start_year, end_year, all_data):
     """
-    Writes separate CSV files for each year of data.
+    Escribe archivos CSV separados para cada año de datos.
 
-    start_year --- the first year of data we want
-    end_year --- the last year of data we want
-    all_data --- DataFrame with multi-year data
+    start_year --- el primer año de datos que queremos
+    end_year --- el último año de datos que queremos
+    all_data --- DataFrame con datos de varios años
     """
 
-    # "end_year" is the last year of data we want to pull, so we loop to end_year+1
+    # "end_year" es el último año que queremos extraer, entonces iteramos hasta end_year+1
     for year in range(start_year, end_year+1):
         one_year_csv_writer(year, all_data)
 ~~~
 {: .language-python}
 
-Because people will naturally expect that the end year for the files is the last
-year with data, the for loop inside the function ends at `end_year + 1`. By
-writing the entire loop into a function, we've made a reusable tool for whenever
-we need to break a large data file into yearly files. Because we can specify the
-first and last year for which we want files, we can even use this function to
-create files for a subset of the years available. This is how we call this
-function:
+Como la gente esperará naturalmente que el año final (`end_year`) sea el último,
+el bucle **for** adentro de la función termina en `end_year + 1`. Al escribir el
+bucle entero en la función, hemos hecho una herramienta reusable para cuando
+necesitemos partir un archivo de datos grande en archivos anuales. Como podemos
+especificar el primer y el último año para los cuales queremos crear archivos,
+podemos inclusive usar esta función para crear archivos para un subconjunto de
+los años disponibles. Así llamaríamos la función:
 
 ~~~
-# Load the data into a DataFrame
+# Cargamos los datos en un DataFrame
 surveys_df = pd.read_csv('data/surveys.csv')
 
-# Create CSV files
+# Creamos los archivos CSV
 yearly_data_csv_writer(1977, 2002, surveys_df)
 ~~~
 {: .language-python}
 
-BEWARE! If you are using IPython Notebooks and you modify a function, you MUST
-re-run that cell in order for the changed function to be available to the rest
-of the code. Nothing will visibly happen when you do this, though, because
-simply defining a function without *calling* it doesn't produce an output. Any
-cells that use the now-changed functions will also have to be re-run for their
-output to change.
+¡TEN CUIDADO! Si estás usando Jupyter Notebooks y estás modicando la función,
+DEBES volver a ejecutar la celda para que la función cambiada esté disponible
+para el resto del código. Nada cambiará visualmente cuando hagas esto, porque
+definir una función sin *ejecutarla* no produce ninguna salida. Toda otra celda
+que use la función (ahora cambiada) también tendrá que ser re-ejecutada para
+cambiar su salida.
 
-> ## Challenge- More functions
+> ## Challenge- Más funciones
 >
-> 1. Add two arguments to the functions we wrote that take the path of the
->    directory where the files will be written and the root of the file name.
->    Create a new set of files with a different name in a different directory.
-> 2. How could you use the function `yearly_data_csv_writer` to create a CSV file
->    for only one year? (Hint: think about the syntax for `range`)
-> 3. Make the functions return a list of the files they have written. There are
->    many ways you can do this (and you should try them all!): either of the
->    functions can print to screen, either can use a return statement to give back
->    numbers or strings to their function call, or you can use some combination of
->    the two. You could also try using the `os` library to list the contents of
->    directories.
-> 4. Explore what happens when variables are declared inside each of the functions
->    versus in the main (non-indented) body of your code. What is the scope of the
->    variables (where are they visible)? What happens when they have the same name
->   but are given different values?
+> 1. Añade dos argumentos a las funciones que escribimos que tomen el **path**
+>    del directorio donde los archivos serán escritos y el root del nombre del
+>    archivo. Crea un nuevo conjunto de archivos con un nombre diferente en un
+>    directorio diferente.
+> 2. ¿Cómo podrías usar la función `yearly_data_csv_writer` para crear un archivo
+>    CSV para solo un año? (Pista: piensa sobre la sintaxis para `range`)
+> 3. Haz que las funciones retornen una lista de los archivos que escribieron.
+>    Hay muchas formas en las que puedes hacer esto (¡y deberías intentarlas
+>    todas!): cualquiera de las dos funciones podría imprimir algo en pantalla,
+>    cualquiera podría usar `return` para retornar números o cadenas de
+>    caracteres cada vez que se llaman, o podrías hacer una combinación de estas
+>    dos estrategias. Podrías también intentar usar la librería `os` para listar
+>    los contenidos de directorios.
+> 4. Explora qué sucede cuando las variables son declaradas dentro de cada una
+>    de las funciones versus en el cuerpo principal de tu código (lo que está
+>    sin indentar). ¿Cuál es el alcance de las variables (es decir, dónde son 
+>    visibles)?, ¿qué ocurre si tienen el mismo nombre pero valores diferentes?
 {: .challenge}
 
-The functions we wrote demand that we give them a value for every argument.
-Ideally, we would like these functions to be as flexible and independent as
-possible. Let's modify the function `yearly_data_csv_writer` so that the
-`start_year` and `end_year` default to the full range of the data if they are
-not supplied by the user. Arguments can be given default values with an equal
-sign in the function declaration. Any arguments in the function without default
-values (here, `all_data`) is a required argument and MUST come before the
-argument with default values (which are optional in the function call).
+Las funciones que escribimos exigen que les demos un valor para cada argumento.
+Idealmente, nos gustaría que estas funciones fuesen tan flexibles e
+independientes como fuera posible. Modifiquemos la función
+`yearly_data_csv_writer` para que `start_year` y `end_year` sean por defecto el
+rango completo de los datos si no son dados por el usuario. Se le pueden asignar
+a los argumentos valores por defecto usando el signo igual a la hora de declarar
+la función. Todos los argumentos en la función que no tengan un valor por
+defecto (como aquí `all_data`) serán argumentos requeridos y DEBERÁN ir antes de
+los argumentos que tengan valores por defecto (y que son opcionales al llamar la
+función).
 
 ~~~
 def yearly_data_arg_test(all_data, start_year = 1977, end_year = 2002):
     """
-    Modified from yearly_data_csv_writer to test default argument values!
+    Modificación de yearly_data_csv_writer para probar argumentos con valores
+    por defecto!
 
-    start_year --- the first year of data we want --- default: 1977
-    end_year --- the last year of data we want --- default: 2002
-    all_data --- DataFrame with multi-year data
+    start_year --- el primer año de datos que queremos --- por defecto: 1977
+    end_year --- el último año de datos que queremos --- por defecto: 2002
+    all_data --- DataFrame con datos de varios años
     """
 
     return start_year, end_year
@@ -512,21 +537,22 @@ Default values:		1977 2002
 ~~~
 {: .output}
 
-The "\t" in the `print` statements are tabs, used to make the text align and be
-easier to read.
+Los "\t" en `print` son tabulaciones, y son usadas para alinear el texto y
+facilitar la lectura.
 
-But what if our dataset doesn't start in 1977 and end in 2002? We can modify the
-function so that it looks for the start and end years in the dataset if those
-dates are not provided:
+Pero ¿qué sucede si nuestro **dataset** no comienza en 1977 ni termina en 2002?
+Podemos modificar la función de tal forma que ella misma mire cuál es el primer
+y cuál es el último año si estos argumentos no son provistos por el usuario:
 
 ~~~
 def yearly_data_arg_test(all_data, start_year = None, end_year = None):
     """
-    Modified from yearly_data_csv_writer to test default argument values!
+    Modificación de yearly_data_csv_writer para probar argumentos con valores
+    por defecto!
 
-    start_year --- the first year of data we want --- default: None - check all_data
-    end_year --- the last year of data we want --- default: None - check all_data
-    all_data --- DataFrame with multi-year data
+    start_year --- el primer año de datos que queremos --- por defecto: None - revisar all_data
+    end_year --- el último año de datos que queremos --- por defecto: None - revisar all_data
+    all_data --- DataFrame con datos de varios años
     """
 
     if start_year is None:
@@ -550,80 +576,85 @@ Default values:		1977 2002
 ~~~
 {: .output}
 
-The default values of the `start_year` and `end_year` arguments in the function
-`yearly_data_arg_test` are now `None`. This is a build-it constant in Python
-that indicates the absence of a value - essentially, that the variable exists in
-the namespace of the function (the directory of variable names) but that it
-doesn't correspond to any existing object.
+Ahora los valores por defecto de los argumentos `start_year` y `end_year` en la
+función `yearly_data_arg_test` son `None`. Esta es una constante incorporada en
+Python que indica la ausencia de un valor - esencialmente indica que la variable
+existe en el directorio de nombres de variables (el **namespace**) de la función pero que
+no corresponde a ningún objeto existente.
 
 > ## Challenge - Variables
 >
-> 1. What type of object corresponds to a variable declared as `None`? (Hint:
-> create a variable set to `None` and use the function `type()`)
+> 1. ¿Qué tipo de objeto corresponde a una variable declarada como `None`?
+>    (Pista: crea una variable con el valor `None` y usa la función `type()`)
 >
-> 2. Compare the behavior of the function `yearly_data_arg_test` when the
-> arguments have `None` as a default and when they do not have default values.
+> 2. Compara el comportamiento de la función `yearly_data_arg_test` cuando los
+>    argumentos tienen `None` como valor por defecto y cuando no tienen valores
+>    por defecto.
 >
-> 3. What happens if you only include a value for `start_year` in the function
-> call? Can you write the function call with only a value for `end_year`? (Hint:
-> think about how the function must be assigning values to each of the arguments -
-> this is related to the need to put the arguments without default values before
-> those with default values in the function definition!)
+> 3. ¿Qué ocurre si solo incluimos un valor para `start_year` al llamar a la función?,
+>    ¿puedes escribir una llamada a la función con solo un valor para `end_year`?
+>    (Pista: piensa en cómo la función debe estar asignándole valores a cada uno
+>    de sus argumentos - ¡esto está relacionado con la necesidad de poner los
+>    argumentos que no tienen valores por defecto antes de los que sí tienen
+>    valores por defecto en la definición de la función!)
 {: .challenge}
 
-## If Statements
+## Sentencias **if**
 
-The body of the test function now has two conditionals (if statements) that
-check the values of `start_year` and `end_year`. If statements execute a segment
-of code when some condition is met. They commonly look something like this:
+El cuerpo de la función anterior ahora tiene dos condicionales **if** que
+revisan los valores de `start_year` y `end_year`. Los condicionales if ejecutan
+un segmento de código si una condición dada es cierta. Usualmente lucen así:
 
 ~~~
 a = 5
 
-if a<0:  # Meets first condition?
+if a<0:  # ¿es cierta esta primera condición?
 
-    # if a IS less than zero
+    # si a ES menor que cero
     print('a is a negative number')
 
-elif a>0:  # Did not meet first condition. meets second condition?
+elif a>0:  # La primera condición no es cierta, ¿la segunda?
 
-    # if a ISN'T less than zero and IS more than zero
+    # si a NO ES menor que cero y ES mayor que cero
     print('a is a positive number')
 
-else:  # Met neither condition
+else:  # No se cumplieron las dos condiciones
 
-    # if a ISN'T less than zero and ISN'T more than zero
+    # si a NO ES menor que cero y NO ES mayor que cero
     print('a must be zero!')
 ~~~
 {: .language-python}
 
-Which would return:
+lo cual retornaría:
 
 ~~~
 a is a positive number
 ~~~
 {: .output}
 
-Change the value of `a` to see how this function works. The statement `elif`
-means "else if", and all of the conditional statements must end in a colon.
+Cambia los valores de `a` para ver cómo funciona este código. La palabra clave
+`elif` significa "sino" (en inglés, "else if"), y todos los condicionales deben
+terminar con un dos puntos.
 
-The if statements in the function `yearly_data_arg_test` check whether there is an
-object associated with the variable names `start_year` and `end_year`. If those
-variables are `None`, the if statements return the boolean `True` and execute whatever
-is in their body. On the other hand, if the variable names are associated with
-some value (they got a number in the function call), the if statements return `False`
-and do not execute. The opposite conditional statements, which would return
-`True` if the variables were associated with objects (if they had received value
-in the function call), would be `if start_year` and `if end_year`.
+Los condicionales if en la función `yearly_data_arg_test` verifican si hay algún
+objeto asociado a los nombres `start_year` y `end_year`. Si estas variables son
+`None`, los condicionales if retornan el booleano `True` y ejecutan cualquier
+cosa que esté en su cuerpo. Por otra parte, si los nombres están asociados a
+algún valor (es decir, recibieron un número al ser llamada la función), los
+condicionales if retornarán `False` y no ejecutan su cuerpo. El condicional
+opuesto, que retornaría `True` si las variables estuvieran asociadas con
+objetos (es decir, si hubieran recibido valores al llamarse la función), sería
+`if start_year` y `if end_year`.
 
-As we've written it so far, the function `yearly_data_arg_test` associates
-values in the function call with arguments in the function definition just based
-in their order. If the function gets only two values in the function call, the
-first one will be associated with `all_data` and the second with `start_year`,
-regardless of what we intended them to be. We can get around this problem by
-calling the function using keyword arguments, where each of the arguments in the
-function definition is associated with a keyword and the function call passes
-values to the function using these keywords:
+Tal y como la hemos escrito hasta este momento, la función
+`yearly_data_arg_test` asocia los valores que le pasamos cuando la llamamos con
+los argumentos en la definición de la función solo basados en su orden. Si la
+función recibe solo dos valores al ser llamada, el primero será asociado con
+`all_data` y el segundo con `start_year`, sin importar cuál era nuestra
+intención. Podemos solucionar este problema al llamar la función usando
+argumentos **keyword**, en donde cada uno de los argumentos en la definición de
+la función está asociado con una **keyword** y al llamar la función pasamos
+valores a los parámetros usando estas keywords:
 
 ~~~
 start,end = yearly_data_arg_test (surveys_df)
@@ -655,19 +686,18 @@ One keyword, default start:	1977 1993
 ~~~
 {: .output}
 
-> ## Challenge - Modifying functions
+> ## Desafío - Modificando funciones
 >
-> 1. Rewrite the `one_year_csv_writer` and `yearly_data_csv_writer` functions to
-> have keyword arguments with default values
+> 1. Reescribe las funciones `one_year_csv_writer` y `yearly_data_csv_writer`
+>    para que tengan argumentos keyword con valores por defecto.
 >
-> 2. Modify the functions so that they don't create yearly files if there is no
-> data for a given year and display an alert to the user (Hint: use conditional
-> statements to do this. For an extra challenge, use `try`
-> statements!)
+> 2. Modifica las funciones de tal forma que no creen archivos para un año si
+>    éste no está en los datos y que muestre una alerta al usuario (Pista: usa
+>    condicionales para esto. Si quieres un reto más, ¡usa `try`!)
 >
-> 3. The code below checks to see whether a directory exists and creates one if it
-> doesn't. Add some code to your function that writes out the CSV files, to check
-> for a directory to write to.
+> 3. Este código verifica si un directorio existe, sino lo crea. Añade un poco
+>    de código a la función que escribe los archivos CSV para verificar si
+>    existe el directorio al que piensas escribir.
 >
 > ~~~
 >if 'dir_name_here' in os.listdir('.'):
@@ -678,15 +708,14 @@ One keyword, default start:	1977 1993
 > ~~~
 > {: .language-python }
 >
-> 4. The code that you have written so far to loop through the years is good,
-> however it is not necessarily reproducible with different datasets.
-> For instance, what happens to the code if we have additional years of data
-> in our CSV files? Using the tools that you learned in the previous activities,
-> make a list of all years represented in the data. Then create a loop to process
-> your data, that begins at the earliest year and ends at the latest year using
-> that list.
->
-> HINT: you can create a loop with a list as follows: `for years in year_list:`
+> 4. El código que has escrito hasta este momento usando el bucle **for** está
+>    bastante bien, pero no necesariamente es reproducible con **datasets**
+>    diferentes. Por ejemplo, ¿qué pasa con el código si tenemos datos para más
+>    años? Usando las herramientas que aprendiste en las actividades anteriores,
+>    crea una lista de todos los años representados en los datos. Después crea
+>    un bucle para procesar tu información, comenzando desde el primer año y
+>    terminando en el último usando la lista.
+>    (Pista: puedes crear un bucle con la lista así: `for years in year_list:`)
 {: .challenge}
 
 {% include links.md %}
