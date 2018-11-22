@@ -36,7 +36,7 @@ Al escribir el comando `jupyter notebook`, ocurre lo siguiente:
 
 * Bajo el menu __"help"__, puedes tomar un rápido tour interactivo sobre como 
   utilizar el __notebook__. Más ayuda sobre __Jupyter__ y recursos de 
-  talleres clave se encuentran aquí también. 
+  paquetes clave se encuentran aquí también. 
 
   ![ayuda y tour Jupyter](../fig/00_4_jupyter_tour_help.png)
   *Tour de interfaz del usuario y Ayuda*
