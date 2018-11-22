@@ -59,7 +59,7 @@ Al escribir el comando `jupyter notebook`, ocurre lo siguiente:
 * Veamos una celda de **Markdown**. __Markdown__ es un lenguaje de manipulación de 
   texto que es legible pero que ofrece formato adicional. No olvides 
   seleccionar **Markdown** del menú desplegable de tipo de celda. Haz clic 
-  en la celda y escribe algo texto en __Markdown__.
+  en la celda y escribe texto en __Markdown__.
 
   ![Una celda de __Markdown__](../fig/00_7_jupyter_markdown_before.png)
   *Una celda de __Markdown__*
