@@ -7,7 +7,7 @@ Archivo | Nombre de archivo | Reponsable de traducción | Fecha de inicio | Fech
 Before we start | _episodes/00-before-we-start.md | @LUS24 | nov 10 | nov 11 | @spereyra @orchid00| nov 13 | nov 17
 Short Introduction to Programming in Python | _episodes/01-short-introduction-to-Python.md | @Helysalgado | nov 9 | nov 14 | @ComplejoC @orchid00 @monialo2000 | nov 16 | nov 20, nov 21
 Starting With Data | _episodes/02-starting-with-data.md | @jmbarrios  | nov 10 | nov 19 | @LUS24 | nov 20 | nov 22
-Indexing, Slicing and Subsetting DataFrames in Python | _episodes/03-index-slice-subset.md | @welozano  | nov 10 | nov 22 |@orchid00 | nov 11 | 
+Indexing, Slicing and Subsetting DataFrames in Python | _episodes/03-index-slice-subset.md | @welozano  | nov 10 | nov 22 |@orchid00 | nov 11 | nov 22
 Data Types and Formats | _episodes/04-data-types-and-format.md |  @fergarciafer  | nov 10 | nov 15 | @orchid00 | nov 12 | nov 17
 Combining DataFrames with Pandas | _episodes/05-merging-data.md | @spencerbh | nov 12 | nov 15 | @arredondo23 @raynamharris | nov 16 |
 Data Workflows and Automation | _episodes/06-loops-and-functions.md | @miguelgondu  | nov 9 | nov 18 | @fergarciafer | nov 19 | nov 22
