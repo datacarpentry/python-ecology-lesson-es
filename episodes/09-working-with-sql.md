@@ -21,12 +21,13 @@ keypoints:
 
 ## Python y SQL
 
-Cuando abres un archivo CSV en Python y asignas éste a una variable, estás usando la memoria de tu computadora para guardar esta variable. Acceder a datos almacenados en una base de datos con SQL no solo es más eficiente, sino que también te permite hacer subconjunto e importar solamente las partes de datos que necesites.
+Cuando lees un archivo de datos en Python y lo asignas a una variable, estás usando la memoria de tu computadora para guardar esta variable. Acceder a datos almacenados en una base de datos como SQL no solo es más eficiente, sino que también te permite extraer e importar todo o partes del `dataset` que necesites.
 
-En la siguiente lección, veremos algunos enfoques para hacer esto.
+En la siguiente lección, veremos algunos enfoques que se pueden tomar para conectarte a una base de datos, por ejemplo SQLite.
+
 ### El módulo `sqlite3`
 
-El módulo [sqlite3] proporciona una interfaz sencilla para interactuar con bases de datos SQLite. Primeramente, se crea un objeto de conexión usando `sqlite3.connect()`, esto abre la puerta a la base de datos. Mientras la conexión esté abierta cualquier interacción con la base de datos requiere que crees un objeto cursor con el comando `.cursor()`. Luego el cursor estará listo para realizar todo tipo de operaciones con el comando `.execute()`. Al final, no olvides cerrar la puerta de la conexión usando el comando `.close()`.
+El módulo [sqlite3] proporciona una interfaz sencilla para interactuar con bases de datos SQLite. Primeramente, se crea un objeto de conexión usando `sqlite3.connect()`, esto abre la puerta a la base de datos. Mientras la conexión esté abierta cualquier interacción con la base de datos requiere que crees un objeto cursor, con el comando `.cursor()`. Luego el cursor estará listo para realizar todo tipo de operaciones con el comando `.execute()`. Al final, no olvides cerrar la puerta de la conexión usando el comando `.close()`.
 
 [sqlite3]: https://docs.python.org/3/library/sqlite3.html
 
@@ -51,7 +52,9 @@ con.close()
 
 ### Consultas
 
-Una de las formas más comunes de interactuar con una base de datos es haciendo consultas: extraer datos con base en algunos parametros de búsqueda. Para esto usa la declaración **SELECT**. Una consulta regresa datos en una tupla sencilla o en una tupla de tuplas. Agrega una declaración **WHERE** para filtrar tus resultados basados en algún parámetro.
+Una de las formas más comunes de interactuar con una base de datos es haciendo consultas para extraer datos:
+Para seleccionar columnas del `DataFrame` o tabla, usa la palabra de declaración **SELECT**.
+Una consulta nos devuelve o retorna datos que pueden ser una o varias filas y columnas, a este resultado también se llama tupla. Para filtrar las tuplas basado en algún parametro, usa la palabra **WHERE**. El filtro **WHERE** recibe una o más condiciones.
 
 ~~~
 # Importa el módulo sqlite3
@@ -80,7 +83,7 @@ con.close()
 
 ##  Accesando datos almacenados en SQLite usando Python y Pandas
 
-Usando pandas, podemos importar los resultados de una consulta en SQLite a un *DataFrame*. Nota que puedes usar los mismos comandos o sintaxis que usamos en la lección SQLite. 
+Usando Pandas, podemos importar los resultados de una consulta en SQLite a un *DataFrame*. Nota que puedes usar los mismos comandos o sintaxis que usamos en la lección SQLite. 
 
 Por ejemplo para usar Pandas y SQLite:
 
@@ -106,7 +109,7 @@ con.close()
 
 ## Almacenando datos: CSV vs SQLite
 
-Almacenar datos en una base de datos SQLite incrementa sustancialmente el rendimiento de lectura / escritura en comparación con archivos CSV. La diferencia en el rendimiento se hace más notable a medida que crece el tamaño del conjunto de datos (ver un ejemplo en [estos benchmarks]).
+Almacenar datos en una base de datos SQLite incrementa sustancialmente el rendimiento de lectura / escritura, en comparación con archivos CSV. La diferencia en el rendimiento se hace más notable a medida que crece el tamaño del conjunto de datos (ver por ejemplo [estos benchmarks]).
 
 [estos benchmarks]: http://sebastianraschka.com/Articles/2013_sqlite_database.html#results-and-conclusions
 
@@ -117,8 +120,8 @@ Almacenar datos en una base de datos SQLite incrementa sustancialmente el rendim
 > para observaciones de sexo "masculino" o "femenino" que incluyan el género y la especie de la observación,
 > y el tipo de sitio de la muestra. ¿Cuántos registros regresa la consulta?
 >
-> 2. Crea un DataFrame que contenga el número total de observaciones hechas
-> (**count** ) de todos los años y la suma de los pesos de observaciones de cada sitio, ordenados por
+> 2. Crea un DataFrame (usando **count**) que contenga el número total de observaciones
+> de todos los años y la suma de los pesos de observaciones de cada sitio, ordenados por
 > el ID del sitio.
 {: .challenge}
 
