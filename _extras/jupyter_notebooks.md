@@ -14,7 +14,7 @@ Al escribir el comando `jupyter notebook`, ocurre lo siguiente:
 * Un servidor de __Jupyter Notebook__ es creado en tu máquina local.
 * El servidor de  __Jupyter Notebook__ solo se ejecuta en tu máquina local
   y no utiliza una conexión a internet.
-* El servidor de __Jupyter Notebook__ abre el cliente de __Jupyter notebook__, 
+* El servidor de __Jupyter Notebook__ abre el cliente de __Jupyter Notebook__, 
   también conocido como la interfaz de usuario de notebook, en tu navegador web
   predeterminado.
 
