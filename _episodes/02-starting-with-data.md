@@ -21,7 +21,7 @@ keypoints:
     - "FIXME"
 ---
 
-# Trabajando con Pandas **DataFrames** en Python
+# Trabajando con Pandas DataFrames en Python
 
 Podemos automatizar el proceso de manipular datos con Python. Vale la pena pasar
 tiempo escribiendo el código que haga estas tareas ya que una vez que se escribió,
@@ -56,7 +56,7 @@ Vamos a estudiar la especie y el peso de los animales capturados en sitios dentr
 estudio. El conjunto de datos esta guardado en un archivo `.csv`: cada línea
 tiene información sobre un solo animal y las columnas representan:
 
-| Column          | Description                           |
+| Columna          | Descripción                          |
 |-----------------|---------------------------------------|
 | record_id       | identificador único de la observación |
 | month           | mes de observación                    |
@@ -119,7 +119,7 @@ Cada vez que llamemos a una función que está en la biblioteca, se usa la sinta
 `NombreDeLaBiblioteca.NombreDeLaFuncion`. Agregar el nombre de la biblioteca
 con un `.` antes del nombre de la función le indica a Python donde encontrar la función. 
 En el ejemplo anterior hemos importado a Pandas como `pd`. Esto significa que no 
-vamos a tener que escribir `pandas` cada que llamemos una función de Pandas y solo
+vamos a tener que escribir `pandas` cada vez que llamemos a una función de Pandas y solo
 lo hagamos con su sobrenombre.
 
 # Leyendo datos en CSV usando Pandas
@@ -128,7 +128,7 @@ Empezaremos encontrando y leyendo los datos del censo que están en
 formato CSV. CSV son las siglas para _Comma-Separated Values_, valores
 separados por coma, y es una manera común de guardar datos. Otros
 símbolos pueden ser usados, te puedes encontrar valores separados por
-tabuladores, por punto y coma o por espacios en blancos. Es fácil remplazar
+tabuladores, por punto y coma o por espacios en blanco. Es fácil remplazar
 un separador por otro, para usar tu aplicación. La primera línea del 
 archivo generalmente contiene los encabezados que dicen que hay en
 cada columna. CSV (y otros separadores) hacen fácil compartir los datos y pueden
@@ -141,12 +141,12 @@ un [DataFrame](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#datafram
 
 Un **DataFrame** es una estructura de datos con dos dimensiones en la cual se puede
 guardar datos de distintos tipos (como caractéres, enteros, valores de punto flotante,
-fatcores y más) en columnas. Es similar a una hoja de cálculo o una table de SQL o
+factores y más) en columnas. Es similar a una hoja de cálculo o una tabla de SQL o
 el `data.frame` de R. Un **DataFrame** siempre tiene un índice (con inicio en 0). El índice 
 refiere a la posición de un elemento en la estructura de datos.
 
 ~~~
-# Note that pd.read_csv is used because we imported pandas as pd
+# Observa que se usa pd.read_csv debido a que importamos a pandas como pd
 pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
