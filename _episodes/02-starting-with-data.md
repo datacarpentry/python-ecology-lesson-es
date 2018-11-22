@@ -1,73 +1,75 @@
 ---
-title: Starting With Data
+title: Comenzando con datos
 teaching: 30
 exercises: 30
 questions:
-    - "How can I import data in Python?"
-    - "What is Pandas?"
-    - "Why should I use Pandas to work with data?"
+    - "¿Cómo importar datos en Python?"
+    - "¿Qué es Pandas?"
+    - "¿Por qué debería de usar Pandas para trabajar con datos?"
 objectives:
-    - "Navigate the workshop directory and download a dataset."
-    - "Explain what a library is and what libraries are used for."
-    - "Describe what the Python Data Analysis Library (Pandas) is."
-    - "Load the Python Data Analysis Library (Pandas)."
-    - "Use `read_csv` to read tabular data into Python."
-    - "Describe what a DataFrame is in Python."
-    - "Access and summarize data stored in a DataFrame."
-    - "Define indexing as it relates to data structures."
-    - "Perform basic mathematical operations and summary statistics on data in a Pandas DataFrame."
-    - "Create simple plots."
+    - "Explorar el directorio del taller y descargar el dataset."
+    - "Explicar qué es una biblioteca y para qué se usa."
+    - "Describir qué es, Pandas, la Biblioteca de Análisis de Datos de Python."
+    - "Cargar Pandas, la biblioteca de Análisis de Datos de Python."
+    - "Usar `read_csv` para leer datos tabulares en Python."
+    - "Describir qué es un **DataFrame** en Python."
+    - "Acceder y resumir datos guardados en un **DataFrame**."
+    - "Definir la indexación y su relación con las estructuras de datos."
+    - "Ejecutar operaciones matemáticas básicas y calcular estadísticas descriptivas sobre datos dentro de un Pandas **Dataframe**."
+    - "Crear gráficos simples."
 keypoints:
     - "FIXME"
 ---
 
-# Working With Pandas DataFrames in Python
+# Trabajando con Pandas DataFrames en Python
 
-We can automate the process of performing data manipulations in Python. It's efficient to spend time
-building the code to perform these tasks because once it's built, we can use it
-over and over on different datasets that use a similar format. This makes our
-methods easily reproducible. We can also easily share our code with colleagues
-and they can replicate the same analysis.
+Podemos automatizar el proceso de manipular datos con Python. Vale la pena pasar
+tiempo escribiendo el código que haga estas tareas ya que una vez que se escribió,
+lo podemos usar una y otra vez en distintos conjuntos de datos que usen un formato 
+similar. Esto hace a nuestros métodos fácilmente reproducibles. También resulta fácil
+compartir nuestro código con nuestros colegas y ellos pueden replicar el mismo 
+análisis.
 
-### Starting in the same spot
+### Comenzando en el mismo lugar
 
-To help the lesson run smoothly, let's ensure everyone is in the same directory.
-This should help us avoid path and file name issues. At this time please
-navigate to the workshop directory. If you working in IPython Notebook be sure
-that you start your notebook in the workshop directory.
+Para que la lección salga de la mejor manera posible, vamos a asegurarnos que todos
+estemos en el mismo directorio. Esto debería ayudarnos a evitar inconvenientes con los nombres
+de los directorios y los archivos. Navega al directorio del
+taller. Si tu estás trabajando en IPython Notebook asegurate de iniciar tu notebook 
+en el directorio del taller.
 
-A quick aside that there are Python libraries like [OS
-Library](https://docs.python.org/3/library/os.html) that can work with our
-directory structure, however, that is not our focus today.
+Un comentario al margen es que hay bibliotecas de Python, como [OS
+Library](https://docs.python.org/3/library/os.html), las cuales pueden trabajar con la
+estructra de directorios, sin emebargo este no es nuestro objetivo el día de hoy. 
 
-### Our Data
+### Nuestros datos
 
-For this lesson, we will be using the Portal Teaching data, a subset of the data
-from Ernst et al
-[Long-term monitoring and experimental manipulation of a Chihuahuan Desert ecosystem near Portal, Arizona, USA](http://www.esapubs.org/archive/ecol/E090/118/default.htm)
+Para esta lección, usaremos los datos de "Portal Teaching" que son
+subconjunto de los datos estudiados por Ernst et al.
+ [Long-term monitoring and experimental manipulation of a Chihuahuan Desert ecosystem near Portal, Arizona, USA](http://www.esapubs.org/archive/ecol/E090/118/default.htm).
 
-We will be using files from the [Portal Project Teaching Database](https://figshare.com/articles/Portal_Project_Teaching_Database/1314459).
-This section will use the `surveys.csv` file that can be downloaded here:
+Usaremos los datos de [Portal Project Teaching Database](https://figshare.com/articles/Portal_Project_Teaching_Database/1314459).
+Esta sección usa el archivo `surveys.csv` el cual puede ser descargado desde:
 [https://ndownloader.figshare.com/files/2292172](https://ndownloader.figshare.com/files/2292172)
 
-We are studying the species and weight of animals caught in sites in our study
-area. The dataset is stored as a `.csv` file: each row holds information for a
-single animal, and the columns represent:
+Vamos a estudiar la especie y el peso de los animales capturados en sitios dentro de nuestra área de
+estudio. El conjunto de datos esta guardado en un archivo `.csv`: cada línea
+tiene información sobre un solo animal y las columnas representan:
 
-| Column           | Description                        |
-|------------------|------------------------------------|
-| record_id        | Unique id for the observation      |
-| month            | month of observation               |
-| day              | day of observation                 |
-| year             | year of observation                |
-| plot_id          | ID of a particular site            |
-| species_id       | 2-letter code                      |
-| sex              | sex of animal ("M", "F")           |
-| hindfoot_length  | length of the hindfoot in mm       |
-| weight           | weight of the animal in grams      |
+| Columna          | Descripción                          |
+|-----------------|---------------------------------------|
+| record_id       | identificador único de la observación |
+| month           | mes de observación                    |
+| day             | día de la observación                 |
+| year            | año de la observación                 |
+| plot_id         | ID de un sitio en particular          |
+| species_id      | código de dos letras                  |
+| sex             | sexo del animal ("M", "F")            |
+| hindfoot_length | tamaño de pata en mm                  |
+| weight          | peso del animal en gramos             |
 
 
-The first few rows of our first file look like this:
+Las primeras líneas de nuestro archivo se ven de la siguiente manera:
 
 ~~~
 record_id,month,day,year,plot_id,species_id,sex,hindfoot_length,weight
@@ -85,24 +87,27 @@ record_id,month,day,year,plot_id,species_id,sex,hindfoot_length,weight
 
 ---
 
-## About Libraries
-A library in Python contains a set of tools (called functions) that perform
-tasks on our data. Importing a library is like getting a piece of lab equipment
-out of a storage locker and setting it up on the bench for use in a project.
-Once a library is set up, it can be used or called to perform many tasks.
+## Acerca de las bibliotecas
+Una biblioteca en Python contiene un conjunto de herramientas (llamadas
+funciones) que hacen tareas en nuestros datos. Importar una biblioteca es
+como traer un la pieza de laboratorio de nuestro locker y montarla en nuestra
+mesa de trabajo para usarla en nuestro proyecto. Una vez que la bilioteca
+está instalada, puede ser usada y llamada para hacer muchas tareas.
 
-## Pandas in Python
-One of the best options for working with tabular data in Python is to use the
-[Python Data Analysis Library](http://pandas.pydata.org/) (a.k.a. Pandas). The
-Pandas library provides data structures, produces high quality plots with
-[matplotlib](http://matplotlib.org/) and integrates nicely with other libraries
-that use [NumPy](http://www.numpy.org/) (which is another Python library) arrays.
+## Pandas en Python
+Una de las mejores opciones para trabajar con datos tabulares en Python es usar
+la [Python Data Analysis Library](http://pandas.pydata.org/) (alias Pandas).  La
+biblioteca Pandas provee estructuras de datos, genera gráficos de alta
+calidad con [matplotlib](http://matplotlib.org/) y se integra de buena forma 
+con otras bibliotecas que usan **arrays** de [NumPy](http://www.numpy.org/) 
+(la cual es otra biblioteca de Python).
 
-Python doesn't load all of the libraries available to it by default. We have to
-add an `import` statement to our code in order to use library functions. To import
-a library, we use the syntax `import libraryName`. If we want to give the
-library a nickname to shorten the command, we can add `as nickNameHere`.  An
-example of importing the pandas library using the common nickname `pd` is below.
+Python no carga todas las bibliotecas disponibles por default. Se tiene que usar
+el enunciado `import` en nuestro código para usar las funciones de la biblioteca. 
+Para importar una biblioteca se usa la sintaxis `import nombreDeLaBiblioteca`. Si
+además le queremos poner un sobrenombre para acortar los comandos, se puede
+agregar `as sobrenombreAUsar`. Un ejemplo es importar la biblioteca pandas 
+usando su sobrenombre común `pd` como está aquí abajo.
 
 
 ~~~
@@ -110,34 +115,43 @@ import pandas as pd
 ~~~
 {: .language-python}
 
-Each time we call a function that's in a library, we use the syntax
-`LibraryName.FunctionName`. Adding the library name with a `.` before the
-function name tells Python where to find the function. In the example above, we
-have imported Pandas as `pd`. This means we don't have to type out `pandas` each
-time we call a Pandas function.
+Cada vez que llamemos a una función que está en la biblioteca, se usa la sintaxis
+`NombreDeLaBiblioteca.NombreDeLaFuncion`. Agregar el nombre de la biblioteca
+con un `.` antes del nombre de la función le indica a Python donde encontrar la función. 
+En el ejemplo anterior hemos importado a Pandas como `pd`. Esto significa que no 
+vamos a tener que escribir `pandas` cada vez que llamemos a una función de Pandas y solo
+lo hagamos con su sobrenombre.
 
+# Leyendo datos en CSV usando Pandas
 
-# Reading CSV Data Using Pandas
+Empezaremos encontrando y leyendo los datos del censo que están en 
+formato CSV. CSV son las siglas para _Comma-Separated Values_, valores
+separados por coma, y es una manera común de guardar datos. Otros
+símbolos pueden ser usados, te puedes encontrar valores separados por
+tabuladores, por punto y coma o por espacios en blanco. Es fácil remplazar
+un separador por otro, para usar tu aplicación. La primera línea del 
+archivo generalmente contiene los encabezados que dicen que hay en
+cada columna. CSV (y otros separadores) hacen fácil compartir los datos y pueden
+ser importados y exportados desde distintos programas, incluyendo Microsoft Excel.
+Para más detalles sobre los archivos CSV, ve la lección [Organización de datos en hojas de cálculo](http://www.datacarpentry.org/spreadsheet-ecology-lesson/05-exporting-data/).
+Podemos usar la función de Pandas `read_csv`para abrir el archivo directamente en
+un [DataFrame](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe).
 
-We will begin by locating and reading our survey data which are in CSV format. CSV stands for Comma-Separated Values and is a common way store formatted data. Other symbols may also be used, so you might see tab-separated, colon-separated or space separated files. It is quite easy to replace one separator with another, to match your application. The first line in the file often has headers to explain what is in each column. CSV (and other separators) make it easy to share data, and can be imported and exported from many applications, including Microsoft Excel. For more details on CSV files, see the [Data Organisation in Spreadsheets](http://www.datacarpentry.org/spreadsheet-ecology-lesson/05-exporting-data/) lesson.
-We can use Pandas' `read_csv` function to pull the file directly into a
-[DataFrame](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe).
+## Entonces, ¿qué es un DataFrame?
 
-## So What's a DataFrame?
-
-A DataFrame is a 2-dimensional data structure that can store data of different
-types (including characters, integers, floating point values, factors and more)
-in columns. It is similar to a spreadsheet or an SQL table or the `data.frame` in
-R. A DataFrame always has an index (0-based). An index refers to the position of
-an element in the data structure.
+Un **DataFrame** es una estructura de datos con dos dimensiones en la cual se puede
+guardar datos de distintos tipos (como caractéres, enteros, valores de punto flotante,
+factores y más) en columnas. Es similar a una hoja de cálculo o una tabla de SQL o
+el `data.frame` de R. Un **DataFrame** siempre tiene un índice (con inicio en 0). El índice 
+refiere a la posición de un elemento en la estructura de datos.
 
 ~~~
-# Note that pd.read_csv is used because we imported pandas as pd
+# Observa que se usa pd.read_csv debido a que importamos a pandas como pd
 pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
 
-The above command yields the **output** below:
+El comando anterior lleva a la siguiente **salida**:
 
 ~~~
 record_id  month  day  year  plot_id species_id sex  hindfoot_length  weight
@@ -157,35 +171,37 @@ record_id  month  day  year  plot_id species_id sex  hindfoot_length  weight
 ~~~
 {: .output}
 
-We can see that there were 35,549 rows parsed. Each row has 9
-columns. The first column is the index of the DataFrame. The index is used to
-identify the position of the data, but it is not an actual column of the DataFrame.
-It looks like  the `read_csv` function in Pandas  read our file properly. However,
-we haven't saved any data to memory so we can work with it. We need to assign the
-DataFrame to a variable. Remember that a variable is a name for a value, such as `x`,
-or  `data`. We can create a new  object with a variable name by assigning a value to it using `=`.
+Podemos ver que se leyeron 35,549 líneas. Cada una de los líneas tiene 
+9 columnas. La primera columna es el índice del DataFrame. El índice es usado
+para identificar la posición de los datos, pero no es una columna del DataFrame. 
+Parace ser que la función `read_csv`de Pandas leyó el archivo correctamente. 
+Sin embargo, no hemos salvado ningún dato en memoria por lo que no podemos 
+trabajar con estos. Necesitamos asignar el **DataFrame** a una variable. Recuerda que 
+una variable es el nombre para un valor, como `x`o `data`. Podemos crear un
+nuevo objeto con el nombre de la variable y le asignamos un valor usando `=`.
 
-Let's call the imported survey data `surveys_df`:
+Llamemos los datos del censo importados `surveys_df`:
 
 ~~~
 surveys_df = pd.read_csv("data/surveys.csv")
 ~~~
 {: .language-python}
 
-Notice when you assign the imported DataFrame to a variable, Python does not
-produce any output on the screen. We can view the value of the `surveys_df`
-object by typing its name into the Python command prompt.
+Notemos que cuando asignamos los datos importado a un **DataFrame** a una variable,
+Python no produce ninguna salida a pantalla. Podemos ver el contenido de `surveys_df`
+escribiendo el nombre en la línea de comando de Python.t.
 
 ~~~
 surveys_df
 ~~~
 {: .language-python}
 
-which prints contents like above.
+el cual imprime los contenidos como anteriormente.
 
-Note: if the output is too wide to print on your narrow terminal window, you may see something
-slightly different as the large set of data scrolls past. You may see simply the last column
-of data:
+Nota: si la salida es más ancha que la pantalla de teminal al imprimirlo se verá algo
+distinto conforme el gran conjunto de datos pasa. Se podría ver simplemente la 
+última columna de los datos:
+
 ~~~
 17        NaN
 18        NaN
@@ -236,9 +252,10 @@ of data:
 ~~~
 {: .output}
 
-Never fear, all the data is there, if you scroll up. Selecting just a few rows, so it is
-easier to fit on one window, you can see that pandas has neatly formatted the data to fit
-our screen:
+No temas, todos los datos están ahí, si tu navegas hacía arriba de tu terminal. 
+Seleccionemos solo algunas de las líneas, esto hara más facil que la salida quepa en
+una terminal, se puede ver que Pandas formateo los datos de tal manera que quepan 
+en la pantalla:
 
 ~~~
 surveys_df.head() # The head() method displays the first several lines of a file. It
@@ -262,9 +279,9 @@ surveys_df.head() # The head() method displays the first several lines of a file
 ~~~
 {: .output}
 
-## Exploring Our Species Survey Data
+## Explorando los datos del censo de especies
 
-Again, we can use the `type` function to see what kind of thing `surveys_df` is:
+Una vez más podemos usar la función `type` para ver que cosa es `surveys_df`:is:
 
 ~~~
 type(surveys_df)
@@ -275,11 +292,11 @@ type(surveys_df)
 ~~~
 {: .output}
 
-As expected, it's a DataFrame (or, to use the full name that Python uses to refer
-to it internally, a `pandas.core.frame.DataFrame`).
+Como podíamos esperar, es un **DataFrame** (o, usando el nombre completo por
+el cual Python usa internamente, un  `pandas.core.frame.DataFrame`).
 
-What kind of things does `surveys_df` contain? DataFrames have an attribute
-called `dtypes` that answers this:
+¿Qué tipo de cosas `surveys_df` contiene? Los **DataFrame** tienen un atributo 
+llamado `dtypes` que contesta esta pregunta:
 
 ~~~
 surveys_df.dtypes
@@ -299,63 +316,64 @@ dtype: object
 ~~~
 {: .output}
 
-All the values in a column have the same type. For example, months have type
-`int64`, which is a kind of integer. Cells in the month column cannot have
-fractional values, but the weight and hindfoot_length columns can, because they
-have type `float64`. The `object` type doesn't have a very helpful name, but in
-this case it represents strings (such as 'M' and 'F' in the case of sex).
+Todos los valores de una columna tienen el mismo tipo. Por ejemplo, months tienen
+el tipo `int64`, el cual es un tipo de entero. Las celdas en la columna de mes 
+no pueden tener valores fraccionarios, pero las columnas de `weight` y 
+`hindfoot_length` pueden, ya que son de tupo `float64`. El tipo `object` no tiene 
+un nombre muy útil, pero en ete caso representa una palabra (como 'M' y  'F' en
+el caso del sexo).
 
-We'll talk a bit more about what the different formats mean in a different lesson.
+En otra lección discutiremos sobre el significado de los distintos tipos.
 
-### Useful Ways to View DataFrame objects in Python
+### Formas útiles de ver objetos **DataFrame** en Python
 
-There are many ways to summarize and access the data stored in DataFrames,
-using attributes and methods provided by the DataFrame object.
+Hay distintas maneras de resumir y accesar a los datos guardados en un DataFrame,
+usando los atributos y métodos que proveé el objeto DataFrame.
 
-To access an attribute, use the DataFrame object name followed by the attribute
-name `df_object.attribute`. Using the DataFrame `surveys_df` and attribute
-`columns`, an index of all the column names in the DataFrame can be accessed
-with `surveys_df.columns`.
+Para accesar a un atributo, se usa el nombre del objeto **DataFrame** seguido
+del nombre del atributo `df_object.attribute`. Usando el **DataFrame** `surveys_df`
+y el atributo `columns`, un índice de todos los nombres de las columnas en 
+el **DataFrame** puede ser accesado con `surveys_df.columns`.
 
-Methods are called in a similar fashion using the syntax `df_object.method()`.
-As an example, `surveys_df.head()` gets the first few rows in the DataFrame
-`surveys_df` using **the `head()` method**. With a method, we can supply extra
-information in the parens to control behaviour.
+Métodos son llamados de la misma manera usando la sintáxis `df_object.method()`.
+Como ejemplo, `surveys_df.head()` obtiene las primeros líneas del **DataFrame**
+`surveys_df` usando **el método `head()`**. Con un método, podemos proporcionar
+información extra en los padres para contreol su comportamiento.
 
-Let's look at the data using these.
+Echemos un ojo a los datos usando este.
 
-> ## Challenge - DataFrames
+> ## Reto - DataFrames
 >
-> Using our DataFrame `surveys_df`, try out the attributes & methods below to see
-> what they return.
+> Usando nuestro **DataFrame** `surveys_df`, ejecuta los atributos y métodos siguientes
+> y observa que regresan.
 >
 > 1. `surveys_df.columns`
-> 2. `surveys_df.shape` Take note of the output of `shape` - what format does it
->    return the shape of the DataFrame in?
+> 2. `surveys_df.shape` Toma nota de la salida de`shape` - ¿Qué formato tiene la salida
+>    del atributo que regresa la forma de un DataFrame?
 >
->    HINT: [More on tuples, here](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences).
-> 3. `surveys_df.head()` Also, what does `surveys_df.head(15)` do?
+>    Sugerencia: [Más acercad e tuplas, aquí](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences).
+> 3. `surveys_df.head()` También ejecuta `surveys_df.head(15)` ¿qué hace esto?
 > 4. `surveys_df.tail()`
 {: .challenge}
 
 
-## Calculating Statistics From Data In A Pandas DataFrame
+## Calculando estadísticas de los datos en un **DataFrame** de Pandas
 
-We've read our data into Python. Next, let's perform some quick summary
-statistics to learn more about the data that we're working with. We might want
-to know how many animals were collected in each site, or how many of each
-species were caught. We can perform summary stats quickly using groups. But
-first we need to figure out what we want to group by.
+Hemos leídos los datos en Python. Ahora calculemos algunas estadísticas para
+entender un poco de los datos con los que estamos trabajando. Podríamos  querer
+saber cuántos animales fueron colectados en cada sitio, o cuántos de cada especie
+fueron capturados. Podemos calcular estas estadísticas rápidamente usando grupos. 
+Pero antes tenemos que saber como los queremos argupar.
 
-Let's begin by exploring our data:
+Empezemos a explorar los datos:
 
 ~~~
-# Look at the column names
+# Echemos un vistazo a las columnas
 surveys_df.columns
 ~~~
 {: .language-python}
 
-which **returns**:
+lo que  **regresa**:
 
 ~~~
 Index(['record_id', 'month', 'day', 'year', 'plot_id', 'species_id', 'sex',
@@ -364,15 +382,15 @@ Index(['record_id', 'month', 'day', 'year', 'plot_id', 'species_id', 'sex',
 ~~~
 {: .output}
 
-Let's get a list of all the species. The `pd.unique` function tells us all of
-the unique values in the `species_id` column.
+Obtengamos una lista de todas las especies. La función `pd.unique` nos dice
+los distintos valores presentes en la columna`species_id`.
 
 ~~~
 pd.unique(surveys_df['species_id'])
 ~~~
 {: .language-python}
 
-which **returns**:
+lo que **regresa**:
 
 ~~~
 array(['NL', 'DM', 'PF', 'PE', 'DS', 'PP', 'SH', 'OT', 'DO', 'OX', 'SS',
@@ -383,29 +401,29 @@ array(['NL', 'DM', 'PF', 'PE', 'DS', 'PP', 'SH', 'OT', 'DO', 'OX', 'SS',
 ~~~
 {: .language-python}
 
-> ## Challenge - Statistics
+> ## Reto - Estadísticas
 >
-> 1. Create a list of unique site ID's ("plot_id") found in the surveys data. Call it
->   `site_names`. How many unique sites are there in the data? How many unique
->   species are in the data?
+> 1. Crear una lista de los IDs de los sitios ("plot_id") que están en los datos del censo.
+>    Llamamemos a esta lista `site_names`. ¿Cuántos sitios hay en los datos?, ¿cuántas 
+>   especies hay en los datos?
 >
-> 2. What is the difference between `len(site_names)` and `surveys_df['plot_id'].nunique()`?
+> 2. ¿Cuál es la diferencia entre `len(site_names)` y`surveys_df['plot_id'].nunique()`?
 {: .challenge}
 
-# Groups in Pandas
+# Grupos en Pandas
 
-We often want to calculate summary statistics grouped by subsets or attributes
-within fields of our data. For example, we might want to calculate the average
-weight of all individuals per site.
+En algunas ocasiones queremos calcular estadísticas de datos agrupados por 
+subconjuntos o atributos de nuestros datos. Por ejemplo, si queremos calcular el
+promedio de peso de nuestros individuos por sitio.
 
-We can calculate basic statistics for all records in a single column using the
-syntax below:
+Podemos calcular algunas estadísticas básica de todos los datos en una columna
+usando el siguiente comando:
 
 ~~~
 surveys_df['weight'].describe()
 ~~~
 {: .language-python}
-gives **output**
+nos devuelve la siguiente **salida**
 
 ~~~
 count    32283.000000
@@ -420,7 +438,7 @@ Name: weight, dtype: float64
 ~~~
 {: .language-python}
 
-We can also extract one specific metric if we wish:
+También podemos extraer una métrica en particular::
 
 ~~~
 surveys_df['weight'].min()
@@ -431,30 +449,30 @@ surveys_df['weight'].count()
 ~~~
 {: .language-python}
 
-But if we want to summarize by one or more variables, for example sex, we can
-use **Pandas' `.groupby` method**. Once we've created a groupby DataFrame, we
-can quickly calculate summary statistics by a group of our choice.
+Pero si nosotros queremos extraer información por una o más variables, por ejemplo sexo,
+podemos usar el **método `.groupby` de Pandas**. Una vez que creamos
+un **DataFrame** groupby, podemos calcular estadísticas por el grupo de nuestra elección.
 
 ~~~
-# Group data by sex
+# Datos agrupados por sexo
 grouped_data = surveys_df.groupby('sex')
 ~~~
 {: .language-python}
 
-The **pandas function `describe`** will return descriptive stats including: mean,
-median, max, min, std and count for a particular column in the data. Pandas'
-`describe` function will only return summary values for columns containing
-numeric data.
+La **función `describe` de Pandas** regresa estadísticas descriptivas incluyendo:
+media, meadiana, máx, mín, std y conteos para una columna en particular de los 
+datos. La función `describe` solo regresa los valores de estas estadísticas para las 
+columnas numéricas.
 
 ~~~
-# Summary statistics for all numeric columns by sex
+# Estadísticas para todas las columnas numéricas por sexo
 grouped_data.describe()
-# Provide the mean for each numeric column by sex
+# Regresa la media de cada columna numérica por sexo
 grouped_data.mean()
 ~~~
 {: .language-python}
 
-`grouped_data.mean()` **OUTPUT:**
+`grouped_data.mean()` **SALIDA:**
 
 ~~~
         record_id     month        day         year    plot_id  \
@@ -470,23 +488,24 @@ M          29.709578  42.995379
 ~~~
 {: .language-python}
 
-The `groupby` command is powerful in that it allows us to quickly generate
-summary stats.
+El comando `groupby` es muy potente y no permite rápidamente generar
+estadísticas descriptivas.
 
-> ## Challenge - Summary Data
+> ## Reto - Descripción de datos
 >
-> 1. How many recorded individuals are female `F` and how many male `M`
-> 2. What happens when you group by two columns using the following syntax and
->    then grab mean values:
+> 1. ¿Cuántos individuos son hembras `F` y cuántos son machos `M`?
+> 2. Qué pasa cuando agrupas sobre dos columnas usando el siguiente enunciado
+>    y después tomas los valores medios:
 >   - `grouped_data2 = surveys_df.groupby(['plot_id','sex'])`
 >   - `grouped_data2.mean()`
-> 3. Summarize weight values for each site in your data. HINT: you can use the
->   following syntax to only create summary statistics for one column in your data
+> 3. Calcula las estadísticas descriptivas del peso para cada sitio. Sugerencia:
+>    puedes usar la siguiente sintaxis para solo crear las estadísticas para una 
+>   columna de tus datos
 >   `by_site['weight'].describe()`
 >
 >
->> ## Did you get #3 right?
->> **A Snippet of the Output from challenge 3 looks like:**
+>> ## ¿tuviste bien el reto #3t?
+>> **Un pedaxo de la salida para el reto 3 se ve así:**
 >>
 >> ~~~
 >>  site
@@ -504,86 +523,89 @@ summary stats.
 > {: .solution}
 {: .challenge}
 
-## Quickly Creating Summary Counts in Pandas
+## Creando estadísticas de conteos rapidamente con Pandas
 
-Let's next count the number of samples for each species. We can do this in a few
-ways, but we'll use `groupby` combined with **a `count()` method**.
-
+Ahora contemos el número de muestras de cada especie. Podemos hacer esto 
+de dsitintas maneras, pero usaremos `groupby` combinada con **el método `count()`**.
 
 ~~~
-# Count the number of samples by species
+# Cuenta el número de muestras por especie
 species_counts = surveys_df.groupby('species_id')['record_id'].count()
 print(species_counts)
 ~~~
 {: .language-python}
 
-Or, we can also count just the rows that have the species "DO":
+O, también podemos contar las líneas que tienen la especie "DO":
 
 ~~~
 surveys_df.groupby('species_id')['record_id'].count()['DO']
 ~~~
 {: .language-python}
 
-> ## Challenge - Make a list
+> ## Reto - Haciendo una lista
 >
->  What's another way to create a list of species and associated `count` of the
->  records in the data? Hint: you can perform `count`, `min`, etc functions on
->  groupby DataFrames in the same way you can perform them on regular DataFrames.
+> ¿Qué otra manera hay de crear una lista de especies y asociarle `count` de las
+>  muestras  de los datos? Sugerencia: puedes hacer ejecutar las funciones
+>  `count`, `min`, etc. en un **DataFrame** groupby de la misma manera de la que 
+>  se hace en un DataFrame
 {: .challenge}
 
-## Basic Math Functions
+## Funciones básicas de matemáticas
 
-If we wanted to, we could perform math on an entire column of our data. For
-example let's multiply all weight values by 2. A more practical use of this might
-be to normalize the data according to a mean, area, or some other value
-calculated from our data.
+Si nosotros quisieramos, se puede hacer operaciones en una columna de los
+datos. Como ejemplo multipliquemos todos los valores de peso por 2. Un uso 
+más útil podría ser normalizar los datos con la media, área o algñun otro valor
+calculado de nuestros datos.
 
 ~~~
-# Multiply all weight values by 2
+# Multiplicar todos los valores de peso por 2
 surveys_df['weight']*2
 ~~~
 {: .language-python}
 
-# Quick & Easy Plotting Data Using Pandas
+# Graficar rápida y fácilmente los datos usando Pandas
 
-We can plot our summary stats using Pandas, too.
+También podemos gráficar nuestras estadísticas descriptivas usando Pandas.
 
 ~~~
-# Make sure figures appear inline in Ipython Notebook
+# Aseguremonos de que las imágenes aparezcan insertadas en iPython Notebook
 %matplotlib inline
-# Create a quick bar chart
+# Creaemos una gráfica de barras
 species_counts.plot(kind='bar');
 ~~~
 {: .language-python}
 
-![Weight by Species Site](../fig/countPerSpecies.png)
-Count per species site
+![Peso de especies por sitios](../fig/countPerSpecies.png)
+Conteos de especie por sitio
 
-We can also look at how many animals were captured in each site:
+También podemos ver cuantos animales fueron capturados por sitio:
 
 ~~~
 total_count = surveys_df.groupby('plot_id')['record_id'].nunique()
-# Let's plot that too
+# También grafiquemos eso
 total_count.plot(kind='bar');
 ~~~
 {: .language-python}
 
-> ## Challenge - Plots
+> ## Reto - Gráficas
 >
-> 1. Create a plot of average weight across all species per site.
-> 2. Create a plot of total males versus total females for the entire dataset.
+> 1. Crea una gráfica del promedio de peso de las especies por sitio.
+> 2. Crea una gráfica del total de machos contra el total de hembras para todo
+>    el conjunto de datos.
 {: .challenge}
 
-> ## Summary Plotting Challenge
+> ## Reto de graficación final
 >
-> Create a stacked bar plot, with weight on the Y axis, and the stacked variable
-> being sex. The plot should show total weight by sex for each site. Some
-> tips are below to help you solve this challenge:
+> Crea una gráfica de barras apiladas con el peso en el eje Y, y la variable de 
+> apilamiento que sea el sexo. La gráfica debe mostrar el el peso total por sexo
+> para cada sitio. Algúnos tips que te pueden ayudar a resolver el reto son los
+> siguientes:
 >
-> * [For more on Pandas plots, visit this link.](http://pandas.pydata.org/pandas-docs/stable/visualization.html#basic-plotting-plot)
-> * You can use the code that follows to create a stacked bar plot but the data to stack
->  need to be in individual columns.  Here's a simple example with some data where
->  'a', 'b', and 'c' are the groups, and 'one' and 'two' are the subgroups.
+> * [Para mayor información en gráfica con Pandas, visita la siguiente liga.](http://pandas.pydata.org/pandas-docs/stable/visualization.html#basic-plotting-plot)
+> * Puedes usar el siguiente código para crear una gráficad de barras apiladas pero 
+>    pero los datos para apilar deben de estar en distintas columnas. Aquí hay un pequeño
+>    ejemplo con algunos datos donde 'a', 'b' y 'c' son los grupos, y 'one' y 'two' son los 
+>    subgrupos.
 >
 > ~~~
 > d = {'one' : pd.Series([1., 2., 3.], index=['a', 'b', 'c']),'two' : pd.Series([1., 2., 3., 4.], index=['a', 'b', 'c', 'd'])}
@@ -591,7 +613,7 @@ total_count.plot(kind='bar');
 > ~~~
 > {: .language-python }
 >
-> shows the following data
+> muestra los siguientes datos
 >
 > ~~~
 >       one  two
@@ -602,28 +624,29 @@ total_count.plot(kind='bar');
 > ~~~
 > {: .output}
 >
-> We can plot the above with
+> Podemos gráficar esto con
 >
 > ~~~
-> # Plot stacked data so columns 'one' and 'two' are stacked
+> # Graficar datos apilados de modo que las columnas 'one' y 'two' estén apiladas
 > my_df = pd.DataFrame(d)
 > my_df.plot(kind='bar',stacked=True,title="The title of my graph")
 > ~~~
 > {: .language-python }
 >
-> ![Stacked Bar Plot](../fig/stackedBar1.png)
+> ![Gŕafica de barras apiladas](../fig/stackedBar1.png)
 >
-> * You can use the `.unstack()` method to transform grouped data into columns
-> for each plotting.  Try running `.unstack()` on some DataFrames above and see
-> what it yields.
+> * Podemos usar el método `.unstack()` para transformar los datos agrupados en
+>    columnas para cada gráfica. Intenta ejecutar `.unstack()` en algún DataFrame
+>    anterior y observa a que lleva. 
 >
-> Start by transforming the grouped data (by site and sex) into an unstacked layout, then create
-> a stacked plot.
+> Empieza transformando los datos agrupados (por sitio y sexo) en una disposición desapilada
+> entonces crea una gráfica apilada.
 >
 >
->> ## Solution to Summary Challenge
+>> ## Soluciones para el reto final
 >>
->> First we group data by site and by sex, and then calculate a total for each site.
+>> Primero agrupemos los datos por sitio y por sexo y después calculemos el total para
+>> cada sitio.
 >>
 >> ~~~
 >> by_site_sex = surveys_df.groupby(['plot_id','sex'])
@@ -631,7 +654,7 @@ total_count.plot(kind='bar');
 >> ~~~
 >> {: .language-python}
 >>
->> This calculates the sums of weights for each sex within each site as a table
+>> Esto calcula la suma de los pesos para cada sexo por sitio como una tabla
 >>
 >> ~~~
 >> site  sex
@@ -644,11 +667,12 @@ total_count.plot(kind='bar');
 >>          M      28253
 >> 4        F      39796
 >>          M      49377
->> <other sites removed for brevity>
+>> <lo demás fue omitido para abreviar>
 >> ~~~
 >> {: .output}
 >>
->> Below we'll use `.unstack()` on our grouped data to figure out the total weight that each sex contributed to each site.
+>> Ahora usaremos `.unstack()` en los datos agrupados para entender como el peso
+>> total de cada sexo contribuye a cada sitio.
 >>
 >> ~~~
 >> by_site_sex = surveys_df.groupby(['plot_id','sex'])
@@ -657,7 +681,7 @@ total_count.plot(kind='bar');
 >> ~~~
 >> {: .language-python }
 >>
->> The `unstack` method above will display the following output:
+>> El método `unstack` de arriba despliega la siguiente salida:
 >>
 >> ~~~
 >> sex          F      M
@@ -666,13 +690,15 @@ total_count.plot(kind='bar');
 >> 2        50144  57250
 >> 3        27251  28253
 >> 4        39796  49377
->> <other sites removed for brevity>
+>> <los demás sitios son omitido por brevedar>
 >> ~~~
 >> {: .output}
 >>
->> Now, create a stacked bar plot with that data where the weights for each sex are stacked by site.
+>> Ahora creamos una gráfica de barras apilada con los datos donde el peso para cada
+>> sexo es apilado por sitio.
 >>
->> Rather than display it as a table, we can plot the above data by stacking the values of each sex as follows:
+>> En vez de mostrarla como tabla, nosotros podemos graficar los datos apilando los datos
+>> de cada sexo como sigue:
 >>
 >> ~~~
 >> by_site_sex = surveys_df.groupby(['plot_id','sex'])
@@ -684,7 +710,7 @@ total_count.plot(kind='bar');
 >> ~~~
 >> {: .language-python}
 >>
->> ![Stacked Bar Plot](../fig/stackedBar.png)
+>> ![Gráfica de barras apiladas](../fig/stackedBar.png)
 > {: .solution}
 {: .challenge}
 
