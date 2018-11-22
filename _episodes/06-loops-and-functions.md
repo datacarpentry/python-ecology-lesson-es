@@ -175,6 +175,8 @@ a crear un archivo por separado para cada año. Listar los nombres de los archiv
 es una buena estrategia, porque así podemos confirmar que nuestro bucle se
 está comportando como esperamos.
 
+Hemos visto que podemos iterar sobre una lista de elementos, entonces necesitamos una lista de años sobre la cual iterar. Podemos obtener los años en nuestro **DataFrame** con:
+
 ~~~
 surveys_df['year']
 ~~~
