@@ -524,7 +524,7 @@ pidiendo a Python que seleccione aquellas filas que tienen un valor de `NaN` en 
 >
 > 1. Crea un nuevo objeto `DataFrame` que solamente contenga observaciones cuyos valores en la columna `sex`
 >   **no** sean `female` o `male`. Asigna cada valor de `sex` en el nuevo `DataFrame` a
->   un nuvo valor de 'x'. Determina el número todal de valores `null` en el subconjunto.
+>   un nuevo valor de 'x'. Determina el número todal de valores `null` en el subconjunto.
 >
 > 2. Crea un nuevo objeto `DataFrame` que contenga solo observaciones cuyos valores en la columna`sex` sean `male`
 >   o `female` y en los cuales el valor de `weight` sea mayor que 0. Crea un gráfico de barra apiladas
