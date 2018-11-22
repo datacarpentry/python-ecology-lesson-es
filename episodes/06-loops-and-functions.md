@@ -16,22 +16,22 @@ keypoints:
 ---
 
 Hasta este momento, hemos usado Python y la librería Pandas para explorar y
-manipular datasets a mano, tal y como lo haríamos en una planilla de cálculo.
+manipular **datasets** a mano, tal y como lo haríamos en una planilla de cálculo.
 Sin embargo la belleza de usar un lenguaje de programación como Python viene de
 la posibilidad de automatizar el procesamiento de los datos a través del uso de
 bucles y funciones.
 
-## Bucles for
+## Bucles **for**
 
 Los bucles nos permiten repetir un flujo de trabajo (o una serie de acciones)
 cierto número dado de veces o mientras una condición es cierta. Podríamos
 usar un bucle para procesar automáticamente la información que está contenida en
 múltiples archivos (valores diarios con un archivo por año, por ejemplo). Los
-bucles nos quitan trabajo de encima al hacer tareas de forma repetida y sin
+bucles nos alivian nuestra tarea al hacer tareas repetitivas sin que tengamos que
 involucrarnos directamente, y hace menos probable que introduzcamos errores al
 equivocarnos mientras procesamos cada archivo manualmente.
 
-Escribamos un bucle `for` sencillo que simule lo que un niño podría ver
+Escribamos un bucle **for** sencillo que simule lo que un niño podría ver
 durante una visita al zoológico:
 
 ~~~
@@ -60,13 +60,13 @@ hippo
 ~~~
 {: .output}
 
-La línea que define el bucle debe comenzar con un `for` y terminar con un dos
+La línea que define el bucle debe comenzar con un **for** y terminar con el caracter dos
 puntos, y el cuerpo del bucle debe estar indentado.
 
 Eh este ejemplo, `creature` es la variable del bucle que toma el valor de la
 siguiente entrada en `animals` cada vez que el bucle hace una iteración. Podemos
-llamar la variable del bucle lo que querramos. Después que se termina el bucle,
-la variable del bucle todavía existe y tendrá el valor de la última entrada en
+darle a la variable del bucle el nombre que querramos. Después que se termina el bucle,
+la variable del bucle continuará existiendo y tendrá el valor de la última entrada en
 la colección.
 
 ~~~
@@ -95,7 +95,7 @@ bucle, pero el bucle todavía corre y el valor de `creature` cambia en cada
 iteración. La palabra clave `pass` en el cuerpo del bucle significa solamente
 "no hagas nada".
 
-> ## Challenge - Bucles
+> ## Desafío - **Bucles**
 >
 > 1. ¿Qué pasa si no incluimos la palabra clave `pass`?
 >
@@ -105,7 +105,7 @@ iteración. La palabra clave `pass` en el cuerpo del bucle significa solamente
 >    ejemplo, `print(string1 + string2)` resulta en 'string1string2').
 {: .challenge}
 
-## Automatizando el procesamiento de datos usando bucles For
+## Automatizando el procesamiento de datos usando bucles **For**
 
 El archivo que hemos estado usando hasta este momento, `surveys.csv`, contiene
 25 años de información y es muy grande. Nos encantaría separar esta información
@@ -143,11 +143,11 @@ os.listdir('data')
 
 El comando `os.listdir` es equivalente a usar `ls` en la terminal.
 
-En episodios anteriores, vimos cómo usar la librería pandas para cargar la
-información sobre las especies en la memoría como un **DataFrame**, vimos cómo
+En episodios anteriores, vimos cómo usar la librería Pandas para cargar
+en memoria, a través de **DataFrame**,  información sobre las especies; vimos cómo
 seleccionar un subconjunto de esos datos usando ciertos criterios, y vimos
 también cómo escribir esa información en un archivo CSV. Escribamos un
-**script** que realice esos tres pasos en secuencia para el año 2002:
+**script** que realiza esos tres pasos en secuencia para el año 2002:
 
 ~~~
 import pandas as pd
@@ -164,15 +164,15 @@ surveys2002.to_csv('data/yearly_files/surveys2002.csv')
 {: .language-python}
 
 Para crear los archivos con los datos anuales, podemos repetir estos últimos dos
-comandos una y otra vez, una por cada año de información. Sin embargo, repetir
+comandos una y otra vez, una vez por cada año de información. Sin embargo, repetir
 código no es ni elegante ni práctico, y hace muy probable que introduzcamos
 errores en nuestro código. Queremos convertir lo que acabamos de escribir en un
-bucle que repita estos últimos dos comandos para cada año en nuestro dataset.
+bucle que repita estos últimos dos comandos para cada año en nuestro **dataset**.
 
 Comencemos con un bucle que solamente imprima los nombres de los archivos que
 queremos crear - El dataset que estamos usando va desde 1977 hasta 2002, y vamos
-a crear un archivo por separado para cada año. Es una buena estrategia enlistar
-los nombres de los archivos, porque así podemos confirmar que nuestro bucle se
+a crear un archivo por separado para cada año. Listar los nombres de los archivos
+es una buena estrategia, porque así podemos confirmar que nuestro bucle se
 está comportando como esperamos.
 
 ~~~
@@ -206,7 +206,7 @@ array([1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987,
 ~~~
 {: .output}
 
-Escribiendo esto en un bucle `for` obtenemos
+Escribiendo esto en un bucle **for** obtenemos
 
 ~~~
 for year in surveys_df['year'].unique():
@@ -274,7 +274,7 @@ filename = 'data/yearly_files/surveys' + str(year) + '.csv'
 ~~~
 {: .language-python}
 
-Entendamos las partes de este nombre:
+Descompongamos las partes de este nombre:
 
 * La primera parte es simplemente un texto que especifica el directorio en el que
   vamos a guardar nuestro archivo (data/yearly_files/) y la primera parte del
@@ -290,12 +290,12 @@ variable no está entre comillas. Este código produce la cadena de caracteres
 `data/yearly_files/surveys2002.csv` que contiene tanto el **path** como el
 nombre del archivo.
 
-> ## Challenge - Modificando bucles
+> ## Desafío - Modificando bucles
 >
-> 1. Algunos de los surveys que guardaste tienen datos faltantes (tienen valores
+> 1. Algunas de las encuestas que guardaste tienen datos faltantes (tienen valores
 >    nulos que salen como `NaN` - No es un número (en inglés) - en los DataFrames
->    y no salen en los archivos de texto). Modifica el bucle for para que las
->    entradas que tengan valores nulos no sean incluidos en los archivos anuales.
+>    y no salen en los archivos de texto). Modifica el bucle **for** para que las
+>    entradas que tengan valores nulos no sean incluidas en los archivos anuales.
 >
 > 2. Supongamos que solo quieres revisar los datos cada cierto múltiplo de años.
 >    ¿Cómo modificarías el bucle para generar un archivo de datos cada cinco
@@ -308,7 +308,7 @@ nombre del archivo.
 
 ## Construyendo código modular y reusable usando funciones
 
-Supón que separar archivos enormes en archivos anuales induviduales es una tarea
+Supón que separar archivos enormes en archivos anuales individuales es una tarea
 que tenemos que realizar frecuentemente. Podríamos escribir un bucle **for**
 como el que hicimos arriba cada vez que lo necesitemos, pero esto tomaría
 mucho tiempo y podría introducir errores en el código. Una solución más elegante
@@ -316,13 +316,13 @@ sería crear una herramienta reusable que realice esta tarea con el mínimo
 esfuerzo del usuario. Para hacerlo, vamos a convertir el código que ya
 escribimos en una función.
 
-Las funciones son pedazos de códigos reusables y autónomos que pueden ser
-llamados con un solo comando. Están diseñados para aceptar argumentos como
+Las funciones son piezas de código reusable y autónomo que pueden ser
+llamadas mediante un solo comando. Están diseñadas para aceptar argumentos como
 entrada y retornar valores, pero no necesitan hacerlo necesariamente. Las
 variables declaradas adentro de las funciones solo existen mientras la función
 se está ejecutando, y si una variable adentro de una función (una variable
 local) tiene el mismo nombre de otra variable en alguna parte del código, la
-variable local no sobreescribe la otra.
+variable local no sobrescribe a la otra.
 
 Todo método usado en Python (como por ejemplo `print`) es una función, y las
 librerías que importamos (`pandas`, por ejemplo) son una colección de funciones.
@@ -346,7 +346,7 @@ def this_is_the_function_name(input_argument1, input_argument2):
 
 La declaración de la función comienza con la palabra clave `def`, seguida del
 nombre de la función y los argumentos entre paréntesis, y termina con un dos
-puntos. El cuerpo de la función está indentada justo como ocurría con los
+puntos. El cuerpo de la función está indentado justo como ocurría con los
 bucles. Si la función retorna algo al ser llamada, entonces incluimos la palabra
 clave `return` al final.
 
@@ -372,7 +372,7 @@ Their product is: 10 (this is done outside the function!)
 ~~~
 {: .output}
 
-> ## Challenge - Funciones
+> ## Desafío - Funciones
 >
 > 1. Cambia los valores de los argumentos en la función y mira su salida.
 > 2. Intenta llamar a la función usando la cantidad equivocada de argumentos
@@ -381,12 +381,12 @@ Their product is: 10 (this is done outside the function!)
 > 3. Declara una variable dentro de una función y prueba a encontrar en dónde
 >    existe (Pista: ¿puedes imprimirla desde fuera de la función?)
 > 4. Explora qué sucede cuando una variable tiene el mismo nombre adentro y
->    afuera de la función. ¿Qué le ocurre a la variable globar cuando cambias el
+>    afuera de la función. ¿Qué le ocurre a la variable global cuando cambias el
 >    valor de la variable local?
 {: .challenge}
 
 Ahora podemos convertir el código para guardar archivos con datos anuales en una
-función. Hay muchas "partes" de este códugo que podemos convertir en funciones,
+función. Hay muchas "partes" de este código que podemos convertir en funciones,
 y podríamos inclusive crear funciones que llaman a otras funciones adentro de
 ellas. Comencemos escribiendo una función que separa los datos para un año y los
 guarda en un archivo:
@@ -430,8 +430,8 @@ anteriormente. Busca en el directorio `yearly_files` el archivo que creamos.
 ¿Hizo la función lo que esperabas que hiciera?
 
 Sin embargo, lo que nos encantaría hacer es crear archivos para múltiples años
-sin tener que pedirlos uno a uno. Escribamos otra función que reemplaza el bucle
-for por iterar a través de la secuencia de los años y llamar repetidamente la
+sin tener que pedirlos uno a uno. Escribamos otra función que reemplace el bucle
+**for** simplemente iterando a través de la secuencia de años y llamando repetidamente a la
 función que acabamos de escribir, `one_year_csv_writer`:
 
 
@@ -452,10 +452,10 @@ def yearly_data_csv_writer(start_year, end_year, all_data):
 {: .language-python}
 
 Como la gente esperará naturalmente que el año final (`end_year`) sea el último,
-el bucle for adentro de la función termina en `end_year + 1`. Al escribir el
+el bucle **for** adentro de la función termina en `end_year + 1`. Al escribir el
 bucle entero en la función, hemos hecho una herramienta reusable para cuando
 necesitemos partir un archivo de datos grande en archivos anuales. Como podemos
-especificar el primer y el último año de los que queremos crear archivos,
+especificar el primer y el último año para los cuales queremos crear archivos,
 podemos inclusive usar esta función para crear archivos para un subconjunto de
 los años disponibles. Así llamaríamos la función:
 
@@ -472,7 +472,7 @@ yearly_data_csv_writer(1977, 2002, surveys_df)
 DEBES volver a ejecutar la celda para que la función cambiada esté disponible
 para el resto del código. Nada cambiará visualmente cuando hagas esto, porque
 definir una función sin *ejecutarla* no produce ninguna salida. Toda otra celda
-que usa la función (ahora cambiada) también tendrán que ser re-ejecutadas para
+que use la función (ahora cambiada) también tendrá que ser re-ejecutada para
 cambiar su salida.
 
 > ## Challenge- Más funciones
@@ -483,12 +483,12 @@ cambiar su salida.
 >    directorio diferente.
 > 2. ¿Cómo podrías usar la función `yearly_data_csv_writer` para crear un archivo
 >    CSV para solo un año? (Pista: piensa sobre la sintaxis para `range`)
-> 3. Has que las funciones retornen una lista de los archivos que escribieron.
+> 3. Haz que las funciones retornen una lista de los archivos que escribieron.
 >    Hay muchas formas en las que puedes hacer esto (¡y deberías intentarlas
 >    todas!): cualquiera de las dos funciones podría imprimir algo en pantalla,
 >    cualquiera podría usar `return` para retornar números o cadenas de
 >    caracteres cada vez que se llaman, o podrías hacer una combinación de estas
->    dos estrategias. Podrías también intentar usar la librería `os` para enlistar
+>    dos estrategias. Podrías también intentar usar la librería `os` para listar
 >    los contenidos de directorios.
 > 4. Explora qué sucede cuando las variables son declaradas dentro de cada una
 >    de las funciones versus en el cuerpo principal de tu código (lo que está
@@ -538,7 +538,7 @@ Default values:		1977 2002
 Los "\t" en `print` son tabulaciones, y son usadas para alinear el texto y
 facilitar la lectura.
 
-Pero ¿qué sucede si nuestro dataset no comienza en 1977 ni termina en 2002?
+Pero ¿qué sucede si nuestro **dataset** no comienza en 1977 ni termina en 2002?
 Podemos modificar la función de tal forma que ella misma mire cuál es el primer
 y cuál es el último año si estos argumentos no son provistos por el usuario:
 
@@ -577,7 +577,7 @@ Default values:		1977 2002
 Ahora los valores por defecto de los argumentos `start_year` y `end_year` en la
 función `yearly_data_arg_test` son `None`. Esta es una constante incorporada en
 Python que indica la ausencia de un valor - esencialmente indica que la variable
-existe en el directorio de variables (el **namespace**) de la función pero que
+existe en el directorio de nombres de variables (el **namespace**) de la función pero que
 no corresponde a ningún objeto existente.
 
 > ## Challenge - Variables
@@ -589,7 +589,7 @@ no corresponde a ningún objeto existente.
 >    argumentos tienen `None` como valor por defecto y cuando no tienen valores
 >    por defecto.
 >
-> 3. ¿Qué ocurre si solo incluimos un valor para `start_year` al llamar la función?,
+> 3. ¿Qué ocurre si solo incluimos un valor para `start_year` al llamar a la función?,
 >    ¿puedes escribir una llamada a la función con solo un valor para `end_year`?
 >    (Pista: piensa en cómo la función debe estar asignándole valores a cada uno
 >    de sus argumentos - ¡esto está relacionado con la necesidad de poner los
@@ -597,7 +597,7 @@ no corresponde a ningún objeto existente.
 >    valores por defecto en la definición de la función!)
 {: .challenge}
 
-## Condicionales if
+## Sentencias **if**
 
 El cuerpo de la función anterior ahora tiene dos condicionales **if** que
 revisan los valores de `start_year` y `end_year`. Los condicionales if ejecutan
@@ -631,7 +631,7 @@ a is a positive number
 {: .output}
 
 Cambia los valores de `a` para ver cómo funciona este código. La palabra clave
-`elif` significa "si no" (en inglés, "else if"), y todos los condicionales deben
+`elif` significa "sino" (en inglés, "else if"), y todos los condicionales deben
 terminar con un dos puntos.
 
 Los condicionales if en la función `yearly_data_arg_test` verifican si hay algún
@@ -684,7 +684,7 @@ One keyword, default start:	1977 1993
 ~~~
 {: .output}
 
-> ## Challenge - Modificando funciones
+> ## Desafío - Modificando funciones
 >
 > 1. Reescribe las funciones `one_year_csv_writer` y `yearly_data_csv_writer`
 >    para que tengan argumentos keyword con valores por defecto.
@@ -693,7 +693,7 @@ One keyword, default start:	1977 1993
 >    éste no está en los datos y que muestre una alerta al usuario (Pista: usa
 >    condicionales para esto. Si quieres un reto más, ¡usa `try`!)
 >
-> 3. Este código verifica si un directorio existe y lo crea si no. Añade un poco
+> 3. Este código verifica si un directorio existe, sino lo crea. Añade un poco
 >    de código a la función que escribe los archivos CSV para verificar si
 >    existe el directorio al que piensas escribir.
 >
@@ -706,8 +706,8 @@ One keyword, default start:	1977 1993
 > ~~~
 > {: .language-python }
 >
-> 4. El código que has escrito hasta este momento usando el bucle for está
->    bastante bien, pero no necesariamente es reproducible con datasets
+> 4. El código que has escrito hasta este momento usando el bucle **for** está
+>    bastante bien, pero no necesariamente es reproducible con **datasets**
 >    diferentes. Por ejemplo, ¿qué pasa con el código si tenemos datos para más
 >    años? Usando las herramientas que aprendiste en las actividades anteriores,
 >    crea una lista de todos los años representados en los datos. Después crea
