@@ -47,7 +47,7 @@ Al escribir el comando `jupyter notebook`, ocurre lo siguiente:
 
 * Por ejemplo, haz clic en la primera celda y escribe algo de código en Python.
 
-  ![cell de código](../fig/00_5_jupyter_code_before.png)
+  ![celda de código](../fig/00_5_jupyter_code_before.png)
   *Una celda de código*
 
 * Esta es una celda de **Código** (nota el tipo de celda en el menú desplegable con la palabra **Code**).
