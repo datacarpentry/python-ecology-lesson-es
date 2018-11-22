@@ -95,7 +95,7 @@ Este flujo de trabajo tiene varias ventajas:
 El __notebook__ tiene dos modos de operación: __Control__ y __Edit__. El modo
 __Control__ te permite editar funciones a nivel __notebook__; mientras, el modo
 __Edit__ te permite cambiar los contenidos de las celdas del __notebook__.
-Recuerda que un __notebook__ esta compuesto de un numero de celdas que contienen
+Recuerda que un __notebook__ esta compuesto de un número de celdas que contienen
 código, __markdown__, html, visualizaciones, y más.
 
 ### Ayuda y más información
