@@ -53,7 +53,7 @@ Esta sección usa el archivo `surveys.csv` el cual puede ser descargado desde:
 [https://ndownloader.figshare.com/files/2292172](https://ndownloader.figshare.com/files/2292172)
 
 Vamos a estudiar la especie y el peso de los animales capturados en sitios dentro de nuestra área de
-estudio. El conjunto de datos esta guardado en un archivo `.csv`: cada renglón
+estudio. El conjunto de datos esta guardado en un archivo `.csv`: cada línea
 tiene información sobre un solo animal y las columnas representan:
 
 | Column          | Description                           |
@@ -69,7 +69,7 @@ tiene información sobre un solo animal y las columnas representan:
 | weight          | peso del animal en gramos             |
 
 
-Los primeros renglones de nuestro archivo se ven de la siguiente manera:
+Las primeras líneas de nuestro archivo se ven de la siguiente manera:
 
 ~~~
 record_id,month,day,year,plot_id,species_id,sex,hindfoot_length,weight
@@ -129,7 +129,7 @@ formato CSV. CSV son las siglas para _Comma-Separated Values_, valores
 separados por coma, y es una manera común de guardar datos. Otros
 símbolos pueden ser usados, te puedes encontrar valores separados por
 tabuladores, por punto y coma o por espacios en blancos. Es fácil remplazar
-un separador por otro, para usar tu aplicación. El primer renglón del 
+un separador por otro, para usar tu aplicación. La primera línea del 
 archivo generalmente contiene los encabezados que dicen que hay en
 cada columna. CSV (y otros separadores) hacen fácil compartir los datos y pueden
 ser importados y exportados desde distintos programas, incluyendo Microsoft Excel.
@@ -171,7 +171,7 @@ record_id  month  day  year  plot_id species_id sex  hindfoot_length  weight
 ~~~
 {: .output}
 
-Podemos ver que se leyeron 35,549 renglones. Cada uno de los renglones tiene 
+Podemos ver que se leyeron 35,549 líneas. Cada una de los líneas tiene 
 9 columnas. La primera columna es el índice del DataFrame. El índice es usado
 para identificar la posición de los datos, pero no es una columna del DataFrame. 
 Parace ser que la función `read_csv`de Pandas leyó el archivo correctamente. 
@@ -336,7 +336,7 @@ y el atributo `columns`, un índice de todos los nombres de las columnas en
 el **DataFrame** puede ser accesado con `surveys_df.columns`.
 
 Métodos son llamados de la misma manera usando la sintáxis `df_object.method()`.
-Como ejemplo, `surveys_df.head()` obtiene los primeros renglones del DataFrame
+Como ejemplo, `surveys_df.head()` obtiene las primeros líneas del **DataFrame**
 `surveys_df` usando **el método `head()`**. Con un método, podemos proporcionar
 información extra en los padres para contreol su comportamiento.
 
@@ -535,7 +535,7 @@ print(species_counts)
 ~~~
 {: .language-python}
 
-O, también podemos contar los renglones que tienen la especie "DO":
+O, también podemos contar las líneas que tienen la especie "DO":
 
 ~~~
 surveys_df.groupby('species_id')['record_id'].count()['DO']
