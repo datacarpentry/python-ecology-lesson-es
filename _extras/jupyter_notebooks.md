@@ -100,4 +100,4 @@ código, __markdown__, html, visualizaciones, y más.
 
 ### Ayuda y más información
 
-Utiliza el menú **Help** y sus opciones options cuando lo necesites.
+Utiliza el menú **Help** y sus opciones **options** cuando lo necesites.
