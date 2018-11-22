@@ -78,7 +78,7 @@ Este flujo de trabajo tiene varias ventajas:
 - Te permite anotar tu código con enlaces, texto de diferentes tamaños,
   viñetas, etc. para hacer la información más accesible para ti y tus
   colaboradores.
-- Te permite mostrar gráficos junto al código que las produce para contar
+- Te permite mostrar gráficos junto al código que los produce para contar
   la historia completa de tu análisis.
 
 ### Como se guarda el __notebook__
