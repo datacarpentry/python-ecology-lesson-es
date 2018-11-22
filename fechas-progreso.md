@@ -5,18 +5,18 @@ La meta es traducir toda la lección hasta el final del mes de Nov 2018 y luego 
 Archivo | Nombre de archivo | Reponsable de traducción | Fecha de inicio | Fecha de entrega | Responsable de revisión | Fecha de inicio | Fecha de entrega
 --- | --- | --- | --- | --- | --- | --- | --- 
 Before we start | _episodes/00-before-we-start.md | @LUS24 | nov 10 | nov 11 | @spereyra @orchid00| nov 13 | nov 17
-Short Introduction to Programming in Python | _episodes/01-short-introduction-to-Python.md | @Helysalgado | nov 9 | nov 14 | @ComplejoC @orchid00 | nov 16 | nov 20
-Starting With Data | _episodes/02-starting-with-data.md | @jmbarrios  | nov 10 | nov 19 | @LUS24 | nov 20 |
-Indexing, Slicing and Subsetting DataFrames in Python | _episodes/03-index-slice-subset.md | @welozano  | nov 10 | |@orchid00| nov 11 |
+Short Introduction to Programming in Python | _episodes/01-short-introduction-to-Python.md | @Helysalgado | nov 9 | nov 14 | @ComplejoC @orchid00 @monialo2000 | nov 16 | nov 20, nov 21
+Starting With Data | _episodes/02-starting-with-data.md | @jmbarrios  | nov 10 | nov 19 | @LUS24 | nov 20 | nov 22
+Indexing, Slicing and Subsetting DataFrames in Python | _episodes/03-index-slice-subset.md | @welozano  | nov 10 | |@orchid00 | nov 11 | 
 Data Types and Formats | _episodes/04-data-types-and-format.md |  @fergarciafer  | nov 10 | nov 15 | @orchid00 | nov 12 | nov 17
 Combining DataFrames with Pandas | _episodes/05-merging-data.md | @spencerbh | nov 12 | nov 15 | @arredondo23 @raynamharris | nov 16 |
-Data Workflows and Automation | _episodes/06-loops-and-functions.md | @miguelgondu  | nov 9 | nov 18 | @fergarciafer | nov 19 |
+Data Workflows and Automation | _episodes/06-loops-and-functions.md | @miguelgondu  | nov 9 | nov 18 | @fergarciafer | nov 19 | nov 22
 Making Plots With plotnine | _episodes/07-visualization-ggplot-python.md | @orchid00 | nov10  | nov 12 | @LauCIFASIS | nov 12 | nov 20
 Data Ingest and Visualization - Matplotlib and Pandas | _episodes/08-putting-it-all-together.md | @enricescorsa | nov 11 | nov 12 | @chekos | nov 13 |
-Accessing SQLite Databases Using Python and Pandas | _episodes/09-working-with-sql.md | @orchid00 | nov 9 | nov10| @rzayas @nohemihuanca | nov 13 - nov 20 ||
+Accessing SQLite Databases Using Python and Pandas | _episodes/09-working-with-sql.md | @orchid00 | nov 9 | nov10| @rzayas @nohemihuanca | nov 13, nov 20 | nov , nov 21
 Glossary | _extras/reference.md | @chekos | nov 12 | nov 13 | @arredondo23 | nov 13 | nov 15 
-Index | _extras/index.md | @agbeltran | nov 9 | nov 11 | @orchid00 | nov 12 | nov 12|
+Index | _extras/index.md | @agbeltran | nov 9 | nov 11 | @orchid00 | nov 12 | nov 12
 Instructor guide | _extras/guide.md | @NPalopoli | nov 12  | | @Helysalgado |||
 Contributors | _extras/CONTRIBUTORS.md | @orchid00 @rzayas | nov 21 ||||
-Overview of Jupyter Notebooks | _extras/jupyter_notebooks.md | @chekos | nov 12 | nov 15 | @miguelgondu | nov 19 ||
-Setup | setup.md | @raynamharris | nov 12 | nov 12 | @orchid00 | nov 13 | nov 17|
+Overview of Jupyter Notebooks | _extras/jupyter_notebooks.md | @chekos | nov 12 | nov 15 | @miguelgondu @orchid00 | nov 19, nov 21  | nov , nov 22
+Setup | setup.md | @raynamharris | nov 12 | nov 12 | @orchid00 | nov 13 | nov 17
