@@ -129,7 +129,7 @@ type(6.02)
 
 La variable `text` es de tipo 'str', abreviatura de **string** o cadena de caracteres. Las cadenas almacenan
 secuencias de caracteres, que pueden ser letras, números, puntuación
-o más formas exóticas de texto (¡incluso emoji!).
+o formas más exóticas de texto (¡incluso emoji!).
 
 También podemos ver el valor de algo usando otra función incorporada, `print`:
 
@@ -180,7 +180,7 @@ Data Carpentry
 
 Nota que "Data Carpentry" se imprime una vez.
 
-**Sugerencia**: `print` y `type` son funciones incorporadas en Python. Mas adelante en esta
+**Sugerencia**: `print` y `type` son funciones incorporadas en Python. Más adelante en esta
 lección, veremos métodos y funciones definidas por el usuario. La documentación 
 de Python es excelente para darte una referencia sobre las diferencias entre ellos.
 
@@ -226,7 +226,7 @@ Podemos realizar cálculos matemáticos en Python usando los operadores básicos
 {: .output}
 
 
-También podemos utilizar operadores de comparación y lógica:
+También podemos utilizar operadores de comparación y lógicos:
 `<,>, ==,! =, <=,> =` y declaraciones de identidad como
 `and, or, not`. El tipo de datos devuelto por estos operadres es
 llamado _**boolean**_ y retorna verdadero o falso, como ves a continuación.
