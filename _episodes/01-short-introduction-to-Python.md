@@ -365,7 +365,7 @@ a_list = [1, 2, 3]
 
 ## Diccionarios
 
-Un diccionario **dictionary** es un contenedor que almacena pares de objetos - llaves y valores.
+Un diccionario **dictionary** es un contenedor que almacena pares de objetos - claves y valores.
 
 ~~~
 translation = {'one': 1, 'two': 2}
@@ -377,9 +377,9 @@ translation['one']
 ~~~
 {: .output}
 
-Los diccionarios funcionan como listas, excepto que se crea el índice utilizando *llaves*  **keys**.
-Puedes pensar en una llave como nombre o un identificador único para un conjunto de valores
-en el diccionario. Las llaves solo pueden tener tipos particulares, tienen que ser
+Los diccionarios funcionan como listas, excepto que se crea el índice utilizando *claves*  **keys**.
+Puedes pensar en una clave como un nombre o un identificador único para un conjunto de valores
+en el diccionario. Las claves sólo pueden tener tipos particulares, tienen que ser
 "**hashable**". Las cadenas y los tipos numéricos son aceptables, pero las listas no lo son.
 
 ~~~
@@ -406,7 +406,7 @@ TypeError: unhashable type: 'list'
 En Python, un "**Traceback**" es un bloque de error de varias líneas impreso para el
 usuario.
 
-Para agregar un elemento al diccionario, asignamos un valor a una nueva llave:
+Para agregar un elemento al diccionario, asignamos un valor a una nueva clave:
 
 ~~~
 rev = {1: 'one', 2: 'two'}
@@ -452,7 +452,7 @@ for key in rev.keys():
 > ## Cambiando diccionarios
 >
 > 1. Primero, imprime el valor de `rev` del diccionario en la pantalla.
-> 2. Reasigna el segundo valor (parar el *par llave: valor*) para que ya no
+> 2. Reasigna el segundo valor (parar el *par clave: valor*) para que ya no
 > lea "dos" sino "manzana".
 > 3. Imprime el valor de `rev` en la pantalla nuevamente y ve si el valor ha cambiado.
 >
@@ -460,7 +460,7 @@ for key in rev.keys():
 
 
 Es importante tener en cuenta que los diccionarios están "desordenados" y no recuerdan
-la secuencia de sus elementos (es decir, el orden en el que los pares llave: valor fueron
+la secuencia de sus elementos (es decir, el orden en el que los pares clave: valor fueron
 añadidos al diccionario). Debido a esto, el orden en que los elementos son
 devuelto en los bucles sobre los diccionarios, puede aparecer al azar e incluso puede cambiar
 con el tiempo.
