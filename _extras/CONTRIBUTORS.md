@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Acerca de los Contribuidores
+title: Acerca de los Colaboradores
 permalink: /contributors/
 ---
 
-Los materiales en este repositorio **python-ecology-lesson** fueron inicialmente desarrollados, adaptados y son constantemente revisados por muchos contribuidores. Algunas partes de esta lección fueron adaptadas de los materiales de Software Carpentry.
+Los materiales en este repositorio **python-ecology-lesson** fueron inicialmente desarrollados, adaptados y son constantemente revisados por muchos colaboradores. Algunas partes de esta lección fueron adaptadas de los materiales de Software Carpentry.
 
 El primer taller de Python de Data Carpentry se llevó a cabo en la Universidad de Miami el 30 de marzo de 2015 por John Gossoset y François Michonneau. Durante ese tiempo los materiales fueron refinados y se presentaron nuevamente en la conferencia de la UCAR Software Engineering Assembly (SEA) en Boulder, Colorado por Leah Wasser (NEON, Inc) y Mariela Perignon.
 
@@ -38,4 +38,4 @@ Nota: estos episodios fueron reorganizados, limpiados y desarrollados por Leah W
 
 ## Traducción
 
-La traducción de esta lección a sido un esfuerzo grupal de varios contribuidores durante noviembre 2018. Queremos agradecer a todos ellos con una mención especial [Alejandra Gonzalez-Beltran](https://github.com/agbeltran), [Sergio Arredondo](https://github.com/arredondo23), [Sergio Sánchez](https://github.com/chekos), [Sofía Meléndez](https://github.com/ComplejoC),  [Enric Escorsa O'Callaghan](https://github.com/enricescorsa), [Fernando Garcia](https://github.com/fergarciafer), [François Michonneau](https://github.com/fmichonneau), [Heladia Salgado](https://github.com/Helysalgado), [Juan Martín Barrios](https://github.com/jmbarrios), [Laura Angelone](https://github.com/LauCIFASIS), [Leonardo Ulises Spairani](https://github.com/LUS24), [Miguel González Duque](https://github.com/miguelgondu), [Monica Alonso](https://github.com/monialo2000), [Nicolas Palopoli](https://github.com/NPalopoli), [Nohemi Huanca](https://github.com/nohemihuanca), [Paula Andrea Martinez](https://github.com/orchid00), [Rayna M Harris](https://github.com/raynamharris), [Romualdo Zayas Lagunas](https://github.com/rzayas), [Spencer Harris](https://github.com/spencerbh), [Silvana Pereyra](https://github.com/spereyra) y [Wilson Lozano-Rolón](https://github.com/welozano).
+La traducción de esta lección a sido un esfuerzo grupal de varios colaboradores durante noviembre 2018. Queremos agradecer a todos ellos con una mención especial [Alejandra Gonzalez-Beltran](https://github.com/agbeltran), [Sergio Arredondo](https://github.com/arredondo23), [Sergio Sánchez](https://github.com/chekos), [Sofía Meléndez](https://github.com/ComplejoC),  [Enric Escorsa O'Callaghan](https://github.com/enricescorsa), [Fernando Garcia](https://github.com/fergarciafer), [François Michonneau](https://github.com/fmichonneau), [Heladia Salgado](https://github.com/Helysalgado), [Juan Martín Barrios](https://github.com/jmbarrios), [Laura Angelone](https://github.com/LauCIFASIS), [Leonardo Ulises Spairani](https://github.com/LUS24), [Miguel González Duque](https://github.com/miguelgondu), [Monica Alonso](https://github.com/monialo2000), [Nicolas Palopoli](https://github.com/NPalopoli), [Nohemi Huanca](https://github.com/nohemihuanca), [Paula Andrea Martinez](https://github.com/orchid00), [Rayna M Harris](https://github.com/raynamharris), [Romualdo Zayas Lagunas](https://github.com/rzayas), [Spencer Harris](https://github.com/spencerbh), [Silvana Pereyra](https://github.com/spereyra) y [Wilson Lozano-Rolón](https://github.com/welozano).
