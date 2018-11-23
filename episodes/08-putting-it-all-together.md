@@ -81,7 +81,7 @@ import matplotlib.pyplot as plt
 ~~~
 {: .language-python}
 
-Ahora leemos los datos y los representarlos en un gráfico!
+¡Ahora leemos los datos y los representarlos en un gráfico!
 
 ~~~
 surveys = pd.read_csv("data/surveys.csv")
