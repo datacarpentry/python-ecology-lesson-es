@@ -15,40 +15,21 @@ keypoints:
 ---
 
 
-## Putting it all together
+## Resumiendo
 
-Up to this point, we have walked through tasks that are often
-involved in handling and processing data using the workshop ready cleaned
-files that we have provided. In this wrap-up exercise, we will perform
-many of the same tasks with real data sets. This lesson also covers data
-visualization.
+Hasta aquí, hemos repasado las tareas que se suelen llevar a cabo en el manejo y procesamiento de datos utilizando los archivos limpios que hemos proporcionado en el taller. En este ejercicio de repaso final, realizaremos muchas de las tareas que hemos visto pero con __datasets__ reales. Esta lección también incluye visualización de datos.
 
-As opposed to the previous ones, this lesson does not give step-by-step
-directions to each of the tasks. Use the lesson materials you've already gone
-through as well as the Python documentation to help you along.
+A diferencia de las anteriores, en esta lección no se dan instrucciones paso a paso para realizar cada una de las tareas. Usa los materiales de las lecciones que ya has estudiado, así como la documentación de Python.
 
-## Obtain data
+## Obtener datos
 
-There are many repositories online from which you can obtain data. We are
-providing you with one data file to use with these exercises, but feel free to
-use any data that is relevant to your research. The file
-[`bouldercreek_09_2013.txt`]({{ page.root }}/data/bouldercreek_09_2013.txt)
-contains stream discharge data, summarized at 15
-15 minute intervals (in cubic feet per second) for a streamgage on Boulder
-Creek at North 75th Street (USGS gage06730200) for 1-30 September 2013. If you'd
-like to use this dataset, please find it in the data folder.
+Hay muchos repositorios en línea desde los cuales puedes obtener datos. Te proporcionamos un archivo de datos para usar con estos ejercicios, pero no dudes en utilizar cualquier conjunto de datos que encuentres relevante para tu investigación. El archivo [`bouldercreek_09_2013.txt`]({{ page.root }}/data/bouldercreek_09_2013.txt) contiene datos sobre vertidos de agua, resumidos en 15 intervalos de 15 minutos (en pies cúbicos por segundo) de una estación hidrométrica en Boulder Creek en North 75th Street (USGS gage06730200) durante el periodo 1-30 de Septiembre de 2013. Si deseas usar este __dataset__, lo encontrarás en la carpeta de datos.
 
-## Clean up your data and open it using Python and Pandas
+## Limpia tus datos y ábrelos con Python y Pandas
 
-To begin, import your data file into Python using Pandas. Did it fail? Your data
-file probably has a header that Pandas does not recognize as part of the data
-table. Remove this header, but do not simply delete it in a text editor! Use
-either a shell script or Python to do this - you wouldn't want to do it by hand
-if you had many files to process.
+Para empezar, importa tu archivo de datos a Python usando Pandas. ¿No te funcionó? Puede que tu archivo de datos tenga un  encabezado que Pandas no reconozca como parte de la tabla. Elimina este encabezado, ¡pero no lo hagas borrándolo en un editor de texto! Usa la terminal o Python para hacerlo; no quisieras tener que hacer esto a mano si tuvieras muchos archivos por procesar.
 
-If you are still having trouble importing the data as a table using Pandas,
-check the documentation. You can open the docstring in an ipython notebook using
-a question mark. For example:
+Si aún tienes problemas para importar los datos como una tabla con Pandas, consulta la documentación. Prueba a abrir la __docstring__ en un ipython notebook utilizando un signo de interrogación. Por ejemplo:
 
 ~~~
 import pandas as pd
@@ -56,36 +37,30 @@ pd.read_csv?
 ~~~
 {: .language-python}
 
-Look through the function arguments to see if there is a default value that is
-different from what your file requires (Hint: the problem is most likely the
-delimiter or separator. Common delimiters are `','` for comma, `' '` for space,
-and `'\t'` for tab).
+Fíjate en los argumentos de la función para ver si hay un valor predeterminado que sea diferente al que requiere tu archivo (Sugerencia: probablemente el problema sea el delimitador o separador. Los delimitadores más comunes son `','` comas, `' '` espacios, y `'\t'` tabulaciones).
 
-Create a DataFrame that includes only the values of the data that are useful to
-you. In the streamgage file, those values might be the date, time, and discharge
-measurements. Convert any measurements in imperial units into SI units. You can
-also change the name of the columns in the DataFrame like this:
+Crea un __DataFrame__ que incluya sólo los valores de los datos que te sean útiles. En nuestro archivo de ejemplo de la estación hidrométrica, esos valores podrían ser la fecha, la hora y las mediciones de descarga o vertido. Convierte cualquier medida de unidades imperiales a unidades SI. También puedes cambiar el nombre de las columnas en el __DataFrame__ del siguiente modo:
 
 ~~~
-df = pd.DataFrame({'1stcolumn':[100,200], '2ndcolumn':[10,20]}) # this just creates a DataFrame for the example!
-print('With the old column names:\n') # the \n makes a new line, so it's easier to see
+df = pd.DataFrame({'1stcolumn':[100,200], '2ndcolumn':[10,20]}) # esto crea un __DataFrame__ para el ejemplo!
+print('With the old column names:\n') # El \n crea una nueva línea, para que sea más fácil de ver
 print(df)
 
-df.columns = ['FirstColumn','SecondColumn'] # rename the columns!
+df.columns = ['FirstColumn','SecondColumn'] # renombra las columna!
 print('\n\nWith the new column names:\n')
 print(df)
 ~~~
 {: .language-python}
 
 ~~~
-With the old column names:
+Con los nombres antiguos de las columnas:
 
    1stcolumn  2ndcolumn
 0        100         10
 1        200         20
 
 
-With the new column names:
+Con los nuevos nombres de columna:
 
    FirstColumn  SecondColumn
 0          100            10
@@ -93,34 +68,32 @@ With the new column names:
 ~~~
 {: .output}
 
-## Matplotlib package
+## El paquete Matplotlib
 
-[Matplotlib](https://matplotlib.org/) is a Python package that is widely used throughout the scientific Python community to create high-quality and publication-ready graphics. It supports a wide range of raster and vector graphics formats including PNG, PostScript, EPS, PDF and SVG.
+[Matplotlib](https://matplotlib.org/) es un paquete de Python usado ampliamente por la comunidad científica de Python para crear gráficos de alta calidad, listos para publicar. Admite una amplia gama de formatos de gráficos rasterizados y vectoriales, tales como PNG, PostScript, EPS, PDF y SVG.
 
-Moreover, matplotlib is the actual engine behind the plotting capabilities of both Pandas and plotnine packages. For example, when we call the `.plot` method on Pandas data objects, we actually use the matplotlib package.
+Además, Matplotlib es el motor que hay detrás de las capacidades gráficas de los paquetes Pandas y plotnine. Por ejemplo, cuando invocamos el método `.plot` en objetos de datos Pandas, de hecho estamos usando el paquete matplotlib.
 
-First, import the pyplot toolbox:
+Primero, importamos la caja de herramientas pyplot:
 
 ~~~
 import matplotlib.pyplot as plt
 ~~~
 {: .language-python}
 
-Now, let's read data and plot it!
+¡Ahora leemos los datos y los representarlos en un gráfico!
 
 ~~~
 surveys = pd.read_csv("data/surveys.csv")
 my_plot = surveys.plot("hindfoot_length", "weight", kind="scatter")
-plt.show() # not necessary in Jupyter Notebooks
+plt.show() # no necesariamente en Jupyter Notebooks
 ~~~
 {: .language-python}
 
-![Scatter plot of survey data set](../fig/08_scatter_surveys.png)
+![Diagrama de dispersión del conjunto de datos de una encuesta](../fig/08_scatter_surveys.png)
 
-> ## Tip
-> By default, matplotlib creates a figure in a separate window. When using
-> Jupyter notebooks, we can make figures appear in-line within the notebook by
-> executing:
+> ## Sugerencia
+> Por defecto, matplotlib crea una figura en una ventana separada. Cuando usamos Jupyter notebooks, podemos hacer que las figuras aparezcan en línea dentro del cuaderno; lo hacemos ejecutando:
 >
 > ~~~
 > %matplotlib inline
@@ -128,28 +101,19 @@ plt.show() # not necessary in Jupyter Notebooks
 > {: .language-python}
 {: .callout}
 
-The returned object is a matplotlib object (check it yourself with `type(my_plot)`),
-to which we may make further adjustments and refinements using other matplotlib methods.
+El objeto que obtenemos es un objeto matplotlib (puedes verificarlo tu mismo con `type(my_plot)`),
+al que podemos ajustarle y realizarle mejoras adicionales utilizando otros métodos de matplotlib.
 
-> ## Tip
-> Matplotlib itself can be overwhelming, so a useful strategy is to
-> do as much as you easily can in a convenience layer, _i.e._ start
-> creating the plot in Pandas or plotnine, and then use matplotlib
-> for the rest.
+> ## Sugerencia
+> Matplotlib en sí mismo puede resultar algo abrumador, por lo que una estrategia útil de entrada es hacer todo lo posible en capas de conveniencia, _p.e._ empezar creando los gráficos en Pandas o plotnine y luego usar matplotlib para el resto.
 {: .callout}
 
-We will cover a few basic commands for creating and formatting plots with matplotlib in this lesson.
-A great resource for help creating and styling your figures is the matplotlib gallery
-(<http://matplotlib.org/gallery.html>), which includes plots in many different
-styles and the source codes that create them.
+En esta lección cubriremos algunos comandos básicos para crear y formatear gráficos con matplotlib. Un gran recurso para ayudarnos a crear y agregar estilo a nuestras figuras es la galería matplotlib (<http://matplotlib.org/gallery.html>), la cual incluye gráficos en todo tipo de estilos junto con el código fuente para crearlos.
 
 
-### `plt` pyplot versus object-based matplotlib
+### `plt` pyplot vs matplotlib basado en objetos
 
-Matplotlib integrates nicely with the NumPy package and can use NumPy arrays
-as input to the available plot functions. Consider the following example data,
-created with NumPy by drawing 1000 samples from a normal distribution with a mean value of 0 and
-a standard deviation of 0.1:
+Matplotlib se integra bien con el paquete NumPy y permite usar __arrays__ de NumPy como entrada para las funciones para crear gráficos disponibles. Considera los siguientes datos de ejemplo, creados con NumPy extrayendo 1000 muestras de una distribución normal con un valor medio de 0 y una desviación estándar de 0.1:
 
 ~~~
 import numpy
@@ -158,26 +122,20 @@ sample_data = numpy.random.normal(0, 0.1, 1000)
 ~~~
 {: .language-python}
 
-To plot a histogram of our draws from the normal distribution, we can use the `hist` function directly:
+Para representar un histograma de la distribución normal, podemos usar la función `hist` directamente:
 
 ~~~
 plt.hist(sample_data)
 ~~~
 {: .language-python}
 
-![Histogram of 1000 samples from normal distribution](../fig/08-normal-distribution.png)
+![Histograma de 1000 muestras de una distribución normal](../fig/08-normal-distribution.png)
 
-> ## Tip: Cross-Platform Visualization of Figures
-> Jupyter Notebooks make many aspects of data analysis and visualization much simpler. This includes
-> doing some of the labor of visualizing plots for you. But, not every one of your collaborators
-> will be using a Jupyter Notebook. The `.show()` command allows you to visualize plots
-> when working at the command line, with a script, or at the IPython interpreter. In the
-> previous example, adding  `plt.show()` after the creation of the plot will enable your
-> colleagues who aren't using a Jupyter notebook to reproduce your work on their platform.
+> ## Sugerencia: Visualization multiplataforma de Figuras
+> Los __Jupyter Notebooks__ nos simplifican muchos aspectos de nuestro análisis y de las visualizaciones. Por ejemplo, hacen buena parte del trabajo de visualización por nosotros. Pero quizás no todos tus colaboradores trabajan con __Jupyter Notebooks__. El comando `.show()` te permite visualizar los gráficos tanto si trabajas en la línea de comandos, con un __script__ o en el intérprete de IPython. En el ejemplo anterior, si añades `plt.show()` después de crear el gráfico, eso permitirá que tus colegas que no estén usando __Jupyter notebooks__ puedan reproducir igualmente tu trabajo en su plataforma.
 {: .callout}
 
-or create matplotlib `figure` and `axis` objects first and subsequently add a histogram with 30
-data bins:
+o creas primero los objetos `figure` y `axis` de matplotlib y luego agregas un histograma con 30 contenedores de datos:
 
 ~~~
 fig, ax = plt.subplots()  # initiate an empty figure and axis matplotlib object
@@ -185,63 +143,58 @@ ax.hist(sample_data, 30)
 ~~~
 {: .language-python}
 
-Although the latter approach requires a little bit more code to create the same plot,
-the advantage is that it gives us **full control** over the plot and we can add new items
-such as labels, grid lines, title, and other visual elements. For example, we can add
-additional axes to the figure and customize their labels:
+Aunque el último enfoque requiere un poco más de código para crear la misma trama, la ventaja es que nos da control total sobre el gráfico y podemos agregarle nuevos elementos tales como etiquetas, una cuadrícula, títulos u otros elementos visuales. Por ejemplo, podemos agregar ejes adicionales a la figura y personalizar sus etiquetas:
 
 ~~~
-fig, ax1 = plt.subplots() # prepare a matplotlib figure
+fig, ax1 = plt.subplots() # preparar un gráfico con matplotlib
 ax1.hist(sample_data, 30)
 
-# Add a plot of a Beta distribution
+# Crear el gráfico de una distribución Beta
 a = 5
 b = 10
 beta_draws = np.random.beta(a, b)
-# adapt the labels
+# editar las etiquetas
 ax1.set_ylabel('density')
 ax1.set_xlabel('value')
 
-# add additional axes to the figure
+# añadir ejes adicionales a la figura
 ax2 = fig.add_axes([0.125, 0.575, 0.3, 0.3])
 #ax2 = fig.add_axes([left, bottom, right, top])
 ax2.hist(beta_draws)
 ~~~
 {: .language-python}
 
-![Plot with additional axes](../fig/08-dualdistribution.png)
+![Gráfico con ejes adicionales](../fig/08-dualdistribution.png)
 
-> ## Challenge - Drawing from distributions
-> Have a look at the NumPy
-> random documentation <https://docs.scipy.org/doc/numpy-1.14.0/reference/routines.random.html>.
-> Choose a distribution you have no familiarity with, and try to sample from and visualize it.
+> ## Reto - Dibujo a partir de distribuciones
+> Echa un vistazo a la documentación aleatoria deNumPy <https://docs.scipy.org/doc/numpy-1.14.0/reference/routines.random.html>.
+> Toma una distribución con la que no tengas ninguna familiaridad e intenta muestrearla y visualizarla.
 {: .challenge}
 
 
-### Link matplotlib, Pandas and plotnine
+### Enlaza matplotlib, Pandas y plotnine
 
-When we create a plot using pandas or plotnine, both libraries use matplotlib
-to create those plots. The plots created in pandas or plotnine are matplotlib
+Cuando creamos un gráfico usando pandas o plotnine, ambas bibliotecas usan matplotlib para crear esas. The plots created in pandas or plotnine are matplotlib
 objects, which enables us to use some of the advanced plotting options available
 in the matplotlib library. Because the objects output by pandas and plotnine
 can be read by matplotlib, we have many more options than any one library can
 provide, offering a consistent environment to make publication-quality visualizations.
 
 ~~~
-fig, ax1 = plt.subplots() # prepare a matplotlib figure
+fig, ax1 = plt.subplots() # prepara un gráfico de matplotlib
 
 surveys.plot("hindfoot_length", "weight", kind="scatter", ax=ax1)
 
-# Provide further adaptations with matplotlib:
+# realiza ajustes al gráfico con matplotlib:
 ax1.set_xlabel("Hindfoot length")
 ax1.tick_params(labelsize=16, pad=8)
 fig.suptitle('Scatter plot of weight versus hindfoot length', fontsize=15)
 ~~~
 {: .language-python}
 
-![Extended version of scatter plot surveys](../fig/08_scatter_surveys_extended.png)
+![Versión extendida de diagramas de dispersión](../fig/08_scatter_surveys_extended.png)
 
-To retrieve the matplotlib figure object from plotnine for customization, use the `draw()` function in plotnine:
+Para recuperar una figura de matplotlib de plotnine para luego ajustarla, usa la función `draw()` en plotnine:
 
 ~~~
 import plotnine as p9
@@ -249,27 +202,24 @@ myplot = (p9.ggplot(data=surveys,
                     mapping=p9.aes(x='hindfoot_length', y='weight')) +
               p9.geom_point())
 
-# convert output plotnine to a matplotlib object
+# convierte el output de plotnine a un objeto de matplotlib
 my_plt_version = myplot.draw()
 
-# Provide further adaptations with matplotlib:
-p9_ax = my_plt_version.axes[0] # each subplot is an item in a list
+# Realiza más ajustes al gráfico con matplotlib:
+p9_ax = my_plt_version.axes[0] # cada subgráfico es un ítem en una lista
 p9_ax.set_xlabel("Hindfoot length")
 p9_ax.tick_params(labelsize=16, pad=8)
 p9_ax.set_title('Scatter plot of weight versus hindfoot length', fontsize=15)
-plt.show() # not necessary in Jupyter Notebooks
+plt.show() # esto no es necesario en Jupyter Notebooks
 ~~~
 {: .language-python}
 
-![Extended version of plotnine scatter plot](../fig/08_scatter_surveys_plotnine.png)
+![Versión extendida de diagramas de dispersión de plotnine](../fig/08_scatter_surveys_plotnine.png)
 
-> ## Challenge - Pandas and matplotlib
-> Load the streamgage data set with Pandas, subset the week of the 2013 Front Range flood
-> (September 11 through 15) and create a hydrograph (line plot) of the discharge data using
-> Pandas, linking it to an empty maptlotlib `ax` object. Create a second axis that displays the
-> whole dataset. Adapt the title and axes' labels using matplotlib.
+> ## Reto - Pandas y matplotlib
+> Carga el conjunto de datos de streamgage con Pandas, haz un subconjunto filtrando la semana de la inundación de Front Range en 2013 (del 11 al 15 de septiembre) y crea un hidrograma (gráfico de líneas) usando Pandas, vinculándolo a un objeto de maptlotlib `ax` vacío . Crea un segundo eje que muestre el conjunto de datos entero. Adapta el título y las etiquetas de los ejes usando matplotlib.
 >
-> > ## Answers
+> > ## Respuestas
 > >
 > > ~~~
 > > discharge = pd.read_csv("data/bouldercreek_09_2013.txt",
@@ -309,29 +259,26 @@ plt.show() # not necessary in Jupyter Notebooks
 > {: .solution}
 {: .challenge}
 
-### Saving matplotlib figures
+### Guardar figuras de matplotlib
 
-Once satisfied with the resulting plot, you can save the plot with the `.savefig(*args)` method from matplotlib:
+Una vez que estés satisfecho con el gráfico resultante, puedes guardar el gráfico con el método `.savefig(*args)` de matplotlib:
 
 ~~~
 fig.savefig("my_plot_name.png")
 ~~~
 {: .language-python}
 
-Which will save the `fig` created using Pandas/matplotlib as a png file with the name `my_plot_name`
+Lo cual guardará la `fig` creada usando Pandas / matplotlib como un archivo png con nombre `my_plot_name`
 
 > ~~~
->     Matplotlib recognizes the extension used in the filename and
->     supports (on most computers) png, pdf, ps, eps and svg formats.
+>     Matplotlib reconoce la extensión usada en el nombre del archivo y soporta (en la mayoría de computadoras) los formatos png, pdf, ps, eps y svg.
 > ~~~
 {: .callout}
 
-> ## Challenge - Saving figure to file
-> Check the documentation of the `savefig` method and check how
-> you can comply to journals requiring figures as `pdf` file with
-> dpi >= 300.
+> ## Reto - Guardar figuras a un archivo
+> Repasa la documentación del método `savefig` y comprueba cómo cumplir con los requerimientos de las revistas que aceptan archivos en `pdf` con dpi >= 300.
 >
-> > ## Answers
+> > ## Respuestas
 > >
 > > ~~~
 > > fig.savefig("my_plot_name.pdf", dpi=300)
@@ -340,20 +287,14 @@ Which will save the `fig` created using Pandas/matplotlib as a png file with the
 > {: .solution}
 {: .challenge}
 
-## Make other types of plots:
+## Crea otros tipos de gráficos:
 
-Matplotlib can make many other types of plots in much the same way that it makes two-dimensional line plots. Look through the examples in
-<http://matplotlib.org/users/screenshots.html> and try a few of them (click on the
-"Source code" link and copy and paste into a new cell in ipython notebook or
-save as a text file with a `.py` extension and run in the command line).
+Matplotlib permite crear muchos otros tipos de gráficos del mismo modo como hace gráficos de líneas bidimensionales. Mira los ejemplos en <http://matplotlib.org/users/screenshots.html> e intenta realizar alguno de ellos (Haz click en el enlace
+"Source code" y haz copy y paste en una nueva celda en ipython notebook o
+bien guárdalo como un archivo de texto con extensión `.py` y ejecútalo en la línea de comandos).
 
-> ## Challenge - Final Plot
-> Display your data using one or more plot types from the example gallery. Which
-> ones to choose will depend on the content of your own data file. If you are
-> using the streamgage file [`bouldercreek_09_2013.txt`]({{ page.root }}/data/bouldercreek_09_2013.txt), you could make a
-> histogram of the number of days with a given mean discharge, use bar plots
-> to display daily discharge statistics, or explore the different ways matplotlib
-> can handle dates and times for figures.
+> ## Reto - Gráfico final
+> Muestra tus datos usando uno o más gráficos de entre los mostrados en la galería de ejemplos. Las que elijas dependerán del contenido de tu propio archivo de datos. Si está usando el archivo [`bouldercreek_09_2013.txt`]({{ page.root }}/data/bouldercreek_09_2013.txt), podrías por ejemplo, hacer un histograma de la cantidad de días con un vertido medio determinado, usar gráficos de barras para mostrar estadísticas de vertido diarias o explorar las diferentes formas en que matplotlib puede manejar fechas y horas.
 {: .challenge}
 
 {% include links.md %}
