@@ -402,7 +402,7 @@ surveys_df[(surveys_df.year >= 1980) & (surveys_df.year <= 1985)]
 ### Hoja de referencia para sintaxis de Python
 
 Podemos utilizar la sintaxis incluida a continuación, cuando queramos hace consultas de datos por criterios en un `DataFrame`.
-Experimenta seleccionando varios subconjuntos de los datos contenidos en `surveys_df`R.
+Experimenta seleccionando varios subconjuntos de los datos contenidos en `surveys_df`.
 
 * Igual a: `==`
 * No igual o diferente de: `!=`
