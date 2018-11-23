@@ -402,7 +402,7 @@ surveys_df[(surveys_df.year >= 1980) & (surveys_df.year <= 1985)]
 ### Hoja de referencia para sintaxis de Python
 
 Podemos utilizar la sintaxis incluida a continuación, cuando queramos hace consultas de datos por criterios en un `DataFrame`.
-Experimenta seleccionando varios subconjuntos de los datos contenidos en "surveys".
+Experimenta seleccionando varios subconjuntos de los datos contenidos en `surveys_df`R.
 
 * Igual a: `==`
 * No igual o diferente de: `!=`
@@ -417,7 +417,7 @@ Experimenta seleccionando varios subconjuntos de los datos contenidos en "survey
 >   el año 1999 y que contenga valores en `weight` menores o iguales a 8. ¿Cuántas
 >   filas obtuviste como resultado? ¿Cuántas filas obtuvo tu compañera?
 >
-> 2. Puedes usar la función `isin` de Python para hacer una consulta, a un `DataFrame`, basada en
+> 2. Puedes usar la función `isin` de Python para hacer una consulta a un `DataFrame`, basada en
 >   una lista de valores según se muestra a continuación:
 >
 >    ~~~
@@ -426,15 +426,15 @@ Experimenta seleccionando varios subconjuntos de los datos contenidos en "survey
 >    {: .language-python }
 >
 >   Usa la función `isin` para encontrar todos los `plots` que contienen una especie en particular
->   en el `DtataFrame` "surveys". ¿Cuántos registros contienen esos valores?
+>   en el `DataFrame` `surveys_df`. ¿Cuántos registros contienen esos valores?
 >
 > 3. Experimenta con otras consultas. Crea una consulta que encuentre todas las filas con el
->   valor de `weight` `>=` mayor o igual a 0.
+>   valor de `weight` mayor o igual a 0.
 >
-> 4. El símbolo `~` en Python puede ser usado para obtener lo **opuesto** a los
->   datos seleccionados que hayas especificado en Python. Es equivalente a **no esta en**.
+> 4. El símbolo `~` puede ser usado en Python para obtener lo **opuesto** a los
+>   datos seleccionados que hayas especificado. Es equivalente a **no esta en**.
 >   Escribe una consulta que seleccione todas las filas con `sex` diferente de 'M' o 'F' en
->   los datos de "surveys".
+>   los datos de `surveys_df`.
 {: .challenge}
 
 
@@ -526,7 +526,7 @@ pidiendo a Python que seleccione aquellas filas que tienen un valor de `NaN` en 
 >   **no** sean `female` o `male`. Asigna cada valor de `sex` en el nuevo `DataFrame` a
 >   un nuevo valor de 'x'. Determina el número total de valores `null` en el subconjunto.
 >
-> 2. Crea un nuevo objeto `DataFrame` que contenga solo observaciones cuyos valores en la columna`sex` sean `male`
+> 2. Crea un nuevo objeto `DataFrame` que contenga solo observaciones cuyos valores en la columna `sex` sean `male`
 >   o `female` y en los cuales el valor de `weight` sea mayor que 0. Luego, crea un gráfico de barra apiladas
 >   del promedio de `weight`,  por parcela, con valores `male` versus `female` apilados por cada parcela.
 >   
