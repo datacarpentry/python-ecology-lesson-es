@@ -1,17 +1,18 @@
 ---
-title: Data Ingest and Visualization - Matplotlib and Pandas
+title: Entrada de datos y visualizacón - Matplotlib y Pandas
 teaching: 40
 exercises: 65
 questions:
-    - "What other tools can I use to create plots apart from ggplot?"
-    - "Why should I use Python to create plots?"
+     - "¿Qué otras herramientas aparte de ggplot puedo usar para crear gráficos?"
+     - "¿Por qué usar Python para crear gráficos?"
 objectives:
-    - "Import the pyplot toolbox to create figures in Python."
-    - "Use matplotlib to make adjustments to Pandas or plotnine objects."
+     - "Importar herramientas de pyplot para crear figuras en Python."
+     - "Usar matplotlib para ajustar objetos de Pandas o plotnine."
 keypoints:
-    - "Matplotlib is the engine behind plotnine and Pandas plots."
-    - "Object-based nature of matplotlib plots enables their detailed customization after they have been created."
-    - "Export plots to a file using the `savefig` method."
+     - "Matplotlib es el motor detrás de los gráficos creados con plotnine y Pandas."
+     - "La filosofía de los gráficos de matplotlib, basada en objetos, permite la personalización detallada de los gráficos una vez creados."
+     - "Exportar gráficos a un archivo usando el método `savefig` ".
+     
 ---
 
 
