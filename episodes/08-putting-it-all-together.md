@@ -1,5 +1,5 @@
 ---
-title: Entrada de datos y visualizacón - Matplotlib y Pandas
+title: Entrada de datos y visualización - Matplotlib y Pandas
 teaching: 40
 exercises: 65
 questions:
