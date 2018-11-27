@@ -16,7 +16,7 @@ Data Ingest and Visualization - Matplotlib and Pandas | _episodes/08-putting-it-
 Accessing SQLite Databases Using Python and Pandas | _episodes/09-working-with-sql.md | @orchid00 | nov 9 | nov10| @rzayas, @nohemihuanca | nov 13, nov 20 | nov 22 , nov 21
 Glossary | _extras/reference.md | @chekos | nov 12 | nov 13 | @arredondo23 | nov 13 | nov 15 
 Index | _extras/index.md | @agbeltran | nov 9 | nov 11 | @orchid00 | nov 12 | nov 12
-Instructor guide | _extras/guide.md | @NPalopoli | nov 12  | | @Helysalgado |||
+Instructor guide | _extras/guide.md | @NPalopoli | nov 12  | nov 23 | @Helysalgado, @orchid00 | nov 24, nov 27 | , nov 27|
 Contributors | _extras/CONTRIBUTORS.md | @orchid00 @rzayas | nov 21 | nov 22 | @orchid00 | nov 21 | nov 22
 Overview of Jupyter Notebooks | _extras/jupyter_notebooks.md | @chekos | nov 12 | nov 15 | @miguelgondu @orchid00 | nov 19, nov 21  | nov , nov 22
 Setup | setup.md | @raynamharris | nov 12 | nov 12 | @orchid00 | nov 13 | nov 17
