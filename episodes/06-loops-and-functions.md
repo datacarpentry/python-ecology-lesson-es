@@ -1,5 +1,5 @@
 ---
-title: Data Workflows and Automation
+title: Flujos de trabajo y automatización
 teaching: 40
 exercises: 50
 questions:
