@@ -266,7 +266,7 @@ Si las estudiantes tienen problemas para generar el output, u ocurre algo con é
 
 ## 05-merging-data
 
-* En la carpeta de datos, hay dos archivos de datos de encuestas: `survey2001.csv` y `survey2002.csv`. Lee los datos en Python y combina los archivos para hacer un DataFrame nuevo. Crea una gráfica del peso promedio de la parcela, plot_id, por año agrupada por sexo. Exporta tus resultados como CSV y asegúrate de que se lean correctamente en Python..
+* En la carpeta de datos, hay dos archivos de datos de encuestas: `survey2001.csv` y `survey2002.csv`. Lee los datos en Python y combina los archivos para hacer un DataFrame nuevo. Crea una gráfica del peso promedio de la parcela, `plot_id`, por año agrupada por `sex`. Exporta tus resultados como CSV y asegúrate de que se lean correctamente en Python..
 
 ~~~
 # lee los archivos:
