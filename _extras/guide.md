@@ -15,7 +15,7 @@ Por favor utiliza las instrucciones en el documento [Setup](https://datacarpentr
 En el directorio `_includes/scripts` encontrarás un **script** llamado `check_env.py`. Éste revisa la funcionalidad de la versión instalada de Anaconda.
 
 Por defecto, Data Carpentry no requiere que la gente descargue el repositorio completo con todos los scripts y apéndices. Por lo tanto y como instructor, tú debes decidir cómo proveer este script a las estudiantes, si decides hacerlo.
-Para usarlo, las estudiantes pueden navegar en su terminal hasta `includes/scripts` y ejecutar lo siguiente:
+Para usarlo, las estudiantes pueden navegar en su terminal hasta `_includes/scripts` y ejecutar lo siguiente:
 
 ~~~
 python check_env.py
