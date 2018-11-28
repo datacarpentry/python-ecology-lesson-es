@@ -145,7 +145,7 @@ surveys_df.groupby('sex').count()["record_id"].plot(kind='bar')
 
 ## 03-index-slice-subset
 
-Sugerencia: usa el método `.head()` a lo largo de esta lección con el fin de mantener tu pantalla limpia para los estudiantes. Anima a los estudiantes a probar comandos con y sin `.head()` para reforzar la utilidad de esta herramienta y luego emplearla, o no, según su preferencia. Por ejemplo, si un estudiante muestra preocupación por mantener el ritmo de tipeo, infórmale que puede evitar `.head()`, pero que tú lo usarás para mantener visibles más líneas anteriores de código.
+Sugerencia: usa el método `.head()` a lo largo de esta lección con el fin de mantener tu pantalla limpia. Anima a las estudiantes a probar comandos con y sin `.head()` para reforzar la utilidad de esta herramienta y luego emplearla, o no, según su preferencia. Por ejemplo, si una estudiante muestra preocupación por mantener el ritmo de tipeo, infórmale que puede evitar `.head()`, pero que tú lo usarás para mantener visibles más líneas anteriores de código.
 
 ### Desafíos sobre indexación
 
