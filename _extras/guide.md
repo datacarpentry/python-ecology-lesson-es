@@ -120,7 +120,7 @@ surveys_df.groupby(['plot_id'])['weight'].describe()
 ~~~
 {: .language-python}
 
-* ¿Qué otra manera hay de crear una lista de especies y asociarle `count` de las muestras  de los datos?
+* ¿Qué otra manera hay de crear una lista de especies y asociarle el número `count` de las muestras de los datos?
 
 	En vez de recuperar y luego contar las columnas resultantes de `groupby`, también puedes hacer el recuento junto con `groupby` (en todas las columnas) y construir una selección del `DataFrame` resultante: `surveys_df.groupby('species_id').count()["record_id"]`
 
