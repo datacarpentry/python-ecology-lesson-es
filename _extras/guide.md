@@ -243,7 +243,7 @@ stack_selection.columns = stack_selection.columns.droplevel()
 ~~~
 {: .language-python}
 
-![promedio de weight para cada plot por sex](../fig/02_chall_stack_level.png)
+![promedio de `weight` para cada `plot_id` por `sex`](../fig/02_chall_stack_level.png)
 
 ## 04-data-types-and-format
 
