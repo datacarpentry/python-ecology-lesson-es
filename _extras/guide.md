@@ -22,7 +22,7 @@ python check_env.py
 ~~~
 {: .language-bash}
 
-Si las estudiantes reciben un `AssertionError`, éste te informará cómo ayudarlos a corregir su instalación. De lo contrario, ¡te dirá que el sistema está listo para Data Carpentry!
+Si las estudiantes reciben un `AssertionError`, éste te informará cómo ayudar a corregir la instalación. De lo contrario, ¡te dirá que el sistema está listo para Data Carpentry!
 
 ## 01-short-introduction-to-Python
 
