@@ -113,7 +113,7 @@ surveys_df.groupby(['plot_id','sex']).agg({"year": 'min',
 ~~~
 {: .language-python}
 
-*  Calcula las estadísticas descriptivas del peso para cada `plot`.
+*  Calcula las estadísticas descriptivas del peso `weight` para cada `plot_id`.
 
 ~~~
 surveys_df.groupby(['plot_id'])['weight'].describe()
