@@ -41,7 +41,7 @@ Si las estudiantes reciben un `AssertionError`, éste te informará cómo ayudar
 
 * Cambiando diccionarios: 2. Reasigna el segundo valor.
 
-Asegúrate también de aclarar que acceder al "segundo valor" se trata del nombre de la llave. Agrega por ejemplo `rev[10] = "ten"` para aclarar que no se trata de la posición.
+Asegúrate también de aclarar que acceder al "segundo valor" se trata del nombre de la clave. Agrega por ejemplo `rev[10] = "ten"` para aclarar que no se trata de la posición.
 
 ~~~
 rev
