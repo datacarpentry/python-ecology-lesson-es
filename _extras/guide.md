@@ -98,7 +98,7 @@ Ambos resultan en el mismo output, sirviendo como formas alternativas de obtener
 
 ### Desafíos sobre agrupamientos
 
-* ¿Cuántas observaciones son de sexo femenino `F` y cuántos son masculino `M`?
+* ¿Cuántas observaciones son de sexo femenino `F` y cuántas de sexo masculino `M`?
 
 	`grouped_data.count()`
 
