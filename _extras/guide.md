@@ -68,7 +68,7 @@ rev[2] = "apple-sauce"
 
 Pandas < .18.1 tiene un error **bug** por el cual surveys_df['weight'].describe() puede devolver un error en tiempo de ejecución.
 
-### Desafíos sobre dataframes
+### Desafíos sobre DataFrames
 
 * `surveys_df.columns`
 
