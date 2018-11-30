@@ -88,7 +88,7 @@ Pandas < .18.1 tiene un error **bug** por el cual surveys_df['weight'].describe(
 
 ### Desafíos sobre calcular estadísticas de los datos
 
-* Crear una lista de los IDs de los sitios ("plot_id") que están en los datos del censo. Llamamemos a esta lista `site_names`. ¿Cuántos sitios hay en los datos?, ¿cuántas especies hay en los datos?
+* Crear una lista de los IDs de los sitios `plot_id` que están en los datos de la encuesta `surveys_df`. Llamemos a esta lista `site_names`. ¿Cuántos sitios hay en los datos?, ¿cuántas especies hay en los datos?
 
 	`plot_names = pd.unique(surveys_df["plot_id"])`. Número de IDs de los sitios: `plot_names.size` o `len(plot_names)`. Número de especies en los datos: `len(pd.unique(surveys_df["species"]))`
 
