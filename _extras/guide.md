@@ -82,7 +82,7 @@ Pandas < .18.1 tiene un error **bug** por el cual surveys_df['weight'].describe(
 
 	Muestra las últimas 15 líneas.
 
-* `surveys_df.shape`. Toma nota de la salida de`shape` - ¿Qué formato tiene la salida del atributo que regresa la forma de un DataFrame?
+* `surveys_df.shape`. Toma nota de la salida de `shape` - ¿Qué formato tiene la salida del atributo que regresa la forma de un DataFrame?
 
 	`type(surveys_df.shape)` -> `Tuple`
 
