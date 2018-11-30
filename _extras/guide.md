@@ -72,7 +72,7 @@ Pandas < .18.1 tiene un error **bug** por el cual surveys_df['weight'].describe(
 
 * `surveys_df.columns`
 
-	Nombres de columnas. (Opcional: muestra `surveys_df.columns[4] = "plotid"`. El índice no es mutable; recapitula de la lección previa. La adaptación del nombre es realizada por la función `rename`: `surveys_df.rename(columns={"plot_id": "plotid"})`)
+	Nombres de columnas. (Opcional: muestra `surveys_df.columns[4] = "plotid"`. El índice no es mutable; recapitula del episodio anterios. La adaptación del nombre es realizada por la función `rename`: `surveys_df.rename(columns={"plot_id": "plotid"})`)
 
 * `surveys_df.head()`. Además, qué realiza `surveys_df.head(15)`?
 
