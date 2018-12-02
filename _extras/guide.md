@@ -8,7 +8,7 @@ permalink: /guide/
 
 ## Instalar los paquetes requeridos para el taller
 
-Por favor sigue las instrucciones del documento [Setup](setup.html) para instalar los programas necesarios para esta lección. Si encuentras problemas, por favor crea un **issue** con la etiqueta **High-priority**.
+Por favor sigue las instrucciones del documento [Setup](../setup.html) para instalar los programas necesarios para esta lección. Si encuentras problemas, por favor crea un **issue** con la etiqueta **High-priority**.
 
 ## Revisando instalaciones
 
