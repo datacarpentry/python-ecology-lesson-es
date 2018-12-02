@@ -8,13 +8,13 @@ permalink: /guide/
 
 ## Instalar los paquetes requeridos para el taller
 
-Por favor utiliza las instrucciones en el documento [Setup](https://datacarpentry.org/python-ecology-lesson/setup.html) para completar instalaciones. Si encuentras problemas, por favor crea un **issue** con la etiqueta **'High-priority**.
+Por favor sigue las instrucciones del documento [Setup](setup.html) para instalar los programas necesarios para esta lección. Si encuentras problemas, por favor crea un **issue** con la etiqueta **High-priority**.
 
 ## Revisando instalaciones
 
 En el directorio `_includes/scripts` encontrarás un **script** llamado `check_env.py`. Éste revisa la funcionalidad de la versión instalada de Anaconda.
 
-Por defecto, Data Carpentry no requiere que la gente descargue el repositorio completo con todos los scripts y apéndices. Por lo tanto y como instructor, tú debes decidir cómo proveer este script a las estudiantes, si decides hacerlo.
+Por defecto, Data Carpentry no requiere que la gente descargue el repositorio completo con todos los scripts y apéndices. Por lo tanto, como instructor, debes decidir cómo te gustaría proveer este script a las estudiantes, si es que decides hacerlo.
 Para usarlo, las estudiantes pueden navegar en su terminal hasta `_includes/scripts` y ejecutar lo siguiente:
 
 ~~~
@@ -66,7 +66,7 @@ rev[2] = "apple-sauce"
 
 ### Nota sobre bugs
 
-Pandas < .18.1 tiene un error **bug** por el cual surveys_df['weight'].describe() puede devolver un error en tiempo de ejecución.
+Pandas < .18.1 tiene un error **bug** por el cual `surveys_df['weight'].describe()` puede devolver un error en tiempo de ejecución.
 
 ### Desafíos sobre DataFrames
 
@@ -74,7 +74,7 @@ Pandas < .18.1 tiene un error **bug** por el cual surveys_df['weight'].describe(
 
 	Nombres de columnas. (Opcional: muestra `surveys_df.columns[4] = "plotid"`. El índice no es mutable; recapitula del episodio anterior. La adaptación del nombre es realizada por la función `rename`: `surveys_df.rename(columns={"plot_id": "plotid"})`)
 
-* `surveys_df.head()`. Además, qué realiza `surveys_df.head(15)`?
+* `surveys_df.head()`. Además, ¿qué realiza `surveys_df.head(15)`?
 
 	Muestra las primeras 5 líneas. Muestra las primeras 15 líneas.
 
@@ -616,7 +616,7 @@ plt.plot(t, (t - 5)**2 + 5 * t - 0.5, 'g^:', label='$y=(x - 5)^2 + 5  x - \\frac
 
 plt.legend(loc='upper left', shadow=True, fontsize='x-large')
 
-# Nota las barras invertidas dobles en la línea de abajo
+# Nota las dobles barras invertidas en la línea de abajo
 plt.xlabel('Éste es el eje x. También puede contener matemática, como $\\bar{x}=\\frac{\\sum_{i=1}^{n} {x}} {N}$')
 plt.ylabel('Éste es el eje y')
 plt.title('Éste es el título de la figura')
