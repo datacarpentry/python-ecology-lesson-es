@@ -3,9 +3,7 @@ layout: lesson
 root: .
 
 maintainers:
-  - Necesitamos maintainers de esta versión
-  - 
-  - 
+  - Estamos buscando personas interesadas en ser **maintainers** de esta versión.
 ---
 
 **Lesson Maintainers:** {{ page.maintainers | join: ', ' }}
