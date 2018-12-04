@@ -6,6 +6,8 @@
 ## Lección de Data Carpentry - Python usando datos de ecología
 
 Éste repositorio contiene material para enseñar la lección de Data Carpentry con Python usando datos de ecología.
+Hemos terminado con la traducción de esta lección en Diciembre 4, 2018. Luego la lección traducida ha sido movida a el repositorio oficial de Data Carpentry. Este repositorio (https://github.com/datacarpentry/python-ecology-lesson-es) esta ahora archivado y cualquier colaboracion es bienvenida en el nuevo repositorio: 
+[**https://datacarpentry.org/python-ecology-lesson-es/**](https://datacarpentry.org/python-ecology-lesson-es/)
 
 
 ## Contribuyendo
