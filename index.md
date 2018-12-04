@@ -3,6 +3,9 @@ layout: lesson
 root: .
 
 maintainers:
+  - Paula Andrea Martinez
+  - Heladia Salgado
+  - Rayna Harris
   - Estamos buscando personas interesadas en ser **maintainers** de esta versión.
 ---
 
