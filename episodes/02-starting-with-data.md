@@ -597,13 +597,13 @@ total_count.plot(kind='bar');
 > ## Reto de graficación final
 >
 > Crea una gráfica de barras apiladas con el peso en el eje Y, y la variable de 
-> apilamiento que sea el sexo. La gráfica debe mostrar el el peso total por sexo
+> apilamiento que sea el sexo. La gráfica debe mostrar el peso total por sexo
 > para cada sitio. Algúnos tips que te pueden ayudar a resolver el reto son los
 > siguientes:
 >
 > * [Para mayor información en gráfica con Pandas, visita la siguiente liga.](http://pandas.pydata.org/pandas-docs/stable/visualization.html#basic-plotting-plot)
 > * Puedes usar el siguiente código para crear una gráficad de barras apiladas pero 
->    pero los datos para apilar deben de estar en distintas columnas. Aquí hay un pequeño
+>    los datos para apilar deben de estar en distintas columnas. Aquí hay un pequeño
 >    ejemplo con algunos datos donde 'a', 'b' y 'c' son los grupos, y 'one' y 'two' son los 
 >    subgrupos.
 >
