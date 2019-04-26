@@ -351,7 +351,7 @@ Echemos un ojo a los datos usando este.
 > 2. `surveys_df.shape` Toma nota de la salida de`shape` - ¿Qué formato tiene la salida
 >    del atributo que regresa la forma de un DataFrame?
 >
->    Sugerencia: [Más acercad e tuplas, aquí](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences).
+>    Sugerencia: [Más acerca de tuplas, aquí](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences).
 > 3. `surveys_df.head()` También ejecuta `surveys_df.head(15)` ¿qué hace esto?
 > 4. `surveys_df.tail()`
 {: .challenge}
