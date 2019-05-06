@@ -34,5 +34,5 @@ Nota: los datos no han sido traducidos de la versión original en inglés, por l
 
 > ## Para instructores
 > Si enseñas esta lección en un taller, por favor lee las 
-> [Notas de instructor](https://carpentries-es.github.io/python-ecology-lesson-es/guide).
+> [Notas de instructor](https://carpentries-es.github.io/python-ecology-lesson-es/guide/).
 {: .prereq}
