@@ -3,15 +3,24 @@ title: Combinando DataFrames con Pandas
 teaching: 20
 exercises: 25
 questions:
-  - ¿Puedo trabajar con datos de diferentes fuentes?
-  - ¿Cómo puedo combinar datos de diferentes __datasets__?
+  - "¿Puedo trabajar con datos de diferentes fuentes?"
+  - "¿Cómo puedo combinar datos de diferentes datasets?"
 objectives:
-  - Combinar datos de varios diferentes archivos en un unico __DataFrame__ usando merge y concat.
-  - Combinar dos __DataFrames__ usando un ID único encontrado en los do __DataFrames__.
-  - Usar `to_csv` para exportar el __DataFrame__ en formato CSV.
-  - Unir __DataFrames__ usando claves de unión (o __join keys__).
+  - "Combinar datos de varios diferentes archivos en un único DataFrame usando `merge` y `concat`."
+  - "Combinar dos DataFrames usando un ID único encontrado en ambos DataFrames."
+  - "Unir DataFrames usando campos comunes (unión por claves)."
 keypoints:
-    - "FIXME"
+    - "Podemos usar la función `concat` en pandas para agregar columnas o filas de un 
+    DataFrame a otro."
+    - "Se pueden combinar DataFrames en base a columnas en cada dataset que contienen
+    valores comunes (un ID única común), esta combinación utilizando un campo
+    común se llama “joining” (unión)."
+    - "Es posible realizar distintos tipos de uniones: interna cuyo resultado
+    solamente tiene las filas donde coinciden las columnas clave en ambos
+    DataFrame, externa hacia la izquierda o la derecha, si queremos conservar
+    las filas del DataFrame de origen o destino respectivamente, o una unión
+    externa completa, con filas para todas las combinaciones de las columnas
+    clave."
 ---
 
 En muchas situations del “mundo real”, los datos que queremos usar proceden de múltiples archivos. Frecuentemente necesitamos combinar estos archivos en un uniquo __DataFrame__ para analizar los datos. El paquete __pandas__ proporciona [varios métodos de combinar __DataFrames__](http://pandas.pydata.org/pandas-docs/stable/merging.html) incluyendo `merge` y `concat`.

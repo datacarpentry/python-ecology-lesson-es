@@ -14,7 +14,12 @@ objectives:
     - "Analizar datasets que tienen valores faltantes/nulos (valores NaN)."
     - "Escribir datos manipulados a un archivo."
 keypoints:
-    - "FIXME"
+    - "Pandas usa otros nombres para tipos de datos que Python, por ejemplo: `object`
+    para datos textuales."
+    - "Una columna en un DataFrame sólo puede tener un tipo de datos."
+    - "El tipo de datos de la columna de un DataFrame puede ser comprobado usando            `dtype`."
+    - "Es necesario tomar decisiones conscientes sobre cómo manejar los datos faltantes".
+    - "Un DataFrame puede ser guardado en un archivo CSV usando la función `to_csv`".
 ---
 
 El formato de columnas y filas individuales afectará el análisis realizado en

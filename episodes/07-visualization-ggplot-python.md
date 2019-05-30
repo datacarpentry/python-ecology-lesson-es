@@ -16,8 +16,8 @@ objectives:
     - "Usar los comandos `facet_wrap` y `facet_grid` para crear una colección de gráficos que dividen los datos por una variable categórica."
     - "Crear estilos personalizados para tus gráficos."
 keypoints:
-    - "Las variables `data`, `aes` y` geometry` son los elementos principales de un gráfico de `plotnine`."
-    - "Con el operador `+ `, se agregan elementos adicionales al gráfico, por ejemplo `scale_*`, `theme_*`, `xlab`, `ylab` y `facet_*`."
+    - "Las variables `data`, `aes` y `geometry` son los elementos principales de un gráfico de `plotnine`."
+    - "Con el operador `+`, se agregan elementos adicionales al gráfico, por ejemplo `scale_*`, `theme_*`, `xlab`, `ylab` y `facet_*`."
 ---
 
 ## Nota

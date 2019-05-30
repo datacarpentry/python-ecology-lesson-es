@@ -16,9 +16,9 @@ objectives:
     - "Localizar subconjuntos de datos utilizando máscaras."
     - "Describir objetos tipo 'boolean' en Python y manipular datos usando 'booleans'."
 keypoints:
-    - "En Python, fragmentos de datos pueden ser accedidos usando índices, 'slices', encabezados de columnas, y subconjuntos basados en condiciones."
-    - "Python usa indexación base-0, en la cual el primer elemento de una lista, tupla o cualquier otra structura de datos tiene un indice de 0."
-    - "'Pandas' permite usar procedimientos comunes de exploración de datos como indexación de datos, 'slicing' y creación de subconjuntos basados en condiciones."
+    - "En Python, fragmentos de datos pueden ser accedidos usando índices, cortes, encabezados de columnas, y subconjuntos basados en condiciones."
+    - "Python usa indexación base-0, en la cual el primer elemento de una lista, tupla o cualquier otra estructura de datos tiene un índice de 0."
+    - "'Pandas' permite usar procedimientos comunes de exploración de datos como indexación de datos, cortes y creación de subconjuntos basados en condiciones."
     
 ---
 
