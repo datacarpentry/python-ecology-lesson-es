@@ -46,7 +46,7 @@ disponible en **FigShare**](https://figshare.com/articles/Portal_Project_Teachin
 ## Instalación de software
 
 Usaremos **Anaconda** o **Miniconda** para instalar **Python** y los paquetes necesarios.
-Ambos usan [Conda](http://conda.pydata.org/docs/), pero
+Ambos usan [Conda](https://conda.io/en/latest/), pero
 Anaconda viene con **Pandas**, **Jupyter Notebook**, **Numpy** y **Matplotlib** preinstaladas,
 mientras que Miniconda no lo hace.
 
