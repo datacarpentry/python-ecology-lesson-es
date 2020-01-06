@@ -12,10 +12,11 @@ objectives:
     - "Describe las diferencias de interactuar con datos almacenados en un archivo CSV y datos almacenados en SQLite."
     - "Describe los beneficios de acceso a datos usando una base de datos en comparación con un archivo CSV."
 keypoints:
-    - "Crea una conexión con `sqlite3.connect()`, luego un cursor para consultas con `.cursor()`."
-    - "Ejecuta consultas usando `.execute()`."
-    - "Usa Pandas `.read_sql_query()` para extraer datos directamente a un DataFrame."
-    - "Escribe los datos de un nuevo DataFrame en una nueva tabla en SQLite usando `.to_sql()`."
+    - "Se puede crear una conexión con `sqlite3.connect()`, y luego establecer un cursor para consultas con `.cursor()`."
+    - "Es posible ejecutar consultas usando `.execute()`."
+    - "Puedes usar la función `.read_sql_query()` de Pandas para extraer datos 
+    directamente de un DataFrame."
+    - "Se pueden escribir los datos de un DataFrame a una nueva tabla en SQLite usando `.to_sql()`."
     - "Al final, no olvides cerrar la puerta de la conexión usando el comando `.close()`."
 ---
 
