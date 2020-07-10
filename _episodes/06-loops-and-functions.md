@@ -12,19 +12,18 @@ objectives:
     - "Construir código reusable en Python."
     - "Escribir funciones usando condicionales (if, then, else)."
 keypoints:
-    - "Los bucles nos permiten repetir una serie de acciones un número dado de veces
+   - "Los bucles nos permiten repetir una serie de acciones un número dado de veces
     o mientras una condición es cierta."
-    - "Podemos automatizar tareas que se deben repetir un número predefinido de veces
+   - "Podemos automatizar tareas que se deben repetir un número predefinido de veces
     utilizando bucles `for`"
-    - "Una tarea de automatización típica en programación es generar secuencias de
+   - "Una tarea de automatización típica en programación es generar secuencias de
     archivos con nombres distinos que siguen un patrón, esto se puede realizar
     fácilmente manipulando cadenas de caracteres con el nombre de los archivos
     dentro de bucles de repetición a medida que se van creando."
-    - "Es conveniente definir funciones para establecer bloques de código reutilizables.
+   - "Es conveniente definir funciones para establecer bloques de código reutilizables.
     Las funciones se pueden diseñar para que acepten argumentos de entradas para
     generalizar su funcionalidad y devolver distintos tipos de resultados." 
-    - "Las sentencias `if` permiten elegir cuales bloques de código ejecutar según
-    según se cumplan o no distintas condiciones".
+   - "Las sentencias `if` permiten elegir cuales bloques de código ejecutar según según se cumplan o no distintas condiciones".
 ---
 
 Hasta este momento, hemos usado Python y la librería Pandas para explorar y
