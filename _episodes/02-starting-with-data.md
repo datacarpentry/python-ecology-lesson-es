@@ -18,20 +18,11 @@ objectives:
     - "Ejecutar operaciones matemáticas básicas y calcular estadísticas descriptivas sobre datos dentro de un Pandas **Dataframe**."
     - "Crear gráficos simples."
 keypoints:
-    - "Las bibliotecas en Python son conjuntos de herramientas, funciones y
-    estructuras de datos, agrupadas de forma conveniente para facilitar  nuestro trabajo".
-    - "Pandas es una librería que ofrece funcionalidades avanzadas para manejar
-    datos tabulares, procesarlos y obtener resultados similares a los que ofrecen
-    las hojas de cálculo."
-    - "El DataFrame es la estructura de datos fundamental de Pandas, representa una
-    tabla de datos panel con indexación integrada. Cada columna contiene los valores
-    de una variable y cada fila un conjunto de valores de cada columna."
-    - "Un índice es un vector inmutable, ordenado y divisible, que almacena las
-    etiquetas de los ejes de todas las estructuras de Pandas. Se utiliza para
-    agrupar y seleccionar de distintas maneras el contenido de un DataFrame."
-    - "Pandas ofrece funcionalidades que permiten realizar operaciones matemáticas, 
-    calcular estadísticas y generar gráficos a partir del contenido de una Serie o
-    DataFrame."
+  - "Las bibliotecas en Python son conjuntos de herramientas, funciones y estructuras de datos, agrupadas de forma conveniente para facilitar  nuestro trabajo".
+  - "Pandas es una librería que ofrece funcionalidades avanzadas para manejar datos tabulares, procesarlos y obtener resultados similares a los que ofrecen las hojas de cálculo."
+  - "El DataFrame es la estructura de datos fundamental de Pandas, representa una tabla de datos panel con indexación integrada. Cada columna contiene los valores de una variable y cada fila un conjunto de valores de cada columna."
+  - "Un índice es un vector inmutable, ordenado y divisible, que almacena las etiquetas de los ejes de todas las estructuras de Pandas. Se utiliza para agrupar y seleccionar de distintas maneras el contenido de un DataFrame."
+  - "Pandas ofrece funcionalidades que permiten realizar operaciones matemáticas, calcular estadísticas y generar gráficos a partir del contenido de una Serie o DataFrame."
 ---
 
 # Trabajando con Pandas DataFrames en Python
