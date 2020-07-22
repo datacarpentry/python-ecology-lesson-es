@@ -3,18 +3,19 @@ title: Breve introducción a la Programación en Python
 teaching: 0
 exercises: 0
 questions:
-  - "¿Qué es Python?"
-  - "¿Porqué deberías aprender Python?"
+    - "¿Qué es Python?"
+    - "¿Porqué deberías aprender Python?"
 objectives:
-  - "Describir las ventajas de usar programación vs. completar tareas repetitivas a mano."
-  - "Definir los tipos de datos en Python: **cadenas**, **enteros**, y números de **punto flotante**."
-  - "Realizar operaciones matemáticas en Python utilizando operadores básicos."
-  - "Dentro del contexto de Python definir: **listas**, **tuplas**, y **diccionarios**."
+    - "Describir las ventajas de usar programación vs. completar tareas repetitivas a mano."
+    - "Definir los tipos de datos en Python: **cadenas**, **enteros**, y números de **punto flotante**."
+    - "Realizar operaciones matemáticas en Python utilizando operadores básicos."
+    - "Dentro del contexto de Python definir: **listas**, **tuplas**, y **diccionarios**."
 keypoints:
-  - "Python es un lenguaje interpretado que puede ser usado interactivamente (ejecutando un comando a la vez) o en modo scripting (ejecutando una serie de comandos guardados en un archivo)".
-  - "Se puede asignar un valor a una variable en Python. Esas variables pueden ser de varios tipos, tales como cadenas, y números: enteros, de punto flotante y complejos".
-  - "Las listas y las tuplas son similares en el sentido de que son listas ordenadas de elementos; difieren en que una tupla es inmutable (sus elementos no pueden ser modificados)".
-  - "Los diccionarios son estructuras de datos desordenadas que proporcionan mapeos entre claves y valores."
+    - "Python es un lenguaje interpretado que puede ser usado interactivamente (ejecutando un comando a la vez) o en modo scripting (ejecutando una serie de comandos guardados en un archivo)".
+    - "Se puede asignar un valor a una variable en Python. Esas variables pueden ser de varios tipos, tales como cadenas, y números: enteros, de punto flotante y complejos".
+    - "Las listas y las tuplas son similares en el sentido de que son listas ordenadas de elementos; difieren en que una tupla es inmutable (sus elementos no pueden ser modificados)".
+    - "Los diccionarios son estructuras de datos desordenadas que proporcionan mapeos entre claves y valores."
+  
 ---
 
 ## Intérprete
