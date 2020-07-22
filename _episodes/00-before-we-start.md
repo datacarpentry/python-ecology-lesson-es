@@ -15,7 +15,7 @@ keypoints:
   - "Jupyter Notebook y la Spyder IDE son excelentes herramientas para escribir código e interactuar con Python. Con su gran comunidad es fácil encontrar ayuda en internet"
 ---
 
-<br />
+
 ## ¿Qué es Python?
 
 Python es un lenguaje de programación de tipo general que soporta un desarrollo rápido de aplicaciones de análisis de datos. La palabra "Python" es usada para referirse tanto al lenguaje de programación, como a la herramienta que ejecuta los **scripts** escritos en el lenguaje "Python".
