@@ -19,10 +19,10 @@ keypoints:
     - "En Python, fragmentos de datos pueden ser accedidos usando índices, cortes, encabezados de columnas, y subconjuntos basados en condiciones."
     - "Python usa indexación base-0, en la cual el primer elemento de una lista, tupla o cualquier otra estructura de datos tiene un índice de 0."
     - "'Pandas' permite usar procedimientos comunes de exploración de datos como indexación de datos, cortes y creación de subconjuntos basados en condiciones."
-    
+
 ---
 
-En la lección 01, leímos un archivo CSV y cargamos los datos en un  pandas **DataFrame**. 
+En la lección 01, leímos un archivo CSV y cargamos los datos en un  pandas **DataFrame**.
 Aprendimos:
 
 - como guardar el **DataFrame** en un objeto,
@@ -53,14 +53,14 @@ surveys_df = pd.read_csv("data/surveys.csv")
 
 ## Indexando y Fragmentando en Python
 
-A menudo necesitamos trabajar con subconjuntos de un objeto **DataFrame**. Existen diferentes 
-maneras de lograr esto, incluyendo: usando etiquetas (encabezados de columnas), rangos numéricos, 
+A menudo necesitamos trabajar con subconjuntos de un objeto **DataFrame**. Existen diferentes
+maneras de lograr esto, incluyendo: usando etiquetas (encabezados de columnas), rangos numéricos,
 o índices de localizaciones específicas x,y.
 
 ## Seleccionando datos mediante el uso de Etiquetas (Encabezados de Columnas)
 
-Utilizamos corchetes `[]` para seleccionar un subconjunto de un objeto en Python. Por ejemplo, 
-podemos seleccionar todos los datos de una columna llamada `species_id`  del `surveys_df` **DataFrame** 
+Utilizamos corchetes `[]` para seleccionar un subconjunto de un objeto en Python. Por ejemplo,
+podemos seleccionar todos los datos de una columna llamada `species_id`  del `surveys_df` **DataFrame**
 usando el nombre de la columna. Existen dos maneras de hacer esto:
 
 ~~~
@@ -73,7 +73,7 @@ surveys_df.species_id
 ~~~
 {: .language-python}
 
-También podemos crear un nuevo objeto que contiene solamente los datos de la 
+También podemos crear un nuevo objeto que contiene solamente los datos de la
 columna `species_id` de la siguiente manera:
 
 ~~~
@@ -82,10 +82,10 @@ surveys_species = surveys_df['species_id']
 ~~~
 {: .language-python}
 
-También podemos pasar una lista de nombres de columnas, a manera de índice para seleccionar las columnas en ese orden. 
+También podemos pasar una lista de nombres de columnas, a manera de índice para seleccionar las columnas en ese orden.
 Esto es útil cuando necesitamos reorganizar nuestros datos.
 
-**NOTA:** Si el nombre de una columna no esta incluido en el `DataFrame`, 
+**NOTA:** Si el nombre de una columna no esta incluido en el `DataFrame`,
 se producirá una excepción (error).
 
 ~~~
@@ -100,7 +100,7 @@ surveys_df['speciess']
 ~~~
 {: .language-python}
 
-Python nos informa que tipo de error es en el rastreo, en la parte inferior dice `KeyError: 'speciess'` lo que significa 
+Python nos informa que tipo de error es en el rastreo, en la parte inferior dice `KeyError: 'speciess'` lo que significa
 que `speciess` no es un nombre de columna (o **Key** que está relacionado con el diccionario de tipo de datos de Python).
 
 ## Extrayendo subconjuntos basados en rangos: Segmentando
@@ -109,7 +109,7 @@ que `speciess` no es un nombre de columna (o **Key** que está relacionado con e
 
 Recordemos que Python usa indexación en base-0.
 Esto quiere decir que el primer elemento en un objeto esta localizado en la posición 0.
-Esto es diferente de otros lenguajes como R y Matlab que indexan elementos dentro 
+Esto es diferente de otros lenguajes como R y Matlab que indexan elementos dentro
 de objetos iniciando en 1.
 
 ~~~
@@ -151,10 +151,10 @@ a = [1, 2, 3, 4, 5]
 
 ## Segmentando Subconjuntos de Filas en Python
 
-La segmentación utilizando el operador `[]` selecciona un conjunto de filas y/o columnas de 
-un **DataFrame**. Para segmentar un conjunto de filas, usa la siguiente sintaxis: `data[start:stop]`. 
-Cuando se hace segmentación en pandas, el límite inicial (**start**) se incluye en los datos de salida. 
-El límite final (**stop**) es un paso MÁS ALLÁ de la fila que desea seleccionar. 
+La segmentación utilizando el operador `[]` selecciona un conjunto de filas y/o columnas de
+un **DataFrame**. Para segmentar un conjunto de filas, usa la siguiente sintaxis: `data[start:stop]`.
+Cuando se hace segmentación en pandas, el límite inicial (**start**) se incluye en los datos de salida.
+El límite final (**stop**) es un paso MÁS ALLÁ de la fila que desea seleccionar.
 Así que si deseas seleccionar las filas 0, 1 y 2, tu código se vería así:
 
 ~~~
@@ -163,7 +163,7 @@ surveys_df[0:3]
 ~~~
 {: .language-python}
 
-El límite final en Python es diferente del que puedes estar acostumbrado a usar 
+El límite final en Python es diferente del que puedes estar acostumbrado a usar
 en Lenguajes como Matlab y R.
 
 ~~~
@@ -178,7 +178,7 @@ surveys_df[-1:]
 
 También podemos reasignar valores dentro de subconjuntos de nuestro **DataFrame**.
 
-Pero antes de hacerlo, veamos la diferencia entre el concepto de copiar objetos y el 
+Pero antes de hacerlo, veamos la diferencia entre el concepto de copiar objetos y el
 concepto de referenciar objetos en Python.
 
 ## Copiar Objetos vs Referenciar Objetos en Python
@@ -194,11 +194,11 @@ ref_surveys_df = surveys_df
 ~~~
 {: .language-python}
 
-Puedes pensar que el código `ref_surveys_df = surveys_df` crea una copia nueva y 
-distinta de objeto **DataFrame** `surveys_df`. Sin embargo, usar el operador `=` en 
-una instrucción simple de la forma `y = x` **no** crea una copia de nuestro **DataFrame**. 
-En lugar de esto, `y = x` crea una variable nueva `y` que hace referencia al **mismo** 
-objeto al que `x` hace referencia. Para decirlo de otra manera, solamente hay **un** 
+Puedes pensar que el código `ref_surveys_df = surveys_df` crea una copia nueva y
+distinta de objeto **DataFrame** `surveys_df`. Sin embargo, usar el operador `=` en
+una instrucción simple de la forma `y = x` **no** crea una copia de nuestro **DataFrame**.
+En lugar de esto, `y = x` crea una variable nueva `y` que hace referencia al **mismo**
+objeto al que `x` hace referencia. Para decirlo de otra manera, solamente hay **un**
 objeto (el **DataFrame**), y ambos objetos `x` y `y` hacen referencia a él.
 
 En contraste, el método `copy()` de un **DataFrame** crea una copia verdadera del
@@ -227,9 +227,9 @@ surveys_df.head()
 ¿Cuál es la diferencia entre estos dos **DataFrames**?
 
 Cuando asignamos a las tres primeras filas el valor de `0` usando el **DataFrame** `ref_surveys_df`,
-el **DataFrame** `surveys_df` también es modificado. Recuerda que creamos el objeto `ref_survey_df` 
-arriba usando la instrucción `ref_survey_df = surveys_df`. Por lo tanto `surveys_df` y `ref_surveys_df` hacen 
-referencia exactamente al mismo objeto **DataFrame**. Si cualquiera de los dos objetos (`ref_survey_df`, `surveys_df`) 
+el **DataFrame** `surveys_df` también es modificado. Recuerda que creamos el objeto `ref_survey_df`
+arriba usando la instrucción `ref_survey_df = surveys_df`. Por lo tanto `surveys_df` y `ref_surveys_df` hacen
+referencia exactamente al mismo objeto **DataFrame**. Si cualquiera de los dos objetos (`ref_survey_df`, `surveys_df`)
 es modificado, el otro objeto va a observar los mismos cambios.
 
 **Revisar y Recapitular**:
@@ -357,7 +357,7 @@ selecciona el elemento ubicado en la intersección de la tercera fila (índice 2
 
 ## Creando subconjuntos de datos mediante el filtrado por criterios
 
-También podemos seleccionar un subconjunto de nuestros datos, mediante el filtrado de la data original, usando algún criterio. 
+También podemos seleccionar un subconjunto de nuestros datos, mediante el filtrado de la data original, usando algún criterio.
 Por ejemplo, podemos seleccionar todas las filas que tienen el valor de 2002 en la columna `year`:
 
 ~~~
@@ -467,10 +467,10 @@ Para crear una máscara booleana:
 - Establece el criterio a ser evaluado como `True` o `False` (ej. `values > 5 = True`)
 - Python evaluará cada valor en el objeto para determinar si
   el valor cumple el criterio (`True`) o no lo cumple (`False`).
-- Python crea un objeto de salida que es de la misma forma que el objeto 
+- Python crea un objeto de salida que es de la misma forma que el objeto
   original, pero con un valor `True` o `False` por cada índice según corresponda.
 
-Intentémoslo. Vamos a identificar todos los lugares en los datos de `survey` que son `null` (que no existen o son NaN). 
+Intentémoslo. Vamos a identificar todos los lugares en los datos de `survey` que son `null` (que no existen o son NaN).
 Podemos usar el método `isnull` para lograrlo.
 El método `isnull` va a comparar cada celda con un valor `null`. Si un elemento
 tiene un valor `null`, se le asignará un nuevo valor de `True` en el objeto de salida.
@@ -529,8 +529,7 @@ pidiendo a Python que seleccione aquellas filas que tienen un valor de `NaN` en 
 > 2. Crea un nuevo objeto `DataFrame` que contenga solo observaciones cuyos valores en la columna `sex` sean `male`
 >   o `female` y en los cuales el valor de `weight` sea mayor que 0. Luego, crea un gráfico de barra apiladas
 >   del promedio de `weight`,  por parcela, con valores `male` versus `female` apilados por cada parcela.
->   
+>
 {: .challenge}
 
 {% include links.md %}
-
