@@ -23,7 +23,7 @@ Nota: los datos no han sido traducidos de la versión original en inglés, por l
 > asegurar la correcta configuración **setup** de las herramientas para un trabajo eficiente.
 > **Estas lecciones no asumen conocimientos previos sobre los temas presentados o herramientas usadas.**
 >
-> Para empezar, sigue las direcciones en [Setup](https://datacarpentry.org/python-ecology-lesson-es/setup.html)
+> Para empezar, sigue las direcciones en [Setup](setup.html)
 > para bajar los datos a tu computadora y siguen las instrucciones de instalación.
 >
 > #### Prerequisitos
@@ -35,5 +35,5 @@ Nota: los datos no han sido traducidos de la versión original en inglés, por l
 
 > ## Para instructores
 > Si enseñas esta lección en un taller, por favor lee las
-> [Notas de instructor](https://datacarpentry.org/python-ecology-lesson-es/guide/).
+> [Notas de instructor](guide/index.html).
 {: .prereq}
