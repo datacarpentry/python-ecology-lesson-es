@@ -1,6 +1,7 @@
 ---
 layout: lesson
 root: .
+permalink: index.html
 
 maintainers:
   - Paula Andrea Martinez
@@ -18,7 +19,7 @@ Nota: los datos no han sido traducidos de la versión original en inglés, por l
 
 > ## Antes de empezar
 >
-> La enseñanza en **Data Carpentry** es práctica, y por tanto se fomenta que los participantes usen sus propias computadoras para 
+> La enseñanza en **Data Carpentry** es práctica, y por tanto se fomenta que los participantes usen sus propias computadoras para
 > asegurar la correcta configuración **setup** de las herramientas para un trabajo eficiente.
 > **Estas lecciones no asumen conocimientos previos sobre los temas presentados o herramientas usadas.**
 >
@@ -28,11 +29,11 @@ Nota: los datos no han sido traducidos de la versión original en inglés, por l
 > #### Prerequisitos
 >
 > Esta lección requiere la instalación de **Python**.
-> Para el uso efectivo de este material, por favor instala todo 
+> Para el uso efectivo de este material, por favor instala todo
 > *antes* de trabajar en la lección.
 {: .prereq}
 
 > ## Para instructores
-> Si enseñas esta lección en un taller, por favor lee las 
+> Si enseñas esta lección en un taller, por favor lee las
 > [Notas de instructor](https://datacarpentry.org/python-ecology-lesson-es/guide/).
 {: .prereq}
