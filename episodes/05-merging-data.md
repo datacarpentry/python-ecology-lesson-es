@@ -10,7 +10,7 @@ objectives:
   - "Combinar dos DataFrames usando un ID único encontrado en ambos DataFrames."
   - "Unir DataFrames usando campos comunes (unión por claves)."
 keypoints:
-    - "Podemos usar la función `concat` en pandas para agregar columnas o filas de un 
+    - "Podemos usar la función `concat` en pandas para agregar columnas o filas de un
     DataFrame a otro."
     - "Se pueden combinar DataFrames en base a columnas en cada dataset que contienen
     valores comunes (un ID única común), esta combinación utilizando un campo
@@ -73,7 +73,7 @@ Ten en cuenta que el método `read_csv` que usamos puede tomar opciones adiciona
 
 # Concatenando DataFrames
 
-Podemos usar la función `concat` en pandas para agregar columnas o filas de un __DataFrame__ a otro. Tomemos dos subconjuntos de nuestros datos para ver cómo esto trabaja. 
+Podemos usar la función `concat` en pandas para agregar columnas o filas de un __DataFrame__ a otro. Tomemos dos subconjuntos de nuestros datos para ver cómo esto trabaja.
 
 ~~~
 # Lee las primeras 10 líneas de la tabla de encuestas.
@@ -123,7 +123,7 @@ new_output = pd.read_csv('data_output/out.csv', keep_default_na=False, na_values
 
 > ## Challenge - Combine Data
 >
-> En la carpeta de datos, hay dos archivos de datos de encuestas: `survey2001.csv` y `survey2002.csv`. 
+> En la carpeta de datos, hay dos archivos de datos de encuestas: `survey2001.csv` y `survey2002.csv`.
 > Lee los datos en Python y combina los archivos para hacer un __DataFrame__ nuevo.
 > Crea una gráfica del peso promedio de la parcela, `plot_id`, por año agrupada por sexo. Exporta tus resultados como CSV y asegúrate de que se lean correctamente en Python.
 {: .challenge}
@@ -179,7 +179,7 @@ Index([u'record_id', u'month', u'day', u'year', u'plot_id', u'species_id',
 ~~~
 {: .language-python}
 
-En nuestro ejemplo, la clave de unión es la columna que contiene el identificador de especie de dos letras, que se llama `species_id`. 
+En nuestro ejemplo, la clave de unión es la columna que contiene el identificador de especie de dos letras, que se llama `species_id`.
 
 Ahora que conocemos los campos con los atributos de ID de especies comunes en cada __DataFrame__, estamos casi listos para unir nuestros datos. Sin embargo, porque hay
 [diferentes tipos de uniones](http://blog.codinghorror.com/a-visual-explanation-of-sql-joins/), también debemos decidir qué tipo de unión tiene sentido para nuestro análisis.
@@ -198,7 +198,7 @@ la opción por defecto:
 
 ~~~
 merged_inner = pd.merge(left=survey_sub,right=species_sub, left_on='species_id', right_on='species_id')
-# En este caso, `species_id` es el único nombre de columna en los dos __DataFrames__, entonces si omitimos 
+# En este caso, `species_id` es el único nombre de columna en los dos __DataFrames__, entonces si omitimos
 # los argumentos `left_on` y `right_on` todavía obtendríamos el mismo resultado
 
 # ¿Cuál es el tamaño de los datos en el resultado?
