@@ -11,7 +11,7 @@ objectives:
 keypoints:
      - "Matplotlib es el motor detrás de los gráficos creados con plotnine y Pandas."
      - "La filosofía de los gráficos de matplotlib, basada en objetos, permite la personalización detallada de los gráficos una vez creados."
-     - "Es posible exportar gráficos a un archivo usando el método `savefig`." 
+     - "Es posible exportar gráficos a un archivo usando el método `savefig`."
 ---
 
 
@@ -298,4 +298,3 @@ bien guárdalo como un archivo de texto con extensión `.py` y ejecútalo en la 
 {: .challenge}
 
 {% include links.md %}
-
