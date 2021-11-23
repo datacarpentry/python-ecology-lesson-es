@@ -7,6 +7,7 @@ maintainers:
   - Paula Andrea Martinez
   - Heladia Salgado
   - Rayna Harris
+  - Vini Salazar
   - Estamos buscando personas interesadas en ser **maintainers** de esta versión.
 ---
 
