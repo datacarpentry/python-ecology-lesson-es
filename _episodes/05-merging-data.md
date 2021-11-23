@@ -316,17 +316,17 @@ La función `merge` de pandas admite otros dos tipos de unión:
   * __Full (outer) join__ unión completa (externa): se invoca al pasar `how = 'outer'` como argumento. Este tipo de unión devuelve todas las combinaciones de filas de los dos __DataFrames__; es decir., el __DataFrame__ resultante estará `NaN` donde faltan datos en uno de los __DataFrames__. Este tipo de unión es muy raramente utilizado.
 
 
-# Desafíos Finales
+## Desafíos Finales
 
-> ## Challenge - Distribuciones
+> ## Desafío - Distribuciones
 > Cree un nuevo __DataFrame__ uniendo los contenidos de `survey.csv` y
 > Tablas `species.csv`. Luego calcula y crea un gráfico de la distribución de:
 >
 > 1. taxa por parcela
 > 2. taxa por sexo por parcela
-{:. challenge}
+{: .challenge}
 
-> ## Challenge - Índice de Diversidad
+> ## Desafío - Índice de Diversidad
 >
 > 1. En la carpeta de datos, hay un gráfico `CSV` que contiene información sobre el
 > tipo asociado con cada parcela. Usa esos datos para resumir el número de
@@ -338,7 +338,6 @@ La función `merge` de pandas admite otros dos tipos de unión:
 > que calcula la diversidad como:
 >
 > el número de especies en la parcela / el número total de individuos en la parcela = índice de biodiversidad.
-
 {: .challenge}
 
 {% include links.md %}
