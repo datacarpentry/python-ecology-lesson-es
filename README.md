@@ -43,3 +43,4 @@ Dejaremos eso para la segunda versión. Pero lo tenemos en cuenta.
 Empezaremos a revisar, y éste proceso se hará también en paralelo. Si quieres revisar, las issues que tienen el label "to review" están listas para ser revisadas, igual que para las traducciones te pido que dejes tu nombre y una nota que vas a revisar. Podemos tener más de una revisión y eso sería lo ideal. Contactanos si quieres revisar.
 
 Si tienes otras dudas, te esperamos en slack.
+

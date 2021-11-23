@@ -14,7 +14,7 @@ objectives:
 keypoints:
     - "Se puede crear una conexión con `sqlite3.connect()`, y luego establecer un cursor para consultas con `.cursor()`."
     - "Es posible ejecutar consultas usando `.execute()`."
-    - "Puedes usar la función `.read_sql_query()` de Pandas para extraer datos 
+    - "Puedes usar la función `.read_sql_query()` de Pandas para extraer datos
     directamente de un DataFrame."
     - "Se pueden escribir los datos de un DataFrame a una nueva tabla en SQLite usando `.to_sql()`."
     - "Al final, no olvides cerrar la puerta de la conexión usando el comando `.close()`."
@@ -84,7 +84,7 @@ con.close()
 
 ##  Accesando datos almacenados en SQLite usando Python y Pandas
 
-Usando Pandas, podemos importar los resultados de una consulta en SQLite a un *DataFrame*. Nota que puedes usar los mismos comandos o sintaxis que usamos en la lección SQLite. 
+Usando Pandas, podemos importar los resultados de una consulta en SQLite a un *DataFrame*. Nota que puedes usar los mismos comandos o sintaxis que usamos en la lección SQLite.
 
 Por ejemplo para usar Pandas y SQLite:
 
@@ -117,7 +117,7 @@ Almacenar datos en una base de datos SQLite incrementa sustancialmente el rendim
 
 > ## Desafío - SQL
 >
-> 1. Crea una consulta que contenga datos de encuestas recopiladas entre 1998 y 2001 
+> 1. Crea una consulta que contenga datos de encuestas recopiladas entre 1998 y 2001
 > para observaciones de sexo "masculino" o "femenino" que incluyan el género y la especie de la observación,
 > y el tipo de sitio de la muestra. ¿Cuántos registros regresa la consulta?
 >
@@ -156,7 +156,7 @@ con.close()
 >
 > 1. Para cada uno de los desafíos del bloque anterior, modifica tu codigo para guardar los resultados en sus propias tablas en el portal de base de datos.
 >
-> 2. ¿Por qué razones tú preferirías guardar los resultados de tus consultas nuevamente en la base de datos? 
+> 2. ¿Por qué razones tú preferirías guardar los resultados de tus consultas nuevamente en la base de datos?
 > ¿Por qué razones preferirías evitar hacer esto?
 {: .challenge}
 
