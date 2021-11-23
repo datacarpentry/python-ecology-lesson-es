@@ -1,15 +1,19 @@
-Por favor borra este texto antes de enviar tu issue.
+<details>
+<summary><strong>Instructions</strong></summary>
 
----
+Thanks for contributing! :heart:
 
-Agradecemos tu tiempo y esfuerzo para mejorar esta lección. ¡Gracias por contribuir!
+If this contribution is for instructor training, please email the link to this contribution to
+checkout@carpentries.org so we can record your progress. You've completed your contribution
+step for instructor checkout by submitting this contribution!
 
-Si esta contribución es parte de tu capacitación como **instructor**, envía un correo electrónico a [checkout@carpentries.org](mailto:checkout@carpentries.org) con un enlace a ésta contribución para que podamos registrar su progreso.
+Keep in mind that **lesson maintainers are volunteers** and it may take them some time to
+respond to your contribution. Although not all contributions can be incorporated into the lesson
+materials, we appreciate your time and effort to improve the curriculum. If you have any questions
+about the lesson maintenance process or would like to volunteer your time as a contribution
+reviewer, please contact The Carpentries Team at team@carpentries.org.
 
-¿Quieres ayudar con la revisión?
-Te invito a que leas este artículo https://help.github.com/articles/commenting-on-a-pull-request/
-el punto 6 es muy bueno, recién ha sido incoorporado y es muy útil, para directamente aceptar cambios.
+You may delete these instructions from your comment.
 
-Por favor ten en cuenta que los **Maintainers** son voluntarios y pueden tardar más de 72 horas en responder. Si tienes alguna pregunta sobre el proceso de mantenimiento de la lección o te gustaría ofrecer su tiempo como **Maintainer**, comunícate en el [canal de Slack en español] (https://swcarpentry.slack.com/messages/CDZLNHSMQ)
-
----
+\- The Carpentries
+</details>

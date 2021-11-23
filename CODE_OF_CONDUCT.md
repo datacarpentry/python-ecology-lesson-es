@@ -44,4 +44,5 @@ puede informarse siguiendo nuestras [guías de informes][coc-reporting].
 
 {% include links.md %}
 
-{% include links.md %}
+[coc]: https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html
+[coc-reporting]: https://docs.carpentries.org/topic_folders/policies/incident-reporting.html
