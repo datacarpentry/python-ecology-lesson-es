@@ -1,6 +1,6 @@
 ---
+title: Licencias
 layout: page
-title: "Licenses"
 root: .
 ---
 ## Instructional Material
@@ -23,27 +23,25 @@ license terms.
 
 Under the following terms:
 
-* **Attribution**---You must give appropriate credit (mentioning that
-  your work is derived from work that is Copyright © Software
-  Carpentry and, where practical, linking to
-  http://software-carpentry.org/), provide a [link to the
-  license][cc-by-human], and indicate if changes were made. You may do
-  so in any reasonable manner, but not in any way that suggests the
-  licensor endorses you or your use.
+* **Atribución** --- Debes otorgar crédito a éste material de manera adecuada (mencionando que
+  su trabajo se deriva del trabajo que es Copyright de © Software
+  Carpentry y, donde sea práctico, agrega un enlace a
+  http://software-carpentry.org/), proporciona un [enlace a la
+  licencia][cc-por-humano], e indica si se realizaron cambios. Puedes hacerlo en cualquier forma razonable,
+  pero no de forma tal que sugiera que tú o el uso del material derivado tienen el respaldo del licenciante.
 
-**No additional restrictions**---You may not apply legal terms or
-technological measures that legally restrict others from doing
-anything the license permits.  With the understanding that:
+**Sin restricciones adicionales** --- No puedes aplicar términos legales o
+medidas tecnológicas que restrinjan a otros hacer
+todo lo que la licencia permite.
 
 Notices:
 
-* You do not have to comply with the license for elements of the
-  material in the public domain or where your use is permitted by an
-  applicable exception or limitation.
-* No warranties are given. The license may not give you all of the
-  permissions necessary for your intended use. For example, other
-  rights such as publicity, privacy, or moral rights may limit how you
-  use the material.
+* No tiene que cumplir con la licencia con los materiales que estén en el dominio público
+  o cuando su uso esté permitido por una excepción o limitación aplicable.
+* No se dan garantías. La licencia puede no darle todos los
+  permisos necesarios para su uso previsto. Por ejemplo, otros
+  derechos como la publicidad, la privacidad, o los derechos morales pueden limitar la forma en que
+  uses el material.
 
 ## Software
 

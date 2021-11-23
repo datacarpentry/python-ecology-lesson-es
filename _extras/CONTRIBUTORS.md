@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Acerca de los Colaboradores
-permalink: /contributors/
 ---
 
 Los materiales en este repositorio **python-ecology-lesson** fueron inicialmente desarrollados, adaptados y son constantemente revisados por muchos colaboradores. Algunas partes de esta lección fueron adaptadas de los materiales de Software Carpentry.
