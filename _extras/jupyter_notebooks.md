@@ -1,7 +1,5 @@
 ---
-layout: page
-title: "Resumen de Jupyter Notebooks"
-permalink: /jupyter_notebooks/
+title: Resumen de Jupyter Notebooks
 ---
 
 ![Example Jupyter Notebook](../fig/00_0_jupyter_notebook_example.jpg)
@@ -14,7 +12,7 @@ Al escribir el comando `jupyter notebook`, ocurre lo siguiente:
 * Un servidor de __Jupyter Notebook__ es creado en tu máquina local.
 * El servidor de  __Jupyter Notebook__ solo se ejecuta en tu máquina local
   y no utiliza una conexión a internet.
-* El servidor de __Jupyter Notebook__ abre el cliente de __Jupyter Notebook__, 
+* El servidor de __Jupyter Notebook__ abre el cliente de __Jupyter Notebook__,
   también conocido como la interfaz de usuario de notebook, en tu navegador web
   predeterminado.
 
@@ -22,26 +20,26 @@ Al escribir el comando `jupyter notebook`, ocurre lo siguiente:
   ![Navegador de archivos de Jupyter notebook](../fig/00_1_jupyter_file_browser.png)
   *El navegador de archivos de __Jupyter notebook__*
 
-* Para crear un nuevo __notebook__ de Python selecciona __"New"__ del manu 
+* Para crear un nuevo __notebook__ de Python selecciona __"New"__ del manu
   desplegable de la esquina superior derecha de la pantalla.
 
   ![Navegador de archivos de Jupyter notebook](../fig/00_2_jupyter_new_notebook.png)
   *El navegador de archivos de __Jupyter notebook__*
 
-* Cuando creas un nuevo __notebook__ y escribes código en tu navegador, el 
+* Cuando creas un nuevo __notebook__ y escribes código en tu navegador, el
   navegador web y el servidor de __Jupyter Notebook__ se comunican entre si.
 
   ![nuevo Jupyter notebook](../fig/00_3_jupyter_blank_notebook.png)
   *Un nuevo __Jupyter notebook__ en blanco*
 
-* Bajo el menu __"help"__, puedes tomar un rápido tour interactivo sobre como 
-  utilizar el __notebook__. Más ayuda sobre __Jupyter__ y recursos de 
-  paquetes clave se encuentran aquí también. 
+* Bajo el menu __"help"__, puedes tomar un rápido tour interactivo sobre como
+  utilizar el __notebook__. Más ayuda sobre __Jupyter__ y recursos de
+  paquetes clave se encuentran aquí también.
 
   ![ayuda y tour Jupyter](../fig/00_4_jupyter_tour_help.png)
   *Tour de interfaz del usuario y Ayuda*
 
-* El servidor de __Jupyter Notebook__ hace el trabajo y los cálculos, y el navegador 
+* El servidor de __Jupyter Notebook__ hace el trabajo y los cálculos, y el navegador
   web procesa el __notebook__.
 * El navegador web entonces te muestra el __notebook__ actualizado.
 
@@ -56,9 +54,9 @@ Al escribir el comando `jupyter notebook`, ocurre lo siguiente:
   ![Una celda de código y su resultado](../fig/00_6_jupyter_code_after.png)
   *Una celda de código y su resultado*
 
-* Veamos una celda de **Markdown**. __Markdown__ es un lenguaje de manipulación de 
-  texto que es legible pero que ofrece formato adicional. No olvides 
-  seleccionar **Markdown** del menú desplegable de tipo de celda. Haz clic 
+* Veamos una celda de **Markdown**. __Markdown__ es un lenguaje de manipulación de
+  texto que es legible pero que ofrece formato adicional. No olvides
+  seleccionar **Markdown** del menú desplegable de tipo de celda. Haz clic
   en la celda y escribe texto en __Markdown__.
 
   ![Una celda de __Markdown__](../fig/00_7_jupyter_markdown_before.png)
@@ -83,7 +81,7 @@ Este flujo de trabajo tiene varias ventajas:
 
 ### Como se guarda el __notebook__
 
-* El archivo __notebook__ se guarda en un formato llamado JSON y tiene el 
+* El archivo __notebook__ se guarda en un formato llamado JSON y tiene el
   sufijo `.ipynb`.
 * Igual que HTML para una página web, lo que se guarda en un archivo __notebook__
   se ve diferente a lo que tu vez en tu navegador.
