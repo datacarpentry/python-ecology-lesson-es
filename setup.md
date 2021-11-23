@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Setup
 ---
 
@@ -119,4 +118,4 @@ Si no es así, o si deseas utilizar un navegador diferente, abre este enlace: <h
 
 
 Para una breve introducción a **Jupyter Notebooks**, consulta nuestra página
-["Introducción a Jupyter Notebooks"](jupyter_notebooks).
+["Introducción a Jupyter Notebooks"](jupyter_notebooks/index.html).
