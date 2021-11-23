@@ -15,15 +15,15 @@ keypoints:
    - "Los bucles nos permiten repetir una serie de acciones un número dado de veces
     o mientras una condición es cierta."
    - "Podemos automatizar tareas que se deben repetir un número predefinido de veces
-    utilizando bucles `for`"
+    utilizando bucles `for`."
    - "Una tarea de automatización típica en programación es generar secuencias de
     archivos con nombres distinos que siguen un patrón, esto se puede realizar
     fácilmente manipulando cadenas de caracteres con el nombre de los archivos
     dentro de bucles de repetición a medida que se van creando."
    - "Es conveniente definir funciones para establecer bloques de código reutilizables.
     Las funciones se pueden diseñar para que acepten argumentos de entradas para
-    generalizar su funcionalidad y devolver distintos tipos de resultados." 
-   - "Las sentencias `if` permiten elegir cuales bloques de código ejecutar según según se cumplan o no distintas condiciones".
+    generalizar su funcionalidad y devolver distintos tipos de resultados."
+   - "Las sentencias `if` permiten elegir cuales bloques de código ejecutar según según se cumplan o no distintas condiciones."
 ---
 
 Hasta este momento, hemos usado Python y la librería Pandas para explorar y
@@ -112,7 +112,7 @@ iteración. La palabra clave `pass` en el cuerpo del bucle significa solamente
 >
 > 2. Reescribe el bucle de tal forma que los animales estén separados por comas
 >    y no por una línea nueva.
->    (Pista: Puedes concatenar cadenas de caracteres usando el signo más. Por 
+>    (Pista: Puedes concatenar cadenas de caracteres usando el signo más. Por
 >    ejemplo, `print(string1 + string2)` resulta en 'string1string2').
 {: .challenge}
 
@@ -505,7 +505,7 @@ cambiar su salida.
 >    los contenidos de directorios.
 > 4. Explora qué sucede cuando las variables son declaradas dentro de cada una
 >    de las funciones versus en el cuerpo principal de tu código (lo que está
->    sin indentar). ¿Cuál es el alcance de las variables (es decir, dónde son 
+>    sin indentar). ¿Cuál es el alcance de las variables (es decir, dónde son
 >    visibles)?, ¿qué ocurre si tienen el mismo nombre pero valores diferentes?
 {: .challenge}
 
@@ -730,4 +730,3 @@ One keyword, default start:	1977 1993
 {: .challenge}
 
 {% include links.md %}
-
