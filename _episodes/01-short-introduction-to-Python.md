@@ -11,11 +11,11 @@ objectives:
     - "Realizar operaciones matemáticas en Python utilizando operadores básicos."
     - "Dentro del contexto de Python definir: **listas**, **tuplas**, y **diccionarios**."
 keypoints:
-    - "Python es un lenguaje interpretado que puede ser usado interactivamente (ejecutando un comando a la vez) o en modo scripting (ejecutando una serie de comandos guardados en un archivo)".
-    - "Se puede asignar un valor a una variable en Python. Esas variables pueden ser de varios tipos, tales como cadenas, y números: enteros, de punto flotante y complejos".
-    - "Las listas y las tuplas son similares en el sentido de que son listas ordenadas de elementos; difieren en que una tupla es inmutable (sus elementos no pueden ser modificados)".
+    - "Python es un lenguaje interpretado que puede ser usado interactivamente (ejecutando un comando a la vez) o en modo scripting (ejecutando una serie de comandos guardados en un archivo)."
+    - "Se puede asignar un valor a una variable en Python. Esas variables pueden ser de varios tipos, tales como cadenas, y números: enteros, de punto flotante y complejos."
+    - "Las listas y las tuplas son similares en el sentido de que son listas ordenadas de elementos; difieren en que una tupla es inmutable (sus elementos no pueden ser modificados)."
     - "Los diccionarios son estructuras de datos desordenadas que proporcionan mapeos entre claves y valores."
-  
+
 ---
 
 ## Intérprete
@@ -185,7 +185,7 @@ Data Carpentry
 Nota que "Data Carpentry" se imprime una vez.
 
 **Sugerencia**: `print` y `type` son funciones incorporadas en Python. Más adelante en esta
-lección, veremos métodos y funciones definidas por el usuario. La documentación 
+lección, veremos métodos y funciones definidas por el usuario. La documentación
 de Python es excelente para darte una referencia sobre las diferencias entre ellos.
 
 
@@ -289,7 +289,7 @@ numbers[0]
 ~~~
 {: .output}
 
-Se puede usar un bucle `for` para acceder a los elementos de una lista u otras 
+Se puede usar un bucle `for` para acceder a los elementos de una lista u otras
 estructuras de datos de Python, uno a la vez:
 
 ~~~
@@ -308,8 +308,8 @@ estructuras de datos de Python, uno a la vez:
 
 Usar **sangría** es muy importante en Python. Ten en cuenta que la segunda línea en el
 ejemplo de arriba está sangrada (o indentada). Al igual que los tres `>>>` son un
-indicador interactivo en Python, los tres puntos `...` son indicadores de 
-líneas multiples en Python. Esta es la manera en que Python marca un bloque de código. [Nota: no 
+indicador interactivo en Python, los tres puntos `...` son indicadores de
+líneas multiples en Python. Esta es la manera en que Python marca un bloque de código. [Nota: no
 tienes que escribir `>>>` o `...`.]
 
 Para agregar elementos al final de una lista, podemos usar el método `append`. Los métodos
@@ -491,4 +491,3 @@ print(z)
 {: .output}
 
 {% include links.md %}
-

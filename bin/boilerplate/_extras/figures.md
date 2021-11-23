@@ -1,10 +1,19 @@
 ---
 title: Figures
 ---
+
+{% include base_path.html %}
+{% include manual_episode_order.html %}
+
 <script>
   window.onload = function() {
     var lesson_episodes = [
-    {% for episode in site.episodes %}
+    {% for lesson_episode in lesson_episodes %}
+      {% if site.episode_order %}
+        {% assign episode = site.episodes | where: "slug", lesson_episode | first %}
+      {% else %}
+        {% assign episode = lesson_episode %}
+      {% endif %}
     "{{ episode.url }}"{% unless forloop.last %},{% endunless %}
     {% endfor %}
     ];
@@ -39,9 +48,7 @@ title: Figures
               title.innerHTML = "<strong>Figure " + image_num + ".</strong> " + image.alt;
               article_here.appendChild(title);
 
-              var img = document.createElement('img');
-              img.src = image.src;
-              article_here.appendChild(img);
+              article_here.appendChild(image.cloneNode(false));
 
               if (image_num < images.length) {
                 var hr = document.createElement('hr');
@@ -51,16 +58,21 @@ title: Figures
           }
         }
       }
-      episode_url = "{{ page.root }}" + lesson_episodes[i];
+      episode_url = "{{ relative_root_path }}" + lesson_episodes[i];
       xmlHttp[i].open("GET", episode_url);
       xmlHttp[i].send(null);
     }
   }
 </script>
-{% comment %}
-Create anchor for each one of the episodes.
-{% endcomment %}
-{% for episode in site.episodes %}
+
+{% comment %} Create anchor for each one of the episodes.  {% endcomment %}
+
+{% for lesson_episode in lesson_episodes %}
+  {% if site.episode_order %}
+    {% assign episode = site.episodes | where: "slug", lesson_episode | first %}
+  {% else %}
+    {% assign episode = lesson_episode %}
+  {% endif %}
 <article id="{{ episode.url }}" class="figures"></article>
 {% endfor %}
 

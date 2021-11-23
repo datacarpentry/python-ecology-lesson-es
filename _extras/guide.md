@@ -1,14 +1,12 @@
 ---
-layout: page
-title: "Notas de Instructor"
-permalink: /guide/
+title: Notas de Instructor
 ---
 
 # Soluciones a desafíos
 
 ## Instalar los paquetes requeridos para el taller
 
-Por favor sigue las instrucciones del documento [Setup](../setup.html) para instalar los programas necesarios para esta lección. Si encuentras problemas, por favor crea un **issue** con la etiqueta **High-priority**.
+Por favor sigue las instrucciones del documento [Setup]({{page.root}}{% link setup.md %}) para instalar los programas necesarios para esta lección. Si encuentras problemas, por favor crea un **issue** con la etiqueta **High-priority**.
 
 ## Revisando instalaciones
 
@@ -169,9 +167,9 @@ Sugerencia: usa el método `.head()` a lo largo de esta lección con el fin de m
 
 * ¿Qué ocurre al ejecutar el siguiente código?
 
-	`surveys_df[0:1]` selecciona sólo el primer elemento  
-	`surveys_df[:4]` seleccionar desde el primer elemento hace redundante escribir el 0  
-	`surveys_df[-1:]` puedes contar hacia atrás  
+	`surveys_df[0:1]` selecciona sólo el primer elemento
+	`surveys_df[:4]` seleccionar desde el primer elemento hace redundante escribir el 0
+	`surveys_df[-1:]` puedes contar hacia atrás
 
 	*Sugerencia*: También puedes seleccionar cada N-ésima fila: `surveys_df[1:10:2]`. Entonces, ¿cómo interpretas `surveys_df[::-1]`?
 
@@ -502,7 +500,7 @@ Adapta los argumentos de entrada, por ejemplo: 1978, 1979.
 * Haz que las funciones retornen una lista de los archivos que escribieron. Hay muchas formas en las que puedes hacer esto (¡y deberías intentarlas todas!):
     * cualquiera de las dos funciones podría imprimir algo en pantalla,
     Sólo agrega el comando `print("year " + str(this_year)+ " written to disk")`
-    * cualquiera podría usar `return` para retornar números o cadenas de caracteres cada vez que se llaman, 
+    * cualquiera podría usar `return` para retornar números o cadenas de caracteres cada vez que se llaman,
     * o podrías hacer una combinación de estas dos estrategias.
     * Podrías también intentar usar la librería `os` para listar los contenidos de directorios.
         `os.listdir`
@@ -630,4 +628,3 @@ plt.show()
 FIXME
 
 [Ésta página](https://matplotlib.org/users/mathtext.html) contiene más información.
-
