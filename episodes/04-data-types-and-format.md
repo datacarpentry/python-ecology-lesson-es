@@ -89,11 +89,11 @@ de datos. Más sobre esto en la tabla de abajo:
 
 Ahora que tenemos una comprensión básica de los tipos de datos numéricos
 y de texto, exploremos el formato de los datos de nuestra encuesta. Estaremos trabajando
-con el mismo **dataset**  `survey.csv` que hemos usado en lecciones anteriores.
+con el mismo **dataset**  `surveys.csv` que hemos usado en lecciones anteriores.
 
 ~~~
 # Ten en cuenta que se usa `pd.read_csv` porque importamos pandas con el alias `pd`
-survey_df = pd.read_csv ("data/survey.csv")
+surveys_df = pd.read_csv ("data/surveys.csv")
 ~~~
 {: .language-python}
 
