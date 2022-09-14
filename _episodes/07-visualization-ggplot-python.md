@@ -100,7 +100,7 @@ surveys_plot + p9.geom_point()
 ~~~
 {: .language-python}
 
-![png](../fig/06_first_plot.png)
+![Gráfica de distribución de la longitud de las patas de animales contra su peso donde los puntos están aglomerados en el cuadrante inferior izquierdo](../fig/06_first_plot.png)
 
 > ## Desafío - gráfico de barras
 > Trabajando con los datos de `survey_complete`, usa la columna `plot-id` para
@@ -151,7 +151,7 @@ por aglomeración de puntos:
 ~~~
 {: .language-python}
 
-![png](../fig/06_alpha_plot.png)
+![Gráfica de distribución de la longitud de las patas de animales contra su peso donde los puntos tienen transparencia para evitar la aglomeración](../fig/06_alpha_plot.png)
 
 ¡También puedes agregar color a los puntos!
 
@@ -163,7 +163,7 @@ por aglomeración de puntos:
 ~~~
 {: .language-python}
 
-![png](../fig/06_blue_plot.png)
+![Gráfica de distribución de la longitud de las patas de animales contra su peso donde los puntos son azules](../fig/06_blue_plot.png)
 
 Si quieres usar un color diferente para cada especie, tienes que conectar la
 columna `species_id` con la estética del color:
