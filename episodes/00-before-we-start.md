@@ -58,18 +58,17 @@ Miles de personas usan Python diariamente. Muchos de ellos están dispuestos a a
 ### Gratis y de código abierto (FOSS por sus siglas en inglés)... y multi-plataforma
 Sabemos que ya hemos nombrado esto, de todas formas, vale la pena repetirlo.
 
-<br />
 ## Conociendo a Anaconda
+
 La distribución de Python [Anaconda](https://www.anaconda.com) incluye montones de paquetes populares como la consola Ipython, Jupyter Notebook, y Spyder IDE.
 Échale un vistazo al Navegador Anaconda. Puedes ejecutar programas desde el Navegador o usar la línea de comando.
 
 [Jupyter Notebook](https://jupyter.org) es una aplicación web de código abierto que permite crear y compartir documentos que permiten crear de manera sencilla documentos que combinan código, gráficos y texto narrativo.
 
-[Spyder](https://spyder-ide.github.io) es un **Entorno de Desarrollo Integrado** (IDE por sus siglas en inglés) que permiten escribir **scripts** de Python e interactuar con el software de Python desde una interfaz única.
+[Spyder](https://www.spyder-ide.org/) es un **Entorno de Desarrollo Integrado** (IDE por sus siglas en inglés) que permiten escribir **scripts** de Python e interactuar con el software de Python desde una interfaz única.
 
 Anaconda también viene con un gestor de paquetes llamado [conda](https://conda.io/docs/), el cual hace que sea fácil instalar y actualizar paquetes adicionales.
 
-<br />
 ## Proyecto de Investigación: Buenas Prácticas
 
 Es una buena idea guardar los grupos de datos relacionados, análisis, y texto en una única carpeta.
