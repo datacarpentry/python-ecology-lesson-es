@@ -1,1 +1,65 @@
-{"contributors":[{"type":"Editor","name":"Paula Andrea Martinez"},{"type":"Editor","name":"Heladia Salgado"},{"type":"Editor","name":"Rayna Harris"}],"creators":[{"name":"Paula Andrea Martinez"},{"name":"Wilson Lozano"},{"name":"Rayna Harris"},{"name":"chekos"},{"name":"Laura Angelone"},{"name":"Nicolás Palopoli"},{"name":"Juan M. Barrios"},{"name":"Miguel González"},{"name":"Fernando Garcia"},{"name":"Juan Martín Barrios"},{"name":"LUS24"},{"name":"rzayas"},{"name":"Alejandra Gonzalez-Beltran"},{"name":"Enric Escorsa O'Callaghan"},{"name":"monialo2000"},{"name":"Hely Salgado"},{"name":"Leonardo Ulises Spairani"},{"name":"Nohemi Huanca Nunez"},{"name":"Silvana Pereyra"},{"name":"Spencer Harris"},{"name":"April Wright"},{"name":"Maxim Belkin"},{"name":"Christopher Erdmann"},{"name":"Erin Becker"},{"name":"Raniere Silva"},{"name":"Katrin Leinweber"},{"name":"Sarah Brown"},{"name":"Sarah Brown"},{"name":"Stephan Druskat"},{"name":"Trevor Keller"}],"license":{"id":"CC-BY-4.0"}}
+{
+  "contributors": [
+    {
+      "type": "Editor",
+      "name": "iramosp"
+    },
+    {
+      "type": "Editor",
+      "name": "Agustina Pesce"
+    },
+    {
+      "type": "Editor",
+      "name": "Vini Salazar",
+      "orcid": "0000-0002-8362-3195"
+    }
+  ],
+  "creators": [
+    {
+      "name": "Vini Salazar",
+      "orcid": "0000-0002-8362-3195"
+    },
+    {
+      "name": "Paula Andrea Martinez",
+      "orcid": "0000-0002-8990-1985"
+    },
+    {
+      "name": "iramosp"
+    },
+    {
+      "name": "Alejandra Gonzalez-Beltran",
+      "orcid": "0000-0003-3499-8262"
+    },
+    {
+      "name": "solracarias"
+    },
+    {
+      "name": "Agustina Pesce"
+    },
+    {
+      "name": "Francisco Palm",
+      "orcid": "0000-0002-1293-0868"
+    },
+    {
+      "name": "Katrin Leinweber",
+      "orcid": "0000-0001-5135-5758"
+    },
+    {
+      "name": "Pamela Pairo"
+    },
+    {
+      "name": "Rayna M Harris",
+      "orcid": "0000-0002-7943-5650"
+    },
+    {
+      "name": "Erin Alison Becker",
+      "orcid": "0000-0002-6832-0233"
+    },
+    {
+      "name": "Paola Prieto"
+    }
+  ],
+  "license": {
+    "id": "CC-BY-4.0"
+  }
+}
