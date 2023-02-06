@@ -11,7 +11,7 @@ carpentry: "dc"
 
 # Overall title for pages.
 title: "Análisis y visualización de datos usando Python"
-life_cycle: "transition-step-1"
+life_cycle: "transition-step-2"
 transition_date_prebeta: '2022-12-12'
 transition_date_beta: '2023-02-06'
 transition_date_prerelease: '2023-04-03'
