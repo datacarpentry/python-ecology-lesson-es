@@ -43,10 +43,16 @@
     <loc>https://preview.carpentries.org/python-ecology-lesson-es/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/python-ecology-lesson-es/aio.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/python-ecology-lesson-es/discuss.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/python-ecology-lesson-es/fechas-progreso.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/python-ecology-lesson-es/images.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/python-ecology-lesson-es/index.html</loc>
@@ -94,16 +100,28 @@
     <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/discuss.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/fechas-progreso.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/index.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/jupyter_notebooks.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/profiles.html</loc>
@@ -112,7 +130,13 @@
     <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/reference.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/python-ecology-lesson-es/jupyter_notebooks.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/python-ecology-lesson-es/key-points.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/python-ecology-lesson-es/profiles.html</loc>
