@@ -1,147 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/00-before-we-start.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/00-before-we-start.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/01-short-introduction-to-Python.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/01-short-introduction-to-Python.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/02-starting-with-data.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/02-starting-with-data.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/03-index-slice-subset.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/03-index-slice-subset.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/04-data-types-and-format.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/04-data-types-and-format.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/05-merging-data.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/05-merging-data.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/06-loops-and-functions.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/06-loops-and-functions.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/06-plotting-with-matplotlib.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/06-plotting-with-matplotlib.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/07-visualization-ggplot-python.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/07-visualization-ggplot-python.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/08-putting-it-all-together.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/08-putting-it-all-together.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/09-working-with-sql.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/09-working-with-sql.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/CODE_OF_CONDUCT.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/CONTRIBUTORS.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/CONTRIBUTORS.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/LICENSE.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/aio.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/aio.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/discuss.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/discuss.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/fechas-progreso.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/fechas-progreso.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/images.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/images.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/index.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/index.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/00-before-we-start.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/00-before-we-start.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/01-short-introduction-to-Python.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/01-short-introduction-to-Python.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/02-starting-with-data.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/02-starting-with-data.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/03-index-slice-subset.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/03-index-slice-subset.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/04-data-types-and-format.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/04-data-types-and-format.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/05-merging-data.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/05-merging-data.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/06-loops-and-functions.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/06-loops-and-functions.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/06-plotting-with-matplotlib.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/06-plotting-with-matplotlib.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/07-visualization-ggplot-python.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/07-visualization-ggplot-python.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/08-putting-it-all-together.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/08-putting-it-all-together.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/09-working-with-sql.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/09-working-with-sql.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/CONTRIBUTORS.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/CONTRIBUTORS.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/LICENSE.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/aio.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/aio.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/discuss.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/discuss.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/fechas-progreso.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/fechas-progreso.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/images.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/images.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/index.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/index.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/instructor-notes.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/jupyter_notebooks.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/jupyter_notebooks.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/key-points.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/key-points.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/profiles.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/profiles.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor/reference.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor/reference.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/instructor-notes.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/jupyter_notebooks.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/jupyter_notebooks.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/key-points.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/key-points.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/profiles.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/profiles.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/python-ecology-lesson-es/reference.html</loc>
+    <loc>https://datacarpentry.org/python-ecology-lesson-es/reference.html</loc>
   </url>
 </urlset>

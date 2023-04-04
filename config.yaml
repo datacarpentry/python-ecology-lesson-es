@@ -14,7 +14,7 @@ carpentry: 'dc'
 title: 'Análisis y visualización de datos usando Python'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: ~
+created: '2018-11-09'
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson, The Carpentries'
@@ -85,7 +85,4 @@ profiles:
 # sandpaper and varnish versions) should live
 
 
-url: https://preview.carpentries.org/python-ecology-lesson-es
-workbench-beta: 'true'
-beta-date: '2023-02-06'
-old-url: 'https://datacarpentry.github.io/python-ecology-lesson-es'
+url: 'https://datacarpentry.org/python-ecology-lesson-es'
