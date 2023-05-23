@@ -673,12 +673,12 @@ ser accesado con <code>surveys_df.columns</code>.</p>
 método <code>head()</code></strong>. Con un método, podemos proporcionar
 información extra en los padres para contreol su comportamiento.</p>
 <p>Echemos un ojo a los datos usando este.</p>
-<div id="discussion1" class="callout discussion">
+<div id="reto---dataframes" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="reto---dataframes" class="callout-inner">
-<h3 class="callout-title">Reto - DataFrames<a class="anchor" aria-label="anchor" href="#discussion1"></a>
+<h3 class="callout-title">Reto - DataFrames<a class="anchor" aria-label="anchor" href="#reto---dataframes"></a>
 </h3>
 <div class="callout-content">
 <p>Usando nuestro <strong>DataFrame</strong> <code>surveys_df</code>,
@@ -739,12 +739,12 @@ columna<code>species_id</code>.</p>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>       <span class="st">'SC'</span>, <span class="st">'BA'</span>, <span class="st">'SF'</span>, <span class="st">'RO'</span>, <span class="st">'AS'</span>, <span class="st">'SO'</span>, <span class="st">'PI'</span>, <span class="st">'ST'</span>, <span class="st">'CU'</span>, <span class="st">'SU'</span>, <span class="st">'RX'</span>,</span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>       <span class="st">'PB'</span>, <span class="st">'PL'</span>, <span class="st">'PX'</span>, <span class="st">'CT'</span>, <span class="st">'US'</span>], dtype<span class="op">=</span><span class="bu">object</span>)</span></code></pre>
 </div>
-<div id="discussion2" class="callout discussion">
+<div id="reto---estadísticas" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="reto---estadísticas" class="callout-inner">
-<h3 class="callout-title">Reto - Estadísticas<a class="anchor" aria-label="anchor" href="#discussion2"></a>
+<h3 class="callout-title">Reto - Estadísticas<a class="anchor" aria-label="anchor" href="#reto---estad%C3%ADsticas"></a>
 </h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li><p>Crear una lista de los IDs de los sitios (“plot_id”) que están en
@@ -834,12 +834,12 @@ para las columnas numéricas.</p>
 </div>
 <p>El comando <code>groupby</code> es muy potente y no permite
 rápidamente generar estadísticas descriptivas.</p>
-<div id="challenge1" class="callout challenge">
+<div id="reto---descripción-de-datos" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="reto---descripción-de-datos" class="callout-inner">
-<h3 class="callout-title">Reto - Descripción de datos<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+<h3 class="callout-title">Reto - Descripción de datos<a class="anchor" aria-label="anchor" href="#reto---descripci%C3%B3n-de-datos"></a>
 </h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>¿Cuántos individuos son hembras <code>F</code> y cuántos son machos
@@ -863,7 +863,7 @@ estadísticas para una columna de tus datos
   ¿tuviste bien el reto #3t?
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><strong>Un pedaxo de la salida para el reto 3 se ve así:</strong></p>
 <div class="codewrapper">
@@ -902,12 +902,12 @@ con <strong>el método <code>count()</code></strong>.</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>surveys_df.groupby(<span class="st">'species_id'</span>)[<span class="st">'record_id'</span>].count()[<span class="st">'DO'</span>]</span></code></pre>
 </div>
-<div id="discussion3" class="callout discussion">
+<div id="reto---haciendo-una-lista" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="reto---haciendo-una-lista" class="callout-inner">
-<h3 class="callout-title">Reto - Haciendo una lista<a class="anchor" aria-label="anchor" href="#discussion3"></a>
+<h3 class="callout-title">Reto - Haciendo una lista<a class="anchor" aria-label="anchor" href="#reto---haciendo-una-lista"></a>
 </h3>
 <div class="callout-content">
 <p>¿Qué otra manera hay de crear una lista de especies y asociarle
@@ -944,7 +944,8 @@ Pandas.</p>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Creaemos una gráfica de barras</span></span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>species_counts.plot(kind<span class="op">=</span><span class="st">'bar'</span>)<span class="op">;</span></span></code></pre>
 </div>
-<figure><img src="../fig/countPerSpecies.png" alt="Peso de especies por sitios" class="figure mx-auto d-block"> Conteos de especie por sitio</figure><p>También podemos ver cuantos animales fueron capturados por sitio:</p>
+<p><img src="../fig/countPerSpecies.png" alt="Peso de especies por sitios" class="figure"> Conteos de especie por sitio</p>
+<p>También podemos ver cuantos animales fueron capturados por sitio:</p>
 <div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -952,12 +953,12 @@ Pandas.</p>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co"># También grafiquemos eso</span></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>total_count.plot(kind<span class="op">=</span><span class="st">'bar'</span>)<span class="op">;</span></span></code></pre>
 </div>
-<div id="discussion4" class="callout discussion">
+<div id="reto---gráficas" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="reto---gráficas" class="callout-inner">
-<h3 class="callout-title">Reto - Gráficas<a class="anchor" aria-label="anchor" href="#discussion4"></a>
+<h3 class="callout-title">Reto - Gráficas<a class="anchor" aria-label="anchor" href="#reto---gr%C3%A1ficas"></a>
 </h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Crea una gráfica del promedio de peso de las especies por
@@ -967,12 +968,12 @@ todo el conjunto de datos.</li>
 </ol></div>
 </div>
 </div>
-<div id="challenge2" class="callout challenge">
+<div id="reto-de-graficación-final" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="reto-de-graficación-final" class="callout-inner">
-<h3 class="callout-title">Reto de graficación final<a class="anchor" aria-label="anchor" href="#challenge2"></a>
+<h3 class="callout-title">Reto de graficación final<a class="anchor" aria-label="anchor" href="#reto-de-graficaci%C3%B3n-final"></a>
 </h3>
 <div class="callout-content">
 <p>Crea una gráfica de barras apiladas con el peso en el eje Y, y la
@@ -1026,7 +1027,7 @@ disposición desapilada entonces crea una gráfica apilada.</p>
   Soluciones para el reto final
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Primero agrupemos los datos por sitio y por sexo y después calculemos
 el total para cada sitio.</p>
@@ -1151,7 +1152,7 @@ contenido de una Serie o DataFrame.</li>
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.16" class="external-link">sandpaper (0.11.16)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.12.0" class="external-link">sandpaper (0.12.0)</a>,
         <a href="https://github.com/carpentries/pegboard" class="external-link">pegboard (0.5.3)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/0.2.16" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
@@ -1175,7 +1176,7 @@ contenido de una Serie o DataFrame.</li>
   "identifier": "https://datacarpentry.org/python-ecology-lesson-es/instructor/02-starting-with-data.html",
   "dateCreated": "2018-11-09",
   "dateModified": "2023-02-07",
-  "datePublished": "2023-05-16"
+  "datePublished": "2023-05-23"
 }
 
   </script><script>
