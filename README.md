@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/156880953.svg)](https://zenodo.org/badge/latestdoi/156880953)
-[![Tenemos slack, puedes unirte aquí](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
-[Canal de Slack en español](https://swcarpentry.slack.com/messages/CDZLNHSMQ)
+[![Tenemos slack, puedes unirte aquí](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://slack-invite.carpentries.org/)
+[Canal de Slack en español](https://carpentries.slack.com/messages/CDZLNHSMQ)
 
 ## Lección de Data Carpentry - Python usando datos de ecología
 
