@@ -368,21 +368,21 @@ olvides cerrar la puerta de la conexión usando el comando
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Importa el módulo sqlite3</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Crea un objeto de conexión a la base de datos SQLite</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>con <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"data/portal_mammals.sqlite"</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Con la conexión, crea un objeto cursor</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>cur <span class="op">=</span> con.cursor()</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># El resultado de "cursor.execute" puede ser iterado por fila</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row <span class="kw">in</span> cur.execute(<span class="st">'SELECT * FROM species;'</span>):</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(row)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># No te olvides de cerrar la conexión</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>con.close()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Importa el módulo sqlite3</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co"># Crea un objeto de conexión a la base de datos SQLite</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>con <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"data/portal_mammals.sqlite"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="co"># Con la conexión, crea un objeto cursor</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>cur <span class="op">=</span> con.cursor()</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="co"># El resultado de "cursor.execute" puede ser iterado por fila</span></span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="cf">for</span> row <span class="kw">in</span> cur.execute(<span class="st">'SELECT * FROM species;'</span>):</span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>    <span class="bu">print</span>(row)</span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a><span class="co"># No te olvides de cerrar la conexión</span></span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>con.close()</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -398,27 +398,27 @@ una o más condiciones.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Importa el módulo sqlite3</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Crea una conexión a la base de datos SQLite</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>con <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"data/portal_mammals.sqlite"</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Con la conexión, crea un objeto cursor</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>cur <span class="op">=</span> con.cursor()</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejecuta la consulta 1</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>cur.execute(<span class="st">'SELECT plot_id FROM plots WHERE plot_type="Control"'</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Extrae todos los datos</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>cur.fetchall()</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejecuta la consulta 2</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>cur.execute(<span class="st">'SELECT species FROM species WHERE taxa="Bird"'</span>)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Extrae sólo el primer resultado</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>cur.fetchone()</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co"># No te olvides de cerrar la conexión</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>con.close()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># Importa el módulo sqlite3</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co"># Crea una conexión a la base de datos SQLite</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>con <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"data/portal_mammals.sqlite"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co"># Con la conexión, crea un objeto cursor</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>cur <span class="op">=</span> con.cursor()</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co"># Ejecuta la consulta 1</span></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a>cur.execute(<span class="st">'SELECT plot_id FROM plots WHERE plot_type="Control"'</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="co"># Extrae todos los datos</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>cur.fetchall()</span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a><span class="co"># Ejecuta la consulta 2</span></span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>cur.execute(<span class="st">'SELECT species FROM species WHERE taxa="Bird"'</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a><span class="co"># Extrae sólo el primer resultado</span></span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a>cur.fetchone()</span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a><span class="co"># No te olvides de cerrar la conexión</span></span>
+<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a>con.close()</span></code></pre>
 </div>
 </div>
 </section><section id="accesando-datos-almacenados-en-sqlite-usando-python-y-pandas"><h2 class="section-heading">Accesando datos almacenados en SQLite usando Python y Pandas<a class="anchor" aria-label="anchor" href="#accesando-datos-almacenados-en-sqlite-usando-python-y-pandas"></a>
@@ -430,22 +430,22 @@ o sintaxis que usamos en la lección SQLite.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Importa pandas y sqlite3</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Crea una conexión a la base de datos SQLite</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>con <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"data/portal_mammals.sqlite"</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Usa read_sql_query de pandas para extraer el resultado</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># de la consulta a un DataFrame</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_sql_query(<span class="st">"SELECT * from surveys"</span>, con)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Verifica que el resultado de la consulta SQL está</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># almacenado en el DataFrame</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.head())</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># No te olvides de cerrar la conexión</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>con.close()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># Importa pandas y sqlite3</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="co"># Crea una conexión a la base de datos SQLite</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>con <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"data/portal_mammals.sqlite"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="co"># Usa read_sql_query de pandas para extraer el resultado</span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co"># de la consulta a un DataFrame</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>df <span class="op">=</span> pd.read_sql_query(<span class="st">"SELECT * from surveys"</span>, con)</span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="co"># Verifica que el resultado de la consulta SQL está</span></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co"># almacenado en el DataFrame</span></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="bu">print</span>(df.head())</span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co"># No te olvides de cerrar la conexión</span></span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a>con.close()</span></code></pre>
 </div>
 </section><section id="almacenando-datos-csv-vs-sqlite"><h2 class="section-heading">Almacenando datos: CSV vs SQLite<a class="anchor" aria-label="anchor" href="#almacenando-datos-csv-vs-sqlite"></a>
 </h2>
@@ -483,24 +483,24 @@ propia tabla para que podamos trabajar solo con ellos más adelante.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Importa pandas y sqlite3</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Crea una conexión a la base de datos SQLite</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>con <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"data/portal_mammals.sqlite"</span>)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Extrae los datos de la consulta directamente a un DataFrame</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>surveys_df <span class="op">=</span> pd.read_sql_query(<span class="st">"SELECT * from surveys"</span>, con)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Selecciona sólo datos en el año 2002</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>surveys2002 <span class="op">=</span> surveys_df[surveys_df.year <span class="op">==</span> <span class="dv">2002</span>]</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Escribe los datos del nuevo DataFrame en una nueva tabla en SQLite</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>surveys2002.to_sql(<span class="st">"surveys2002"</span>, con, if_exists<span class="op">=</span><span class="st">"replace"</span>)</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># No te olvides de cerrar la conexión</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>con.close()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># Importa pandas y sqlite3</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co"># Crea una conexión a la base de datos SQLite</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>con <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"data/portal_mammals.sqlite"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="co"># Extrae los datos de la consulta directamente a un DataFrame</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>surveys_df <span class="op">=</span> pd.read_sql_query(<span class="st">"SELECT * from surveys"</span>, con)</span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="co"># Selecciona sólo datos en el año 2002</span></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>surveys2002 <span class="op">=</span> surveys_df[surveys_df.year <span class="op">==</span> <span class="dv">2002</span>]</span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a><span class="co"># Escribe los datos del nuevo DataFrame en una nueva tabla en SQLite</span></span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>surveys2002.to_sql(<span class="st">"surveys2002"</span>, con, if_exists<span class="op">=</span><span class="st">"replace"</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a><span class="co"># No te olvides de cerrar la conexión</span></span>
+<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a>con.close()</span></code></pre>
 </div>
 <div id="desafío---guardando-tus-datos" class="callout discussion">
 <div class="callout-square">
@@ -599,7 +599,7 @@ comando <code>.close()</code>.</li>
   "identifier": "https://datacarpentry.org/python-ecology-lesson-es/instructor/09-working-with-sql.html",
   "dateCreated": "2018-11-09",
   "dateModified": "2023-02-07",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

@@ -373,7 +373,7 @@ ejecutar lo siguiente:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> check_env.py</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">python</span> check_env.py</span></code></pre>
 </div>
 <p>Si las estudiantes reciben un <code>AssertionError</code>, éste te
 informará cómo ayudar a corregir la instalación. De lo contrario, ¡te
@@ -412,7 +412,7 @@ para aclarar que no se trata de la posición.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rev</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>rev</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -422,7 +422,7 @@ para aclarar que no se trata de la posición.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>rev[<span class="dv">2</span>] <span class="op">=</span> <span class="st">"apple-sauce"</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>rev[<span class="dv">2</span>] <span class="op">=</span> <span class="st">"apple-sauce"</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -515,9 +515,9 @@ longitudes de pies y el valor medio del peso para cada combinación de
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>surveys_df.groupby([<span class="st">'plot_id'</span>,<span class="st">'sex'</span>]).agg({<span class="st">"year"</span>: <span class="st">'min'</span>,</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"hindfoot_length"</span>: <span class="st">'median'</span>,</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"weight"</span>: <span class="st">'mean'</span>})`</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>surveys_df.groupby([<span class="st">'plot_id'</span>,<span class="st">'sex'</span>]).agg({<span class="st">"year"</span>: <span class="st">'min'</span>,</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>                                           <span class="st">"hindfoot_length"</span>: <span class="st">'median'</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>                                           <span class="st">"weight"</span>: <span class="st">'mean'</span>})`</span></code></pre>
 </div>
 <ul>
 <li>Calcula las estadísticas descriptivas del peso <code>weight</code>
@@ -526,7 +526,7 @@ para cada <code>plot_id</code>.</li>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>surveys_df.groupby([<span class="st">'plot_id'</span>])[<span class="st">'weight'</span>].describe()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>surveys_df.groupby([<span class="st">'plot_id'</span>])[<span class="st">'weight'</span>].describe()</span></code></pre>
 </div>
 <ul>
 <li>
@@ -549,7 +549,7 @@ del <code>DataFrame</code> resultante:
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>surveys_df.groupby(<span class="st">'plot_id'</span>).mean()[<span class="st">"weight"</span>].plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>surveys_df.groupby(<span class="st">'plot_id'</span>).mean()[<span class="st">"weight"</span>].plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span></code></pre>
 </div>
 <figure><img src="fig/01_chall_bar_meanweight.png" alt="promedio de peso de las especies por sitio" class="figure mx-auto d-block"></figure><ul>
 <li>Crea una gráfica del total de machos contra el total de hembras para
@@ -558,7 +558,7 @@ todo el dataset.</li>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>surveys_df.groupby(<span class="st">'sex'</span>).count()[<span class="st">"record_id"</span>].plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>surveys_df.groupby(<span class="st">'sex'</span>).count()[<span class="st">"record_id"</span>].plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span></code></pre>
 </div>
 <figure><img src="fig/01_chall_bar_totalsex.png" alt="total de machos contra el total de hembras para todo el dataset" class="figure mx-auto d-block"></figure>
 </div>
@@ -679,7 +679,7 @@ diferente de ‘M’ o ‘F’ en los datos de <code>surveys</code>.</p></li>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="op">~</span>surveys_df[<span class="st">"sex"</span>].isin([<span class="st">'M'</span>, <span class="st">'F'</span>])]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>surveys_df[<span class="op">~</span>surveys_df[<span class="st">"sex"</span>].isin([<span class="st">'M'</span>, <span class="st">'F'</span>])]</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -696,9 +696,9 @@ nuevo valor de ‘x’. Determina el número total de valores
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>new <span class="op">=</span> surveys_df[<span class="op">~</span>surveys_df[<span class="st">'sex'</span>].isin([<span class="st">'M'</span>, <span class="st">'F'</span>])].copy()</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>new[<span class="st">'sex'</span>]<span class="op">=</span><span class="st">'x'</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(new))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>new <span class="op">=</span> surveys_df[<span class="op">~</span>surveys_df[<span class="st">'sex'</span>].isin([<span class="st">'M'</span>, <span class="st">'F'</span>])].copy()</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>new[<span class="st">'sex'</span>]<span class="op">=</span><span class="st">'x'</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(new))</span></code></pre>
 </div>
 <p>Puedes verificar el número de valores Nan con
 <code>sum(surveys_df['sex'].isnull())</code>, que resulta igual al
@@ -716,13 +716,13 @@ parcela.</li>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># selecciona los datos con isin:</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>stack_selection <span class="op">=</span> surveys_df[(surveys_df[<span class="st">'sex'</span>].isin([<span class="st">'M'</span>, <span class="st">'F'</span>])) <span class="op">&amp;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>							surveys_df[<span class="st">"weight"</span>] <span class="op">&gt;</span> <span class="fl">0.</span>][[<span class="st">"sex"</span>, <span class="st">"weight"</span>, <span class="st">"plot_id"</span>]]</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># calcula el promedio de weight para cada combinación de plot_id y sex:</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>stack_selection <span class="op">=</span> stack_selection.groupby([<span class="st">"plot_id"</span>, <span class="st">"sex"</span>]).mean().unstack()</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># podemos representarlo como un gráfico de barras apiladas:</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>stack_selection.plot(kind<span class="op">=</span><span class="st">'bar'</span>, stacked<span class="op">=</span><span class="va">True</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># selecciona los datos con isin:</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>stack_selection <span class="op">=</span> surveys_df[(surveys_df[<span class="st">'sex'</span>].isin([<span class="st">'M'</span>, <span class="st">'F'</span>])) <span class="op">&amp;</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>							surveys_df[<span class="st">"weight"</span>] <span class="op">&gt;</span> <span class="fl">0.</span>][[<span class="st">"sex"</span>, <span class="st">"weight"</span>, <span class="st">"plot_id"</span>]]</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="co"># calcula el promedio de weight para cada combinación de plot_id y sex:</span></span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a>stack_selection <span class="op">=</span> stack_selection.groupby([<span class="st">"plot_id"</span>, <span class="st">"sex"</span>]).mean().unstack()</span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a><span class="co"># podemos representarlo como un gráfico de barras apiladas:</span></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a>stack_selection.plot(kind<span class="op">=</span><span class="st">'bar'</span>, stacked<span class="op">=</span><span class="va">True</span>)</span></code></pre>
 </div>
 <p><em>Sugerencia</em>: Como sabemos que todos los otros valores son
 Nan, podemos seleccionar también todos los valores que no sean
@@ -731,8 +731,8 @@ en la siguiente lección):</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>stack_selection <span class="op">=</span> surveys_df[(surveys_df[<span class="st">'sex'</span>].notnull()) <span class="op">&amp;</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>					surveys_df[<span class="st">"weight"</span>] <span class="op">&gt;</span> <span class="fl">0.</span>][[<span class="st">"sex"</span>, <span class="st">"weight"</span>, <span class="st">"plot_id"</span>]]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>stack_selection <span class="op">=</span> surveys_df[(surveys_df[<span class="st">'sex'</span>].notnull()) <span class="op">&amp;</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>					surveys_df[<span class="st">"weight"</span>] <span class="op">&gt;</span> <span class="fl">0.</span>][[<span class="st">"sex"</span>, <span class="st">"weight"</span>, <span class="st">"plot_id"</span>]]</span></code></pre>
 </div>
 <figure><img src="fig/02_chall_stack_levelissue.png" alt="promedio de weight para cada plot por sex" class="figure mx-auto d-block"></figure><p>Sin embargo, debido al comando <code>unstack</code>, el encabezado de
 la leyenda contiene dos niveles. Para removerlo, los nombres de columnas
@@ -740,7 +740,7 @@ deben ser simplificados:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>stack_selection.columns <span class="op">=</span> stack_selection.columns.droplevel()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>stack_selection.columns <span class="op">=</span> stack_selection.columns.droplevel()</span></code></pre>
 </div>
 <figure><img src="fig/02_chall_stack_level.png" alt="promedio de weight para cada plot_id por sex" class="figure mx-auto d-block"></figure>
 </div>
@@ -773,7 +773,7 @@ que no son NA por columna. Examina el método
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>surveys_df.isnull()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>surveys_df.isnull()</span></code></pre>
 </div>
 <p>Si las estudiantes tienen problemas para generar el output, u ocurre
 algo con éste, existe un archivo llamado “sample output” con los datos
@@ -794,24 +794,24 @@ asegúrate de que se lean correctamente en Python..</li>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># lee los archivos:</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>survey2001 <span class="op">=</span> pd.read_csv(<span class="st">"data/survey2001.csv"</span>)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>survey2002 <span class="op">=</span> pd.read_csv(<span class="st">"data/survey2002.csv"</span>)</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># concatena los archivos:</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>survey_all <span class="op">=</span> pd.concat([survey2001, survey2002], axis<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co"># recupera el peso de cada año, agrupado por sexo:</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>weight_year <span class="op">=</span> survey_all.groupby([<span class="st">'year'</span>, <span class="st">'sex'</span>]).mean()[<span class="st">"wgt"</span>].unstack()</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co"># genera el gráfico:</span></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>weight_year.plot(kind<span class="op">=</span><span class="st">"bar"</span>)</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()  <span class="co"># tip(!)</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="co"># lee los archivos:</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>survey2001 <span class="op">=</span> pd.read_csv(<span class="st">"data/survey2001.csv"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>survey2002 <span class="op">=</span> pd.read_csv(<span class="st">"data/survey2002.csv"</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a><span class="co"># concatena los archivos:</span></span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a>survey_all <span class="op">=</span> pd.concat([survey2001, survey2002], axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a><span class="co"># recupera el peso de cada año, agrupado por sexo:</span></span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a>weight_year <span class="op">=</span> survey_all.groupby([<span class="st">'year'</span>, <span class="st">'sex'</span>]).mean()[<span class="st">"wgt"</span>].unstack()</span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a><span class="co"># genera el gráfico:</span></span>
+<span id="cb16-9"><a href="#cb16-9" tabindex="-1"></a>weight_year.plot(kind<span class="op">=</span><span class="st">"bar"</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" tabindex="-1"></a>plt.tight_layout()  <span class="co"># tip(!)</span></span></code></pre>
 </div>
 <figure><img src="fig/04_chall_weight_year.png" alt="peso promedio por año, agrupado por sexo" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># escribe a un archivo:</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>weight_year.to_csv(<span class="st">"weight_for_year.csv"</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># lee los datos de nuevo:</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>pd.read_csv(<span class="st">"weight_for_year.csv"</span>, index_col<span class="op">=</span><span class="dv">0</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="co"># escribe a un archivo:</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>weight_year.to_csv(<span class="st">"weight_for_year.csv"</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a><span class="co"># lee los datos de nuevo:</span></span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a>pd.read_csv(<span class="st">"weight_for_year.csv"</span>, index_col<span class="op">=</span><span class="dv">0</span>)</span></code></pre>
 </div>
 <ul>
 <li>Cree un nuevo DataFrame uniendo los contenidos de las tablas
@@ -820,7 +820,7 @@ asegúrate de que se lean correctamente en Python..</li>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>merged_left <span class="op">=</span> pd.merge(left<span class="op">=</span>surveys_df,right<span class="op">=</span>species_df, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span><span class="st">"species_id"</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>merged_left <span class="op">=</span> pd.merge(left<span class="op">=</span>surveys_df,right<span class="op">=</span>species_df, how<span class="op">=</span><span class="st">'left'</span>, on<span class="op">=</span><span class="st">"species_id"</span>)</span></code></pre>
 </div>
 <p>Luego calcula y crea un gráfico de la distribución de:</p>
 <p><strong>1. taxa por parcela</strong> (número de especies de cada taxa
@@ -830,7 +830,7 @@ calcularse de la siguiente forma:</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>merged_left.groupby([<span class="st">"plot_id"</span>])[<span class="st">"taxa"</span>].nunique().plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a>merged_left.groupby([<span class="st">"plot_id"</span>])[<span class="st">"taxa"</span>].nunique().plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span></code></pre>
 </div>
 <figure><img src="fig/04_chall_ntaxa_per_site.png" alt="taxa por parcela" class="figure mx-auto d-block"></figure><p><em>Sugerencia</em>: También es posible graficar el número de
 invididuos de cada taxa en cada parcela (gráfico de barras
@@ -838,8 +838,8 @@ apiladas):</p>
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>merged_left.groupby([<span class="st">"plot_id"</span>, <span class="st">"taxa"</span>]).count()[<span class="st">"record_id"</span>].unstack().plot(kind<span class="op">=</span><span class="st">'bar'</span>, stacked<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper center'</span>, ncol<span class="op">=</span><span class="dv">3</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">0.5</span>, <span class="fl">1.05</span>))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>merged_left.groupby([<span class="st">"plot_id"</span>, <span class="st">"taxa"</span>]).count()[<span class="st">"record_id"</span>].unstack().plot(kind<span class="op">=</span><span class="st">'bar'</span>, stacked<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper center'</span>, ncol<span class="op">=</span><span class="dv">3</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">0.5</span>, <span class="fl">1.05</span>))</span></code></pre>
 </div>
 <p>(de otro modo, la leyenda se superpone con el gráfico de barras)</p>
 <figure><img src="fig/04_chall_taxa_per_site.png" alt="taxa por parcela" class="figure mx-auto d-block"></figure><p><strong>2. taxa por sexo por parcela</strong>: Otorguemos los valores
@@ -847,17 +847,17 @@ apiladas):</p>
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>merged_left.loc[merged_left[<span class="st">"sex"</span>].isnull(), <span class="st">"sex"</span>] <span class="op">=</span> <span class="st">'M|F'</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a>merged_left.loc[merged_left[<span class="st">"sex"</span>].isnull(), <span class="st">"sex"</span>] <span class="op">=</span> <span class="st">'M|F'</span></span></code></pre>
 </div>
 <p>Número de taxa por cada combinación de parcela/sexo:</p>
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>ntaxa_sex_site<span class="op">=</span> merged_left.groupby([<span class="st">"plot_id"</span>, <span class="st">"sex"</span>])[<span class="st">"taxa"</span>].nunique().reset_index(level<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>ntaxa_sex_site <span class="op">=</span> ntaxa_sex_site.pivot_table(values<span class="op">=</span><span class="st">"taxa"</span>, columns<span class="op">=</span><span class="st">"sex"</span>, index<span class="op">=</span>ntaxa_sex_site.index)</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>ntaxa_sex_site.plot(kind<span class="op">=</span><span class="st">"bar"</span>, legend<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper center'</span>, ncol<span class="op">=</span><span class="dv">3</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">0.5</span>, <span class="fl">1.08</span>),</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>           fontsize<span class="op">=</span><span class="st">'small'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>ntaxa_sex_site<span class="op">=</span> merged_left.groupby([<span class="st">"plot_id"</span>, <span class="st">"sex"</span>])[<span class="st">"taxa"</span>].nunique().reset_index(level<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>ntaxa_sex_site <span class="op">=</span> ntaxa_sex_site.pivot_table(values<span class="op">=</span><span class="st">"taxa"</span>, columns<span class="op">=</span><span class="st">"sex"</span>, index<span class="op">=</span>ntaxa_sex_site.index)</span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a>ntaxa_sex_site.plot(kind<span class="op">=</span><span class="st">"bar"</span>, legend<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb22-4"><a href="#cb22-4" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper center'</span>, ncol<span class="op">=</span><span class="dv">3</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">0.5</span>, <span class="fl">1.08</span>),</span>
+<span id="cb22-5"><a href="#cb22-5" tabindex="-1"></a>           fontsize<span class="op">=</span><span class="st">'small'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span></code></pre>
 </div>
 <figure><img src="fig/04_chall_ntaxa_per_site_sex.png" alt="taxa por parcela por sexo" class="figure mx-auto d-block"></figure><p><em>Sugerencia (sólo para discutir))</em>:</p>
 <p>También puede calcularse el número de individuos de cada taxa en cada
@@ -865,10 +865,10 @@ parcela y por sexo:</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>sex_taxa_site  <span class="op">=</span> merged_left.groupby([<span class="st">"plot_id"</span>, <span class="st">"taxa"</span>, <span class="st">"sex"</span>]).count()[<span class="st">'record_id'</span>]</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>sex_taxa_site.unstack(level<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">2</span>]).plot(kind<span class="op">=</span><span class="st">'bar'</span>, logy<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper center'</span>, ncol<span class="op">=</span><span class="dv">3</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">0.5</span>, <span class="fl">1.15</span>),</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>           fontsize<span class="op">=</span><span class="st">'small'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a>sex_taxa_site  <span class="op">=</span> merged_left.groupby([<span class="st">"plot_id"</span>, <span class="st">"taxa"</span>, <span class="st">"sex"</span>]).count()[<span class="st">'record_id'</span>]</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a>sex_taxa_site.unstack(level<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">2</span>]).plot(kind<span class="op">=</span><span class="st">'bar'</span>, logy<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper center'</span>, ncol<span class="op">=</span><span class="dv">3</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">0.5</span>, <span class="fl">1.15</span>),</span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1"></a>           fontsize<span class="op">=</span><span class="st">'small'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span></code></pre>
 </div>
 <figure><img src="fig/04_chall_sex_taxa_site_intro.png" alt="taxa por parcela por sexo" class="figure mx-auto d-block"></figure><p>En verdad, éste gráfico no es el mejor que podría elegirse, pues no
 es legible… Una primera alternativa para mejorarlo es utilizar
@@ -878,15 +878,15 @@ registros sin sexo definido):</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">3</span>, <span class="dv">1</span>)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> sex, ax <span class="kw">in</span> <span class="bu">zip</span>([<span class="st">"M"</span>, <span class="st">"F"</span>, <span class="st">"M|F"</span>], axs):</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    sex_taxa_site[sex_taxa_site[<span class="st">"sex"</span>] <span class="op">==</span> sex].plot(kind<span class="op">=</span><span class="st">'bar'</span>, ax<span class="op">=</span>ax, legend<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(sex)</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> ax.is_last_row():</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>        ax.set_xticks([])</span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">""</span>)</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].legend(loc<span class="op">=</span><span class="st">'upper center'</span>, ncol<span class="op">=</span><span class="dv">5</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">0.5</span>, <span class="fl">1.3</span>),</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>              fontsize<span class="op">=</span><span class="st">'small'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">3</span>, <span class="dv">1</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a><span class="cf">for</span> sex, ax <span class="kw">in</span> <span class="bu">zip</span>([<span class="st">"M"</span>, <span class="st">"F"</span>, <span class="st">"M|F"</span>], axs):</span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>    sex_taxa_site[sex_taxa_site[<span class="st">"sex"</span>] <span class="op">==</span> sex].plot(kind<span class="op">=</span><span class="st">'bar'</span>, ax<span class="op">=</span>ax, legend<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a>    ax.set_ylabel(sex)</span>
+<span id="cb24-5"><a href="#cb24-5" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> ax.is_last_row():</span>
+<span id="cb24-6"><a href="#cb24-6" tabindex="-1"></a>        ax.set_xticks([])</span>
+<span id="cb24-7"><a href="#cb24-7" tabindex="-1"></a>        ax.set_xlabel(<span class="st">""</span>)</span>
+<span id="cb24-8"><a href="#cb24-8" tabindex="-1"></a>axs[<span class="dv">0</span>].legend(loc<span class="op">=</span><span class="st">'upper center'</span>, ncol<span class="op">=</span><span class="dv">5</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">0.5</span>, <span class="fl">1.3</span>),</span>
+<span id="cb24-9"><a href="#cb24-9" tabindex="-1"></a>              fontsize<span class="op">=</span><span class="st">'small'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span></code></pre>
 </div>
 <figure><img src="fig/04_chall_sex_taxa_site.png" alt="taxa por parcela por sexo" class="figure mx-auto d-block"></figure><p>Sin embargo, sería mejor indicar <a href="https://stanford.edu/~mwaskom/software/seaborn/" class="external-link">Seaborn</a> y <a href="https://github.com/ellisonbg/altair" class="external-link">Altair</a> por sus tipos de
 visualizaciones multivariadas.</p>
@@ -898,8 +898,8 @@ datos para resumir el número de parcelas por tipo de parcela.</li>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>plot_info <span class="op">=</span> pd.read_csv(<span class="st">"data/plots.csv"</span>)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>plot_info.groupby(<span class="st">"plot_type"</span>).count()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a>plot_info <span class="op">=</span> pd.read_csv(<span class="st">"data/plots.csv"</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>plot_info.groupby(<span class="st">"plot_type"</span>).count()</span></code></pre>
 </div>
 <ul>
 <li>Calcula un índice de diversidad de su elección para control vs
@@ -913,22 +913,22 @@ de biodiversidad descrito aquí</a> que calcula la biodiversidad como:
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>merged_site_type <span class="op">=</span> pd.merge(merged_left, plot_info, on<span class="op">=</span><span class="st">'plot_id'</span>)</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co"># para cada parcela, recupera el número de especies por parcela</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>nspecies_site <span class="op">=</span> merged_site_type.groupby([<span class="st">"plot_id"</span>])[<span class="st">"species"</span>].nunique().rename(<span class="st">"nspecies"</span>)</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co"># para cada parcela, recupera el número de individuos</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>nindividuals_site <span class="op">=</span> merged_site_type.groupby([<span class="st">"plot_id"</span>]).count()[<span class="st">'record_id'</span>].rename(<span class="st">"nindiv"</span>)</span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="co"># combina las dos series</span></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>diversity_index <span class="op">=</span> pd.concat([nspecies_site, nindividuals_site], axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co"># calcula el índice de diversidad</span></span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>diversity_index[<span class="st">'diversity'</span>] <span class="op">=</span> diversity_index[<span class="st">'nspecies'</span>]<span class="op">/</span>diversity_index[<span class="st">'nindiv'</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>merged_site_type <span class="op">=</span> pd.merge(merged_left, plot_info, on<span class="op">=</span><span class="st">'plot_id'</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a><span class="co"># para cada parcela, recupera el número de especies por parcela</span></span>
+<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a>nspecies_site <span class="op">=</span> merged_site_type.groupby([<span class="st">"plot_id"</span>])[<span class="st">"species"</span>].nunique().rename(<span class="st">"nspecies"</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a><span class="co"># para cada parcela, recupera el número de individuos</span></span>
+<span id="cb26-5"><a href="#cb26-5" tabindex="-1"></a>nindividuals_site <span class="op">=</span> merged_site_type.groupby([<span class="st">"plot_id"</span>]).count()[<span class="st">'record_id'</span>].rename(<span class="st">"nindiv"</span>)</span>
+<span id="cb26-6"><a href="#cb26-6" tabindex="-1"></a><span class="co"># combina las dos series</span></span>
+<span id="cb26-7"><a href="#cb26-7" tabindex="-1"></a>diversity_index <span class="op">=</span> pd.concat([nspecies_site, nindividuals_site], axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb26-8"><a href="#cb26-8" tabindex="-1"></a><span class="co"># calcula el índice de diversidad</span></span>
+<span id="cb26-9"><a href="#cb26-9" tabindex="-1"></a>diversity_index[<span class="st">'diversity'</span>] <span class="op">=</span> diversity_index[<span class="st">'nspecies'</span>]<span class="op">/</span>diversity_index[<span class="st">'nindiv'</span>]</span></code></pre>
 </div>
 <p>Generando un gráfico de barras:</p>
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>diversity_index[<span class="st">'diversity'</span>].plot(kind<span class="op">=</span><span class="st">"barh"</span>)</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Diversity index"</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a>diversity_index[<span class="st">'diversity'</span>].plot(kind<span class="op">=</span><span class="st">"barh"</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>plt.xlabel(<span class="st">"Diversity index"</span>)</span></code></pre>
 </div>
 <figure><img src="fig/04_chall_diversity_index.png" alt="taxa por parcela por sexo" class="figure mx-auto d-block"></figure>
 </div>
@@ -952,8 +952,8 @@ caracteres usando el signo más. Por ejemplo,
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> creature <span class="kw">in</span> animals:</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(creature<span class="op">+</span><span class="st">','</span>, end<span class="op">=</span><span class="st">''</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="cf">for</span> creature <span class="kw">in</span> animals:</span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>    <span class="bu">print</span>(creature<span class="op">+</span><span class="st">','</span>, end<span class="op">=</span><span class="st">''</span>)</span></code></pre>
 </div>
 <p>Este bucle también agrega una coma luego del último animal. Una
 solución mejor, sin bucles, sería: <code>','.join(animals)</code></p>
@@ -971,7 +971,7 @@ valores nulos no sean incluidas en los archivos anuales.</li>
 <div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>surveys_year <span class="op">=</span> surveys_df[surveys_df.year <span class="op">==</span> year].dropna()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a>surveys_year <span class="op">=</span> surveys_df[surveys_df.year <span class="op">==</span> year].dropna()</span></code></pre>
 </div>
 <ul>
 <li>Supongamos que solo quieres revisar los datos cada cierto múltiplo
@@ -983,15 +983,15 @@ primer y el último año a partir del código?</p>
 <div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>n_year <span class="op">=</span> <span class="dv">5</span>  <span class="co"># mejor visión general si defines una variable</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>first_year <span class="op">=</span> surveys_df[<span class="st">'year'</span>].<span class="bu">min</span>()</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>last_year <span class="op">=</span> surveys_df[<span class="st">'year'</span>].<span class="bu">max</span>()</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(first_year, last_year, n_year):</span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year)</span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Selecciona los datos para los años correctos</span></span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>    surveys_year <span class="op">=</span> surveys_df[surveys_df.year <span class="op">==</span> year].dropna()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a>n_year <span class="op">=</span> <span class="dv">5</span>  <span class="co"># mejor visión general si defines una variable</span></span>
+<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a>first_year <span class="op">=</span> surveys_df[<span class="st">'year'</span>].<span class="bu">min</span>()</span>
+<span id="cb30-3"><a href="#cb30-3" tabindex="-1"></a>last_year <span class="op">=</span> surveys_df[<span class="st">'year'</span>].<span class="bu">max</span>()</span>
+<span id="cb30-4"><a href="#cb30-4" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="#cb30-5" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(first_year, last_year, n_year):</span>
+<span id="cb30-6"><a href="#cb30-6" tabindex="-1"></a>    <span class="bu">print</span>(year)</span>
+<span id="cb30-7"><a href="#cb30-7" tabindex="-1"></a></span>
+<span id="cb30-8"><a href="#cb30-8" tabindex="-1"></a>    <span class="co"># Selecciona los datos para los años correctos</span></span>
+<span id="cb30-9"><a href="#cb30-9" tabindex="-1"></a>    surveys_year <span class="op">=</span> surveys_df[surveys_df.year <span class="op">==</span> year].dropna()</span></code></pre>
 </div>
 <ul>
 <li>En vez de separar la información por años, un colega tuyo quiere
@@ -1036,28 +1036,28 @@ un nombre diferente en un directorio diferente.</li>
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> one_year_csv_writer(this_year, all_data, folder_to_save, root_name):</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Escribe un archivo csv para los datos de un año dado.</span></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Parámetros</span></span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="co">    ---------</span></span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co">    this_year : int</span></span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="co">        año para el cual se extraen datos</span></span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="co">    all_data: pd.DataFrame</span></span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="co">        DataFrame con datos de múltiples años</span></span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="co">    folder_to_save : str</span></span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="co">        carpeta para guardar los archivos de datos</span></span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="co">    root_name: str</span></span>
-<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="co">        raíz de los nombres de archivo donde se guardan los datos</span></span>
-<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Selecciona datos para el año</span></span>
-<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>    surveys_year <span class="op">=</span> all_data[all_data.year <span class="op">==</span> this_year]</span>
-<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Escribe el nuevo DataFrame a un archivo csv</span></span>
-<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>    filename <span class="op">=</span> os.path.join(folder_to_save, <span class="st">''</span>.join([root_name, <span class="bu">str</span>(this_year), <span class="st">'.csv'</span>]))</span>
-<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>    surveys_year.to_csv(filename)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="kw">def</span> one_year_csv_writer(this_year, all_data, folder_to_save, root_name):</span>
+<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb31-3"><a href="#cb31-3" tabindex="-1"></a><span class="co">    Escribe un archivo csv para los datos de un año dado.</span></span>
+<span id="cb31-4"><a href="#cb31-4" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" tabindex="-1"></a><span class="co">    Parámetros</span></span>
+<span id="cb31-6"><a href="#cb31-6" tabindex="-1"></a><span class="co">    ---------</span></span>
+<span id="cb31-7"><a href="#cb31-7" tabindex="-1"></a><span class="co">    this_year : int</span></span>
+<span id="cb31-8"><a href="#cb31-8" tabindex="-1"></a><span class="co">        año para el cual se extraen datos</span></span>
+<span id="cb31-9"><a href="#cb31-9" tabindex="-1"></a><span class="co">    all_data: pd.DataFrame</span></span>
+<span id="cb31-10"><a href="#cb31-10" tabindex="-1"></a><span class="co">        DataFrame con datos de múltiples años</span></span>
+<span id="cb31-11"><a href="#cb31-11" tabindex="-1"></a><span class="co">    folder_to_save : str</span></span>
+<span id="cb31-12"><a href="#cb31-12" tabindex="-1"></a><span class="co">        carpeta para guardar los archivos de datos</span></span>
+<span id="cb31-13"><a href="#cb31-13" tabindex="-1"></a><span class="co">    root_name: str</span></span>
+<span id="cb31-14"><a href="#cb31-14" tabindex="-1"></a><span class="co">        raíz de los nombres de archivo donde se guardan los datos</span></span>
+<span id="cb31-15"><a href="#cb31-15" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb31-16"><a href="#cb31-16" tabindex="-1"></a></span>
+<span id="cb31-17"><a href="#cb31-17" tabindex="-1"></a>    <span class="co"># Selecciona datos para el año</span></span>
+<span id="cb31-18"><a href="#cb31-18" tabindex="-1"></a>    surveys_year <span class="op">=</span> all_data[all_data.year <span class="op">==</span> this_year]</span>
+<span id="cb31-19"><a href="#cb31-19" tabindex="-1"></a></span>
+<span id="cb31-20"><a href="#cb31-20" tabindex="-1"></a>    <span class="co"># Escribe el nuevo DataFrame a un archivo csv</span></span>
+<span id="cb31-21"><a href="#cb31-21" tabindex="-1"></a>    filename <span class="op">=</span> os.path.join(folder_to_save, <span class="st">''</span>.join([root_name, <span class="bu">str</span>(this_year), <span class="st">'.csv'</span>]))</span>
+<span id="cb31-22"><a href="#cb31-22" tabindex="-1"></a>    surveys_year.to_csv(filename)</span></code></pre>
 </div>
 <p>También adapta la función <code>yearly_data_csv_writer</code> con los
 <strong>inputs</strong> adicionales.</p>
@@ -1093,10 +1093,10 @@ listar los contenidos de directorios. <code>os.listdir</code>
 <div class="codewrapper sourceCode" id="cb32">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>filenames <span class="op">=</span> []</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(start_year, end_year<span class="op">+</span><span class="dv">1</span>):</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    filenames.append(one_year_csv_writer(year, all_data, folder_to_save, root_name))</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> filenames</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a>filenames <span class="op">=</span> []</span>
+<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(start_year, end_year<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb32-3"><a href="#cb32-3" tabindex="-1"></a>    filenames.append(one_year_csv_writer(year, all_data, folder_to_save, root_name))</span>
+<span id="cb32-4"><a href="#cb32-4" tabindex="-1"></a><span class="cf">return</span> filenames</span></code></pre>
 </div>
 <ul>
 <li><p>Explora qué sucede cuando las variables son declaradas dentro de
@@ -1129,7 +1129,7 @@ tienen valores por defecto en la definición de la función!)</p></li>
 <div class="codewrapper sourceCode" id="cb34">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>yearly_data_arg_test(surveys_df, end_year<span class="op">=</span><span class="dv">2001</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a>yearly_data_arg_test(surveys_df, end_year<span class="op">=</span><span class="dv">2001</span>)</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -1143,28 +1143,28 @@ con valores por defecto.</li>
 <div class="codewrapper sourceCode" id="cb35">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> one_year_csv_writer(this_year, all_data, folder_to_save<span class="op">=</span><span class="st">'./'</span>, root_name<span class="op">=</span><span class="st">'survey'</span>):</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Escribe un archivo csv para los datos de un año dado.</span></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Parámetros</span></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="co">    ---------</span></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co">    this_year : int</span></span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="co">        año para el cual se extraen datos</span></span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="co">    all_data: pd.DataFrame</span></span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="co">        DataFrame con datos de múltiples años</span></span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="co">    folder_to_save : str</span></span>
-<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a><span class="co">        carpeta para guardar los archivos de datos</span></span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="co">    root_name: str</span></span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="co">        raíz de los nombres de archivo donde se guardan los datos</span></span>
-<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Selecciona datos para el año</span></span>
-<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>    surveys_year <span class="op">=</span> all_data[all_data.year <span class="op">==</span> this_year]</span>
-<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Escribe el nuevo DataFrame a un archivo csv</span></span>
-<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a>    filename <span class="op">=</span> os.path.join(folder_to_save, <span class="st">''</span>.join([root_name, <span class="bu">str</span>(this_year), <span class="st">'.csv'</span>]))</span>
-<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a>    surveys_year.to_csv(filename)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="kw">def</span> one_year_csv_writer(this_year, all_data, folder_to_save<span class="op">=</span><span class="st">'./'</span>, root_name<span class="op">=</span><span class="st">'survey'</span>):</span>
+<span id="cb35-2"><a href="#cb35-2" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb35-3"><a href="#cb35-3" tabindex="-1"></a><span class="co">    Escribe un archivo csv para los datos de un año dado.</span></span>
+<span id="cb35-4"><a href="#cb35-4" tabindex="-1"></a></span>
+<span id="cb35-5"><a href="#cb35-5" tabindex="-1"></a><span class="co">    Parámetros</span></span>
+<span id="cb35-6"><a href="#cb35-6" tabindex="-1"></a><span class="co">    ---------</span></span>
+<span id="cb35-7"><a href="#cb35-7" tabindex="-1"></a><span class="co">    this_year : int</span></span>
+<span id="cb35-8"><a href="#cb35-8" tabindex="-1"></a><span class="co">        año para el cual se extraen datos</span></span>
+<span id="cb35-9"><a href="#cb35-9" tabindex="-1"></a><span class="co">    all_data: pd.DataFrame</span></span>
+<span id="cb35-10"><a href="#cb35-10" tabindex="-1"></a><span class="co">        DataFrame con datos de múltiples años</span></span>
+<span id="cb35-11"><a href="#cb35-11" tabindex="-1"></a><span class="co">    folder_to_save : str</span></span>
+<span id="cb35-12"><a href="#cb35-12" tabindex="-1"></a><span class="co">        carpeta para guardar los archivos de datos</span></span>
+<span id="cb35-13"><a href="#cb35-13" tabindex="-1"></a><span class="co">    root_name: str</span></span>
+<span id="cb35-14"><a href="#cb35-14" tabindex="-1"></a><span class="co">        raíz de los nombres de archivo donde se guardan los datos</span></span>
+<span id="cb35-15"><a href="#cb35-15" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb35-16"><a href="#cb35-16" tabindex="-1"></a></span>
+<span id="cb35-17"><a href="#cb35-17" tabindex="-1"></a>    <span class="co"># Selecciona datos para el año</span></span>
+<span id="cb35-18"><a href="#cb35-18" tabindex="-1"></a>    surveys_year <span class="op">=</span> all_data[all_data.year <span class="op">==</span> this_year]</span>
+<span id="cb35-19"><a href="#cb35-19" tabindex="-1"></a></span>
+<span id="cb35-20"><a href="#cb35-20" tabindex="-1"></a>    <span class="co"># Escribe el nuevo DataFrame a un archivo csv</span></span>
+<span id="cb35-21"><a href="#cb35-21" tabindex="-1"></a>    filename <span class="op">=</span> os.path.join(folder_to_save, <span class="st">''</span>.join([root_name, <span class="bu">str</span>(this_year), <span class="st">'.csv'</span>]))</span>
+<span id="cb35-22"><a href="#cb35-22" tabindex="-1"></a>    surveys_year.to_csv(filename)</span></code></pre>
 </div>
 <ul>
 <li>Modifica las funciones de tal forma que no creen archivos para un
@@ -1175,12 +1175,12 @@ año si éste no está en los datos y que muestre una alerta al usuario
 <div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Escribe el nuevo DataFrame a un archivo csv</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(surveys_year) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>        filename <span class="op">=</span> os.path.join(folder_to_save, <span class="st">''</span>.join([root_name, <span class="bu">str</span>(this_year), <span class="st">'.csv'</span>]))</span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>        surveys_year.to_csv(filename)</span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"No data for year "</span> <span class="op">+</span> <span class="bu">str</span>(this_year))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a>    <span class="co"># Escribe el nuevo DataFrame a un archivo csv</span></span>
+<span id="cb36-2"><a href="#cb36-2" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(surveys_year) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb36-3"><a href="#cb36-3" tabindex="-1"></a>        filename <span class="op">=</span> os.path.join(folder_to_save, <span class="st">''</span>.join([root_name, <span class="bu">str</span>(this_year), <span class="st">'.csv'</span>]))</span>
+<span id="cb36-4"><a href="#cb36-4" tabindex="-1"></a>        surveys_year.to_csv(filename)</span>
+<span id="cb36-5"><a href="#cb36-5" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb36-6"><a href="#cb36-6" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"No data for year "</span> <span class="op">+</span> <span class="bu">str</span>(this_year))</span></code></pre>
 </div>
 <ul>
 <li>El código que has escrito hasta este momento usando el bucle
@@ -1195,23 +1195,23 @@ terminando en el último usando la lista.</li>
 <div class="codewrapper sourceCode" id="cb37">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> yearly_data_csv_writer(all_data, yearcolumn<span class="op">=</span><span class="st">"year"</span>,</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>                           folder_to_save<span class="op">=</span><span class="st">'./'</span>, root_name<span class="op">=</span><span class="st">'survey'</span>):</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Escribe archivos csv separados para los datos de cada año.</span></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="co">    all_data --- DataFrame con datos de múltiples años</span></span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="co">    yearcolumn --- nombre de columna con el año de los datos</span></span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="co">    folder_to_save --- carpeta para guardar los archivos de datos</span></span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="co">    root_name --- inicio de los nombres de archivo almacenados</span></span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>    years <span class="op">=</span> all_data[<span class="st">"year"</span>].unique()</span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># "end_year" es el último año de los datos que queremos extraer, así que hacemos un bucle hasta end_year+1</span></span>
-<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>    filenames <span class="op">=</span> []</span>
-<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> year <span class="kw">in</span> years:</span>
-<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>        filenames.append(one_year_csv_writer(year, all_data, folder_to_save, root_name))</span>
-<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> filenames</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a><span class="kw">def</span> yearly_data_csv_writer(all_data, yearcolumn<span class="op">=</span><span class="st">"year"</span>,</span>
+<span id="cb37-2"><a href="#cb37-2" tabindex="-1"></a>                           folder_to_save<span class="op">=</span><span class="st">'./'</span>, root_name<span class="op">=</span><span class="st">'survey'</span>):</span>
+<span id="cb37-3"><a href="#cb37-3" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb37-4"><a href="#cb37-4" tabindex="-1"></a><span class="co">    Escribe archivos csv separados para los datos de cada año.</span></span>
+<span id="cb37-5"><a href="#cb37-5" tabindex="-1"></a></span>
+<span id="cb37-6"><a href="#cb37-6" tabindex="-1"></a><span class="co">    all_data --- DataFrame con datos de múltiples años</span></span>
+<span id="cb37-7"><a href="#cb37-7" tabindex="-1"></a><span class="co">    yearcolumn --- nombre de columna con el año de los datos</span></span>
+<span id="cb37-8"><a href="#cb37-8" tabindex="-1"></a><span class="co">    folder_to_save --- carpeta para guardar los archivos de datos</span></span>
+<span id="cb37-9"><a href="#cb37-9" tabindex="-1"></a><span class="co">    root_name --- inicio de los nombres de archivo almacenados</span></span>
+<span id="cb37-10"><a href="#cb37-10" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb37-11"><a href="#cb37-11" tabindex="-1"></a>    years <span class="op">=</span> all_data[<span class="st">"year"</span>].unique()</span>
+<span id="cb37-12"><a href="#cb37-12" tabindex="-1"></a></span>
+<span id="cb37-13"><a href="#cb37-13" tabindex="-1"></a>    <span class="co"># "end_year" es el último año de los datos que queremos extraer, así que hacemos un bucle hasta end_year+1</span></span>
+<span id="cb37-14"><a href="#cb37-14" tabindex="-1"></a>    filenames <span class="op">=</span> []</span>
+<span id="cb37-15"><a href="#cb37-15" tabindex="-1"></a>    <span class="cf">for</span> year <span class="kw">in</span> years:</span>
+<span id="cb37-16"><a href="#cb37-16" tabindex="-1"></a>        filenames.append(one_year_csv_writer(year, all_data, folder_to_save, root_name))</span>
+<span id="cb37-17"><a href="#cb37-17" tabindex="-1"></a>    <span class="cf">return</span> filenames</span></code></pre>
 </div>
 </div>
 </div>
@@ -1242,18 +1242,18 @@ barras invertidas.</p>
 <div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>plt.plot(t, t, <span class="st">'r--'</span>, label<span class="op">=</span><span class="st">'$y=x$'</span>)</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>plt.plot(t, t<span class="op">**</span><span class="dv">2</span> , <span class="st">'bs-'</span>, label<span class="op">=</span><span class="st">'$y=x^2$'</span>)</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>plt.plot(t, (t <span class="op">-</span> <span class="dv">5</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">5</span> <span class="op">*</span> t <span class="op">-</span> <span class="fl">0.5</span>, <span class="st">'g^:'</span>, label<span class="op">=</span><span class="st">'$y=(x - 5)^2 + 5  x - </span><span class="ch">\\</span><span class="st">frac</span><span class="sc">{1}{2}</span><span class="st">$'</span>) <span class="co"># nota la barra invertida doble</span></span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper left'</span>, shadow<span class="op">=</span><span class="va">True</span>, fontsize<span class="op">=</span><span class="st">'x-large'</span>)</span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Nota las dobles barras invertidas en la línea de abajo</span></span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Éste es el eje x. También puede contener matemática, como $</span><span class="ch">\\</span><span class="st">bar</span><span class="sc">{x}</span><span class="st">=</span><span class="ch">\\</span><span class="st">frac{</span><span class="ch">\\</span><span class="st">sum_{i=1}^</span><span class="sc">{n}</span><span class="st"> </span><span class="sc">{x}</span><span class="st">} </span><span class="sc">{N}</span><span class="st">$'</span>)</span>
-<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Éste es el eje y'</span>)</span>
-<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Éste es el título de la figura'</span>)</span>
-<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a>plt.plot(t, t, <span class="st">'r--'</span>, label<span class="op">=</span><span class="st">'$y=x$'</span>)</span>
+<span id="cb38-2"><a href="#cb38-2" tabindex="-1"></a>plt.plot(t, t<span class="op">**</span><span class="dv">2</span> , <span class="st">'bs-'</span>, label<span class="op">=</span><span class="st">'$y=x^2$'</span>)</span>
+<span id="cb38-3"><a href="#cb38-3" tabindex="-1"></a>plt.plot(t, (t <span class="op">-</span> <span class="dv">5</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">5</span> <span class="op">*</span> t <span class="op">-</span> <span class="fl">0.5</span>, <span class="st">'g^:'</span>, label<span class="op">=</span><span class="st">'$y=(x - 5)^2 + 5  x - </span><span class="ch">\\</span><span class="st">frac</span><span class="sc">{1}{2}</span><span class="st">$'</span>) <span class="co"># nota la barra invertida doble</span></span>
+<span id="cb38-4"><a href="#cb38-4" tabindex="-1"></a></span>
+<span id="cb38-5"><a href="#cb38-5" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper left'</span>, shadow<span class="op">=</span><span class="va">True</span>, fontsize<span class="op">=</span><span class="st">'x-large'</span>)</span>
+<span id="cb38-6"><a href="#cb38-6" tabindex="-1"></a></span>
+<span id="cb38-7"><a href="#cb38-7" tabindex="-1"></a><span class="co"># Nota las dobles barras invertidas en la línea de abajo</span></span>
+<span id="cb38-8"><a href="#cb38-8" tabindex="-1"></a>plt.xlabel(<span class="st">'Éste es el eje x. También puede contener matemática, como $</span><span class="ch">\\</span><span class="st">bar</span><span class="sc">{x}</span><span class="st">=</span><span class="ch">\\</span><span class="st">frac{</span><span class="ch">\\</span><span class="st">sum_{i=1}^</span><span class="sc">{n}</span><span class="st"> </span><span class="sc">{x}</span><span class="st">} </span><span class="sc">{N}</span><span class="st">$'</span>)</span>
+<span id="cb38-9"><a href="#cb38-9" tabindex="-1"></a>plt.ylabel(<span class="st">'Éste es el eje y'</span>)</span>
+<span id="cb38-10"><a href="#cb38-10" tabindex="-1"></a>plt.title(<span class="st">'Éste es el título de la figura'</span>)</span>
+<span id="cb38-11"><a href="#cb38-11" tabindex="-1"></a></span>
+<span id="cb38-12"><a href="#cb38-12" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
 </div>
 <div class="section level2">
@@ -1313,8 +1313,8 @@ contiene más información.</p>
   "url": "https://datacarpentry.org/python-ecology-lesson-es/instructor-notes.html",
   "identifier": "https://datacarpentry.org/python-ecology-lesson-es/instructor-notes.html",
   "dateCreated": "2018-11-09",
-  "dateModified": "2024-02-27",
-  "datePublished": "2024-02-27"
+  "dateModified": "2024-03-05",
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

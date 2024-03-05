@@ -348,43 +348,43 @@ DataFrames</strong>. En <strong>Python</strong>:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>surveys_df <span class="op">=</span> pd.read_csv(<span class="st">"data/surveys.csv"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                         keep_default_na<span class="op">=</span><span class="va">False</span>, na_values<span class="op">=</span>[<span class="st">""</span>])</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>surveys_df</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>       record_id  month  day  year  plot species  sex  hindfoot_length weight</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span>              <span class="dv">1</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>     <span class="dv">2</span>      NA    M               <span class="dv">32</span>  NaN</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>              <span class="dv">2</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>     <span class="dv">3</span>      NA    M               <span class="dv">33</span>  NaN</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>              <span class="dv">3</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>     <span class="dv">2</span>      DM    F               <span class="dv">37</span>  NaN</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>              <span class="dv">4</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>     <span class="dv">7</span>      DM    M               <span class="dv">36</span>  NaN</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>              <span class="dv">5</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>     <span class="dv">3</span>      DM    M               <span class="dv">35</span>  NaN</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>...          ...    ...  ...   ...   ...     ...  ...              ...  ...</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="dv">35544</span>      <span class="dv">35545</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>    <span class="dv">15</span>      AH  NaN              NaN  NaN</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="dv">35545</span>      <span class="dv">35546</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>    <span class="dv">15</span>      AH  NaN              NaN  NaN</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="dv">35546</span>      <span class="dv">35547</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>    <span class="dv">10</span>      RM    F               <span class="dv">15</span>   <span class="dv">14</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="dv">35547</span>      <span class="dv">35548</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>     <span class="dv">7</span>      DO    M               <span class="dv">36</span>   <span class="dv">51</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="dv">35548</span>      <span class="dv">35549</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>     <span class="dv">5</span>     NaN  NaN              NaN  NaN</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>[<span class="dv">35549</span> rows x <span class="dv">9</span> columns]</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>species_df <span class="op">=</span> pd.read_csv(<span class="st">"data/species.csv"</span>,</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>                         keep_default_na<span class="op">=</span><span class="va">False</span>, na_values<span class="op">=</span>[<span class="st">""</span>])</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>species_df</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  species_id             genus          species     taxa</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span>          AB        Amphispiza        bilineata     Bird</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>          AH  Ammospermophilus          harrisi   Rodent</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>          AS        Ammodramus       savannarum     Bird</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>          BA           Baiomys          taylori   Rodent</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>          CB   Campylorhynchus  brunneicapillus     Bird</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>..        ...               ...              ...      ...</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="dv">49</span>         UP            Pipilo              sp.     Bird</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="dv">50</span>         UR            Rodent              sp.   Rodent</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="dv">51</span>         US           Sparrow              sp.     Bird</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="dv">52</span>         ZL       Zonotrichia       leucophrys     Bird</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="dv">53</span>         ZM           Zenaida         macroura     Bird</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>[<span class="dv">54</span> rows x <span class="dv">4</span> columns]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>surveys_df <span class="op">=</span> pd.read_csv(<span class="st">"data/surveys.csv"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>                         keep_default_na<span class="op">=</span><span class="va">False</span>, na_values<span class="op">=</span>[<span class="st">""</span>])</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>surveys_df</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>       record_id  month  day  year  plot species  sex  hindfoot_length weight</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="dv">0</span>              <span class="dv">1</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>     <span class="dv">2</span>      NA    M               <span class="dv">32</span>  NaN</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="dv">1</span>              <span class="dv">2</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>     <span class="dv">3</span>      NA    M               <span class="dv">33</span>  NaN</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="dv">2</span>              <span class="dv">3</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>     <span class="dv">2</span>      DM    F               <span class="dv">37</span>  NaN</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="dv">3</span>              <span class="dv">4</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>     <span class="dv">7</span>      DM    M               <span class="dv">36</span>  NaN</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="dv">4</span>              <span class="dv">5</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>     <span class="dv">3</span>      DM    M               <span class="dv">35</span>  NaN</span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>...          ...    ...  ...   ...   ...     ...  ...              ...  ...</span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a><span class="dv">35544</span>      <span class="dv">35545</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>    <span class="dv">15</span>      AH  NaN              NaN  NaN</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a><span class="dv">35545</span>      <span class="dv">35546</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>    <span class="dv">15</span>      AH  NaN              NaN  NaN</span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a><span class="dv">35546</span>      <span class="dv">35547</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>    <span class="dv">10</span>      RM    F               <span class="dv">15</span>   <span class="dv">14</span></span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a><span class="dv">35547</span>      <span class="dv">35548</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>     <span class="dv">7</span>      DO    M               <span class="dv">36</span>   <span class="dv">51</span></span>
+<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a><span class="dv">35548</span>      <span class="dv">35549</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>     <span class="dv">5</span>     NaN  NaN              NaN  NaN</span>
+<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a>[<span class="dv">35549</span> rows x <span class="dv">9</span> columns]</span>
+<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" tabindex="-1"></a>species_df <span class="op">=</span> pd.read_csv(<span class="st">"data/species.csv"</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" tabindex="-1"></a>                         keep_default_na<span class="op">=</span><span class="va">False</span>, na_values<span class="op">=</span>[<span class="st">""</span>])</span>
+<span id="cb1-23"><a href="#cb1-23" tabindex="-1"></a>species_df</span>
+<span id="cb1-24"><a href="#cb1-24" tabindex="-1"></a>  species_id             genus          species     taxa</span>
+<span id="cb1-25"><a href="#cb1-25" tabindex="-1"></a><span class="dv">0</span>          AB        Amphispiza        bilineata     Bird</span>
+<span id="cb1-26"><a href="#cb1-26" tabindex="-1"></a><span class="dv">1</span>          AH  Ammospermophilus          harrisi   Rodent</span>
+<span id="cb1-27"><a href="#cb1-27" tabindex="-1"></a><span class="dv">2</span>          AS        Ammodramus       savannarum     Bird</span>
+<span id="cb1-28"><a href="#cb1-28" tabindex="-1"></a><span class="dv">3</span>          BA           Baiomys          taylori   Rodent</span>
+<span id="cb1-29"><a href="#cb1-29" tabindex="-1"></a><span class="dv">4</span>          CB   Campylorhynchus  brunneicapillus     Bird</span>
+<span id="cb1-30"><a href="#cb1-30" tabindex="-1"></a>..        ...               ...              ...      ...</span>
+<span id="cb1-31"><a href="#cb1-31" tabindex="-1"></a><span class="dv">49</span>         UP            Pipilo              sp.     Bird</span>
+<span id="cb1-32"><a href="#cb1-32" tabindex="-1"></a><span class="dv">50</span>         UR            Rodent              sp.   Rodent</span>
+<span id="cb1-33"><a href="#cb1-33" tabindex="-1"></a><span class="dv">51</span>         US           Sparrow              sp.     Bird</span>
+<span id="cb1-34"><a href="#cb1-34" tabindex="-1"></a><span class="dv">52</span>         ZL       Zonotrichia       leucophrys     Bird</span>
+<span id="cb1-35"><a href="#cb1-35" tabindex="-1"></a><span class="dv">53</span>         ZM           Zenaida         macroura     Bird</span>
+<span id="cb1-36"><a href="#cb1-36" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" tabindex="-1"></a>[<span class="dv">54</span> rows x <span class="dv">4</span> columns]</span></code></pre>
 </div>
 <p>Ten en cuenta que el método <code>read_csv</code> que usamos puede
 tomar opciones adicionales que no hemos usado anteriormente. Muchas
@@ -403,13 +403,13 @@ subconjuntos de nuestros datos para ver cómo esto trabaja.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lee las primeras 10 líneas de la tabla de encuestas.</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>survey_sub <span class="op">=</span> surveys_df.head(<span class="dv">10</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Agarra las últimas 10 filas</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>survey_sub_last10 <span class="op">=</span> surveys_df.tail(<span class="dv">10</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Restablecer los valores de índice a la segunda __DataFrame__ adjunta correctamente</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>survey_sub_last10<span class="op">=</span>survey_sub_last10.reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># drop=True opción evita agregar una nueva columna de índice con valores de índice antiguos</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># Lee las primeras 10 líneas de la tabla de encuestas.</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>survey_sub <span class="op">=</span> surveys_df.head(<span class="dv">10</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co"># Agarra las últimas 10 filas</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>survey_sub_last10 <span class="op">=</span> surveys_df.tail(<span class="dv">10</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="co"># Restablecer los valores de índice a la segunda __DataFrame__ adjunta correctamente</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>survey_sub_last10<span class="op">=</span>survey_sub_last10.reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co"># drop=True opción evita agregar una nueva columna de índice con valores de índice antiguos</span></span></code></pre>
 </div>
 <p>Cuando concatenamos <strong>DataFrames</strong>, necesitamos
 especificar el eje. <code>axis=0</code> dice pandas para apilar el
@@ -426,11 +426,11 @@ manera).</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Apilar los __DataFrames__ uno encima del otro</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>vertical_stack <span class="op">=</span> pd.concat([survey_sub, survey_sub_last10], axis<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Coloque los __DataFrames__ de lado a lado</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>horizontal_stack <span class="op">=</span> pd.concat([survey_sub, survey_sub_last10], axis<span class="op">=</span><span class="dv">1</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># Apilar los __DataFrames__ uno encima del otro</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>vertical_stack <span class="op">=</span> pd.concat([survey_sub, survey_sub_last10], axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co"># Coloque los __DataFrames__ de lado a lado</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>horizontal_stack <span class="op">=</span> pd.concat([survey_sub, survey_sub_last10], axis<span class="op">=</span><span class="dv">1</span>)</span></code></pre>
 </div>
 <div class="section level4">
 <h4 id="valores-de-índice-de-fila-y-concat">Valores de índice de fila y Concat<a class="anchor" aria-label="anchor" href="#valores-de-%C3%ADndice-de-fila-y-concat"></a></h4>
@@ -453,8 +453,8 @@ cada línea.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Escribe el __DataFrame__ a CSV</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>vertical_stack.to_csv(<span class="st">'data_output/out.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># Escribe el __DataFrame__ a CSV</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>vertical_stack.to_csv(<span class="st">'data_output/out.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre>
 </div>
 <p>Revise su directorio de trabajo para asegurarse de que el CSV se haya
 escrito correctamente, y que puedas abrirlo! Si quieres, intenta subirlo
@@ -462,8 +462,8 @@ de vuelta a Python para asegurarte se importa correctamente.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Para los memes lee nuestro archivo en Python y asegúrese de que todo se vea bien.</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>new_output <span class="op">=</span> pd.read_csv(<span class="st">'data_output/out.csv'</span>, keep_default_na<span class="op">=</span><span class="va">False</span>, na_values<span class="op">=</span>[<span class="st">""</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># Para los memes lee nuestro archivo en Python y asegúrese de que todo se vea bien.</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>new_output <span class="op">=</span> pd.read_csv(<span class="st">'data_output/out.csv'</span>, keep_default_na<span class="op">=</span><span class="va">False</span>, na_values<span class="op">=</span>[<span class="st">""</span>])</span></code></pre>
 </div>
 <div id="challenge---combine-data" class="callout discussion">
 <div class="callout-square">
@@ -530,12 +530,12 @@ subconjunto de la tabla de especies.</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lee las primeras 10 líneas de la tabla de encuestas.</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>survey_sub <span class="op">=</span> surveys_df.head(<span class="dv">10</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Importe un penqueño subconjunto de los datos de especies diseñados para esta parte de la lección.</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Esa archivado en la carpeta de datos.</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>species_sub <span class="op">=</span> pd.read_csv(<span class="st">'data/speciesSubset.csv'</span>, keep_default_na<span class="op">=</span><span class="va">False</span>, na_values<span class="op">=</span>[<span class="st">""</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="co"># Lee las primeras 10 líneas de la tabla de encuestas.</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>survey_sub <span class="op">=</span> surveys_df.head(<span class="dv">10</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="co"># Importe un penqueño subconjunto de los datos de especies diseñados para esta parte de la lección.</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="co"># Esa archivado en la carpeta de datos.</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>species_sub <span class="op">=</span> pd.read_csv(<span class="st">'data/speciesSubset.csv'</span>, keep_default_na<span class="op">=</span><span class="va">False</span>, na_values<span class="op">=</span>[<span class="st">""</span>])</span></code></pre>
 </div>
 <p>En este ejemplo, <code>species_sub</code> es la tabla de búsqueda que
 contiene género, especie y nombres de taxa que queremos unir con los
@@ -556,14 +556,14 @@ en cada DataFrame que contiene la misma información.</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> species_sub.columns</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>Index([<span class="st">u'species_id'</span>, <span class="st">u'genus'</span>, <span class="st">u'species'</span>, <span class="st">u'taxa'</span>], dtype<span class="op">=</span><span class="st">'object'</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> survey_sub.columns</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>Index([<span class="st">u'record_id'</span>, <span class="st">u'month'</span>, <span class="st">u'day'</span>, <span class="st">u'year'</span>, <span class="st">u'plot_id'</span>, <span class="st">u'species_id'</span>,</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>       <span class="st">u'sex'</span>, <span class="st">u'hindfoot_length'</span>, <span class="st">u'weight'</span>], dtype<span class="op">=</span><span class="st">'object'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> species_sub.columns</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>Index([<span class="st">u'species_id'</span>, <span class="st">u'genus'</span>, <span class="st">u'species'</span>, <span class="st">u'taxa'</span>], dtype<span class="op">=</span><span class="st">'object'</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> survey_sub.columns</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>Index([<span class="st">u'record_id'</span>, <span class="st">u'month'</span>, <span class="st">u'day'</span>, <span class="st">u'year'</span>, <span class="st">u'plot_id'</span>, <span class="st">u'species_id'</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>       <span class="st">u'sex'</span>, <span class="st">u'hindfoot_length'</span>, <span class="st">u'weight'</span>], dtype<span class="op">=</span><span class="st">'object'</span>)</span></code></pre>
 </div>
 <p>En nuestro ejemplo, la clave de unión es la columna que contiene el
 identificador de especie de dos letras, que se llama
@@ -591,13 +591,13 @@ página</a> se encuentra a continuación:</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>merged_inner <span class="op">=</span> pd.merge(left<span class="op">=</span>survey_sub,right<span class="op">=</span>species_sub, left_on<span class="op">=</span><span class="st">'species_id'</span>, right_on<span class="op">=</span><span class="st">'species_id'</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># En este caso, `species_id` es el único nombre de columna en los dos __DataFrames__, entonces si omitimos</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># los argumentos `left_on` y `right_on` todavía obtendríamos el mismo resultado</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ¿Cuál es el tamaño de los datos en el resultado?</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>merged_inner.shape</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>merged_inner</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>merged_inner <span class="op">=</span> pd.merge(left<span class="op">=</span>survey_sub,right<span class="op">=</span>species_sub, left_on<span class="op">=</span><span class="st">'species_id'</span>, right_on<span class="op">=</span><span class="st">'species_id'</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="co"># En este caso, `species_id` es el único nombre de columna en los dos __DataFrames__, entonces si omitimos</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co"># los argumentos `left_on` y `right_on` todavía obtendríamos el mismo resultado</span></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="co"># ¿Cuál es el tamaño de los datos en el resultado?</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>merged_inner.shape</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>merged_inner</span></code></pre>
 </div>
 <p><strong>OUTPUT:</strong></p>
 <div class="codewrapper">
@@ -686,35 +686,35 @@ argumento <code>how = 'left'</code>:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>merged_left <span class="op">=</span> pd.merge(left<span class="op">=</span>survey_sub,right<span class="op">=</span>species_sub, how<span class="op">=</span><span class="st">'left'</span>, left_on<span class="op">=</span><span class="st">'species_id'</span>, right_on<span class="op">=</span><span class="st">'species_id'</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>merged_left</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>OUTPUT:<span class="op">**</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>   record_id  month  day  year  plot_id species_id sex  hindfoot_length  <span class="op">\</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span>          <span class="dv">1</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">2</span>         NL   M               <span class="dv">32</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>          <span class="dv">2</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">3</span>         NL   M               <span class="dv">33</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>          <span class="dv">3</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">2</span>         DM   F               <span class="dv">37</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>          <span class="dv">4</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">7</span>         DM   M               <span class="dv">36</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>          <span class="dv">5</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">3</span>         DM   M               <span class="dv">35</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>          <span class="dv">6</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">1</span>         PF   M               <span class="dv">14</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span>          <span class="dv">7</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">2</span>         PE   F              NaN</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span>          <span class="dv">8</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">1</span>         DM   M               <span class="dv">37</span></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span>          <span class="dv">9</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">1</span>         DM   F               <span class="dv">34</span></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span>         <span class="dv">10</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">6</span>         PF   F               <span class="dv">20</span></span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>   weight       genus   species    taxa</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span>     NaN     Neotoma  albigula  Rodent</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>     NaN     Neotoma  albigula  Rodent</span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>     NaN   Dipodomys  merriami  Rodent</span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>     NaN   Dipodomys  merriami  Rodent</span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>     NaN   Dipodomys  merriami  Rodent</span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>     NaN         NaN       NaN     NaN</span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span>     NaN  Peromyscus  eremicus  Rodent</span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span>     NaN   Dipodomys  merriami  Rodent</span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span>     NaN   Dipodomys  merriami  Rodent</span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span>     NaN         NaN       NaN     NaN</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>merged_left <span class="op">=</span> pd.merge(left<span class="op">=</span>survey_sub,right<span class="op">=</span>species_sub, how<span class="op">=</span><span class="st">'left'</span>, left_on<span class="op">=</span><span class="st">'species_id'</span>, right_on<span class="op">=</span><span class="st">'species_id'</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>merged_left</span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="op">**</span>OUTPUT:<span class="op">**</span></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>   record_id  month  day  year  plot_id species_id sex  hindfoot_length  <span class="op">\</span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="dv">0</span>          <span class="dv">1</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">2</span>         NL   M               <span class="dv">32</span></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a><span class="dv">1</span>          <span class="dv">2</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">3</span>         NL   M               <span class="dv">33</span></span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a><span class="dv">2</span>          <span class="dv">3</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">2</span>         DM   F               <span class="dv">37</span></span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a><span class="dv">3</span>          <span class="dv">4</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">7</span>         DM   M               <span class="dv">36</span></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a><span class="dv">4</span>          <span class="dv">5</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">3</span>         DM   M               <span class="dv">35</span></span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a><span class="dv">5</span>          <span class="dv">6</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">1</span>         PF   M               <span class="dv">14</span></span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a><span class="dv">6</span>          <span class="dv">7</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">2</span>         PE   F              NaN</span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="dv">7</span>          <span class="dv">8</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">1</span>         DM   M               <span class="dv">37</span></span>
+<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a><span class="dv">8</span>          <span class="dv">9</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">1</span>         DM   F               <span class="dv">34</span></span>
+<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a><span class="dv">9</span>         <span class="dv">10</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">6</span>         PF   F               <span class="dv">20</span></span>
+<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a></span>
+<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a>   weight       genus   species    taxa</span>
+<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a><span class="dv">0</span>     NaN     Neotoma  albigula  Rodent</span>
+<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a><span class="dv">1</span>     NaN     Neotoma  albigula  Rodent</span>
+<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a><span class="dv">2</span>     NaN   Dipodomys  merriami  Rodent</span>
+<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a><span class="dv">3</span>     NaN   Dipodomys  merriami  Rodent</span>
+<span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a><span class="dv">4</span>     NaN   Dipodomys  merriami  Rodent</span>
+<span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a><span class="dv">5</span>     NaN         NaN       NaN     NaN</span>
+<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a><span class="dv">6</span>     NaN  Peromyscus  eremicus  Rodent</span>
+<span id="cb10-27"><a href="#cb10-27" tabindex="-1"></a><span class="dv">7</span>     NaN   Dipodomys  merriami  Rodent</span>
+<span id="cb10-28"><a href="#cb10-28" tabindex="-1"></a><span class="dv">8</span>     NaN   Dipodomys  merriami  Rodent</span>
+<span id="cb10-29"><a href="#cb10-29" tabindex="-1"></a><span class="dv">9</span>     NaN         NaN       NaN     NaN</span></code></pre>
 </div>
 <p>El resultado <strong>DataFrame</strong> de una unión izquierda
 (<code>merged_left</code>) se parece mucho al resultado
@@ -731,15 +731,15 @@ NaN):</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>merged_left[ pd.isnull(merged_left.genus) ]</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>OUTPUT:<span class="op">**</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>   record_id  month  day  year  plot_id species_id sex  hindfoot_length  <span class="op">\</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>          <span class="dv">6</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">1</span>         PF   M               <span class="dv">14</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span>         <span class="dv">10</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">6</span>         PF   F               <span class="dv">20</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>   weight genus species taxa</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>     NaN   NaN     NaN  NaN</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span>     NaN   NaN     NaN  NaN</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>merged_left[ pd.isnull(merged_left.genus) ]</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="op">**</span>OUTPUT:<span class="op">**</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>   record_id  month  day  year  plot_id species_id sex  hindfoot_length  <span class="op">\</span></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="dv">5</span>          <span class="dv">6</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">1</span>         PF   M               <span class="dv">14</span></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="dv">9</span>         <span class="dv">10</span>      <span class="dv">7</span>   <span class="dv">16</span>  <span class="dv">1977</span>        <span class="dv">6</span>         PF   F               <span class="dv">20</span></span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>   weight genus species taxa</span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a><span class="dv">5</span>     NaN   NaN     NaN  NaN</span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a><span class="dv">9</span>     NaN   NaN     NaN  NaN</span></code></pre>
 </div>
 <p>Estas filas son aquellas en las que el valor de
 <code>species_id</code> de<code>survey_sub</code> (en este caso,
@@ -886,7 +886,7 @@ las columnas clave.</li>
   "identifier": "https://datacarpentry.org/python-ecology-lesson-es/instructor/05-merging-data.html",
   "dateCreated": "2018-11-09",
   "dateModified": "2023-02-07",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

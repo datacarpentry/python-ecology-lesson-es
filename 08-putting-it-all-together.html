@@ -373,8 +373,8 @@ interrogación. Por ejemplo:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pd.read_csv?</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>pd.read_csv?</span></code></pre>
 </div>
 <p>Fíjate en los argumentos de la función para ver si hay un valor
 predeterminado que sea diferente al que requiere tu archivo (Sugerencia:
@@ -390,13 +390,13 @@ columnas en el <strong>DataFrame</strong> del siguiente modo:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'1stcolumn'</span>:[<span class="dv">100</span>,<span class="dv">200</span>], <span class="st">'2ndcolumn'</span>:[<span class="dv">10</span>,<span class="dv">20</span>]}) <span class="co"># esto crea un __DataFrame__ para el ejemplo!</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'With the old column names:</span><span class="ch">\n</span><span class="st">'</span>) <span class="co"># El \n crea una nueva línea, para que sea más fácil de ver</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df.columns <span class="op">=</span> [<span class="st">'FirstColumn'</span>,<span class="st">'SecondColumn'</span>] <span class="co"># renombra las columna!</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n\n</span><span class="st">With the new column names:</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'1stcolumn'</span>:[<span class="dv">100</span>,<span class="dv">200</span>], <span class="st">'2ndcolumn'</span>:[<span class="dv">10</span>,<span class="dv">20</span>]}) <span class="co"># esto crea un __DataFrame__ para el ejemplo!</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'With the old column names:</span><span class="ch">\n</span><span class="st">'</span>) <span class="co"># El \n crea una nueva línea, para que sea más fácil de ver</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="bu">print</span>(df)</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>df.columns <span class="op">=</span> [<span class="st">'FirstColumn'</span>,<span class="st">'SecondColumn'</span>] <span class="co"># renombra las columna!</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n\n</span><span class="st">With the new column names:</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="bu">print</span>(df)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -429,23 +429,22 @@ hecho estamos usando el paquete matplotlib.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre>
 </div>
 <p>¡Ahora leemos los datos y los representarlos en un gráfico!</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>surveys <span class="op">=</span> pd.read_csv(<span class="st">"data/surveys.csv"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>my_plot <span class="op">=</span> surveys.plot(<span class="st">"hindfoot_length"</span>, <span class="st">"weight"</span>, kind<span class="op">=</span><span class="st">"scatter"</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.show() <span class="co"># no necesariamente en Jupyter Notebooks</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>surveys <span class="op">=</span> pd.read_csv(<span class="st">"data/surveys.csv"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>my_plot <span class="op">=</span> surveys.plot(<span class="st">"hindfoot_length"</span>, <span class="st">"weight"</span>, kind<span class="op">=</span><span class="st">"scatter"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>plt.show() <span class="co"># no necesariamente en Jupyter Notebooks</span></span></code></pre>
 </div>
-<figure><img src="fig/08_scatter_surveys.png" alt="Diagrama de dispersión del conjunto de datos de una encuesta" class="figure mx-auto d-block"></figure><div id="sugerencia" class="callout callout">
+<figure><img src="fig/08_scatter_surveys.png" alt="Diagrama de dispersión del conjunto de datos de una encuesta" class="figure mx-auto d-block"></figure><div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="sugerencia" class="callout-inner">
-<h3 class="callout-title">Sugerencia<a class="anchor" aria-label="anchor" href="#sugerencia"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="sugerencia">Sugerencia<a class="anchor" aria-label="anchor" href="#sugerencia"></a></h3>
 <div class="callout-content">
 <p>Por defecto, matplotlib crea una figura en una ventana separada.
 Cuando usamos Jupyter notebooks, podemos hacer que las figuras aparezcan
@@ -453,7 +452,7 @@ en línea dentro del cuaderno; lo hacemos ejecutando:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code></pre>
 </div>
 </div>
 </div>
@@ -462,13 +461,12 @@ en línea dentro del cuaderno; lo hacemos ejecutando:</p>
 tu mismo con <code>type(my_plot)</code>), al que podemos ajustarle y
 realizarle mejoras adicionales utilizando otros métodos de
 matplotlib.</p>
-<div id="sugerencia-1" class="callout callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="sugerencia-1" class="callout-inner">
-<h3 class="callout-title">Sugerencia<a class="anchor" aria-label="anchor" href="#sugerencia-1"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="sugerencia-1">Sugerencia<a class="anchor" aria-label="anchor" href="#sugerencia-1"></a></h3>
 <div class="callout-content">
 <p>Matplotlib en sí mismo puede resultar algo abrumador, por lo que una
 estrategia útil de entrada es hacer todo lo posible en capas de
@@ -493,24 +491,23 @@ con un valor medio de 0 y una desviación estándar de 0.1:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>sample_data <span class="op">=</span> numpy.random.normal(<span class="dv">0</span>, <span class="fl">0.1</span>, <span class="dv">1000</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="im">import</span> numpy</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>sample_data <span class="op">=</span> numpy.random.normal(<span class="dv">0</span>, <span class="fl">0.1</span>, <span class="dv">1000</span>)</span></code></pre>
 </div>
 <p>Para representar un histograma de la distribución normal, podemos
 usar la función <code>hist</code> directamente:</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>plt.hist(sample_data)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>plt.hist(sample_data)</span></code></pre>
 </div>
-<figure><img src="fig/08-normal-distribution.png" alt="Histograma de 1000 muestras de una distribución normal" class="figure mx-auto d-block"></figure><div id="sugerencia-visualization-multiplataforma-de-figuras" class="callout callout">
+<figure><img src="fig/08-normal-distribution.png" alt="Histograma de 1000 muestras de una distribución normal" class="figure mx-auto d-block"></figure><div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="sugerencia-visualization-multiplataforma-de-figuras" class="callout-inner">
-<h3 class="callout-title">Sugerencia: Visualization multiplataforma de
-Figuras<a class="anchor" aria-label="anchor" href="#sugerencia-visualization-multiplataforma-de-figuras"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="sugerencia-visualization-multiplataforma-de-figuras">Sugerencia: Visualization multiplataforma de
+Figuras<a class="anchor" aria-label="anchor" href="#sugerencia-visualization-multiplataforma-de-figuras"></a></h3>
 <div class="callout-content">
 <p>Los <strong>Jupyter Notebooks</strong> nos simplifican muchos
 aspectos de nuestro análisis y de las visualizaciones. Por ejemplo,
@@ -532,8 +529,8 @@ datos:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()  <span class="co"># initiate an empty figure and axis matplotlib object</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>ax.hist(sample_data, <span class="dv">30</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()  <span class="co"># initiate an empty figure and axis matplotlib object</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>ax.hist(sample_data, <span class="dv">30</span>)</span></code></pre>
 </div>
 <p>Aunque el último enfoque requiere un poco más de código para crear la
 misma trama, la ventaja es que nos da control total sobre el gráfico y
@@ -543,21 +540,21 @@ adicionales a la figura y personalizar sus etiquetas:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>fig, ax1 <span class="op">=</span> plt.subplots() <span class="co"># preparar un gráfico con matplotlib</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>ax1.hist(sample_data, <span class="dv">30</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear el gráfico de una distribución Beta</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>beta_draws <span class="op">=</span> np.random.beta(a, b)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># editar las etiquetas</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'density'</span>)</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'value'</span>)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># añadir ejes adicionales a la figura</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> fig.add_axes([<span class="fl">0.125</span>, <span class="fl">0.575</span>, <span class="fl">0.3</span>, <span class="fl">0.3</span>])</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co">#ax2 = fig.add_axes([left, bottom, right, top])</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>ax2.hist(beta_draws)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>fig, ax1 <span class="op">=</span> plt.subplots() <span class="co"># preparar un gráfico con matplotlib</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>ax1.hist(sample_data, <span class="dv">30</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="co"># Crear el gráfico de una distribución Beta</span></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>beta_draws <span class="op">=</span> np.random.beta(a, b)</span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="co"># editar las etiquetas</span></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'density'</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'value'</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a><span class="co"># añadir ejes adicionales a la figura</span></span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a>ax2 <span class="op">=</span> fig.add_axes([<span class="fl">0.125</span>, <span class="fl">0.575</span>, <span class="fl">0.3</span>, <span class="fl">0.3</span>])</span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a><span class="co">#ax2 = fig.add_axes([left, bottom, right, top])</span></span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a>ax2.hist(beta_draws)</span></code></pre>
 </div>
 <figure><img src="fig/08-dualdistribution.png" alt="Gráfico con ejes adicionales" class="figure mx-auto d-block"></figure><div id="reto---dibujo-a-partir-de-distribuciones" class="callout discussion">
 <div class="callout-square">
@@ -586,34 +583,34 @@ consistent environment to make publication-quality visualizations.</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fig, ax1 <span class="op">=</span> plt.subplots() <span class="co"># prepara un gráfico de matplotlib</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>surveys.plot(<span class="st">"hindfoot_length"</span>, <span class="st">"weight"</span>, kind<span class="op">=</span><span class="st">"scatter"</span>, ax<span class="op">=</span>ax1)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># realiza ajustes al gráfico con matplotlib:</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">"Hindfoot length"</span>)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>ax1.tick_params(labelsize<span class="op">=</span><span class="dv">16</span>, pad<span class="op">=</span><span class="dv">8</span>)</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">'Scatter plot of weight versus hindfoot length'</span>, fontsize<span class="op">=</span><span class="dv">15</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>fig, ax1 <span class="op">=</span> plt.subplots() <span class="co"># prepara un gráfico de matplotlib</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>surveys.plot(<span class="st">"hindfoot_length"</span>, <span class="st">"weight"</span>, kind<span class="op">=</span><span class="st">"scatter"</span>, ax<span class="op">=</span>ax1)</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="co"># realiza ajustes al gráfico con matplotlib:</span></span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>ax1.set_xlabel(<span class="st">"Hindfoot length"</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>ax1.tick_params(labelsize<span class="op">=</span><span class="dv">16</span>, pad<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>fig.suptitle(<span class="st">'Scatter plot of weight versus hindfoot length'</span>, fontsize<span class="op">=</span><span class="dv">15</span>)</span></code></pre>
 </div>
 <figure><img src="fig/08_scatter_surveys_extended.png" alt="Versión extendida de diagramas de dispersión" class="figure mx-auto d-block"></figure><p>Para recuperar una figura de matplotlib de plotnine para luego
 ajustarla, usa la función <code>draw()</code> en plotnine:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotnine <span class="im">as</span> p9</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>myplot <span class="op">=</span> (p9.ggplot(data<span class="op">=</span>surveys,</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                    mapping<span class="op">=</span>p9.aes(x<span class="op">=</span><span class="st">'hindfoot_length'</span>, y<span class="op">=</span><span class="st">'weight'</span>)) <span class="op">+</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>              p9.geom_point())</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># convierte el output de plotnine a un objeto de matplotlib</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>my_plt_version <span class="op">=</span> myplot.draw()</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Realiza más ajustes al gráfico con matplotlib:</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>p9_ax <span class="op">=</span> my_plt_version.axes[<span class="dv">0</span>] <span class="co"># cada subgráfico es un ítem en una lista</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>p9_ax.set_xlabel(<span class="st">"Hindfoot length"</span>)</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>p9_ax.tick_params(labelsize<span class="op">=</span><span class="dv">16</span>, pad<span class="op">=</span><span class="dv">8</span>)</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>p9_ax.set_title(<span class="st">'Scatter plot of weight versus hindfoot length'</span>, fontsize<span class="op">=</span><span class="dv">15</span>)</span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>plt.show() <span class="co"># esto no es necesario en Jupyter Notebooks</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="im">import</span> plotnine <span class="im">as</span> p9</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>myplot <span class="op">=</span> (p9.ggplot(data<span class="op">=</span>surveys,</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>                    mapping<span class="op">=</span>p9.aes(x<span class="op">=</span><span class="st">'hindfoot_length'</span>, y<span class="op">=</span><span class="st">'weight'</span>)) <span class="op">+</span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a>              p9.geom_point())</span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a><span class="co"># convierte el output de plotnine a un objeto de matplotlib</span></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a>my_plt_version <span class="op">=</span> myplot.draw()</span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a><span class="co"># Realiza más ajustes al gráfico con matplotlib:</span></span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a>p9_ax <span class="op">=</span> my_plt_version.axes[<span class="dv">0</span>] <span class="co"># cada subgráfico es un ítem en una lista</span></span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a>p9_ax.set_xlabel(<span class="st">"Hindfoot length"</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a>p9_ax.tick_params(labelsize<span class="op">=</span><span class="dv">16</span>, pad<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a>p9_ax.set_title(<span class="st">'Scatter plot of weight versus hindfoot length'</span>, fontsize<span class="op">=</span><span class="dv">15</span>)</span>
+<span id="cb12-14"><a href="#cb12-14" tabindex="-1"></a>plt.show() <span class="co"># esto no es necesario en Jupyter Notebooks</span></span></code></pre>
 </div>
 <figure><img src="fig/08_scatter_surveys_plotnine.png" alt="Versión extendida de diagramas de dispersión de plotnine" class="figure mx-auto d-block"></figure><blockquote>
 <h2 id="reto---pandas-y-matplotlib">Reto - Pandas y matplotlib</h2>
@@ -671,7 +668,7 @@ y=“flow_rate”, ax=ax2) ax2.legend().set_visible(False)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>ax.set_xlabel(““) # no label ax.set_ylabel(”Discharge, cubic feet per
 second”) ax.legend().set_visible(False) ax.set_title(” Front Range flood
@@ -692,17 +689,16 @@ matplotlib:</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"my_plot_name.png"</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>fig.savefig(<span class="st">"my_plot_name.png"</span>)</span></code></pre>
 </div>
 <p>Lo cual guardará la <code>fig</code> creada usando Pandas /
 matplotlib como un archivo png con nombre <code>my_plot_name</code></p>
-<div id="callout4" class="callout callout">
+<div id="callout4" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout4"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title">Callout</h3>
 <div class="callout-content">
 <pre><code>    Matplotlib reconoce la extensión usada en el nombre del archivo y soporta (en la mayoría de computadoras) los formatos png, pdf, ps, eps y svg.</code></pre>
 </div>
@@ -727,12 +723,12 @@ en <code>pdf</code> con dpi &gt;= 300.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Respuestas</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"my_plot_name.pdf"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>fig.savefig(<span class="st">"my_plot_name.pdf"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span></code></pre>
 </div>
 </div>
 </div>
@@ -843,7 +839,7 @@ creados.</li>
   "identifier": "https://datacarpentry.org/python-ecology-lesson-es/08-putting-it-all-together.html",
   "dateCreated": "2018-11-09",
   "dateModified": "2023-02-07",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

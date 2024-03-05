@@ -310,9 +310,9 @@ data.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'https://ndownloader.figshare.com/files/2292172'</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                  index_col<span class="op">=</span><span class="st">'record_id'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'https://ndownloader.figshare.com/files/2292172'</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>                  index_col<span class="op">=</span><span class="st">'record_id'</span>)</span></code></pre>
 </div>
 <p>Matplotlib has a wide variety of plots that it can produce. First,
 we’ll introduce the simplest of plots: the 2 dimensional line plot.</p>
@@ -320,7 +320,7 @@ we’ll introduce the simplest of plots: the 2 dimensional line plot.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre>
 </div>
 <p>Matplotlib can easily plot a set of data even larger than
 <code>surveys.csv</code>, but for this example, we’ll take the first 50
@@ -330,14 +330,14 @@ lesson on masking and grouping</a>.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>small_dataset <span class="op">=</span> df[:<span class="dv">50</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>small_dataset <span class="op">=</span> df[:<span class="dv">50</span>]</span></code></pre>
 </div>
 <p>There’s a column in <code>surveys.csv</code> named “site_id” which
 would make an excellent value to plot.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>site_data <span class="op">=</span> small_dataset[<span class="st">'site_id'</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>site_data <span class="op">=</span> small_dataset[<span class="st">'site_id'</span>]</span></code></pre>
 </div>
 </section><section id="simple-plotting"><h2 class="section-heading">Simple Plotting<a class="anchor" aria-label="anchor" href="#simple-plotting"></a>
 </h2>
@@ -346,7 +346,7 @@ would make an excellent value to plot.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plt.plot(site_data, label<span class="op">=</span><span class="st">'My Data'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>plt.plot(site_data, label<span class="op">=</span><span class="st">'My Data'</span>)</span></code></pre>
 </div>
 <p>The data has now been plotted, to see it we can do 2 things:</p>
 <ol style="list-style-type: decimal"><li>
@@ -355,7 +355,7 @@ so:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
 </li>
 <li>
@@ -364,7 +364,7 @@ like so:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'myplot.png'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>plt.savefig(<span class="st">'myplot.png'</span>)</span></code></pre>
 </div>
 </li>
 </ol><p>This would save the file as a rasterized PNG image. The format is
@@ -378,7 +378,7 @@ as a SVG, EPS or PDF which is as simple as:</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'myplot.pdf'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>plt.savefig(<span class="st">'myplot.pdf'</span>)</span></code></pre>
 </div>
 </section><section id="plot-essentials"><h2 class="section-heading">Plot Essentials<a class="anchor" aria-label="anchor" href="#plot-essentials"></a>
 </h2>
@@ -387,9 +387,9 @@ be easily set like so:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Index'</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Plot Value'</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'The Plot Value From surveys.csv'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>plt.xlabel(<span class="st">'Index'</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>plt.ylabel(<span class="st">'Plot Value'</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>plt.title(<span class="st">'The Plot Value From surveys.csv'</span>)</span></code></pre>
 </div>
 </section><section id="clearing-the-plot"><h2 class="section-heading">Clearing the Plot<a class="anchor" aria-label="anchor" href="#clearing-the-plot"></a>
 </h2>
@@ -400,7 +400,7 @@ on the plot, so we must clear it. Like so:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>plt.clf()</span></code></pre>
 </div>
 </section><section id="managing-figures"><h2 class="section-heading">Managing figures<a class="anchor" aria-label="anchor" href="#managing-figures"></a>
 </h2>
@@ -415,7 +415,7 @@ parameters:</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>), dpi<span class="op">=</span><span class="dv">200</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>), dpi<span class="op">=</span><span class="dv">200</span>)</span></code></pre>
 </div>
 <p>which will create a figure 8 inches high and 10 inches wide with
 resolution of 200 dots per inch.</p>
@@ -424,7 +424,7 @@ axes box and the edge of the image:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>plt.subplots_adjust(left<span class="op">=</span><span class="fl">0.1</span>, bottom<span class="op">=</span><span class="fl">0.2</span>, right<span class="op">=</span><span class="fl">0.99</span>, top<span class="op">=</span><span class="fl">0.99</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>plt.subplots_adjust(left<span class="op">=</span><span class="fl">0.1</span>, bottom<span class="op">=</span><span class="fl">0.2</span>, right<span class="op">=</span><span class="fl">0.99</span>, top<span class="op">=</span><span class="fl">0.99</span>)</span></code></pre>
 </div>
 <p>Values are fractions of the image size and denote the position of the
 respective edge of the axes bounding box. Lower left corner of the image
@@ -439,7 +439,7 @@ so:</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>plt.plot(site_data, color<span class="op">=</span><span class="st">'r'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>plt.plot(site_data, color<span class="op">=</span><span class="st">'r'</span>)</span></code></pre>
 </div>
 <p>Note that creating more than one plot on the same figure will make
 them use different colors (like in gnuplot) unless specified otherwise.
@@ -467,7 +467,7 @@ like so:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>plt.plot(site_data, color<span class="op">=</span><span class="st">'#aa5599'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>plt.plot(site_data, color<span class="op">=</span><span class="st">'#aa5599'</span>)</span></code></pre>
 </div>
 <p>or use RGB coefficients of range 0-1 (which makes it easy to create
 multiple color-encoded plots in a loop):</p>
@@ -480,7 +480,7 @@ thicker by specifying <code>linewidth</code> or <code>lw</code>:</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>plt.plot(site_data, linewidth<span class="op">=</span><span class="dv">3</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>plt.plot(site_data, linewidth<span class="op">=</span><span class="dv">3</span>)</span></code></pre>
 </div>
 <p>The default linewidth is 1. A linewidth of 3 would be 3 times as
 thick as the default. Likewise, a linewidth of .75 would be 3/4 of the
@@ -493,7 +493,7 @@ constructed like so:</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>plt.plot(site_data, <span class="st">'o'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>plt.plot(site_data, <span class="st">'o'</span>)</span></code></pre>
 </div>
 <p>The <code>o</code> means a dot. There are a variety of markers you
 can use. Refer to the official documentation <a href="http://matplotlib.org/api/markers_api.html#module-matplotlib.markers" class="external-link">for
@@ -565,7 +565,7 @@ axes. One can use dedicated plot methods:</p>
 </tr></tbody></table><div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>plt.loglog(site_data)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a>plt.loglog(site_data)</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -576,9 +576,9 @@ units, ranges one can use <code>plt.twinx</code> and
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>plt.bar(site_data.index, site_data.values)</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>plt.twinx()</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>plt.plot(<span class="dv">1</span><span class="op">/</span> site_data, color<span class="op">=</span><span class="st">'k'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>plt.bar(site_data.index, site_data.values)</span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>plt.twinx()</span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a>plt.plot(<span class="dv">1</span><span class="op">/</span> site_data, color<span class="op">=</span><span class="st">'k'</span>)</span></code></pre>
 </div>
 <p>This will create a plot with two independent Y axes, one for barplot
 and one for line plot of inverse values. Both plots will share the same
@@ -595,14 +595,14 @@ legend.</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>plt.plot(..., label<span class="op">=</span><span class="st">'some description'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a>plt.plot(..., label<span class="op">=</span><span class="st">'some description'</span>)</span></code></pre>
 </div>
 <p>and a legend can be automatically generated in the automatically
 chosen <em>best</em> location:</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -612,8 +612,8 @@ chosen <em>best</em> location:</p>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>plt.xticks([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>]) <span class="co"># put ticks in given locations of X-axis</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>plt.yticks([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>], [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>]) <span class="co"># put ticks in given locations on Y-axis, denote them with letters</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a>plt.xticks([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>]) <span class="co"># put ticks in given locations of X-axis</span></span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>plt.yticks([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>], [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>]) <span class="co"># put ticks in given locations on Y-axis, denote them with letters</span></span></code></pre>
 </div>
 <p>Labels can be rotated by adding parameter
 <code>rotation=angle_in_degrees</code>. To draw a grid with grid lines
@@ -625,14 +625,14 @@ at the ticks use <code>plt.grid()</code>.</p>
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'X-axis label'</span>)</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Y-axis label'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>plt.xlabel(<span class="st">'X-axis label'</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>plt.ylabel(<span class="st">'Y-axis label'</span>)</span></code></pre>
 </div>
 <p>To set a title use</p>
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Plot title'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a>plt.title(<span class="st">'Plot title'</span>)</span></code></pre>
 </div>
 </div>
 </section><section id="plot-variations"><h2 class="section-heading">Plot variations<a class="anchor" aria-label="anchor" href="#plot-variations"></a>
@@ -645,7 +645,7 @@ pie chart (<code>plt.pie</code>), error bars
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>plt.bar(site_data.index, site_data.values)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a>plt.bar(site_data.index, site_data.values)</span></code></pre>
 </div>
 </section><div class="section level1">
 <h1 id="go-exploring">Go exploring<a class="anchor" aria-label="anchor" href="#go-exploring"></a></h1>
@@ -658,7 +658,7 @@ Cookbook</a></li>
 <div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>plt.boxplot(site_data.values)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a>plt.boxplot(site_data.values)</span></code></pre>
 </div>
 </div>
 <div class="section level1">
@@ -671,29 +671,29 @@ data.</p>
 <div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>grouped_site_data <span class="op">=</span> small_dataset.groupby(<span class="st">'sex'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a>grouped_site_data <span class="op">=</span> small_dataset.groupby(<span class="st">'sex'</span>)</span></code></pre>
 </div>
 <p>This returns our data in an iterable object. Each entry in
 <code>grouped_site_data</code> is formatted like so:</p>
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>(<span class="st">'group_name'</span>, pandas data pertaining to the group)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a>(<span class="st">'group_name'</span>, pandas data pertaining to the group)</span></code></pre>
 </div>
 <p>Keep in mind we need different colors and labels for each group. So
 we can plot the data like so:</p>
 <div class="codewrapper sourceCode" id="cb32">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">'r'</span>, <span class="st">'g'</span>] <span class="co">#we'll be cycling through these colors</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>color_index <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> group <span class="kw">in</span> grouped_site_data:</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> colors[color_index]</span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    group_label <span class="op">=</span> group[<span class="dv">0</span>]</span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    group_data <span class="op">=</span> group[<span class="dv">1</span>]</span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>    plt.plot(group_data[<span class="st">'site_id'</span>], color<span class="op">=</span>color, label<span class="op">=</span>group_label)</span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>    color_index <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>plt.legend()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">'r'</span>, <span class="st">'g'</span>] <span class="co">#we'll be cycling through these colors</span></span>
+<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a>color_index <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb32-3"><a href="#cb32-3" tabindex="-1"></a><span class="cf">for</span> group <span class="kw">in</span> grouped_site_data:</span>
+<span id="cb32-4"><a href="#cb32-4" tabindex="-1"></a>    color <span class="op">=</span> colors[color_index]</span>
+<span id="cb32-5"><a href="#cb32-5" tabindex="-1"></a>    group_label <span class="op">=</span> group[<span class="dv">0</span>]</span>
+<span id="cb32-6"><a href="#cb32-6" tabindex="-1"></a>    group_data <span class="op">=</span> group[<span class="dv">1</span>]</span>
+<span id="cb32-7"><a href="#cb32-7" tabindex="-1"></a>    plt.plot(group_data[<span class="st">'site_id'</span>], color<span class="op">=</span>color, label<span class="op">=</span>group_label)</span>
+<span id="cb32-8"><a href="#cb32-8" tabindex="-1"></a>    color_index <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb32-9"><a href="#cb32-9" tabindex="-1"></a>plt.legend()</span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="more-information">More Information<a class="anchor" aria-label="anchor" href="#more-information"></a></h2>
@@ -763,7 +763,7 @@ graphs. For more information on Matplotlib, visit the <a href="http://matplotlib
   "identifier": "https://datacarpentry.org/python-ecology-lesson-es/06-plotting-with-matplotlib.html",
   "dateCreated": "2018-11-09",
   "dateModified": "2023-02-07",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

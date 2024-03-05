@@ -425,15 +425,15 @@ encuesta. Estaremos trabajando con el mismo <strong>dataset</strong>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ten en cuenta que se usa `pd.read_csv` porque importamos pandas con el alias `pd`</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>surveys_df <span class="op">=</span> pd.read_csv (<span class="st">"data/surveys.csv"</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Ten en cuenta que se usa `pd.read_csv` porque importamos pandas con el alias `pd`</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>surveys_df <span class="op">=</span> pd.read_csv (<span class="st">"data/surveys.csv"</span>)</span></code></pre>
 </div>
 <p>Recuerda que podemos comprobar el tipo de un objeto de la siguiente
 manera:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(surveys_df)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">type</span>(surveys_df)</span></code></pre>
 </div>
 <p><strong>OUTPUT:</strong> <code>pandas.core.frame.DataFrame</code></p>
 <p>A continuación, veamos la estructura de datos de nuestras encuestas.
@@ -443,7 +443,7 @@ En pandas, podemos comprobar el tipo de datos de una columna en un
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="st">'sex'</span>].dtype</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>surveys_df[<span class="st">'sex'</span>].dtype</span></code></pre>
 </div>
 <p><strong>OUTPUT:</strong> <code>dtype('O')</code></p>
 <p>Un tipo ‘O’ solo significa “objeto” que en el mundo de Pandas es una
@@ -451,7 +451,7 @@ secuencia de caracteres (texto).</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="st">'record_id'</span>].dtype</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>surveys_df[<span class="st">'record_id'</span>].dtype</span></code></pre>
 </div>
 <p><strong>OUTPUT:</strong> <code>dtype('int64')</code></p>
 <p>El tipo <code>int64</code> nos dice que Python está almacenando cada
@@ -461,22 +461,22 @@ columna de un <strong>DataFrame</strong> (todos a la vez).</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>surveys_df.dtypes</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>surveys_df.dtypes</span></code></pre>
 </div>
 <p>which <strong>returns</strong>:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>record_id            int64</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>month                int64</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>day                  int64</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>year                 int64</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>plot_id              int64</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>species_id          <span class="bu">object</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>sex                 <span class="bu">object</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>hindfoot_length    float64</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>weight             float64</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>dtype: <span class="bu">object</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>record_id            int64</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>month                int64</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>day                  int64</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>year                 int64</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>plot_id              int64</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>species_id          <span class="bu">object</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>sex                 <span class="bu">object</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>hindfoot_length    float64</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>weight             float64</span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>dtype: <span class="bu">object</span></span></code></pre>
 </div>
 <p>Ten en cuenta que la mayoría de las columnas en nuestros datos de
 encuesta son del tipo <code>int64</code>. Esto significa que son enteros
@@ -502,11 +502,11 @@ esperar.</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">5</span><span class="op">+</span><span class="dv">5</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">24</span><span class="op">-</span><span class="dv">4</span>)</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="dv">20</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">5</span><span class="op">+</span><span class="dv">5</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="dv">10</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">24</span><span class="op">-</span><span class="dv">4</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="dv">20</span></span></code></pre>
 </div>
 <p>Si dividimos un <strong>integer</strong> por otro, obtenemos un
 <strong>float</strong>. El resultado en Python 3 es diferente al de
@@ -515,11 +515,11 @@ Python 2 hace una división entera).</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">5</span><span class="op">/</span><span class="dv">9</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fl">0.5555555555555556</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">10</span><span class="op">/</span><span class="dv">3</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fl">3.3333333333333335</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">5</span><span class="op">/</span><span class="dv">9</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="fl">0.5555555555555556</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">10</span><span class="op">/</span><span class="dv">3</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="fl">3.3333333333333335</span></span></code></pre>
 </div>
 <p>También podemos convertir un número de punto flotante en un entero, o
 un entero en un número de punto flotante. Ten en cuenta que Python
@@ -528,15 +528,15 @@ redondea por defecto cuando convierte de <strong>float</strong> a
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertir 'a' a integer</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">7.83</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(a)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertir 'b' a float</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">7</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="bu">float</span>(b)</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fl">7.0</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># Convertir 'a' a integer</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">7.83</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="bu">int</span>(a)</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="dv">7</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="co"># Convertir 'b' a float</span></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a><span class="bu">float</span>(b)</span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a><span class="fl">7.0</span></span></code></pre>
 </div>
 </div>
 </section><section id="trabajando-con-los-datos-de-nuestra-encuesta"><h2 class="section-heading">Trabajando con los datos de nuestra encuesta<a class="anchor" aria-label="anchor" href="#trabajando-con-los-datos-de-nuestra-encuesta"></a>
@@ -547,9 +547,9 @@ convertir el campo <code>record_id</code> a <strong>float</strong></p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertir el campo record_id de integer a float</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="st">'record_id'</span>] <span class="op">=</span> surveys_df[<span class="st">'record_id'</span>].astype(<span class="st">'float64'</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="st">'record_id'</span>].dtype</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co"># Convertir el campo record_id de integer a float</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>surveys_df[<span class="st">'record_id'</span>] <span class="op">=</span> surveys_df[<span class="st">'record_id'</span>].astype(<span class="st">'float64'</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>surveys_df[<span class="st">'record_id'</span>].dtype</span></code></pre>
 </div>
 <p><strong>OUTPUT:</strong> <code>dtype('float64')</code></p>
 <blockquote>
@@ -559,7 +559,7 @@ convertir el campo <code>record_id</code> a <strong>float</strong></p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>surveys_df.plot_id.astype(<span class="st">"float"</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>surveys_df.plot_id.astype(<span class="st">"float"</span>)</span></code></pre>
 </div>
 <p>A continuación, intenta convertir <code>weight</code> (peso) en un
 <strong>integer</strong>. ¿Qué te dice Pandas? ¿Qué es lo que va mal
@@ -582,8 +582,8 @@ saltarse las celdas vacías.</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="st">'weight'</span>].mean()</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fl">42.672428212991356</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>surveys_df[<span class="st">'weight'</span>].mean()</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="fl">42.672428212991356</span></span></code></pre>
 </div>
 <p>Tratar con valores de datos faltantes siempre es un desafío. A veces
 es dificil saber por qué faltan valores. ¿Fue debido a un error de
@@ -614,9 +614,9 @@ peso):</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(surveys_df[pd.isnull(surveys_df.weight)])</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># How many rows have weight values?</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(surveys_df[surveys_df.weight<span class="op">&gt;</span> <span class="dv">0</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="bu">len</span>(surveys_df[pd.isnull(surveys_df.weight)])</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="co"># How many rows have weight values?</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="bu">len</span>(surveys_df[surveys_df.weight<span class="op">&gt;</span> <span class="dv">0</span>])</span></code></pre>
 </div>
 <p>Usando el método <code>.fillna ()</code> podemos reemplazar todos los
 valores <strong>NaN</strong> por ceros (después de hacer una copia de
@@ -624,9 +624,9 @@ los datos de modo tal de no perder nuestro trabajo):</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>df1 <span class="op">=</span> surveys_df.copy()</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Completar todos los valores NaN con ceros</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'weight'</span>] <span class="op">=</span> df1[<span class="st">'weight'</span>].fillna(<span class="dv">0</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>df1 <span class="op">=</span> surveys_df.copy()</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="co"># Completar todos los valores NaN con ceros</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>df1[<span class="st">'weight'</span>] <span class="op">=</span> df1[<span class="st">'weight'</span>].fillna(<span class="dv">0</span>)</span></code></pre>
 </div>
 <p>Sin embargo, <strong>NaN</strong> y cero arrojan diferentes
 resultados en el análisis. El valor promedio resulta diferente cuando
@@ -636,8 +636,8 @@ ignorados.</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'weight'</span>].mean()</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fl">38.751976145601844</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>df1[<span class="st">'weight'</span>].mean()</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="fl">38.751976145601844</span></span></code></pre>
 </div>
 <p>Podemos completar los valores <strong>NaN</strong> con cualquier
 valor que elijamos. El código de abajo completa todos los Valores
@@ -645,7 +645,7 @@ valor que elijamos. El código de abajo completa todos los Valores
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a> df1[<span class="st">'weight'</span>] <span class="op">=</span> surveys_df[<span class="st">'weight'</span>].fillna(surveys_df[<span class="st">'weight'</span>].mean())</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a> df1[<span class="st">'weight'</span>] <span class="op">=</span> surveys_df[<span class="st">'weight'</span>].fillna(surveys_df[<span class="st">'weight'</span>].mean())</span></code></pre>
 </div>
 <p>También podríamos elegir crear un subconjunto de datos, manteniendo
 solamente aquellas filas que no contienen valores
@@ -684,7 +684,7 @@ mezclar todas nuestras manipulaciones anteriores.</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>surveys_df <span class="op">=</span> pd.read_csv(<span class="st">"data/surveys.csv"</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>surveys_df <span class="op">=</span> pd.read_csv(<span class="st">"data/surveys.csv"</span>)</span></code></pre>
 </div>
 <p>A continuación, vamos a eliminar todas las filas que contienen
 valores nulos. Usaremos el comando <code>dropna</code>. De forma
@@ -693,7 +693,7 @@ valores nulos incluso para una sola fila.</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df_na <span class="op">=</span> surveys_df.dropna()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>df_na <span class="op">=</span> surveys_df.dropna()</span></code></pre>
 </div>
 <p>Si ahora escribes <code>df_na</code>, deberías observar que el
 <strong>DataFrame</strong> resultante tiene 30676 filas y 9 columnas,
@@ -710,8 +710,8 @@ antes del nombre del archivo:
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Escribir DataFrame a CSV</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>df_na.to_csv(<span class="st">'data_output/surveys_complete.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="co"># Escribir DataFrame a CSV</span></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>df_na.to_csv(<span class="st">'data_output/surveys_complete.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre>
 </div>
 <p>Usaremos este archivo de datos más adelante en el taller. Revisa tu
 directorio de trabajo para asegurarte de que el CSV se haya guardado
@@ -811,7 +811,7 @@ datos faltantes.</li>
   "identifier": "https://datacarpentry.org/python-ecology-lesson-es/04-data-types-and-format.html",
   "dateCreated": "2018-11-09",
   "dateModified": "2023-02-07",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>
