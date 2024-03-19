@@ -5607,12 +5607,12 @@ hecho estamos usando el paquete matplotlib.</p>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>my_plot <span class="op">=</span> surveys.plot(<span class="st">"hindfoot_length"</span>, <span class="st">"weight"</span>, kind<span class="op">=</span><span class="st">"scatter"</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>plt.show() <span class="co"># no necesariamente en Jupyter Notebooks</span></span></code></pre>
 </div>
-<figure><img src="fig/08_scatter_surveys.png" alt="Diagrama de dispersión del conjunto de datos de una encuesta" class="figure mx-auto d-block"></figure><div id="callout1" class="callout">
+<figure><img src="fig/08_scatter_surveys.png" alt="Diagrama de dispersión del conjunto de datos de una encuesta" class="figure mx-auto d-block"></figure><div id="sugerencia" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title" id="sugerencia">Sugerencia<a class="anchor" aria-label="anchor" href="#sugerencia"></a>
+<div id="sugerencia" class="callout-inner">
+<h3 class="callout-title">Sugerencia<a class="anchor" aria-label="anchor" href="#sugerencia"></a>
 </h3>
 <div class="callout-content">
 <p>Por defecto, matplotlib crea una figura en una ventana separada.
@@ -5630,12 +5630,12 @@ en línea dentro del cuaderno; lo hacemos ejecutando:</p>
 tu mismo con <code>type(my_plot)</code>), al que podemos ajustarle y
 realizarle mejoras adicionales utilizando otros métodos de
 matplotlib.</p>
-<div id="callout2" class="callout">
+<div id="sugerencia-1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title" id="sugerencia-1">Sugerencia<a class="anchor" aria-label="anchor" href="#sugerencia-1"></a>
+<div id="sugerencia-1" class="callout-inner">
+<h3 class="callout-title">Sugerencia<a class="anchor" aria-label="anchor" href="#sugerencia-1"></a>
 </h3>
 <div class="callout-content">
 <p>Matplotlib en sí mismo puede resultar algo abrumador, por lo que una
@@ -5672,12 +5672,12 @@ usar la función <code>hist</code> directamente:</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>plt.hist(sample_data)</span></code></pre>
 </div>
-<figure><img src="fig/08-normal-distribution.png" alt="Histograma de 1000 muestras de una distribución normal" class="figure mx-auto d-block"></figure><div id="callout3" class="callout">
+<figure><img src="fig/08-normal-distribution.png" alt="Histograma de 1000 muestras de una distribución normal" class="figure mx-auto d-block"></figure><div id="sugerencia-visualization-multiplataforma-de-figuras" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title" id="sugerencia-visualization-multiplataforma-de-figuras">Sugerencia: Visualization multiplataforma de
+<div id="sugerencia-visualization-multiplataforma-de-figuras" class="callout-inner">
+<h3 class="callout-title">Sugerencia: Visualization multiplataforma de
 Figuras<a class="anchor" aria-label="anchor" href="#sugerencia-visualization-multiplataforma-de-figuras"></a>
 </h3>
 <div class="callout-content">
@@ -5871,8 +5871,9 @@ matplotlib como un archivo png con nombre <code>my_plot_name</code></p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title">Callout</h3>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout4"></a>
+</h3>
 <div class="callout-content">
 <pre><code>    Matplotlib reconoce la extensión usada en el nombre del archivo y soporta (en la mayoría de computadoras) los formatos png, pdf, ps, eps y svg.</code></pre>
 </div>
@@ -6234,7 +6235,7 @@ comando <code>.close()</code>.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.2" class="external-link">sandpaper (0.16.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.4" class="external-link">pegboard (0.7.4)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.1" class="external-link">varnish (1.0.1)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.3" class="external-link">sandpaper (0.16.3)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.4" class="external-link">pegboard (0.7.4)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.1" class="external-link">varnish (1.0.1)</a></p>
 			</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -6257,8 +6258,8 @@ comando <code>.close()</code>.</li>
   "url": "https://datacarpentry.org/python-ecology-lesson-es/aio.html",
   "identifier": "https://datacarpentry.org/python-ecology-lesson-es/aio.html",
   "dateCreated": "2018-11-09",
-  "dateModified": "2024-03-12",
-  "datePublished": "2024-03-12"
+  "dateModified": "2024-03-19",
+  "datePublished": "2024-03-19"
 }
 
   </script><script>
