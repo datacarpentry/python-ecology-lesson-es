@@ -35,6 +35,9 @@ branch: 'main'
 # Who to contact if there are any issues
 contact: 'team@carpentries.org'
 
+# Language of lesson
+lang: 'es'
+
 # Navigation ------------------------------------------------
 #
 # Use the following menu items to specify the order of
