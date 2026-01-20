@@ -1471,44 +1471,44 @@ sitios dentro de nuestra área de estudio. El conjunto de datos esta
 guardado en un archivo <code>.csv</code>: cada línea tiene información
 sobre un solo animal y las columnas representan:</p>
 <table class="table">
-<thead><tr class="header">
+<thead><tr>
 <th>Columna</th>
 <th>Descripción</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>record_id</td>
 <td>identificador único de la observación</td>
 </tr>
-<tr class="even">
+<tr>
 <td>month</td>
 <td>mes de observación</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>day</td>
 <td>día de la observación</td>
 </tr>
-<tr class="even">
+<tr>
 <td>year</td>
 <td>año de la observación</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>plot_id</td>
 <td>ID de un sitio en particular</td>
 </tr>
-<tr class="even">
+<tr>
 <td>species_id</td>
 <td>código de dos letras</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>sex</td>
 <td>sexo del animal (“M”, “F”)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>hindfoot_length</td>
 <td>tamaño de pata en mm</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>weight</td>
 <td>peso del animal en gramos</td>
 </tr>
@@ -2004,7 +2004,7 @@ estadísticas para una columna de tus datos
   ¿tuviste bien el reto #3t?
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p><strong>Un pedaxo de la salida para el reto 3 se ve así:</strong></p>
 <div class="codewrapper">
@@ -2177,7 +2177,7 @@ disposición desapilada entonces crea una gráfica apilada.</p>
   Soluciones para el reto final
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Primero agrupemos los datos por sitio y por sexo y después calculemos
 el total para cada sitio.</p>
@@ -3051,33 +3051,33 @@ los tipos de datos. Más sobre esto en la tabla de abajo:</p>
 <col width="15%">
 <col width="75%">
 </colgroup>
-<thead><tr class="header">
+<thead><tr>
 <th>Tipo en Pandas</th>
 <th>Tipo en Python Nativo</th>
 <th>Descripción</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>object</td>
 <td>string</td>
 <td>El <strong>dtype</strong> más general. Será asignado a tu columna si
 la columna contiene tipos mixtos (números y secuencias de
 caracteres).</td>
 </tr>
-<tr class="even">
+<tr>
 <td>int64</td>
 <td>int</td>
 <td>Caracteres numéricos. 64 se refiere a la memoria asignada para
 almacenar el caracter.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>float64</td>
 <td>float</td>
 <td>Caracteres numéricos con decimales. Si una columna contiene números
 y NaNs (ver más abajo), Pandas usará float64 por defecto, en caso de que
 los datos faltantes contengan decimales.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>datetime64, timedelta[ns]</td>
 <td>N/D (ver el módulo <a href="https://doc.python.org/2/library/datetime.html" class="external-link">datetime</a> en la
 biblioteca estandar de Python)</td>
@@ -5928,7 +5928,7 @@ y=“flow_rate”, ax=ax2) ax2.legend().set_visible(False)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Mostrar la solución </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>ax.set_xlabel(““) # no label ax.set_ylabel(”Discharge, cubic feet per
 second”) ax.legend().set_visible(False) ax.set_title(” Front Range flood
@@ -5984,7 +5984,7 @@ en <code>pdf</code> con dpi &gt;= 300.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Respuestas </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6322,7 +6322,7 @@ comando <code>.close()</code>.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Plantilla compartida bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> por <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Construido con <a href="https://github.com/carpentries/sandpaper/tree/0.18.3" class="external-link">sandpaper (0.18.3)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a> y <a href="https://github.com/carpentries/varnish/tree/1.0.9" class="external-link">varnish (1.0.9)</a></p>
+        <p>Construido con <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.18.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a> y <a href="https://github.com/carpentries/varnish/tree/" class="external-link">varnish (1.0.9)</a></p>
 		</div>
 		</footer>
 </div> <!-- / div.container -->
